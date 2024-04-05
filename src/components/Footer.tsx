@@ -1,18 +1,20 @@
+import Link from "next/link";
 import React from "react";
 import { FaTwitter, FaFacebook, FaLinkedin, FaYoutube } from "react-icons/fa";
 
 interface NavLink {
   label: string;
   href: string;
+  id: string;
 }
 
 const navLinks: NavLink[] = [
-  { label: "The Village", href: "/Village" },
-  { label: "Baobabpad", href: "/Baobabpad" },
-  { label: "Solutions", href: "/Solutions" },
-  { label: "Careers", href: "/Careers" },
-  // { label: 'Login', href: '/login' },
-  // { label: 'Try for free', href: '/try-for-free' },
+  { id: "buh43jn15", label: "The Village", href: "/Village" },
+  { id: "tfgbuyhejni3m", label: "Baobabpad", href: "/Baobabpad" },
+  { id: "4389hunref", label: "Solutions", href: "/Solutions" },
+  { id: "9ol,ytgrer", label: "Careers", href: "/Careers" },
+  { id: "buh43jnadsgqwe", label: "Contact Us", href: "/Contact" },
+  { id: "akljhqkjwebr", label: "FAQs", href: "/FAQs" },
 ];
 
 interface FooterProps {}
@@ -20,7 +22,7 @@ interface FooterProps {}
 const Footer: React.FC<FooterProps> = () => {
   return (
     <footer className="bg-[#FAFAFB] text-[#171A1F] py-8 px-12">
-      <div className="container mx-auto flex flex-wrap flex-col gap-4 items-center">
+      <div className="container mx-auto flex flex-wrap flex-col gap-4 sm:items-center">
         <div className="flex">
           <div className="flex md:ml-auto flex-col justify-center items-center gap-8">
             <label
@@ -30,7 +32,7 @@ const Footer: React.FC<FooterProps> = () => {
               Subscribe to our sharepad
             </label>
 
-            <div>
+            <div className="flex">
               <input
                 id="email"
                 type="email"
@@ -44,38 +46,20 @@ const Footer: React.FC<FooterProps> = () => {
           </div>
         </div>
 
-        <nav className="flex flex-wrap">
-          <ul className="flex items-center pl-4 md:pl-0">
-            <li>
-              <a href="#" className="text-gray-400 hover:text-gray-300 px-2">
-                The Village
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-gray-400 hover:text-gray-300 px-2">
-                Baobabpad
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-gray-400 hover:text-gray-300 px-2">
-                Solutions
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-gray-400 hover:text-gray-300 px-2">
-                Careers
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-gray-400 hover:text-gray-300 px-2">
-                Contact Us
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-gray-400 hover:text-gray-300 px-2">
-                FAQs
-              </a>
-            </li>
+        <nav className="flex">
+          <ul className="flex flex-col sm:flex-row flex-wrap sm:items-center pl-4 md:pl-0">
+            
+            <h3 className="font-semibold mb-2 sm:hidden">Navigation</h3>
+            {navLinks.map((link) => (
+              <li key={link.id}>
+                <Link
+                  href={link.href}
+                  className="text-gray-400 hover:text-gray-300 sm:px-2 px-1 mb-2"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
 

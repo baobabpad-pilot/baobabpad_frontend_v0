@@ -40,7 +40,7 @@ const Navbar = () => {
           <li key={navLink.label}>
             <Link
               href={navLink.href}
-              className="text-[#424955] hover:text-[#00BDD6]"
+              className="text-[#424955] hover:text-[#00BDD6] transition-colors delay-100 ease-in-out"
             >
               {navLink.label}
             </Link>
