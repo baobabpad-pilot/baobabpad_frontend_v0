@@ -1,13 +1,39 @@
+// Careers.tsx
+
 import React from "react";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import styles from "../styles/careers.module.css"; 
+import user1 from "../career_images/user1.png";
+import user2 from "../career_images/user2.png";
+import user3 from "../career_images/user3.png";
+import user4 from "../career_images/user4.png";
 
 const Careers = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <div className="flex-1 flex justify-center items-center font-bold text-3xl">
-        Careers
+      <div
+        className={`${styles.container} flex-1 flex justify-center items-center font-bold text-3xl`}
+        style={{ backgroundColor: "rgb(245,245,245)", height: "70vh" }}
+      >
+        <div className={`${styles.flexContainer} flex flex-row`}>
+          <div className={styles.part1}>
+            01
+            <div
+              className="container mt-20 flex flex-row justify-center items-center"
+              style={{ backgroundColor: "red" }}
+            >
+              <div className="img1 ">
+                <img src={user1} alt="" />
+              </div>
+              <div className="img2 ">
+                <img src={user2} alt="" />
+              </div>
+            </div>
+          </div>
+          <div className={styles.part2}>02</div>
+        </div>
       </div>
       <Footer />
     </div>
