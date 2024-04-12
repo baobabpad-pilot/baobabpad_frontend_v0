@@ -1,0 +1,39 @@
+/* careers.module.css */
+
+.flexContainer {
+    display: flex;
+    justify-content: space-between;
+    /* Distribute items along the main axis */
+}
+
+.part1,
+.part2 {
+min-width: 100vh;
+background-color:rgb(245, 245, 245);
+    /* Each part occupies 50% of the width */
+    text-align: center;
+    /* Center the content horizontally */
+    height: 500px;
+}
+
+.part1{
+    background-color:rgb(245,242,243);
+    /* min-width: 600px; */
+
+}
+
+@media (max-width: 768px) {
+    .flexContainer {
+        flex-direction: column;
+    }
+
+    .part1,
+    .part2 {
+        min-width: auto;
+        /* Adjust as needed */
+        height: auto;
+        /* Adjust as needed */
+    }
+}
+
+
