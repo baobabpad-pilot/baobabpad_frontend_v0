@@ -22,5 +22,18 @@ background-color:rgb(245, 245, 245);
 
 }
 
+@media (max-width: 768px) {
+    .flexContainer {
+        flex-direction: column;
+    }
+
+    .part1,
+    .part2 {
+        min-width: auto;
+        /* Adjust as needed */
+        height: auto;
+        /* Adjust as needed */
+    }
+}
 
 
