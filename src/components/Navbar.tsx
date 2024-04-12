@@ -100,7 +100,7 @@ const Navbar = () => {
         </button>
       </div>
       {isOpen && (
-        <ul className="md:hidden absolute top-full left-0 w-full py-4 bg-white space-y-2">
+        <ul className="md:hidden absolute top-full left-0 w-full py-4 z-50 bg-white space-y-2">
           {navLinks.map((navLink) => (
             <li key={navLink.label}>
               <a
