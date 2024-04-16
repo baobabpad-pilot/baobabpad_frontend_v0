@@ -32,11 +32,12 @@ background-color:rgb(245, 245, 245);
         /* Adjust as needed */
         height: auto;
         /* Adjust as needed */
-        
+    }
+
+    .footer {
+        margin-top: 400px;
+        /* Adjust as needed */
     }
 }
 
 
-/* .info p{
-  margin-left: 10px;
-} */

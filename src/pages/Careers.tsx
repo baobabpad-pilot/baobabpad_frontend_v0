@@ -18,11 +18,17 @@ const Careers = () => {
       <Navbar />
       <div
         className={`${styles.container} flex-1 flex justify-center items-center font-bold text-3xl`}
-        style={{ backgroundColor: "rgb(245,245,245)", height: "800px" }}
+        style={{
+          backgroundColor: "rgb(245,245,245) ",
+          height: "100vh",
+          width: "100%",
+        }}
       >
-        <div className={`${styles.flexContainer} flex flex-row`}>
+        <div
+          className={`${styles.flexContainer} flex flex-row`}
+          style={{ height: "100vh" }}
+        >
           <div className={styles.part1}>
-          
             <div className="container mx-30 mt-10 flex flex-row justify-center items-center">
               <div
                 className="img1"
@@ -79,8 +85,7 @@ const Careers = () => {
           </div>
 
           <div className={styles.part2}>
-            
-            <div className="part3 mt-10 flex justify-center items-center ">
+            <div className="container mx-30 mt-10 flex flex-row justify-center items-center ">
               <Image src={msg} alt="" className="object-contain" />
             </div>
             <p className="text-2xl">Karibu Sana</p>
@@ -151,7 +156,7 @@ const Careers = () => {
           </div>
         </div>
       </div>
-      <div className="footer" style={{ marginTop: "100px" }}>
+      <div className="footer"style={{ marginTop: window.innerWidth <= 768 ? '400px' : '' }}>
         <Footer />
       </div>
     </div>
