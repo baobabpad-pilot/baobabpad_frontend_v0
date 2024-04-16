@@ -18,16 +18,12 @@ const Careers = () => {
       <Navbar />
       <div
         className={`${styles.container} flex-1 flex justify-center items-center font-bold text-3xl`}
-        style={{ backgroundColor: "rgb(245,245,245)", height: "70vh" }}
+        style={{ backgroundColor: "rgb(245,245,245)", height: "800px" }}
       >
         <div className={`${styles.flexContainer} flex flex-row`}>
           <div className={styles.part1}>
-            01
-            <div
-              className="container mx-30 mt-10 flex flex-row justify-center items-center"
-              // style={{ backgroundColor: "red" }}
-            >
-              {/* Image 1 */}
+          
+            <div className="container mx-30 mt-10 flex flex-row justify-center items-center">
               <div
                 className="img1"
                 style={{ marginRight: "25px", marginTop: "50px" }}
@@ -75,14 +71,19 @@ const Careers = () => {
                 />
               </div>
             </div>
+            <div className="info mt-20">
+              <p style={{ marginLeft: "10px", color: "rgb(0,189,214)" }}>
+                Connecting Africa Talent, <br /> Virtually, and Globally
+              </p>
+            </div>
           </div>
 
           <div className={styles.part2}>
-            02
+            
             <div className="part3 mt-10 flex justify-center items-center ">
               <Image src={msg} alt="" className="object-contain" />
             </div>
-            <p>Karibu Sana</p>
+            <p className="text-2xl">Karibu Sana</p>
             <div>
               <div
                 className="authentication flex flex flex-col justify-center items-center "
@@ -110,20 +111,49 @@ const Careers = () => {
                   <span>Sign up with Github</span>
                 </button>
               </div>
-              <div className="section4 mt-5">
-                <p>-----------OR-----------</p>
-                <p>sign up with your email</p>
-                <label htmlFor="email">email@email.com</label>
+              <div className="section4 mt-5 text-base font-normal">
+                <span className="tttt ">______________ </span>OR{" "}
+                <span>______________ </span>
+                <p className="mt-3">
+                  {" "}
+                  <b>sign up with your email</b>{" "}
+                </p>
+                <label className="text-xs opacity-80" htmlFor="email">
+                  email@email.com
+                </label>
               </div>
-              <p>
-                By continuing, you agree to our Terms & Conditions and Privacy
-                Policy
+              <p className="text-base font-normal text-xs  opacity-70">
+                By continuing, you agree to our{" "}
+                <span style={{ color: "rgb(0,189,214)" }}>
+                  {" "}
+                  <b> Terms & Conditions</b>
+                </span>{" "}
+                and{" "}
+                <span style={{ color: "rgb(0,189,214)" }}>
+                  {" "}
+                  <b>Privacy Policy</b>{" "}
+                </span>
               </p>
             </div>
+            <button
+              className=" continue text-white font-bold mt-5  py-2 rounded text-base font-normal "
+              style={{ width: "300px", backgroundColor: "rgb(0,189,214)" }}
+            >
+              continue
+            </button>
+            <p className="text-base font-normal text-xs  opacity-70 mt-3">
+              Existing member?{" "}
+              <span style={{ color: "rgb(0,189,214)" }}>
+                {" "}
+                <b>Sign in</b>{" "}
+              </span>
+            </p>
           </div>
         </div>
       </div>
-      <Footer />
+      <div className="footer" style={{ marginTop: "100px" }}>
+        <Footer />
+      </div>
     </div>
   );
 };
