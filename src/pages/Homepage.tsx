@@ -1,18 +1,35 @@
-import React from "react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import React, { useState } from "react";
 import Header from "@/components/homepage_sections/Header";
+import Layout from "@/components/Layout";
+import MyForm from "@/components/homepage_sections/Form";
+import StepIndicator from "@/components/homepage_sections/StepIndicator";
 
-const Homepage = () => {
+const Homepage: React.FC = () => {
+  const [currentStep, setCurrentStep] = useState<number>(1);
+  const totalSteps = 5;
+
+  const handleNextStep = (nextStep: number) => {
+    setCurrentStep(nextStep);
+  };
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar />
-      <div className="flex-1 flex justify-center items-center font-bold text-3xl">
+      <Layout>
         <Header />
-      </div>
-      <Footer />
+
+        <div className="w-full grid grid-cols-1 md:grid-cols-2">
+          <div className="flex flex-col gap-28 pl-28">
+          {Array.from({ length: totalSteps }, (_, index) => index + 1).map(step => (
+            <StepIndicator key={step} step={step} currentStep={currentStep} />
+          ))}
+          </div>
+          <div>
+            <MyForm onNextStep={handleNextStep} />
+          </div>
+        </div>
+      </Layout>
     </div>
   );
 };
+
 
 export default Homepage;

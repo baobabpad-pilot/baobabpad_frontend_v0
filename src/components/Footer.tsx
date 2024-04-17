@@ -21,7 +21,7 @@ interface FooterProps {}
 
 const Footer: React.FC<FooterProps> = () => {
   return (
-    <footer className="bg-[#FAFAFB] text-[#171A1F] py-8 px-12">
+    <footer className="text-[#171A1F] py-8 px-12">
       <div className="container mx-auto flex flex-wrap flex-col gap-4 sm:items-center">
         <div className="flex">
           <div className="flex md:ml-auto flex-col justify-center items-center gap-8">
@@ -64,7 +64,7 @@ const Footer: React.FC<FooterProps> = () => {
         </nav>
 
         <span className="border w-full"></span>
-        <div className="w-full flex justify-between">
+        <div className="w-full flex flex-col sm:flex-row gap-6 justify-between">
           <div className="flex md:order-1">
             <p className="text-sm text-center md:text-left">
               © 2024 Baobabpad

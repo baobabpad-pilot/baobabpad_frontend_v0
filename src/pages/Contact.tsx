@@ -1,16 +1,12 @@
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
 import React from "react";
+import Layout from "@/components/Layout";
+
 
 const Contact = () => {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
-      <div className="flex-1 flex justify-center items-center font-bold text-3xl">
-        Contact Us
-      </div>
-      <Footer />
-    </div>
+<Layout>
+  Contact Us
+</Layout>
   );
 };
 

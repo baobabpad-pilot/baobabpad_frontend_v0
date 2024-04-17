@@ -25,15 +25,16 @@ const Navbar = () => {
   return (
     <nav className=" relative w-full flex items-center justify-between p-4 px-10">
       <div className="text-xl font-bold text-[#424955]">
-        {/* <Link href="/" className="relative h-10 w-[100px] border-4">
-          <Image
+        <Link href="/" >
+          <div className="relative h-14 w-32"> <Image
             src={Logo}
             alt="Baobabpad logo"
             layout="fill" objectFit="cover"
             className="cursor-pointer h-24  z-10"
-          />
-        </Link> */}
-        <Link href="/">Baobabpad</Link>
+          /></div>
+         
+        </Link>
+        {/* <Link href="/">Baobabpad</Link> */}
       </div>
       <ul className="hidden md:flex space-x-12 flex-row text-lg">
         {navLinks.map((navLink) => (
@@ -100,7 +101,7 @@ const Navbar = () => {
         </button>
       </div>
       {isOpen && (
-        <ul className="md:hidden absolute top-full left-0 w-full py-4 bg-white space-y-2">
+        <ul className="md:hidden absolute top-full left-0 w-full py-4 z-50 bg-white space-y-2">
           {navLinks.map((navLink) => (
             <li key={navLink.label}>
               <a
