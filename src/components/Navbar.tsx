@@ -25,15 +25,16 @@ const Navbar = () => {
   return (
     <nav className=" relative w-full flex items-center justify-between p-4 px-10">
       <div className="text-xl font-bold text-[#424955]">
-        {/* <Link href="/" className="relative h-10 w-[100px] border-4">
-          <Image
+        <Link href="/" >
+          <div className="relative h-14 w-32"> <Image
             src={Logo}
             alt="Baobabpad logo"
             layout="fill" objectFit="cover"
             className="cursor-pointer h-24  z-10"
-          />
-        </Link> */}
-        <Link href="/">Baobabpad</Link>
+          /></div>
+         
+        </Link>
+        {/* <Link href="/">Baobabpad</Link> */}
       </div>
       <ul className="hidden md:flex space-x-12 flex-row text-lg">
         {navLinks.map((navLink) => (

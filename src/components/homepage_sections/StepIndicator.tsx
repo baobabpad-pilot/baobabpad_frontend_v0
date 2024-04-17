@@ -7,7 +7,7 @@ const StepIndicator: React.FC<{ step: number; currentStep: number }> = ({
   const stepTexts = [
     "What is your frontend stack?",
     "What is your backend stack?",
-    "What is your company size?",
+    "What is your company type?",
     "What industry do you operate in?",
     "What is your Technology Readiness Level?",
   ];
