@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
@@ -12,7 +12,27 @@ import google from "../career_images/Google.png";
 import microsoft from "../career_images/microsoft.png";
 import linkedIn from "../career_images/linkedIn.png";
 
+
+
+
 const Careers = () => {
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 768);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []); 
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -158,7 +178,7 @@ const Careers = () => {
       </div>
       <div
         className="footer"
-        style={{ marginTop: window.innerWidth <= 768 ? "400px" : "" }}
+        style={{ marginTop: isSmallScreen ? "400px" : "" }}
       >
         <Footer />
       </div>
