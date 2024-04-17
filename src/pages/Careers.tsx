@@ -205,7 +205,7 @@ const Careers = () => {
         </div>
       </div>
       <div className="footer"style={{ marginTop: window.innerWidth <= 768 ? '400px' : '' }}>
-        </Layout>
+        </Footer>
       </div>
     </div>
   );
