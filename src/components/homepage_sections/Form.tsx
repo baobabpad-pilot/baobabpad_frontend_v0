@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 interface FormData {
   [question: string]: string[];
@@ -9,6 +10,8 @@ interface Props {
   }
 
 const MultiSelectForm: React.FC<Props> = ({ onNextStep }) => {
+const router = useRouter();
+
   const [formData, setFormData] = useState<FormData>({});
 
   const options = {
@@ -38,6 +41,11 @@ const MultiSelectForm: React.FC<Props> = ({ onNextStep }) => {
     onNextStep(currentStep);
   }, [formData, onNextStep]);
 
+  const handleVerifyBusiness = () => {
+
+    router.push('/verify_business')
+  }
+
   return (
     <div className="max-w-lg mt-8 overflow-hidden">
       <div className="space-y-4">
@@ -65,7 +73,7 @@ const MultiSelectForm: React.FC<Props> = ({ onNextStep }) => {
 
       <button
         className="mt-20 bg-[#00BDD6] text-white py-2 px-4 rounded-full hover:bg-gray-300 transition-colors delay-75"
-        onClick={() => console.log(formData)}
+        onClick={() => handleVerifyBusiness()}
       >
         Free Trial
       </button>
