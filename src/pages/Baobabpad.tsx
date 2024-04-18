@@ -98,16 +98,16 @@ const Baobabpad = () => {
                     <div className="flex flex-col items-left w-[60%] mx-3">
                         <div className="flex flex-col border-b border-gray-300 p-8">
                            <div className="flex  items-center ">
-                              <TbNorthStar className="text-[#8353E2] text-500 text-[1.25rem] w-16 h-16" />
-                              <span  className="text-[1.25rem]">Vision</span>
+                              <TbNorthStar className="text-[#8353E2] text-400 text-[0.8rem] w-16 h-16" />
+                              <span  className="text-[1.25rem] ml-2 text-2xl text-500 font-bold">Vision</span>
                            </div>
                            <span className="px-16">Elevating African Talent, Virtually and Globally</span>
                         </div>
 
                         <div className="flex flex-col  border-b border-gray-300 p-8">
                            <div className="flex  items-center ">
-                           <SlEmotsmile  className="text-[#8353E2] text-300 text-[1.25rem] w-16 h-16" />
-                              <span  className="text-[1.25rem]">Mission</span>
+                           <SlEmotsmile  className="text-[#8353E2] text-200 text-[0.8rem] w-16 h-16" />
+                              <span  className="text-[1.25rem] ml-2  text-500 font-bold">Mission</span>
                            </div>
                            <span className="px-16">Empowering African Talents through a bustling ecosystem that harnesses the immense potential of Africa's tech-experts to the world. </span>
                         </div>
@@ -115,8 +115,8 @@ const Baobabpad = () => {
                         
                         <div className="flex flex-col border-b border-gray-300 p-8 ">
                            <div className="flex  items-center ">
-                           <FaShareNodes  className="text-[#8353E2] text-500 text-[1.25rem] w-16 h-16" />
-                              <span  className="text-[1.25rem]">Business Model</span>
+                           <FaShareNodes  className="text-[#8353E2] text-200 text-[0.8rem] w-16 h-16" />
+                              <span  className="text-[1.25rem] ml-2 text-500 font-bold">Business Model</span>
                            </div>
                            <span className="px-16">Our business model iis ownership and impact  based busiiness model , empowering economic and social incliusion for all  our talent. </span>
                         </div>
