@@ -5,6 +5,10 @@ import { CiWifiOn } from "react-icons/ci";
 import { CiShare2 } from "react-icons/ci";
 import { FaRegPaperPlane } from "react-icons/fa";
 import Layout from "@/components/Layout";
+import { TbStar } from "react-icons/tb";
+import { TbNorthStar } from "react-icons/tb";
+import { SlEmotsmile } from "react-icons/sl";
+import { FaShareNodes } from "react-icons/fa6";
 
 const Baobabpad = () => {
   return (
@@ -83,6 +87,51 @@ const Baobabpad = () => {
             </div>
           </div>
         </section>
+        {/* Who we are section */}
+        <section className="flex justify-between items-center p-10  " >
+                <div className="w-[100%] h-[95%] flex flex-row ">
+                   <ul className=" flex flex-col items-left gap-y-10 p-10 w-[40%]">
+                      <li><span className="text-9xl text-[#8353E2] font-bold">W</span> <span className="text-3xl text-[#8353E2] font-bold">HO</span></li>
+                      <li><span className="text-9xl text-[#58CAEF] font-bold">W</span> <span className="text-3xl text-[#58CAEF] font-bold">E</span></li>
+                      <li><span className="text-9xl text-[#F5C4C6] font-bold">A</span> <span className="text-3xl text-[#F5C4C6] font-bold">RE</span></li>
+                    </ul>
+                    <div className="flex flex-col items-left w-[60%] mx-3">
+                        <div className="flex flex-col border-b border-gray-300 p-8">
+                           <div className="flex  items-center ">
+                              <TbNorthStar className="text-[#8353E2] text-500 text-[1.25rem] w-16 h-16" />
+                              <span  className="text-[1.25rem]">Vision</span>
+                           </div>
+                           <span className="px-16">Elevating African Talent, Virtually and Globally</span>
+                        </div>
+
+                        <div className="flex flex-col  border-b border-gray-300 p-8">
+                           <div className="flex  items-center ">
+                           <SlEmotsmile  className="text-[#8353E2] text-300 text-[1.25rem] w-16 h-16" />
+                              <span  className="text-[1.25rem]">Mission</span>
+                           </div>
+                           <span className="px-16">Empowering African Talents through a bustling ecosystem that harnesses the immense potential of Africa's tech-experts to the world. </span>
+                        </div>
+
+                        
+                        <div className="flex flex-col border-b border-gray-300 p-8 ">
+                           <div className="flex  items-center ">
+                           <FaShareNodes  className="text-[#8353E2] text-500 text-[1.25rem] w-16 h-16" />
+                              <span  className="text-[1.25rem]">Business Model</span>
+                           </div>
+                           <span className="px-16">Our business model iis ownership and impact  based busiiness model , empowering economic and social incliusion for all  our talent. </span>
+                        </div>
+
+                        
+
+                    </div>
+
+
+                </div>
+        </section>
+
+
+
+
       </Layout>
     </div>
   );
