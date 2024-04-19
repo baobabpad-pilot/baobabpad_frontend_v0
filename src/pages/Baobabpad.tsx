@@ -14,7 +14,7 @@ import { VscGraph } from "react-icons/vsc";
 import { FaRegHandshake } from "react-icons/fa";
 import { HiOutlineUserAdd } from "react-icons/hi";
 import { FaPeopleGroup } from "react-icons/fa6";
-
+import { CiPlay1 } from "react-icons/ci";
 
 const Baobabpad = () => {
   return (
@@ -529,7 +529,7 @@ const Baobabpad = () => {
 
           {/* End of  Clients benefits and  devops benefits */}
 
-          {/* Start of team building and project management sections */}
+          {/* Start of team building and project management section */}
           <section className="flex flex-row justify-evenly items-center flex-wrap p-10">
             <div className="flex flex-col items-center  w-[20rem] h-[20rem] p-2">
                   <HiOutlineUserAdd className="text-[#00BDD6] text-[3rem] "/>
@@ -549,10 +549,39 @@ const Baobabpad = () => {
 
           </section>
 
+          {/* End of team building and project management section */}
+
+          {/* Start of message from  our village  */}
+
+          <section className="flex flex-col justify-center ">
+              <div className="flex flex-row justify-center">
+              <span className="align-center font-extrabold font text-[3rem]">Message from Our Village</span>
+              </div>
+           <div className="flex justify-end p-4" >
+              <button className="border border-[#00BDD6] p-2 text-[#00BDD6] text-[0.875rem] rounded-[1rem] hover:bg-[#00BDD6] hover:text-[#fff]">View More ...</button>
+           </div>
+
+           <div className="flex justify-center  flex-wrap gap-x-7 gap-y-7 ">
+             <div className="hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer">
+             < CiPlay1  className="text-[2rem] text-[#000] absolute  "/>
+                <img src="/our-village-image1.png" alt="woman smiling photo 2"  />
+             </div>
+              <div className="hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer">
+              < CiPlay1  className="text-[2rem] text-[#000] absolute  "/>      
+                <img src="/our-village-Image.png" alt="woman smiling photo 1" />
+              </div>
+          
+                
+           </div>
 
 
 
-          {/* End of team building and project management sections */}
+
+          </section>
+
+
+
+          {/* End of message from our village  */}
 
 
       </Layout>
