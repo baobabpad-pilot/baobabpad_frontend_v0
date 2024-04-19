@@ -1,8 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import Layout from "@/components/Layout";
 import { CiCircleAlert } from "react-icons/ci";
 
 const VerifyBusiness = () => {
+const [formData, setFormData] = useState({
+  company_name: "",
+  business_type: "",
+  phone_number: "",
+  email: "",
+  address: "",
+  country: "",
+  business_number: "",
+  city: ""
+})
+
+const handleChange = (e: any) => {
+ const {name, value} = e.target;
+
+  setFormData({
+    ...formData,
+    [name]: value,
+  })
+}
+
+const handleSubmit = (e: any) => {
+  e.preventDefault();
+console.log(formData)
+}
+
+
+
   return (
     <Layout>
       <div className="flex flex-col gap-10 p-10 px-36">
@@ -57,7 +84,7 @@ const VerifyBusiness = () => {
 
             <h3 className="font-semibold text-3xl">Business Information</h3>
 
-            <form action="" className="flex flex-col gap-6">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="flex flex-col gap-2 p-2">
                   <label htmlFor="company_name" className="font-medium text-lg">
@@ -67,6 +94,8 @@ const VerifyBusiness = () => {
                     type="text"
                     id="company_name"
                     name="company_name"
+                    value={formData.company_name}
+                    onChange={handleChange}
                     placeholder="Company Name"
                     className="border p-2 rounded bg-slate-100"
                   />
@@ -80,6 +109,8 @@ const VerifyBusiness = () => {
                     type="tel"
                     id="phone_number"
                     name="phone_number"
+                    value={formData.phone_number}
+                    onChange={handleChange}
                     placeholder="Phone Number"
                     className="border p-2 rounded bg-slate-100"
                   />
@@ -93,6 +124,8 @@ const VerifyBusiness = () => {
                     type="email"
                     id="email"
                     name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     placeholder="Email"
                     className="border p-2 rounded bg-slate-100"
                   />
@@ -100,15 +133,17 @@ const VerifyBusiness = () => {
 
                 <div className="flex flex-col gap-2 p-2">
                   <label
-                    htmlFor="company_address"
+                    htmlFor="address"
                     className="font-medium text-lg"
                   >
                     Address
                   </label>
                   <input
                     type="text"
-                    id="company_address"
-                    name="company_address"
+                    id="address"
+                    name="address"
+                    value={formData.address}
+                    onChange={handleChange}
                     placeholder="Address"
                     className="border p-2 rounded bg-slate-100"
                   />
@@ -116,15 +151,17 @@ const VerifyBusiness = () => {
 
                 <div className="flex flex-col gap-2 p-2">
                   <label
-                    htmlFor="country_region"
+                    htmlFor="country"
                     className="font-medium text-lg"
                   >
                     Country/Region
                   </label>
                   <input
                     type="text"
-                    id="country_region"
-                    name="country_region"
+                    id="country"
+                    name="country"
+                    value={formData.country}
+                    onChange={handleChange}
                     placeholder="e.g., Switzerland"
                     className="border p-2 rounded bg-slate-100"
                   />
@@ -138,6 +175,8 @@ const VerifyBusiness = () => {
                     type="text"
                     id="city"
                     name="city"
+                    value={formData.city}
+                    onChange={handleChange}
                     placeholder="e.g., Geneva"
                     className="border p-2 rounded bg-slate-100"
                   />
@@ -154,11 +193,15 @@ const VerifyBusiness = () => {
                     type="text"
                     id="business_number"
                     name="business_number"
+                    value={formData.business_number}
+                    onChange={handleChange}
                     placeholder="Business Number"
                     className="border p-2 rounded bg-slate-100"
                   />
                 </div>
               </div>
+
+              <button className="p-2 px-4 bg-[#00BDD6] text-white">Submit</button>
             </form>
           </div>
         </div>
