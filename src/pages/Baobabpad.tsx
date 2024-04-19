@@ -587,7 +587,7 @@ const Baobabpad = () => {
               <span className="align-left font-extrabold font text-[3rem]">Our Impact</span>
               </div>
            <div className="flex justify-end p-4" >
-              <button className="border border-[#00BDD6] p-2 text-[#00BDD6] text-[0.875rem] rounded-[1rem] hover:bg-[#00BDD6] hover:text-[#fff]">View More ...</button>
+                    <button className="border border-[#00BDD6] p-2 text-[#00BDD6] text-[0.875rem] rounded-[1rem] hover:bg-[#00BDD6] hover:text-[#fff]">View More ...</button>
            </div>
 
            <div className="flex justify-center  flex-wrap gap-x-7 gap-y-7  ">
@@ -627,7 +627,7 @@ const Baobabpad = () => {
 
           {/* End of the impact section */}
 
-          
+
 
 
       </Layout>
