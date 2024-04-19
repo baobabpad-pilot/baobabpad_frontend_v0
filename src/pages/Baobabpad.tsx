@@ -284,6 +284,197 @@ const Baobabpad = () => {
 
 
         </section>
+        {/* Start  Advisory  Board  */}
+        <section className="border-t border-500 p-12">
+          <div className="  p-4 flex flex-col gap-y-1 justify-center">
+              <span className="font-bold text-600 text-[1.5rem]">Advisory Board</span>
+              
+                   
+                 
+                 {/*  start of profile cards */}
+                 <div className=" px-4  flex gap-x-6  flex-wrap justify-center">
+                      <div className="pt-4 w-[18.25rem] h-[20.75rem] flex flex-col items-center justify-center gap-y-4 my-12  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
+      ">
+                                <img
+                                src="/about-hero-image-4.png" 
+                                alt="Team Member"
+                                className="w-20"
+                              />
+                              <span className="font-bold font-700 text-xl"> John Doe</span>
+                              <span className="text-[#9095A0]">CEO</span>
+                              <button type="button" className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center ">View Profile</button>
+                              <div className="bg-[#C8F9FF] text-white rounded-[100%] w-10 h-10 px-3 py-1  "><span className="text-black  text-2xl">+</span></div>
+                              
+                          </div>
+
+                      <div className="pt-4 w-[18.25rem] h-[20.75rem] flex flex-col items-center justify-center gap-y-4 my-12  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
+  ">
+                            <img
+                            src="/about-hero-image-4.png" 
+                            alt="Team Member"
+                            className="w-20"
+                          />
+                          <span className="font-bold font-700 text-xl"> John Doe</span>
+                          <span className="text-[#9095A0]">CEO</span>
+                          <button type="button" className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center ">View Profile</button>
+                          <div className="bg-[#C8F9FF] text-white rounded-[100%] w-10 h-10 px-3 py-1  "><span className="text-black  text-2xl">+</span></div>
+                          
+                      </div>
+                      <div className="pt-4 w-[18.25rem] h-[20.75rem] flex flex-col items-center justify-center gap-y-4 my-12  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
+  ">
+                            <img
+                            src="/about-hero-image-4.png" 
+                            alt="Team Member"
+                            className="w-20"
+                          />
+                          <span className="font-bold font-700 text-xl"> John Doe</span>
+                          <span className="text-[#9095A0]">CEO</span>
+                          <button type="button" className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center ">View Profile</button>
+                          <div className="bg-[#C8F9FF] text-white rounded-[100%] w-10 h-10 px-3 py-1  "><span className="text-black  text-2xl">+</span></div>
+                          
+                      </div>
+
+                      <div className="pt-4 w-[18.25rem] h-[20.75rem] flex flex-col items-center justify-center gap-y-4 my-12  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
+  ">
+                            <img
+                            src="/about-hero-image-4.png" 
+                            alt="Team Member"
+                            className="w-20"
+                          />
+                          <span className="font-bold font-700 text-xl"> John Doe</span>
+                          <span className="text-[#9095A0]">CEO</span>
+                          <button type="button" className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center ">View Profile</button>
+                          <div className="bg-[#C8F9FF] text-white rounded-[100%] w-10 h-10 px-3 py-1  "><span className="text-black  text-2xl">+</span></div>
+                          
+                      </div>
+
+                      <div className="pt-4 w-[18.25rem] h-[20.75rem] flex flex-col items-center justify-center gap-y-4 my-12  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
+  ">
+                            <img
+                            src="/about-hero-image-4.png" 
+                            alt="Team Member"
+                            className="w-20"
+                          />
+                          <span className="font-bold font-700 text-xl"> John Doe</span>
+                          <span className="text-[#9095A0]">CEO</span>
+                          <button type="button" className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center ">View Profile</button>
+                          <div className="bg-[#C8F9FF] text-white rounded-[100%] w-10 h-10 px-3 py-1  "><span className="text-black  text-2xl">+</span></div>
+                          
+                      </div>
+                      <div className="pt-4 w-[18.25rem] h-[20.75rem] flex flex-col items-center justify-center gap-y-4 my-12  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
+  ">
+                            <img
+                            src="/about-hero-image-4.png" 
+                            alt="Team Member"
+                            className="w-20"
+                          />
+                          <span className="font-bold font-700 text-xl"> John Doe</span>
+                          <span className="text-[#9095A0]">CEO</span>
+                          <button type="button" className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center ">View Profile</button>
+                          <div className="bg-[#C8F9FF] text-white rounded-[100%] w-10 h-10 px-3 py-1  "><span className="text-black  text-2xl">+</span></div>
+                          
+                      </div>
+                      <div className="pt-4 w-[18.25rem] h-[20.75rem] flex flex-col items-center justify-center gap-y-4 my-12  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
+  ">
+                            <img
+                            src="/about-hero-image-4.png" 
+                            alt="Team Member"
+                            className="w-20"
+                          />
+                          <span className="font-bold font-700 text-xl"> John Doe</span>
+                          <span className="text-[#9095A0]">CEO</span>
+                          <button type="button" className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center ">View Profile</button>
+                          <div className="bg-[#C8F9FF] text-white rounded-[100%] w-10 h-10 px-3 py-1  "><span className="text-black  text-2xl">+</span></div>
+                          
+                      </div>
+
+                      <div className="pt-4 w-[18.25rem] h-[20.75rem] flex flex-col items-center justify-center gap-y-4 my-12  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
+  ">
+                            <img
+                            src="/about-hero-image-4.png" 
+                            alt="Team Member"
+                            className="w-20"
+                          />
+                          <span className="font-bold font-700 text-xl"> John Doe</span>
+                          <span className="text-[#9095A0]">CEO</span>
+                          <button type="button" className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center ">View Profile</button>
+                          <div className="bg-[#C8F9FF] text-white rounded-[100%] w-10 h-10 px-3 py-1  "><span className="text-black  text-2xl">+</span></div>
+                          
+                      </div>
+                      <div className="pt-4 w-[18.25rem] h-[20.75rem] flex flex-col items-center justify-center gap-y-4 my-12  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
+  ">
+                            <img
+                            src="/about-hero-image-4.png" 
+                            alt="Team Member"
+                            className="w-20"
+                          />
+                          <span className="font-bold font-700 text-xl"> John Doe</span>
+                          <span className="text-[#9095A0]">CEO</span>
+                          <button type="button" className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center ">View Profile</button>
+                          <div className="bg-[#C8F9FF] text-white rounded-[100%] w-10 h-10 px-3 py-1  "><span className="text-black  text-2xl">+</span></div>
+                          
+                      </div>
+                      <div className="pt-4 w-[18.25rem] h-[20.75rem] flex flex-col items-center justify-center gap-y-4 my-12  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
+  ">
+                            <img
+                            src="/about-hero-image-4.png" 
+                            alt="Team Member"
+                            className="w-20"
+                          />
+                          <span className="font-bold font-700 text-xl"> John Doe</span>
+                          <span className="text-[#9095A0]">CEO</span>
+                          <button type="button" className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center ">View Profile</button>
+                          <div className="bg-[#C8F9FF] text-white rounded-[100%] w-10 h-10 px-3 py-1  "><span className="text-black  text-2xl">+</span></div>
+                          
+                      </div>
+                  
+                 </div>
+                 {/* end of profile cards */}
+              
+
+          </div>
+        </section>
+
+        {/* End of Advisory Board */}
+
+        {/* Start of why baobabpad section */}
+        <section className="border-t border-500  flex items-center flex-wrap p-10">
+            <div className="flex flex-col justify-center w-[65%] gap-y-5  p-4">
+              <div className="flex flex-col ">
+                  <span className="text-[#00BDD6]">Officia esse deserunt magna</span>
+                  <span className="font-bold text-5xl text-[#323842]">Why Baobabpad</span>
+              </div>
+
+              <div className="mt-5">
+                <span className="text-[1.5rem] ">Intuitive talent software development platform that lets you find and hire vetted talent, build teams, and connect seamless.</span>
+              </div>
+
+              <div className="flex flex-row gap-x-4 items-center">
+                   <button className="w-[7rem] bg-[#00BDD6] text-white font-[1.125rem] p-[0.4rem] rounded-[1rem] hover:bg-white hover:text-[#00BDD6] hover:border hover:border-500"> Try Free</button>
+                   <span className="text-[#9095A0] font-[1.125rem] cursor-pointer hover:bg-[#00BDD6] hover:border hover:bg-[#00BDD6] hover:text-[#FFF] hover:p-[0.4rem]  hover:rounded-[1rem]">Learn More</span>
+              </div>
+
+               
+              
+                    
+            </div>
+
+            <div className=" flex   w-[34.5%]  ">
+              <div className="bg-[#A6F5FF]  border  rounded-t-[50%] border-t-o border-  w-[22rem] h-[27rem]  relative z-99">
+                 <img src="/hand_holding_phone.png" alt="hand holiding a phone"  className="pl-[-1rem] absolute top-8 left-[-3.2rem] "/>
+                 <div className="w-[15.75rem] h-[8.75rem] shadow-2xl absolute top-5 left-[12rem] z-999 bg-[#fff] flex flex-col items-left p-3 border border-gar-100 rounded-[0.7rem]">
+                  <span className="text-gray-400">Return on Investment</span>
+                  <span className="text-[3rem]">230%</span>
+                  <span className="text-green-500">5.39%</span>
+
+                 </div>
+              </div>
+                 
+
+
+            </div>
+        </section>
+        {/* End of why baobabpad section */}
 
 
 
