@@ -579,9 +579,55 @@ const Baobabpad = () => {
 
           </section>
 
-
-
           {/* End of message from our village  */}
+
+          {/* Start of the impact section */}
+          <section className="flex flex-col justify-center mt-7 ">
+              <div className="flex flex-row justify-center">
+              <span className="align-left font-extrabold font text-[3rem]">Our Impact</span>
+              </div>
+           <div className="flex justify-end p-4" >
+              <button className="border border-[#00BDD6] p-2 text-[#00BDD6] text-[0.875rem] rounded-[1rem] hover:bg-[#00BDD6] hover:text-[#fff]">View More ...</button>
+           </div>
+
+           <div className="flex justify-center  flex-wrap gap-x-7 gap-y-7  ">
+             <div className=" flex flex-col p-4 gap-y-5 shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer">
+          
+                <img src="/Pascaline 1.png" alt="Pascaline's photo"  className="w-[19rem]" />
+                <span className="text-[1.5rem] font-bold">Virtual Intership Program </span>
+                <div >
+                   <span className="bg-[#EBFDFF] text-[#00BDD6] text-[0.7rem] p-1 rounded-[1rem]">Impact</span>
+                </div>
+               
+             </div>
+              <div className="flex flex-col p-4  gap-y-5 shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer">
+                <img src="/kenny.png" alt="Kenny's photo"  />
+                <span className="text-[1.5rem] font-bold">Growth Mentorship</span>
+                <div>
+                     <span className="bg-[#F1F4FD] text-[#4069E5] text-[0.7rem] p-1 rounded-[1rem]">Human Capital</span>
+                </div>
+              </div>
+
+              <div className="flex flex-col p-4 gap-y-5 shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer">
+                <img src="/team_haniken.png" alt="A boy holding a ball photo" className="w-[19rem]" />
+                <span className="text-[1.5rem] font-bold">Team Hanniken</span>
+               <div>
+                   <span className="bg-[#EBFDFF] text-[#00BDD6] text-[0.7rem] p-1 rounded-[1rem]">Sports</span>
+               </div>
+              </div>
+              
+          
+                
+           </div>
+
+
+
+
+          </section>
+
+          {/* End of the impact section */}
+
+          
 
 
       </Layout>
