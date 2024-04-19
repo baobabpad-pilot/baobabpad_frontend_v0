@@ -138,10 +138,10 @@ const Baobabpad = () => {
           <div className="  p-4 flex flex-col gap-y-1 justify-center">
               <span className="font-bold text-600 text-[1.5rem]">Village Management Team</span>
               
-                    <form action="" className=" flex flex-row items-center  w-[100%] bg-[#EAECEF]  ">
+                    {/* <form action="" className=" flex flex-row items-center  w-[100%] bg-[#EAECEF]  ">
                     <CiSearch  className="text-[2rem]"/>
                         <input type="text" placeholder="search"   className="w-[90%] bg-[#EAECEF]  p-2"/>
-                    </form>
+                    </form> */}
                  
                  {/*  start of profile cards */}
                  <div className=" px-4  flex gap-x-6  flex-wrap justify-center">
