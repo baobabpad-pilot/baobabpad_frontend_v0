@@ -10,6 +10,8 @@ import { TbNorthStar } from "react-icons/tb";
 import { SlEmotsmile } from "react-icons/sl";
 import { FaShareNodes } from "react-icons/fa6";
 import { CiSearch } from "react-icons/ci";
+import { VscGraph } from "react-icons/vsc";
+import { FaRegHandshake } from "react-icons/fa";
 
 
 const Baobabpad = () => {
@@ -476,6 +478,54 @@ const Baobabpad = () => {
         </section>
         {/* End of why baobabpad section */}
 
+        {/* Start of  Clients benefits and  devops benefits */}
+          <section className="border-t border-500 flex  flex-row justify-center w-[100%] items-center flex-wrap  gap-x-7  gap-y-10 p-10">
+            <div className="border border-white-100 bg-[#EBFDFF] flex flex-col w-[30.625rem] h-[18.625rem] p-8 ">
+                <span className="font-bold text-3xl">Client Benefits</span>
+                <span>adipisicing elit. Quidem officiis explicabo quos dolorem perspiciatis vel asperiores odit harum, itaque quas maxime eveniet numquam hic, iste error omnis! Ad, rerum provident</span>
+                <ul className="list-disc pl-8">
+                    <li className="mb-2">100% remote team management support</li>
+                    <li className="mb-2">Culture and team building excellence</li>
+                    <li className="mb-2">Merit-reward infrastructure</li>
+                    <li className="mb-2">High return on investment and impact</li>
+                </ul>
+            </div>
+
+            <div className="border border-white-100 bg-[#F5F2FD] flex flex-col w-[30.625rem] h-[18.625rem] p-8">
+                <span className="font-bold text-3xl"> DevOps benefits</span>
+                <span>adipisicing elit. Quidem officiis explicabo quos dolorem perspiciatis vel asperiores odit harum, itaque quas maxime eveniet numquam hic, iste error omnis! Ad, rerum provident</span>
+
+            <div className="flex flex-row justify-around">
+            <div className="flex flex-col justify-center">
+                   <div className="flex  items-center ml-1 p-2">
+                      <VscGraph />
+                      <span className="p-2">Cost Effective</span>
+                   </div>
+
+                     <div>
+                        <span className="p-4 text-[2rem] font-bold font-700">+40%</span>
+                     </div>
+              </div>
+
+              <div className="flex flex-col justify-center">
+                   <div className="flex  items-center ml-1 p-2">
+                   <FaRegHandshake />
+                      <span className="p-2">Quality Assurance</span>
+                   </div>
+                   <div>
+                        <span className="p-4 text-[2rem] font-bold font-700">100%</span>
+                   </div>
+              </div>
+            </div>
+
+            
+
+
+            </div>
+
+          </section>
+
+          {/* End of  Clients benefits and  devops benefits */}
 
 
       </Layout>
