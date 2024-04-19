@@ -553,7 +553,7 @@ const Baobabpad = () => {
 
           {/* Start of message from  our village  */}
 
-          <section className="flex flex-col justify-center ">
+          <section className="flex flex-col justify-center  ">
               <div className="flex flex-row justify-center">
               <span className="align-center font-extrabold font text-[3rem]">Message from Our Village</span>
               </div>
@@ -626,6 +626,50 @@ const Baobabpad = () => {
           </section>
 
           {/* End of the impact section */}
+
+          {/* Start of featured by section */}
+          <section className="bg-[#F8F9FA] flex flex-col items-center mt-8 p-6 gap-y-4 ">
+
+            <div>
+              <span className="text-[2rem] font-medium text-[#341473]">Featured by:</span>
+            </div>
+
+            <div className="flex flex-row gap-x-8 justify-between">
+            <div className="flex flex-row ">
+                  <img src="/apex-fusion-icon-1.png" alt=" apex fusion icon" />
+              
+              </div>
+              <div className="flex flex-row">
+                  <img src="/nebulla-dynamics-1.png" alt="nebulla dynamics icon" />
+               
+              </div>
+
+              <div className="flex flex-row">
+                  <img src="/virtuoso-icon-1.png" alt=" virtuoso icon" />
+               
+              </div>
+
+              <div className="flex flex-row">
+                  <img src="/quantum-icon-1.png" alt="quantum icon" />
+            
+              </div>
+
+              <div className="flex flex-row">
+                  <img src="/pinnacle-nexus-icon-1.png" alt="pinnacle-nexus icon" />
+               
+              </div>
+              
+              <div className="flex flex-row">
+                  <img src="/elysium-global-icon.png" alt="elysium-global icon" />
+                
+              </div>
+            </div>
+              
+
+
+          </section>
+
+          {/* End of featured by section */}
 
 
 
