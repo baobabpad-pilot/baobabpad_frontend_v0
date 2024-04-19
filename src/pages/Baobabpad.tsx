@@ -12,6 +12,8 @@ import { FaShareNodes } from "react-icons/fa6";
 import { CiSearch } from "react-icons/ci";
 import { VscGraph } from "react-icons/vsc";
 import { FaRegHandshake } from "react-icons/fa";
+import { HiOutlineUserAdd } from "react-icons/hi";
+import { FaPeopleGroup } from "react-icons/fa6";
 
 
 const Baobabpad = () => {
@@ -526,6 +528,31 @@ const Baobabpad = () => {
           </section>
 
           {/* End of  Clients benefits and  devops benefits */}
+
+          {/* Start of team building and project management sections */}
+          <section className="flex flex-row justify-evenly items-center flex-wrap p-10">
+            <div className="flex flex-col items-center  w-[20rem] h-[20rem] p-2">
+                  <HiOutlineUserAdd className="text-[#00BDD6] text-[3rem] "/>
+                  <span className="text-[#00BDD6] text-[2rem]">Team Building</span>
+                  <span className="text-[1.25rem]">Effortlessly manage your hiring process with real-time candidate tracking</span>
+             </div>
+
+             <div className="flex flex-col items-center  w-[25rem] h-[20rem] p-2">
+                  <FaPeopleGroup  className="text-[#4069E5] text-[3rem] "/>
+                  <span className="text-[#4069E5] text-[2rem]">Project Management</span>
+                  <span className="text-[1.25rem]">
+                  Simplify HR tasks with efficient employee information management through our centralized database
+                  </span>
+             </div>
+
+
+
+          </section>
+
+
+
+
+          {/* End of team building and project management sections */}
 
 
       </Layout>
