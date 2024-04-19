@@ -9,6 +9,8 @@ import { TbStar } from "react-icons/tb";
 import { TbNorthStar } from "react-icons/tb";
 import { SlEmotsmile } from "react-icons/sl";
 import { FaShareNodes } from "react-icons/fa6";
+import { CiSearch } from "react-icons/ci";
+
 
 const Baobabpad = () => {
   return (
@@ -118,17 +120,170 @@ const Baobabpad = () => {
                            <FaShareNodes  className="text-[#8353E2] text-200 text-[0.8rem] w-16 h-16" />
                               <span  className="text-[1.25rem] ml-2 text-500 font-bold">Business Model</span>
                            </div>
-                           <span className="px-16">Our business model iis ownership and impact  based busiiness model , empowering economic and social incliusion for all  our talent. </span>
+                           <span className="px-16">Our business model is ownership and impact  based busiiness model , empowering economic and social inclusion for all  our talent. </span>
                         </div>
 
-                        
 
                     </div>
 
 
                 </div>
         </section>
+        {/* Village Management Team */}
+        <section className="border-t border-500 p-12">
+          <div className="  p-4 flex flex-col gap-y-1 justify-center">
+              <span className="font-bold text-600 text-[1.5rem]">Village Management Team</span>
+              
+                    <form action="" className=" flex flex-row items-center  w-[100%] bg-[#EAECEF]  ">
+                    <CiSearch  className="text-[2rem]"/>
+                        <input type="text" placeholder="search"   className="w-[90%] bg-[#EAECEF]  p-2"/>
+                    </form>
+                 
+                 {/*  start of profile cards */}
+                 <div className=" px-4  flex gap-x-6  flex-wrap justify-center">
+                      <div className="pt-4 w-[18.25rem] h-[20.75rem] flex flex-col items-center justify-center gap-y-4 my-12  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
+      ">
+                                <img
+                                src="/about-hero-image-4.png" 
+                                alt="Team Member"
+                                className="w-20"
+                              />
+                              <span className="font-bold font-700 text-xl"> John Doe</span>
+                              <span className="text-[#9095A0]">CEO</span>
+                              <button type="button" className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center ">View Profile</button>
+                              <div className="bg-[#C8F9FF] text-white rounded-[100%] w-10 h-10 px-3 py-1  "><span className="text-black  text-2xl">+</span></div>
+                              
+                          </div>
 
+                      <div className="pt-4 w-[18.25rem] h-[20.75rem] flex flex-col items-center justify-center gap-y-4 my-12  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
+  ">
+                            <img
+                            src="/about-hero-image-4.png" 
+                            alt="Team Member"
+                            className="w-20"
+                          />
+                          <span className="font-bold font-700 text-xl"> John Doe</span>
+                          <span className="text-[#9095A0]">CEO</span>
+                          <button type="button" className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center ">View Profile</button>
+                          <div className="bg-[#C8F9FF] text-white rounded-[100%] w-10 h-10 px-3 py-1  "><span className="text-black  text-2xl">+</span></div>
+                          
+                      </div>
+                      <div className="pt-4 w-[18.25rem] h-[20.75rem] flex flex-col items-center justify-center gap-y-4 my-12  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
+  ">
+                            <img
+                            src="/about-hero-image-4.png" 
+                            alt="Team Member"
+                            className="w-20"
+                          />
+                          <span className="font-bold font-700 text-xl"> John Doe</span>
+                          <span className="text-[#9095A0]">CEO</span>
+                          <button type="button" className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center ">View Profile</button>
+                          <div className="bg-[#C8F9FF] text-white rounded-[100%] w-10 h-10 px-3 py-1  "><span className="text-black  text-2xl">+</span></div>
+                          
+                      </div>
+
+                      <div className="pt-4 w-[18.25rem] h-[20.75rem] flex flex-col items-center justify-center gap-y-4 my-12  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
+  ">
+                            <img
+                            src="/about-hero-image-4.png" 
+                            alt="Team Member"
+                            className="w-20"
+                          />
+                          <span className="font-bold font-700 text-xl"> John Doe</span>
+                          <span className="text-[#9095A0]">CEO</span>
+                          <button type="button" className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center ">View Profile</button>
+                          <div className="bg-[#C8F9FF] text-white rounded-[100%] w-10 h-10 px-3 py-1  "><span className="text-black  text-2xl">+</span></div>
+                          
+                      </div>
+
+                      <div className="pt-4 w-[18.25rem] h-[20.75rem] flex flex-col items-center justify-center gap-y-4 my-12  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
+  ">
+                            <img
+                            src="/about-hero-image-4.png" 
+                            alt="Team Member"
+                            className="w-20"
+                          />
+                          <span className="font-bold font-700 text-xl"> John Doe</span>
+                          <span className="text-[#9095A0]">CEO</span>
+                          <button type="button" className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center ">View Profile</button>
+                          <div className="bg-[#C8F9FF] text-white rounded-[100%] w-10 h-10 px-3 py-1  "><span className="text-black  text-2xl">+</span></div>
+                          
+                      </div>
+                      <div className="pt-4 w-[18.25rem] h-[20.75rem] flex flex-col items-center justify-center gap-y-4 my-12  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
+  ">
+                            <img
+                            src="/about-hero-image-4.png" 
+                            alt="Team Member"
+                            className="w-20"
+                          />
+                          <span className="font-bold font-700 text-xl"> John Doe</span>
+                          <span className="text-[#9095A0]">CEO</span>
+                          <button type="button" className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center ">View Profile</button>
+                          <div className="bg-[#C8F9FF] text-white rounded-[100%] w-10 h-10 px-3 py-1  "><span className="text-black  text-2xl">+</span></div>
+                          
+                      </div>
+                      <div className="pt-4 w-[18.25rem] h-[20.75rem] flex flex-col items-center justify-center gap-y-4 my-12  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
+  ">
+                            <img
+                            src="/about-hero-image-4.png" 
+                            alt="Team Member"
+                            className="w-20"
+                          />
+                          <span className="font-bold font-700 text-xl"> John Doe</span>
+                          <span className="text-[#9095A0]">CEO</span>
+                          <button type="button" className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center ">View Profile</button>
+                          <div className="bg-[#C8F9FF] text-white rounded-[100%] w-10 h-10 px-3 py-1  "><span className="text-black  text-2xl">+</span></div>
+                          
+                      </div>
+
+                      <div className="pt-4 w-[18.25rem] h-[20.75rem] flex flex-col items-center justify-center gap-y-4 my-12  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
+  ">
+                            <img
+                            src="/about-hero-image-4.png" 
+                            alt="Team Member"
+                            className="w-20"
+                          />
+                          <span className="font-bold font-700 text-xl"> John Doe</span>
+                          <span className="text-[#9095A0]">CEO</span>
+                          <button type="button" className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center ">View Profile</button>
+                          <div className="bg-[#C8F9FF] text-white rounded-[100%] w-10 h-10 px-3 py-1  "><span className="text-black  text-2xl">+</span></div>
+                          
+                      </div>
+                      <div className="pt-4 w-[18.25rem] h-[20.75rem] flex flex-col items-center justify-center gap-y-4 my-12  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
+  ">
+                            <img
+                            src="/about-hero-image-4.png" 
+                            alt="Team Member"
+                            className="w-20"
+                          />
+                          <span className="font-bold font-700 text-xl"> John Doe</span>
+                          <span className="text-[#9095A0]">CEO</span>
+                          <button type="button" className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center ">View Profile</button>
+                          <div className="bg-[#C8F9FF] text-white rounded-[100%] w-10 h-10 px-3 py-1  "><span className="text-black  text-2xl">+</span></div>
+                          
+                      </div>
+                      <div className="pt-4 w-[18.25rem] h-[20.75rem] flex flex-col items-center justify-center gap-y-4 my-12  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
+  ">
+                            <img
+                            src="/about-hero-image-4.png" 
+                            alt="Team Member"
+                            className="w-20"
+                          />
+                          <span className="font-bold font-700 text-xl"> John Doe</span>
+                          <span className="text-[#9095A0]">CEO</span>
+                          <button type="button" className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center ">View Profile</button>
+                          <div className="bg-[#C8F9FF] text-white rounded-[100%] w-10 h-10 px-3 py-1  "><span className="text-black  text-2xl">+</span></div>
+                          
+                      </div>
+                  
+                 </div>
+                 {/* end of profile cards */}
+              
+
+          </div>
+
+
+        </section>
 
 
 
