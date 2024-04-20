@@ -40,6 +40,29 @@ const Solutions = () => {
           <img src="/introduction-solution-image.png" alt="people smiling " className="w-full"/>
           
         </div>
+        
+
+        <div className="w-full md:w-[90%] flex flex-col flex-wrap items-center bg-[#F3F4F6] mt-3 p-8 gap-y-2 rounded-[2rem]">
+          <div><span  className="font-serif text-[1.25rem]">As featured in </span></div>
+          <div className=" flex items-center gap-x-12">
+              <span className="font-serif text-[1.875rem]">BizBeat Insights</span>
+              <span  className="font-serif text-[1.5rem]">Financial Scope</span>
+              <span  className="font-serif text-[1.5rem] font-extrabold">CommercialCurrentScope</span>
+          </div>
+
+        </div>
+
+        <div  className="w-full  flex flex-col md:flex-row items-center justify-center flex-wrap p-12 ">
+              <div className="w-full md:w-[50%] flex flex-row md:flex-col justify-center flex-wrap p-6 pt-[-1rem] gap-y-7">
+                  hhhh
+          </div>
+        </div>
+
+
+
+
+
+
     </section>
 
 
