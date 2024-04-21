@@ -1,8 +1,14 @@
 import React, { useState } from "react";
 import Layout from "@/components/Layout";
+import { useDispatch, useSelector } from 'react-redux';
+import { updateFormData } from "@/redux/slices/formDataSlice";
+import { RootState } from '@/redux/rootReducer'
 import { CiCircleAlert } from "react-icons/ci";
 
 const VerifyBusiness = () => {
+  const dispatch = useDispatch();
+  const formDataUpdated = useSelector((state: RootState) => state.formData);
+
 const [formData, setFormData] = useState({
   company_name: "",
   business_type: "",
@@ -14,20 +20,23 @@ const [formData, setFormData] = useState({
   city: ""
 })
 
-const handleChange = (e: any) => {
- const {name, value} = e.target;
+const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const { name, value } = e.target;
 
-  setFormData({
-    ...formData,
+  setFormData(prevData => ({
+    ...prevData,
     [name]: value,
-  })
-}
+  }));
 
-const handleSubmit = (e: any) => {
+  dispatch(updateFormData({ business_information: { ...formData, [name]: value } }));
+};
+
+
+const handleSubmit = (e: React.FormEvent) => {
   e.preventDefault();
-console.log(formData)
-}
-
+  console.log(formDataUpdated); 
+  
+};
 
 
   return (
