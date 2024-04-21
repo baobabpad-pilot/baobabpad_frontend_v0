@@ -8,10 +8,7 @@ import user2 from "../career_images/user2.png";
 import user3 from "../career_images/user3.png";
 import user4 from "../career_images/user4.png";
 import Auth from "@/components/career_section/Auth";
-
-
-
-
+// import benefits1 from "";
 
 const Careers = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
@@ -25,11 +22,10 @@ const Careers = () => {
 
     window.addEventListener("resize", handleResize);
 
-
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []); 
+  }, []);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -114,7 +110,54 @@ const Careers = () => {
         <h2 className="mt-10 text-center text-3xl">
           <b style={{ color: "rgb(50, 56, 66)" }}>Our benefits</b>
         </h2>
+
+        <div className={styles.part}>
+          <div className="container mx-auto px-4 lg:px-20 mt-10 flex flex-row justify-between items-center flex-wrap">
+            <div className="img1">
+              <img src="/benefits (5).png" alt="" className="w-full h-auto" />
+            </div>
+            {/* Image 2 */}
+            <div className="img2">
+              <img src="benefits (4).png" alt="" className="w-full h-auto" />
+            </div>
+            <div className="img2">
+              <img src="benefits (3).png" alt="" className="w-full h-auto" />
+            </div>
+          </div>
+          <div className="container mx-auto px-4 lg:px-20 mt-10 flex flex-row justify-between items-center flex-wrap">
+            <div className="img1">
+              <img src="/benefits (2).png" alt="" className="w-full h-auto" />
+            </div>
+            {/* Image 2 */}
+            <div className="img2">
+              <img src="benefits (6).png" alt="" className="w-full h-auto" />
+            </div>
+            <div className="img2">
+              <img src="benefits (1).png" alt="" className="w-full h-auto" />
+            </div>
+          </div>
+        </div>
       </div>
+
+      <h2 className="mt-10 text-center text-3xl">
+        <b style={{ color: "rgb(50, 56, 66)" }}>Office Space</b>
+      </h2>
+
+      <div className="container flex mx-auto px-4 lg:px-20 mt-10 flex flex-row justify-between items-center flex-wrap">
+        <div
+          className="flex-auto bg-red-600 w-46  ..."
+          style={{ height: "200px" }}
+        >
+          01
+        </div>
+        <div
+          className="flex-auto bg-blue-600 w-64 ..."
+          style={{ height: "200px" }}
+        >
+          02
+        </div>
+      </div>
+
       <div
         className="footer"
         style={{ marginTop: isSmallScreen ? "30px" : "" }}
