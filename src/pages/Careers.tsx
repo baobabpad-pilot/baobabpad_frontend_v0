@@ -145,16 +145,109 @@ const Careers = () => {
 
       <div className="container flex mx-auto px-4 lg:px-20 mt-10 flex flex-row justify-between items-center flex-wrap">
         <div
-          className="flex-auto bg-red-600 w-46  ..."
-          style={{ height: "200px" }}
+          className="flex-auto bg-red-600 w-46 bg-cover bg-center"
+          style={{
+            height: "200px",
+            marginRight: "5px",
+            backgroundImage: "url('https://via.placeholder.com/300')",
+          }} // Adjust margin-right and image URL as needed
+        ></div>
+        <div
+          className="flex-auto bg-blue-600 w-64 bg-cover bg-center"
+          style={{
+            height: "200px",
+            marginLeft: "5px",
+            backgroundImage: "url('https://via.placeholder.com/400')",
+          }} // Adjust margin-left and image URL as needed
+        ></div>
+      </div>
+
+      <div className="container flex mx-auto px-4 lg:px-20 mt-5 flex flex-row justify-between items-center flex-wrap">
+        <div
+          className="flex-auto w-64 bg-cover bg-center"
+          style={{
+            height: "400px",
+            marginRight: "5px",
+            backgroundImage: "url('https://via.placeholder.com/300')",
+          }} // Adjust margin-right as needed
+        ></div>
+
+        <div
+          className="flex-auto  w-64"
+          style={{ marginRight: "5px" }} // Adjust margin-right as needed
         >
-          01
+          <img src="/Image33 (2).png" alt="" height="400px" />
         </div>
         <div
-          className="flex-auto bg-blue-600 w-64 ..."
-          style={{ height: "200px" }}
+          className="flex-auto  w-64 rounded"
+          style={{}} // Adjust height as needed
         >
-          02
+          <img src="/Image33 (1).png" alt="" height="400px" />
+        </div>
+      </div>
+
+      <h2 className="mt-10 text-center text-3xl">
+        <b style={{ color: "rgb(50, 56, 66)" }}>Stories</b>
+      </h2>
+
+      <div className="container flex mx-auto px-4 lg:px-20 mt-10 flex flex-row justify-between items-center flex-wrap">
+        <div
+          className="flex-auto w-46"
+          style={{ height: "200px", marginRight: "5px" }}
+        >
+          <video
+            className="w-full h-full object-cover"
+            poster="https://via.placeholder.com/300"
+            controls
+          >
+            <source src="your-video-source-1.mp4" type="video/mp4" />
+            {/* Add more <source> elements for different video formats if needed */}
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div
+          className="flex-auto w-64"
+          style={{ height: "200px", marginLeft: "5px" }}
+        >
+          <video
+            className="w-full h-full object-cover"
+            poster="https://via.placeholder.com/400"
+            controls
+          >
+            <source src="your-video-source-2.mp4" type="video/mp4" />
+            {/* Add more <source> elements for different video formats if needed */}
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+      <div className="container flex mx-auto px-4 lg:px-20 mt-5 flex flex-row justify-between items-center flex-wrap">
+        <div
+          className="flex-auto w-64"
+          style={{ height: "400px", marginRight: "5px" }}
+        >
+          <video
+            className="w-full h-full object-cover"
+            poster="https://via.placeholder.com/300"
+            controls
+          >
+            <source src="your-video-source.mp4" type="video/mp4" />
+            {/* Add more <source> elements for different video formats if needed */}
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div
+          className="flex-auto  w-64"
+          style={{ marginRight: "5px" }} // Adjust margin-right as needed
+        >
+          <img src="/Image33 (2).png" alt="" height="400px" />
+        </div>
+        <div
+          className="flex-auto  w-64 rounded"
+          style={{}} // Adjust height as needed
+        >
+          <img src="/Image33 (1).png" alt="" height="400px" />
         </div>
       </div>
 
