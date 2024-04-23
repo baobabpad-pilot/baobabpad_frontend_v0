@@ -195,29 +195,25 @@ const Careers = () => {
           className="flex-auto w-46"
           style={{ height: "200px", marginRight: "5px" }}
         >
-          <video
-            className="w-full h-full object-cover"
-            poster="https://via.placeholder.com/300"
-            controls
-          >
-            <source src="your-video-source-1.mp4" type="video/mp4" />
-            {/* Add more <source> elements for different video formats if needed */}
-            Your browser does not support the video tag.
-          </video>
+          <iframe
+            className="w-full h-full"
+            src="https://drive.google.com/file/d/1ZRC8S7SBO8E8fT_6wvM9z04gAZeUCawN/preview"
+            title="Google Drive video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </div>
         <div
           className="flex-auto w-64"
           style={{ height: "200px", marginLeft: "5px" }}
         >
-          <video
-            className="w-full h-full object-cover"
-            poster="https://via.placeholder.com/400"
-            controls
-          >
-            <source src="your-video-source-2.mp4" type="video/mp4" />
-            {/* Add more <source> elements for different video formats if needed */}
-            Your browser does not support the video tag.
-          </video>
+          <iframe
+            className="w-full h-full"
+            src="https://drive.google.com/file/d/1SAkENMU536n9lh9cbPFE8mr_6zBdRc1G/preview"
+            title="Google Drive video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </div>
       </div>
 
@@ -226,15 +222,13 @@ const Careers = () => {
           className="flex-auto w-64"
           style={{ height: "400px", marginRight: "5px" }}
         >
-          <video
-            className="w-full h-full object-cover"
-            poster="https://via.placeholder.com/300"
-            controls
-          >
-            <source src="your-video-source.mp4" type="video/mp4" />
-            {/* Add more <source> elements for different video formats if needed */}
-            Your browser does not support the video tag.
-          </video>
+          <iframe
+            className="w-full h-full"
+            src="https://drive.google.com/file/d/1nhnhYopT172YPmDfpiNit4YdCEixEkx4/preview"
+            title="Google Drive video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </div>
 
         <div
