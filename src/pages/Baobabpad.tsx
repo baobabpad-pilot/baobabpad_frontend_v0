@@ -220,12 +220,12 @@ const Baobabpad = () => {
                  {/*  start of profile cards */}
                  <div className=" px-4  flex gap-x-6  flex-wrap justify-center">     
                     {teamDetailsArray.map((member, index)=>(
-                      <div key={index} className="pt-4 w-[20.25rem] h-[35.75rem] flex flex-col items-center justify-center gap-y-4 my-12  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
+                      <div key={index} className="pt-4 w-[21.25rem] h-[35.75rem] flex flex-col items-center justify-center gap-y-4 my-12  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
                       ">
                                                 <img
                                                 src={member.image}
                                                 alt="Team Member"
-                                                className="w-[50%] rounded-[50%]"
+                                                className="w-[50%] h-[30%] rounded-[50%]"
                                               />
                                               <span className="font-bold font-700 text-xl">{member.username}</span>
                                               <span className="text-[#9095A0]">{member.position}</span>
