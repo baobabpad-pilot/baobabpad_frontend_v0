@@ -145,16 +145,103 @@ const Careers = () => {
 
       <div className="container flex mx-auto px-4 lg:px-20 mt-10 flex flex-row justify-between items-center flex-wrap">
         <div
-          className="flex-auto bg-red-600 w-46  ..."
-          style={{ height: "200px" }}
+          className="flex-auto bg-red-600 w-46 bg-cover bg-center"
+          style={{
+            height: "200px",
+            marginRight: "5px",
+            backgroundImage: "url('https://via.placeholder.com/300')",
+          }} // Adjust margin-right and image URL as needed
+        ></div>
+        <div
+          className="flex-auto bg-blue-600 w-64 bg-cover bg-center"
+          style={{
+            height: "200px",
+            marginLeft: "5px",
+            backgroundImage: "url('https://via.placeholder.com/400')",
+          }} // Adjust margin-left and image URL as needed
+        ></div>
+      </div>
+
+      <div className="container flex mx-auto px-4 lg:px-20 mt-5 flex flex-row justify-between items-center flex-wrap">
+        <div
+          className="flex-auto w-64 bg-cover bg-center"
+          style={{
+            height: "400px",
+            marginRight: "5px",
+            backgroundImage: "url('https://via.placeholder.com/300')",
+          }} // Adjust margin-right as needed
+        ></div>
+
+        <div
+          className="flex-auto  w-64"
+          style={{ marginRight: "5px" }} // Adjust margin-right as needed
         >
-          01
+          <img src="/Image33 (2).png" alt="" height="400px" />
         </div>
         <div
-          className="flex-auto bg-blue-600 w-64 ..."
-          style={{ height: "200px" }}
+          className="flex-auto  w-64 rounded"
+          style={{}} // Adjust height as needed
         >
-          02
+          <img src="/Image33 (1).png" alt="" height="400px" />
+        </div>
+      </div>
+
+      <h2 className="mt-10 text-center text-3xl">
+        <b style={{ color: "rgb(50, 56, 66)" }}>Stories</b>
+      </h2>
+
+      <div className="container flex mx-auto px-4 lg:px-20 mt-10 flex flex-row justify-between items-center flex-wrap">
+        <div
+          className="flex-auto w-46"
+          style={{ height: "200px", marginRight: "5px" }}
+        >
+          <iframe
+            className="w-full h-full"
+            src="https://drive.google.com/file/d/1ZRC8S7SBO8E8fT_6wvM9z04gAZeUCawN/preview"
+            title="Google Drive video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
+        <div
+          className="flex-auto w-64"
+          style={{ height: "200px", marginLeft: "5px" }}
+        >
+          <iframe
+            className="w-full h-full"
+            src="https://drive.google.com/file/d/1SAkENMU536n9lh9cbPFE8mr_6zBdRc1G/preview"
+            title="Google Drive video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
+      </div>
+
+      <div className="container flex mx-auto px-4 lg:px-20 mt-5 flex flex-row justify-between items-center flex-wrap">
+        <div
+          className="flex-auto w-64"
+          style={{ height: "400px", marginRight: "5px" }}
+        >
+          <iframe
+            className="w-full h-full"
+            src="https://drive.google.com/file/d/1nhnhYopT172YPmDfpiNit4YdCEixEkx4/preview"
+            title="Google Drive video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
+
+        <div
+          className="flex-auto  w-64"
+          style={{ marginRight: "5px" }} // Adjust margin-right as needed
+        >
+          <img src="/Image33 (2).png" alt="" height="400px" />
+        </div>
+        <div
+          className="flex-auto  w-64 rounded"
+          style={{}} // Adjust height as needed
+        >
+          <img src="/Image33 (1).png" alt="" height="400px" />
         </div>
       </div>
 
