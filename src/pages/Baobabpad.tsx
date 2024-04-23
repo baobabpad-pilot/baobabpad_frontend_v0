@@ -16,7 +16,81 @@ import { HiOutlineUserAdd } from "react-icons/hi";
 import { FaPeopleGroup } from "react-icons/fa6";
 import { CiPlay1 } from "react-icons/ci";
 
+
+
+
+
+
+
+
+
+
+
+
+
 const Baobabpad = () => {
+
+  const teamDetailsArray=[
+    {
+      image:'/brenda_mkeshwa_CEO.jpg',
+      username:'Brenda Mkeshwa',
+      position:'CEO'
+    },
+    {
+      image:'/kenny.png',
+      username:'Kenny Kaluiji',
+      position:'Founder'
+    },
+    {
+      image:'/jacob_mwale_tech_lead.jpg',
+      username:'Jacob Mwale',
+      position:'Tech Lead'
+    },
+    {
+      image:'/chimwemwe_masona_tech_lead.png',
+      username:'Chimwemwe Masona',
+      position:'Tech Lead'
+    },
+    {
+      image:'/selma_hamutenya_product_manager.png',
+      username:'Selma Hamutenya',
+      position:'Product Manager'
+    },
+    {
+      image:'/Mark_Ai.jpg',
+      username:'Mark Njoroge',
+      position:'AI Lead'
+    },
+    {
+      image:'/steve.jpg',
+      username:'Stephen Ondieki',
+      position:'Testing Lead'
+    },
+    {
+      image:'/crispin_manda_product_manager.png',
+      username:'Crispin Manda ',
+      position:'Product Manager'
+    },
+    {
+      image:'/sidney_kipron_cloud_manager.png',
+      username:'Sidney Kiprono ',
+      position:'Cloud Manager'
+    },
+    {
+      image:'/martin_mundia_cloud_manager.jpg',
+      username:'Martin Mundia ',
+      position:'Cloud Manager'
+    },
+  ]
+
+
+
+
+
+
+
+
+
   return (
     <div className="min-h-screen flex flex-col">
       <Layout>
@@ -144,141 +218,25 @@ const Baobabpad = () => {
                     </form> */}
                  
                  {/*  start of profile cards */}
-                 <div className=" px-4  flex gap-x-6  flex-wrap justify-center">
-                      <div className="pt-4 w-[18.25rem] h-[20.75rem] flex flex-col items-center justify-center gap-y-4 my-12  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
-      ">
-                                <img
-                                src="/about-hero-image-4.png" 
-                                alt="Team Member"
-                                className="w-20"
-                              />
-                              <span className="font-bold font-700 text-xl"> John Doe</span>
-                              <span className="text-[#9095A0]">CEO</span>
-                              <button type="button" className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center ">View Profile</button>
-                              <div className="bg-[#C8F9FF] text-white rounded-[100%] w-10 h-10 px-3 py-1  "><span className="text-black  text-2xl">+</span></div>
-                              
-                          </div>
+                 <div className=" px-4  flex gap-x-6  flex-wrap justify-center">     
+                    {teamDetailsArray.map((member, index)=>(
+                      <div key={index} className="pt-4 w-[20.25rem] h-[35.75rem] flex flex-col items-center justify-center gap-y-4 my-12  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
+                      ">
+                                                <img
+                                                src={member.image}
+                                                alt="Team Member"
+                                                className="w-[50%] rounded-[50%]"
+                                              />
+                                              <span className="font-bold font-700 text-xl">{member.username}</span>
+                                              <span className="text-[#9095A0]">{member.position}</span>
+                                              <button type="button" className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center ">View Profile</button>
+                                              <div className="bg-[#C8F9FF] text-white rounded-[100%] w-10 h-10 px-3 py-1  "><span className="text-black  text-2xl">+</span></div>
+                                              
+                                          </div>
 
-                      <div className="pt-4 w-[18.25rem] h-[20.75rem] flex flex-col items-center justify-center gap-y-4 my-12  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
-  ">
-                            <img
-                            src="/about-hero-image-4.png" 
-                            alt="Team Member"
-                            className="w-20"
-                          />
-                          <span className="font-bold font-700 text-xl"> John Doe</span>
-                          <span className="text-[#9095A0]">CEO</span>
-                          <button type="button" className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center ">View Profile</button>
-                          <div className="bg-[#C8F9FF] text-white rounded-[100%] w-10 h-10 px-3 py-1  "><span className="text-black  text-2xl">+</span></div>
-                          
-                      </div>
-                      <div className="pt-4 w-[18.25rem] h-[20.75rem] flex flex-col items-center justify-center gap-y-4 my-12  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
-  ">
-                            <img
-                            src="/about-hero-image-4.png" 
-                            alt="Team Member"
-                            className="w-20"
-                          />
-                          <span className="font-bold font-700 text-xl"> John Doe</span>
-                          <span className="text-[#9095A0]">CEO</span>
-                          <button type="button" className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center ">View Profile</button>
-                          <div className="bg-[#C8F9FF] text-white rounded-[100%] w-10 h-10 px-3 py-1  "><span className="text-black  text-2xl">+</span></div>
-                          
-                      </div>
+                    ))}
+                  
 
-                      <div className="pt-4 w-[18.25rem] h-[20.75rem] flex flex-col items-center justify-center gap-y-4 my-12  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
-  ">
-                            <img
-                            src="/about-hero-image-4.png" 
-                            alt="Team Member"
-                            className="w-20"
-                          />
-                          <span className="font-bold font-700 text-xl"> John Doe</span>
-                          <span className="text-[#9095A0]">CEO</span>
-                          <button type="button" className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center ">View Profile</button>
-                          <div className="bg-[#C8F9FF] text-white rounded-[100%] w-10 h-10 px-3 py-1  "><span className="text-black  text-2xl">+</span></div>
-                          
-                      </div>
-
-                      <div className="pt-4 w-[18.25rem] h-[20.75rem] flex flex-col items-center justify-center gap-y-4 my-12  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
-  ">
-                            <img
-                            src="/about-hero-image-4.png" 
-                            alt="Team Member"
-                            className="w-20"
-                          />
-                          <span className="font-bold font-700 text-xl"> John Doe</span>
-                          <span className="text-[#9095A0]">CEO</span>
-                          <button type="button" className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center ">View Profile</button>
-                          <div className="bg-[#C8F9FF] text-white rounded-[100%] w-10 h-10 px-3 py-1  "><span className="text-black  text-2xl">+</span></div>
-                          
-                      </div>
-                      <div className="pt-4 w-[18.25rem] h-[20.75rem] flex flex-col items-center justify-center gap-y-4 my-12  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
-  ">
-                            <img
-                            src="/about-hero-image-4.png" 
-                            alt="Team Member"
-                            className="w-20"
-                          />
-                          <span className="font-bold font-700 text-xl"> John Doe</span>
-                          <span className="text-[#9095A0]">CEO</span>
-                          <button type="button" className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center ">View Profile</button>
-                          <div className="bg-[#C8F9FF] text-white rounded-[100%] w-10 h-10 px-3 py-1  "><span className="text-black  text-2xl">+</span></div>
-                          
-                      </div>
-                      <div className="pt-4 w-[18.25rem] h-[20.75rem] flex flex-col items-center justify-center gap-y-4 my-12  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
-  ">
-                            <img
-                            src="/about-hero-image-4.png" 
-                            alt="Team Member"
-                            className="w-20"
-                          />
-                          <span className="font-bold font-700 text-xl"> John Doe</span>
-                          <span className="text-[#9095A0]">CEO</span>
-                          <button type="button" className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center ">View Profile</button>
-                          <div className="bg-[#C8F9FF] text-white rounded-[100%] w-10 h-10 px-3 py-1  "><span className="text-black  text-2xl">+</span></div>
-                          
-                      </div>
-
-                      <div className="pt-4 w-[18.25rem] h-[20.75rem] flex flex-col items-center justify-center gap-y-4 my-12  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
-  ">
-                            <img
-                            src="/about-hero-image-4.png" 
-                            alt="Team Member"
-                            className="w-20"
-                          />
-                          <span className="font-bold font-700 text-xl"> John Doe</span>
-                          <span className="text-[#9095A0]">CEO</span>
-                          <button type="button" className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center ">View Profile</button>
-                          <div className="bg-[#C8F9FF] text-white rounded-[100%] w-10 h-10 px-3 py-1  "><span className="text-black  text-2xl">+</span></div>
-                          
-                      </div>
-                      <div className="pt-4 w-[18.25rem] h-[20.75rem] flex flex-col items-center justify-center gap-y-4 my-12  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
-  ">
-                            <img
-                            src="/about-hero-image-4.png" 
-                            alt="Team Member"
-                            className="w-20"
-                          />
-                          <span className="font-bold font-700 text-xl"> John Doe</span>
-                          <span className="text-[#9095A0]">CEO</span>
-                          <button type="button" className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center ">View Profile</button>
-                          <div className="bg-[#C8F9FF] text-white rounded-[100%] w-10 h-10 px-3 py-1  "><span className="text-black  text-2xl">+</span></div>
-                          
-                      </div>
-                      <div className="pt-4 w-[18.25rem] h-[20.75rem] flex flex-col items-center justify-center gap-y-4 my-12  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
-  ">
-                            <img
-                            src="/about-hero-image-4.png" 
-                            alt="Team Member"
-                            className="w-20"
-                          />
-                          <span className="font-bold font-700 text-xl"> John Doe</span>
-                          <span className="text-[#9095A0]">CEO</span>
-                          <button type="button" className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center ">View Profile</button>
-                          <div className="bg-[#C8F9FF] text-white rounded-[100%] w-10 h-10 px-3 py-1  "><span className="text-black  text-2xl">+</span></div>
-                          
-                      </div>
                   
                  </div>
                  {/* end of profile cards */}
