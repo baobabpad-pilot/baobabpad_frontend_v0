@@ -1,8 +1,11 @@
 import React from "react";
 import Layout from "@/components/Layout";
+import Homepage from "./Homepage";
 
 const Village = () => {
-  return <Layout>Village</Layout>;
+  return (
+    <Homepage />
+  )
 };
 
 export default Village;

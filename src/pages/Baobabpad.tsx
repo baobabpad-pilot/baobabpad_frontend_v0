@@ -23,7 +23,7 @@ const Baobabpad = () => {
         {/* Hero section */}
         <div className="mt-7 flex flex-col items-center min-h-[500px] bg-[#ED7D2D] bg-opacity-40 justify-center text-center space-y-4">
           <h1 className="font-bold text-5xl text-[#723CDE] mt-20">
-            Bao<span className="text-[#A6F5FF]">bab</span>pad
+            Baobabpad
           </h1>
           <div className="flex justify-around items-center w-full pb-[150px]  mx-auto">
             <div className="rounded-full overflow-hidden -mt-48 mr-50 ">
@@ -74,7 +74,7 @@ const Baobabpad = () => {
             {/* Eiusmod comm container */}
             <div className="absolute top-24 -left-32 p-6 w-[230px] mx-auto bg-white rounded-xl shadow-md flex flex-col items-center space-y-4">
               <h3 className="text-xl  font-medium text-[#00BDD6]">
-                Eiusmod comm
+                Contact Us
               </h3>
               <div className="w-full">
                 <button className="flex w-full px-4 py-2 bg-[#C8F9FF] text-blue-800 rounded-md shadow-sm space-x-2">

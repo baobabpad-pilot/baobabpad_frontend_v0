@@ -4,8 +4,8 @@ const Header = () => {
   return (
     <div className="min-h-96 w-full bg-[#ED7D2D] bg-opacity-40 pt-16 px-24 flex flex-col items-center gap-24 area">
       <div className="z-20">
-        <h1 className=" md:text-7xl font-semibold text-[#00BDD6]">
-          Virtual <span className="text-[#8353E2]">Technology</span> Village
+        <h1 className=" md:text-4xl font-semibold text-[#00BDD6]">
+        Technology Transformation Empowered by Africa's Best Tech Talent
         </h1>
       </div>
 
