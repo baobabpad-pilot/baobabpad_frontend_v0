@@ -9,7 +9,7 @@ const Solutions = () => {
    {/* Start of the Hero section  */}
  <section className="flex flex-col md:flex-row bg-[#E8C245] flex-wrap">
   <div className="w-full md:w-[50%] flex justify-center">
-    <img src="/hero-section-solution-image.png" alt="a woman with glasses photo" className="w-full" />
+    <img src="/new_solution_image_1.png" alt="a woman with glasses photo" className="w-full" />
   </div>
   <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 text-[1.25rem] max-w-full md:max-w-[50%]">
     <span className="text-[3rem] font-semibold">Client support Infrastructure</span>
@@ -37,7 +37,7 @@ const Solutions = () => {
            
         </div>
         <div className="w-full md:w-[49%] flex justify-center  ">
-          <img src="/introduction-solution-image.png" alt="people smiling " className="w-full"/>
+          <img src="/new_solution_image_2.png" alt="people smiling " className="w-full"/>
           
         </div>
         
@@ -54,7 +54,7 @@ const Solutions = () => {
 
         <div  className="w-full  flex flex-col md:flex-row items-center justify-center flex-wrap p-12 ">
               <div className="w-full md:w-[50%] flex flex-row md:flex-col justify-center flex-wrap p-6 pt-[-1rem] gap-y-7">
-                  hhhh
+                  
           </div>
         </div>
 
