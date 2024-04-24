@@ -149,15 +149,18 @@ const Careers = () => {
           style={{
             height: "200px",
             marginRight: "5px",
-            backgroundImage: "url('https://via.placeholder.com/300')",
-          }} // Adjust margin-right and image URL as needed
+            backgroundImage:
+              "url('https://i.pinimg.com/236x/5c/b9/a3/5cb9a382ed518b21c8a25f8f4a82c24b.jpg')",
+          }}
         ></div>
+
         <div
           className="flex-auto bg-blue-600 w-64 bg-cover bg-center"
           style={{
             height: "200px",
             marginLeft: "5px",
-            backgroundImage: "url('https://via.placeholder.com/400')",
+            backgroundImage:
+              "url('https://i.pinimg.com/236x/60/de/f0/60def0fc042e9690ff3393155d1343dd.jpg')",
           }} // Adjust margin-left and image URL as needed
         ></div>
       </div>
@@ -168,7 +171,8 @@ const Careers = () => {
           style={{
             height: "400px",
             marginRight: "5px",
-            backgroundImage: "url('https://via.placeholder.com/300')",
+            backgroundImage:
+              "url('https://i.pinimg.com/236x/5e/df/9d/5edf9d8f35391c67bb8658b8ba4c0de5.jpg')",
           }} // Adjust margin-right as needed
         ></div>
 
