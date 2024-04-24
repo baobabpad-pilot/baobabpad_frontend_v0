@@ -8,7 +8,11 @@ import microsoft from "../../career_images/microsoft.png";
 
 function Auth() {
   const handleGoogleSignUp = async () => {
-    await signIn("google");
+    try {
+      await signIn("google");
+    } catch (error) {
+      console.error("Error occurred during Google sign-up:", error);
+    }
   };
 
   const handleLinkedInSignUp = async () => {
