@@ -5,8 +5,10 @@ import msg from "../../career_images/msg.png";
 import google from "../../career_images/Google.png";
 import linkedIn from "../../career_images/linkedIn.png";
 import microsoft from "../../career_images/microsoft.png";
+import { useSession } from 'next-auth/react';
 
 function Auth() {
+  const { data: session } = useSession();
   const handleGoogleSignUp = async () => {
     try {
       await signIn("google");
@@ -16,11 +18,19 @@ function Auth() {
   };
 
   const handleLinkedInSignUp = async () => {
-    // Handle LinkedIn sign-up
+    try {
+      await signIn("linkedin");
+    } catch (error) {
+      console.error("Error occurred during Linkedin sign-up:", error);
+    }
   };
 
   const handleGitHubSignUp = async () => {
-    // Handle GitHub sign-up
+    try {
+      await signIn("github");
+    } catch (error) {
+      console.error("Error occurred during Github sign-up:", error);
+    }
   };
 
   return (
@@ -29,7 +39,13 @@ function Auth() {
         <div className="container mx-30 mt-10 flex flex-row justify-center items-center ">
           <Image src={msg} alt="Message Image" className="contin" />
         </div>
-        <p className="text-2xl">Karibu Sana</p>
+        {session ? (
+            <div>
+              <p className="text-2xl">Karibu Sana , {session.user.name}</p>
+            </div>
+          ) : (
+          <p className="text-2xl">Karibu Sana</p>
+          )}
         <div>
           <div
             className="authentication flex flex flex-col justify-center items-center "
@@ -37,27 +53,40 @@ function Auth() {
           >
             <button
               className="flex items-center bg-white border border-red-600 rounded-lg shadow-md max-w-xs px-6 py-2 text-sm font-medium text-gray-800 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
-              style={{ width: "300px" }}
+              style={{ width: "220px" }}
               onClick={handleGoogleSignUp}
             >
-              <Image src={google} alt="Google Icon" />
-              <span>Sign Up with Google</span>
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <Image src={google} alt="Google Icon" style={{ marginRight: '10px' }} />
+                {session ? (
+                  <span style={{ flex: 1 }}>Signed in with Google</span>
+                 ) : (
+                  <span style={{ flex: 1 }}>Sign up with Google</span>
+                )}
+              </div>
+
             </button>
             <button
-              className="flex items-center mt-5 bg-white border border-gray-300 rounded-lg shadow-md max-w-xs px-6 py-2 text-sm font-medium text-gray-800 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
-              style={{ width: "300px" }}
+              className="flex items-center mt-5 bg-white border border-blue-600 rounded-lg shadow-md max-w-xs px-6 py-2 text-sm font-medium text-gray-800 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+              style={{ width: "220px" }}
               onClick={handleLinkedInSignUp}
             >
-              <Image src={linkedIn} alt="LinkedIn Icon" />
-              <span>Sign Up with LinkedIn</span>
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <Image src={linkedIn} alt="LinkedIn Icon" style={{ marginRight: '10px' }} />
+                <span style={{ flex: 1 }}>Sign up with LinkedIn</span>
+              </div>
+
             </button>
             <button
-              className="flex items-center mt-5 bg-white border border-gray-300 rounded-lg shadow-md max-w-xs px-6 py-2 text-sm font-medium text-gray-800 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
-              style={{ width: "300px" }}
+              className="flex items-center mt-5 bg-white border border-green-600 rounded-lg shadow-md max-w-xs px-6 py-2 text-sm font-medium text-gray-800 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+              style={{ width: "220px" }}
               onClick={handleGitHubSignUp}
             >
-              <Image src={microsoft} alt="GitHub Icon" />
-              <span>Sign Up with GitHub</span>
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <Image src={microsoft} alt="GitHub Icon" style={{ marginRight: '10px' }} />
+                <span style={{ flex: 1 }}>Sign up with GitHub</span>
+              </div>
+
             </button>
           </div>
           <div className="section4 mt-5 text-base font-normal">
