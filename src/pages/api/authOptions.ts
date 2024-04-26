@@ -5,12 +5,12 @@ import LinkedInProvider, { LinkedInProfile } from "next-auth/providers/linkedin"
 import GitHubProvider from 'next-auth/providers/github'
 import process from "process";
 
-
-const fetchBackEndData = async (provider:any, authToken:any) => {
+const fetchBackEndData = async (provider:any, authToken:any , userObject:any) => {
   try {
     const url =  process.env.BACKEND_URL+""+provider+"/";
     console.log(url)
     const data = {
+      userObject,
       provider,
       'auth_token':authToken,
     };
@@ -60,6 +60,8 @@ export const authOptions: NextAuthOptions = {
       GitHubProvider({
         clientId: process.env.GITHUB_CLIENT_ID!,
         clientSecret: process.env.GITHUB_SECRET!,
+        accessTokenUrl: "https://github.com/login/oauth/access_token",
+        profileUrl: "https://api.github.com/user",
         profile(profile) {
           return {
             id: profile.id.toString(),
@@ -80,8 +82,8 @@ export const authOptions: NextAuthOptions = {
     },
     callbacks: {
         async signIn(user:any, account:any ) {
-          let auth_token = user?.account?.id_token
-          let backendUserData = await fetchBackEndData(user?.account?.provider,auth_token)
+          let auth_token = user?.account?.id_token    
+          let backendUserData = await fetchBackEndData(user?.account?.provider,auth_token,user?.user)
           console.log("backend response -------------------------------");
           console.log(backendUserData);
           console.log("backend response -------------------------------");
