@@ -17,23 +17,12 @@ import { FaPeopleGroup } from "react-icons/fa6";
 import { CiPlay1 } from "react-icons/ci";
 
 
-
-
-
-
-
-
-
-
-
-
-
 const Baobabpad = () => {
 
   const teamDetailsArray=[
     {
       image:'/brenda_mkeshwa_CEO.jpg',
-      username:'Brenda Mkeshwa',
+      username:'Brenda Mkwesha',
       position:'CEO'
     },
     {
@@ -220,7 +209,7 @@ const Baobabpad = () => {
                  {/*  start of profile cards */}
                  <div className=" px-2  flex gap-x-6  flex-wrap justify-center">     
                     {teamDetailsArray.map((member, index)=>(
-                      <div key={index} className="pt-2 w-[23rem] h-[30.75rem] flex flex-col items-center justify-center gap-y-4 my-12  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
+                      <div key={index} className="pt-2 w-[23rem] h-[30.75rem] flex flex-col items-center justify-center gap-y-4 my-12 border border-600 shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
                       ">
                                                 <img
                                                 src={member.image}
@@ -248,7 +237,7 @@ const Baobabpad = () => {
         </section>
         {/* Start  Advisory  Board  */}
         <section className="border-t border-500 p-12">
-          <div className="  p-4 flex flex-col gap-y-1 justify-center">
+          <div className=" p-4 flex flex-col gap-y-1 justify-center">
               <span className="font-bold text-600 text-[1.5rem]">Advisory Board</span>
               
                    
@@ -258,7 +247,7 @@ const Baobabpad = () => {
                  
 
                  {teamDetailsArray.map((member, index)=>(
-                      <div key={index} className="pt-2 w-[23rem] h-[30.75rem] flex flex-col items-center justify-center gap-y-4 my-12  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
+                      <div key={index} className="pt-2 w-[23rem] h-[30.75rem] flex flex-col items-center justify-center gap-y-4 my-12 border border-600  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
                       ">
                                                 <img
                                                 src={member.image}
