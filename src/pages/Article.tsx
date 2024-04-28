@@ -13,47 +13,56 @@ const Article = () => {
         <div className="min-h-screen">
             <Layout>
                 {/* Top section*/}
-                <section className="w-[700px]  py-6 flex h-[100px]">
-                    <div className="  ml-4 rounded-full border text-gray-700 border-gray-500 p-4 hover hover:bg-gray-300"><FaArrowLeft/> </div>
-                    
-                    <div className="flex gap-4 ml-[10rem] my-auto">
-                    <button  className="border border-black p-1  text-sm rounded-[1rem] hover:bg-[#00BDD6] hover:text-white hover:border-none">Hybrid</button>
-                    <button className="border border-black px-2  text-sm  rounded-[1rem] bg-black text-white hover:bg-white hover:text-black">Remote</button>
+                <section className="w-[700px]  py-6 flex  h-[100px] ">
+                    <div className="hidden md:flex ml-4 rounded-full border text-gray-700 border-gray-500 p-4 hover hover:bg-gray-500 hover:text-white"><FaArrowLeft/> </div>
+                    <div className=" lg:hidden md:hidden  text-gray-700  p-2 mt-2 hover hover:text-[#00bdd6]"><FaArrowLeft/> </div>
+                    <div className="flex gap-4 lg:ml-[10rem] md:ml-[8rem] ml-4 my-auto">
+                    <button  className="border border-black p-1  text-sm rounded-[1rem] hover:bg-gray-500 hover:text-white ">Hybrid</button>
+                    <button className="border border-black px-2  text-sm  rounded-[1rem] bg-black text-white hover:bg-gray-500 ">Remote</button>
                     <p className="text-sm mt-1 font-medium">Mar 28,2024</p>
                     </div>
                 </section>
-                <h1 className="font-medium  md:text-3xl mx-[14rem] p-2 sm:text-sm">
+                <h1 className="font-medium  md:text-3xl text-2xl lg:mx-[14rem] md:mx-[5rem] mx-[3rem] py-2 ">
                  Baobabpad Prioritizes Well-Being and Productivity <br />for Remote Workforce
                 </h1>
                 {/* section 2*/}
-                <section className="flex h-[50px] ml-[14rem] py-6">
+                <section className="flex h-[50px] lg:ml-[14rem] md:ml-[5rem] mx-[3rem] py-6">
                     <img src="image1.png" alt="image1" className="my-auto p-2"/>
                     <div className="grid grid-rows-2 gap-5">
                         <h2 className="font-medium p-2">Brenda Mkwesha</h2>
                         <p className="text-sm p-2 ">4 min read</p>
                     </div>
-                    <button className=" px-4 py-2 my-auto mt-2 text-sm  rounded-[0.5rem] bg-orange-100 text-orange-600 hover:bg-white hover:text-black">Follow</button>
+                    <button className=" px-4 py-2 my-auto mt-2 text-sm  rounded-[0.5rem] bg-orange-100 text-orange-600 hover:bg-orange-300 hover:text-">Follow</button>
 
                     
                 </section>
 
                  {/* section 3*/}
-                 <section className=" border-h-[3px] border-t-2 border-b-2 h-[50px] my-11 mx-[14rem] flex justify-between ">
+                 <section className=" border-h-[3px] border-t-2 border-b-2 h-[50px] my-11 lg:mx-[14rem] md:mx-[5rem] mx-[3rem] flex justify-between ">
                     <div className=" flex gap-1 align-left my-auto">
-                    <FaRegEye className="mt-1 text-2xl"/>
+                    <a href="#" className="hover:text-[#00bdd6] mt-1 text-2xl">
+                    <FaRegEye/>
+                    </a>   
                     <p className=" my-auto  ">1.8M</p>
                     </div>
-                    <div className="flex gap-3  text-2xl my-auto">
+
+                    <div className="flex gap-4  text-2xl my-auto">
+                    <a href="#" className=" hover:text-[#00bdd6]">
                     <IoShareSocialOutline />
+                    </a>
+                    <a href="#" className="hover:text-[#00bdd6]">
                     <FaRegBookmark />
+                    </a>
+                    <a href="#" className="hover:text-[#00bdd6]">
                     <BsThreeDotsVertical />
+                    </a>
                     
                     </div>
 
                  </section> 
 
                  {/* section 4*/}
-                 <section className="mx-[14rem] py-4 text-justify">
+                 <section className="lg:mx-[14rem] md:mx-[5rem]  mx-[3rem] py-4 text-justify">
                     <img src="image2.png" className="w-full" alt="image2 " />
                     <div>
                         <p className="text-justify py-4">
@@ -122,10 +131,10 @@ const Article = () => {
 
                  </section>
 
-                  {/* section 5*/}
-                  <section className="my-6 ml-[8rem] mr-4">
-                    <h2 className="font-medium py-4 text-2xl mb-4"> Recommend to you</h2>
-                    <div className="flex md:gap-20 sm:gap-8 ">
+                  {/* section 5,for cards*/}
+                  <section className="my-6 lg:ml-[8rem] ml-[3rem] mr-5">
+                    <h2 className="font-medium py-4 text-2xl mb-4 "> Recommend to you</h2>
+                    <div className="hidden md:flex md:gap-20 sm:gap-8 ">
                         <div className=" bg-gray-100 w-[250px] rounded-sm shadow-sm  hover:scale-105 duration-300 ">
                             <img src="image4.png" className="w-full " alt="/" />
                             <p className="p-2 text-sm h-11"> Baobabpad Virtual Workshops </p>
@@ -139,16 +148,30 @@ const Article = () => {
                             <p className="p-2 text-sm "> Fight or flight - [E12]: Negative vs. Positive Motivation  </p>
                         </div>
                         <div className=" bg-gray-400 text-white rounded-full my-auto p-2 text-2xl hover hover:bg-gray-700">
+                            <MdOutlinePlayArrow />
+                        </div>
+                    </div>
+
+                    {/* part of card for small size */}
+                    <div className="grid grid-cols-2 gap-8 lg:hidden md:hidden">
+
+                        <div className=" bg-gray-100 w-[200px] rounded-sm shadow-sm  hover:scale-105 duration-300 ">
+                            <img src="image4.png" className="w-full " alt="/" />
+                            <p className="p-2 text-sm h-11"> Baobabpad Virtual Workshops </p>
+                        </div>
+                        <div className=" bg-gray-100 w-[191px] rounded-sm shadow-sm  hover:scale-105 duration-300 ">
+                            <img src="image5.png" className="w-full" alt="/" />
+                            <p className="p-2 text-sm h-11"> Mental and Physical Holistic Welln=being  </p>
+                        </div>
+                        <div className=" bg-gray-100 w-[200px] rounded-sm shadow-sm hover:scale-105 duration-300 ">
+                            <img src="image6.png" className="w-full " alt="/" />
+                            <p className="p-2 text-sm "> Fight or flight - [E12]: Negative vs. Positive Motivation  </p>
+                        </div>
+                        <div className=" bg-gray-400 text-white  rounded-full my-auto mx-auto text-2xl hover hover:bg-gray-700 justify-center p-5">
                             <MdOutlinePlayArrow /></div>
 
                     </div>
                   </section>
-
-
-                 
-
-
-            
 
             </Layout>
 
