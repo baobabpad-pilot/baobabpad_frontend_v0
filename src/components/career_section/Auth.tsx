@@ -5,50 +5,32 @@ import msg from "../../career_images/msg.png";
 import google from "../../career_images/Google.png";
 import linkedIn from "../../career_images/linkedIn.png";
 import microsoft from "../../career_images/microsoft.png";
-import SignInBtn from "../SignInBtn";
+import { useSession } from 'next-auth/react';
 
 function Auth() {
-const handleGoogleSignUp = () => {
-  // Construct the redirect URI
-  const redirectUri = encodeURIComponent(
-    "http://localhost:3000/api/auth/callback/google"
-  );
+  const { data: session } = useSession();
+  const handleGoogleSignUp = async () => {
+    try {
+      await signIn("google");
+    } catch (error) {
+      console.error("Error occurred during Google sign-up:", error);
+    }
+  };
 
-  // Encode the scope and state parameters
-  const scope = encodeURIComponent("email profile");
-  const state = encodeURIComponent("google_signup");
+  const handleLinkedInSignUp = async () => {
+    try {
+      await signIn("linkedin");
+    } catch (error) {
+      console.error("Error occurred during Linkedin sign-up:", error);
+    }
+  };
 
-  // Construct the Google OAuth 2.0 authentication URL
-  const clientId = process.env.GOOGLE_CLIENT_ID!;
-  const authUrl = `https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scope}&state=${state}`;
-
-  // Redirect the user to the Google authentication URL
-  window.location.href = authUrl;
-};
-
-const handleLinkedInSignUp = () => {
-  window.location.href =
-    "https://www.linkedin.com/oauth/v2/authorization?" +
-    "response_type=code&" +
-    "client_id=77zahcp71qw4jq&" + 
-    "redirect_uri=https://www.linkedin.com/developers/tools/oauth/redirect&" +
-    "scope=r_liteprofile%20r_emailaddress&" +
-    "state=linkedin_signup";
-};
-
-///  TODO: Add Microsoft Login API Call here
-
-  const handleGitHubSignUp = () => {
-    window.location.href =
-      "https://github.com/login/oauth/authorize?" +
-      "client_id=559122f4ac8d06a12a78&" +
-      "redirect_uri=YOUR_REDIRECT_URI&" +
-      "client_secret=ca8ea7e9d7545f0e3b294f0302165f0ee261dab8&" +
-      "scope=user:email&" +
-      "state=github_signup";
-
-    // After successful authentication and authorization, GitHub will redirect back to your specified redirect URI
-    // You'll then handle the callback from the redirect URI to complete the sign up process
+  const handleGitHubSignUp = async () => {
+    try {
+      await signIn("github");
+    } catch (error) {
+      console.error("Error occurred during Github sign-up:", error);
+    }
   };
 
   return (
@@ -57,28 +39,54 @@ const handleLinkedInSignUp = () => {
         <div className="container mx-30 mt-10 flex flex-row justify-center items-center ">
           <Image src={msg} alt="" className="contin" />
         </div>
-        <p className="text-2xl">Karibu Sana</p>
+        {session ? (
+            <div>
+              <p className="text-2xl">Karibu Sana , {session.user.name}</p>
+            </div>
+          ) : (
+          <p className="text-2xl">Karibu Sana</p>
+          )}
         <div>
           <div
             className="authentication flex flex flex-col justify-center items-center "
             style={{ marginTop: "20px" }}
           >
-            <SignInBtn/>
             <button
-              className="flex items-center mt-5 bg-white border border-gray-300 rounded-lg shadow-md max-w-xs px-6 py-2 text-sm font-medium text-gray-800 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
-              style={{ width: "300px" }}
-              onClick={handleLinkedInSignUp}
+              className="flex items-center bg-white border border-red-600 rounded-lg shadow-md max-w-xs px-6 py-2 text-sm font-medium text-gray-800 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+              style={{ width: "220px" }}
+              onClick={handleGoogleSignUp}
             >
-              <Image src={linkedIn} alt="" />
-              <span>LinkedIn</span>
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <Image src={google} alt="Google Icon" style={{ marginRight: '10px' }} />
+                {session ? (
+                  <span style={{ flex: 1 }}>Signed in with Google</span>
+                 ) : (
+                  <span style={{ flex: 1 }}>Sign up with Google</span>
+                )}
+              </div>
+
             </button>
             <button
-              className="flex items-center mt-5 bg-white border border-gray-300 rounded-lg shadow-md max-w-xs px-6 py-2 text-sm font-medium text-gray-800 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
-              style={{ width: "300px" }}
+              className="flex items-center mt-5 bg-white border border-blue-600 rounded-lg shadow-md max-w-xs px-6 py-2 text-sm font-medium text-gray-800 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+              style={{ width: "220px" }}
+              onClick={handleLinkedInSignUp}
+            >
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <Image src={linkedIn} alt="LinkedIn Icon" style={{ marginRight: '10px' }} />
+                <span style={{ flex: 1 }}>Sign up with LinkedIn</span>
+              </div>
+
+            </button>
+            <button
+              className="flex items-center mt-5 bg-white border border-green-600 rounded-lg shadow-md max-w-xs px-6 py-2 text-sm font-medium text-gray-800 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+              style={{ width: "220px" }}
               onClick={handleGitHubSignUp}
             >
-              <Image src={microsoft} alt="" />
-              <span>Sign up with Github</span>
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <Image src={microsoft} alt="GitHub Icon" style={{ marginRight: '10px' }} />
+                <span style={{ flex: 1 }}>Sign up with GitHub</span>
+              </div>
+
             </button>
           </div>
           <div className="section4 mt-5 text-base font-normal">
