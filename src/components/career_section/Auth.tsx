@@ -13,10 +13,12 @@ function Auth() {
 
   const handleLinkedInSignUp = async () => {
     // Handle LinkedIn sign-up
+    await signIn("linkedin");
   };
 
   const handleGitHubSignUp = async () => {
     // Handle GitHub sign-up
+    await signIn("github");
   };
 
   return (
