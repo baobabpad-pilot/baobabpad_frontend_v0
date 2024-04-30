@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from "react-redux";
 import { updateFormData } from "../../redux/slices/formDataSlice";
 
 interface FormData {
@@ -9,9 +9,10 @@ interface FormData {
 
 interface Props {
   onNextStep: (nextStep: number) => void;
+  onFreeTrialClick: () => void;
 }
 
-const MultiSelectForm: React.FC<Props> = ({ onNextStep }) => {
+const MultiSelectForm: React.FC<Props> = ({ onNextStep, onFreeTrialClick }) => {
   const router = useRouter();
   const dispatch = useDispatch();
 
@@ -127,7 +128,7 @@ const MultiSelectForm: React.FC<Props> = ({ onNextStep }) => {
 
       <button
         className="mt-20 bg-[#00BDD6] text-white py-2 px-4 rounded-full hover:bg-gray-300 transition-colors delay-75"
-        onClick={() => handleVerifyBusiness()}
+        onClick={() => onFreeTrialClick()}
       >
         Free Trial
       </button>
