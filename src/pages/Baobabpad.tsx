@@ -196,93 +196,8 @@ const Baobabpad = () => {
 
                 </div>
         </section>
-        {/* Village Management Team */}
-        <section className="border-t border-500 p-12">
-          <div className="  p-4 flex flex-col gap-y-1 justify-center">
-              <span className="font-bold text-600 text-[1.5rem]">Village Management Team</span>
-              
-                    {/* <form action="" className=" flex flex-row items-center  w-[100%] bg-[#EAECEF]  ">
-                    <CiSearch  className="text-[2rem]"/>
-                        <input type="text" placeholder="search"   className="w-[90%] bg-[#EAECEF]  p-2"/>
-                    </form> */}
-                 
-                 {/*  start of profile cards */}
-                 <div className=" px-2  flex gap-x-6  flex-wrap justify-center">     
-                    {teamDetailsArray.map((member, index)=>(
-                      <div key={index} className="pt-2 w-[23rem] h-[30.75rem] flex flex-col items-center justify-center gap-y-4 my-12 border border-600 shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
-                      ">
-                                                <img
-                                                src={member.image}
-                                                alt="Team Member"
-                                                className="w-[40%] h-[30%] rounded-[50%]"
-                                              />
-                                              <span className="font-bold font-700 text-xl">{member.username}</span>
-                                              <span className="text-[#9095A0]">{member.position}</span>
-                                              <button type="button" className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center ">View Profile</button>
-                                              {/* <div className="bg-[#C8F9FF] text-white rounded-[100%] w-10 h-10 px-3 py-1  "><span className="text-black  text-2xl">+</span></div> */}
-                                              
-                                          </div>
-
-                    ))}
-                  
-
-                  
-                 </div>
-                 {/* end of profile cards */}
-              
-
-          </div>
-
-
-        </section>
-        {/* Start  Advisory  Board  */}
-        <section className="border-t border-500 p-12">
-          <div className=" p-4 flex flex-col gap-y-1 justify-center">
-              <span className="font-bold text-600 text-[1.5rem]">Advisory Board</span>
-              
-                   
-                 
-                 {/*  start of profile cards */}
-                 <div className=" px-4  flex gap-x-6  flex-wrap justify-center">
-                 
-
-                 {teamDetailsArray.map((member, index)=>(
-                      <div key={index} className="pt-2 w-[23rem] h-[30.75rem] flex flex-col items-center justify-center gap-y-4 my-12 border border-600  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
-                      ">
-                                                <img
-                                                src={member.image}
-                                                alt="Team Member"
-                                                className="w-[40%] h-[30%] rounded-[50%]"
-                                              />
-                                              <span className="font-bold font-700 text-xl">{member.username}</span>
-                                              <span className="text-[#9095A0]">{member.position}</span>
-                                              <button type="button" className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center ">View Profile</button>
-                                              {/* <div className="bg-[#C8F9FF] text-white rounded-[100%] w-10 h-10 px-3 py-1  "><span className="text-black  text-2xl">+</span></div> */}
-                                              
-                                          </div>
-
-                    ))}
-                  
-                    
-
-                 
-
-                     
-                     
-                     
-
-                     
-                     
-                  
-                  
-                 </div>
-                 {/* end of profile cards */}
-              
-
-          </div>
-        </section>
-
-        {/* End of Advisory Board */}
+   
+    
 
         {/* Start of why baobabpad section */}
         <section className="border-t border-500  flex items-center flex-wrap p-10">
@@ -395,6 +310,102 @@ const Baobabpad = () => {
           {/* End of team building and project management section */}
 
           {/* Start of message from  our village  */}
+
+          {/* Start of  Village Management Team  */}
+
+          <section className="border-t border-500 p-12">
+          <div className=" p-2 flex flex-col gap-y-1 justify-center">
+              <span className="font-bold text-600 text-[1.5rem]">Village Management Team</span>
+              
+                   
+                 
+                 {/*  start of profile cards */}
+                 <div className=" px-4  flex gap-x-6  flex-wrap justify-center">
+                 
+
+                 {teamDetailsArray.map((member, index)=>(
+                      <div key={index} className="pt-2 w-[25rem] h-[30rem] flex flex-col items-center justify-center gap-y-4 my-12 border border-600  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
+                      ">
+                                                <img
+                                                src={member.image}
+                                                alt="Team Member"
+                                                className="w-[40%] h-[30%] rounded-[50%]"
+                                              />
+                                              <span className="font-bold font-700 text-xl">{member.username}</span>
+                                              <span className="text-[#9095A0]">{member.position}</span>
+                                              <button type="button" className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center ">View Profile</button>
+                                              {/* <div className="bg-[#C8F9FF] text-white rounded-[100%] w-10 h-10 px-3 py-1  "><span className="text-black  text-2xl">+</span></div> */}
+                                              
+                                          </div>
+
+                    ))}
+                  
+                    
+
+                 
+
+                     
+                     
+                     
+
+                     
+                     
+                  
+                  
+                 </div>
+                 {/* end of profile cards */}
+              
+
+          </div>
+        </section>
+        
+        <section className="border-t border-500 p-12">
+          <div className=" p-4 flex flex-col gap-y-1 justify-center">
+              <span className="font-bold text-600 text-[1.5rem]">Advisory Team</span>
+              
+                   
+                 
+                 {/*  start of profile cards */}
+                 <div className=" px-4  flex gap-x-6  flex-wrap justify-center">
+                 
+
+                 {teamDetailsArray.map((member, index)=>(
+                      <div key={index} className="pt-2 w-[23rem] h-[30.75rem] flex flex-col items-center justify-center gap-y-4 my-12 border border-600  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
+                      ">
+                                                <img
+                                                src={member.image}
+                                                alt="Team Member"
+                                                className="w-[40%] h-[30%] rounded-[50%]"
+                                              />
+                                              <span className="font-bold font-700 text-xl">{member.username}</span>
+                                              <span className="text-[#9095A0]">{member.position}</span>
+                                              <button type="button" className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center ">View Profile</button>
+                                              {/* <div className="bg-[#C8F9FF] text-white rounded-[100%] w-10 h-10 px-3 py-1  "><span className="text-black  text-2xl">+</span></div> */}
+                                              
+                                          </div>
+
+                    ))}
+                  
+                    
+
+                 
+
+                     
+                     
+                     
+
+                     
+                     
+                  
+                  
+                 </div>
+                 {/* end of profile cards */}
+              
+
+          </div>
+        </section>
+          {/* end of Village management team  */}
+
 
           <section className="flex flex-col justify-center  ">
               <div className="flex flex-row justify-center">
