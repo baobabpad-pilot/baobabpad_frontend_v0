@@ -13,6 +13,7 @@ const navLinks: NavLink[] = [
   { label: "Baobabpad", href: "/Baobabpad" },
   { label: "Solutions", href: "/Solutions"},
   { label: "Careers", href: "/Careers" },
+
   // { label: 'Login', href: '/login' },
   // { label: 'Try for free', href: '/try-for-free' },
 ];
