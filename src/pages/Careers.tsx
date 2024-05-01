@@ -149,7 +149,8 @@ const Careers = () => {
           style={{
             height: "200px",
             marginRight: "5px",
-            backgroundImage: "url('https://via.placeholder.com/300')",
+            backgroundImage:
+              "url('https://i.pinimg.com/564x/b0/aa/71/b0aa712b004c5458e8ff7fa22394f2e4.jpg')",
           }} // Adjust margin-right and image URL as needed
         ></div>
         <div
@@ -157,7 +158,8 @@ const Careers = () => {
           style={{
             height: "200px",
             marginLeft: "5px",
-            backgroundImage: "url('https://via.placeholder.com/400')",
+            backgroundImage:
+              "url('https://i.pinimg.com/564x/82/32/14/823214d1f8e66df38a13465358982924.jpg')",
           }} // Adjust margin-left and image URL as needed
         ></div>
       </div>
@@ -168,7 +170,8 @@ const Careers = () => {
           style={{
             height: "400px",
             marginRight: "5px",
-            backgroundImage: "url('https://via.placeholder.com/300')",
+            backgroundImage:
+              "url('https://i.pinimg.com/564x/59/16/6d/59166da12bcdd1a621b02381413ee256.jpg')",
           }} // Adjust margin-right as needed
         ></div>
 
