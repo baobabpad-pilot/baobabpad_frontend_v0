@@ -1,11 +1,8 @@
 import { signIn } from "next-auth/react";
 import Image from "next/image";
 import styles from "../../styles/careers.module.css";
-import msg from "../../career_images/msg.png";
-import google from "../../career_images/Google.png";
-import linkedIn from "../../career_images/linkedIn.png";
-import microsoft from "../../career_images/microsoft.png";
-import LoginForm from "./LoginForm";
+import LoginForm from "../career_section/LoginForm";
+
 
 function Auth() {
   const handleGoogleSignUp = async () => {
@@ -26,7 +23,7 @@ function Auth() {
     <>
       <div className={styles.part2}>
         {/* <div className="container mx-30 mt-10 flex flex-row justify-center items-center ">
-          <Image src={msg} alt="Message Image" className="contin" />
+          <Image src={{msg} alt}="Message Image" className="contin" />
         </div> */}
         <p className="text-2xl">Karibu Sana</p>
         <div>
@@ -39,7 +36,7 @@ function Auth() {
               style={{ width: "300px" }}
               onClick={handleGoogleSignUp}
             >
-              <Image src={google} alt="Google Icon" />
+              <img src={"/google.png"} alt="" />
               <span>Sign Up with Google</span>
             </button>
             <button
@@ -47,7 +44,7 @@ function Auth() {
               style={{ width: "300px" }}
               onClick={handleLinkedInSignUp}
             >
-              <Image src={linkedIn} alt="LinkedIn Icon" />
+              <img src={"/linkedIn.png"} alt="" />
               <span>Sign Up with LinkedIn</span>
             </button>
             <button
@@ -55,7 +52,7 @@ function Auth() {
               style={{ width: "300px" }}
               onClick={handleGitHubSignUp}
             >
-              <Image src={microsoft} alt="GitHub Icon" />
+              <img src={"/microsoft.png"} alt="" />
               <span>Sign Up with GitHub</span>
             </button>
           </div>
@@ -71,10 +68,8 @@ function Auth() {
             </label> */}
 
             {/* ------------------------------------------------------------------------------------*/}
-            <LoginForm/>
+            <LoginForm />
             {/* ----------------------------------------------------------------------------------- */}
-
-
           </div>
           {/* <p className="text-base font-normal text-xs  opacity-70">
             By continuing, you agree to our{" "}
