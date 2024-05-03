@@ -1,10 +1,8 @@
 import { signIn } from "next-auth/react";
 import Image from "next/image";
 import styles from "../../styles/careers.module.css";
-import msg from "../../career_images/msg.png";
-import google from "../../career_images/Google.png";
-import linkedIn from "../../career_images/linkedIn.png";
-import microsoft from "../../career_images/microsoft.png";
+import LoginForm from "../career_section/LoginForm";
+
 
 function Auth() {
   const handleGoogleSignUp = async () => {
@@ -25,7 +23,7 @@ function Auth() {
     <>
       <div className={styles.part2}>
         {/* <div className="container mx-30 mt-10 flex flex-row justify-center items-center ">
-          <Image src={msg} alt="Message Image" className="contin" />
+          <Image src={{msg} alt}="Message Image" className="contin" />
         </div> */}
         <p className="text-2xl">Karibu Sana</p>
         <div>
@@ -38,7 +36,7 @@ function Auth() {
               style={{ width: "300px" }}
               onClick={handleGoogleSignUp}
             >
-              <Image src={google} alt="Google Icon" />
+              <img src={"/google.png"} alt="" />
               <span>Sign Up with Google</span>
             </button>
             <button
@@ -46,7 +44,7 @@ function Auth() {
               style={{ width: "300px" }}
               onClick={handleLinkedInSignUp}
             >
-              <Image src={linkedIn} alt="LinkedIn Icon" />
+              <img src={"/linkedIn.png"} alt="" />
               <span>Sign Up with LinkedIn</span>
             </button>
             <button
@@ -54,12 +52,12 @@ function Auth() {
               style={{ width: "300px" }}
               onClick={handleGitHubSignUp}
             >
-              <Image src={microsoft} alt="GitHub Icon" />
+              <img src={"/microsoft.png"} alt="" />
               <span>Sign Up with GitHub</span>
             </button>
           </div>
           <div className="section4 mt-5 text-base font-normal">
-            <span className="tttt ">______________ </span>OR{" "}
+            {/* <span className="tttt ">______________ </span>OR{" "}
             <span>______________ </span>
             <p className="mt-3">
               {" "}
@@ -67,9 +65,13 @@ function Auth() {
             </p>
             <label className="text-xs opacity-80" htmlFor="email">
               email@email.com
-            </label>
+            </label> */}
+
+            {/* ------------------------------------------------------------------------------------*/}
+            <LoginForm />
+            {/* ----------------------------------------------------------------------------------- */}
           </div>
-          <p className="text-base font-normal text-xs  opacity-70">
+          {/* <p className="text-base font-normal text-xs  opacity-70">
             By continuing, you agree to our{" "}
             <span style={{ color: "rgb(0,189,214)" }}>
               {" "}
@@ -80,9 +82,9 @@ function Auth() {
               {" "}
               <b>Privacy Policy</b>{" "}
             </span>
-          </p>
+          </p> */}
         </div>
-        <button
+        {/* <button
           className=" continue text-white font-bold mt-5  py-2 rounded text-base font-normal "
           style={{ width: "300px", backgroundColor: "rgb(0,189,214)" }}
         >
@@ -94,7 +96,7 @@ function Auth() {
             {" "}
             <b>Sign in</b>{" "}
           </span>
-        </p>
+        </p> */}
       </div>
     </>
   );

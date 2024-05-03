@@ -3,11 +3,8 @@ import Image from "next/image";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import styles from "../styles/careers.module.css";
-import user1 from "../career_images/user1.png";
-import user2 from "../career_images/user2.png";
-import user3 from "../career_images/user3.png";
-import user4 from "../career_images/user4.png";
 import Auth from "@/components/career_section/Auth";
+
 // import benefits1 from "";
 
 const Careers = () => {
@@ -48,47 +45,23 @@ const Careers = () => {
                 className="img1"
                 style={{ marginRight: "25px", marginTop: "50px" }}
               >
-                <Image
-                  src={user3}
-                  width={70}
-                  height={70}
-                  alt="Picture of the author"
-                />
+                <img src={"/user3.png"} alt="" width={70} height={70} />
               </div>
-              {/* Image 2 */}
+              {/* Image 2 */} {" "}
               <div className="img2">
-                <Image
-                  src={user4}
-                  width={120}
-                  height={120}
-                  alt="Picture of the author"
-                />
+                <img src={"/user4.png"} alt="" width={120} height={120} />
               </div>
             </div>
-            <div
-              className="container mx-30  flex flex-row justify-center items-center"
-              // style={{ backgroundColor: "red" }}
-            >
-              {/* Image 2 */}
+            <div className="container mx-30  flex flex-row justify-center items-center">
               <div
                 className="img1"
                 style={{ marginRight: "30px", marginBottom: "30px" }}
               >
-                <Image
-                  src={user2}
-                  width={60}
-                  height={60}
-                  alt="Picture of the author"
-                />
+                <img src={"/user2.png"} alt="" width={60} height={60} />
               </div>
               {/* Image 2 */}
               <div className="img2 mt-5 " style={{ marginRight: "20px" }}>
-                <Image
-                  src={user1}
-                  width={90}
-                  height={90}
-                  alt="Picture of the author"
-                />
+                <img src={"/user1.png"} alt="" width={90} height={90} />
               </div>
             </div>
             <div className="info mt-20">
@@ -105,15 +78,15 @@ const Careers = () => {
       </div>
       <div
         className="section2"
-        style={{ marginTop: isSmallScreen ? "400px" : "" }}
+        style={{ marginTop: isSmallScreen ? "550px" : "" }}
       >
-        <h2 className="mt-10 text-center text-3xl">
+        <h2 className="mt-20 text-center text-3xl">
           <b style={{ color: "rgb(50, 56, 66)" }}>Our benefits</b>
         </h2>
 
         <div className={styles.part}>
           <div className="container mx-auto px-4 lg:px-20 mt-10 flex flex-row justify-between items-center flex-wrap">
-            <div className="img1">
+            <div className="img2">
               <img src="/benefits (5).png" alt="" className="w-full h-auto" />
             </div>
             {/* Image 2 */}
@@ -125,7 +98,7 @@ const Careers = () => {
             </div>
           </div>
           <div className="container mx-auto px-4 lg:px-20 mt-10 flex flex-row justify-between items-center flex-wrap">
-            <div className="img1">
+            <div className="img2">
               <img src="/benefits (2).png" alt="" className="w-full h-auto" />
             </div>
             {/* Image 2 */}
@@ -145,7 +118,7 @@ const Careers = () => {
 
       <div className="container flex mx-auto px-4 lg:px-20 mt-10 flex flex-row justify-between items-center flex-wrap">
         <div
-          className="flex-auto bg-red-600 w-46 bg-cover bg-center"
+          className=" img2 flex-auto bg-red-600 w-46 bg-cover bg-center"
           style={{
             height: "200px",
             marginRight: "5px",
@@ -154,7 +127,7 @@ const Careers = () => {
           }} // Adjust margin-right and image URL as needed
         ></div>
         <div
-          className="flex-auto bg-blue-600 w-64 bg-cover bg-center"
+          className="img2 flex-auto bg-blue-600 w-64 bg-cover bg-center"
           style={{
             height: "200px",
             marginLeft: "5px",
@@ -166,7 +139,7 @@ const Careers = () => {
 
       <div className="container flex mx-auto px-4 lg:px-20 mt-5 flex flex-row justify-between items-center flex-wrap">
         <div
-          className="flex-auto w-64 bg-cover bg-center"
+          className=" img2 flex-auto w-64 bg-cover bg-center"
           style={{
             height: "400px",
             marginRight: "5px",
@@ -176,30 +149,30 @@ const Careers = () => {
         ></div>
 
         <div
-          className="flex-auto  w-64"
+          className="img2 flex-auto  w-64"
           style={{ marginRight: "5px" }} // Adjust margin-right as needed
         >
           <img src="/Image33 (2).png" alt="" height="400px" />
         </div>
         <div
-          className="flex-auto  w-64 rounded"
+          className=" img2 flex-auto  w-64 rounded"
           style={{}} // Adjust height as needed
         >
           <img src="/Image33 (1).png" alt="" height="400px" />
         </div>
       </div>
 
-      <h2 className="mt-10 text-center text-3xl">
+      <h2 className=" img2 mt-10 text-center text-3xl">
         <b style={{ color: "rgb(50, 56, 66)" }}>Stories</b>
       </h2>
 
       <div className="container flex mx-auto px-4 lg:px-20 mt-10 flex flex-row justify-between items-center flex-wrap">
         <div
-          className="flex-auto w-46"
+          className=" img2 flex-auto w-46"
           style={{ height: "200px", marginRight: "5px" }}
         >
           <iframe
-            className="w-full h-full"
+            className=" img2 w-full h-full"
             src="https://drive.google.com/file/d/1ZRC8S7SBO8E8fT_6wvM9z04gAZeUCawN/preview"
             title="Google Drive video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -207,11 +180,11 @@ const Careers = () => {
           ></iframe>
         </div>
         <div
-          className="flex-auto w-64"
+          className=" img2 flex-auto w-64"
           style={{ height: "200px", marginLeft: "5px" }}
         >
           <iframe
-            className="w-full h-full"
+            className="img2 w-full h-full"
             src="https://drive.google.com/file/d/1SAkENMU536n9lh9cbPFE8mr_6zBdRc1G/preview"
             title="Google Drive video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -226,7 +199,7 @@ const Careers = () => {
           style={{ height: "400px", marginRight: "5px" }}
         >
           <iframe
-            className="w-full h-full"
+            className=" img2 w-full h-full"
             src="https://drive.google.com/file/d/1nhnhYopT172YPmDfpiNit4YdCEixEkx4/preview"
             title="Google Drive video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -235,13 +208,13 @@ const Careers = () => {
         </div>
 
         <div
-          className="flex-auto  w-64"
+          className=" img2 flex-auto  w-64"
           style={{ marginRight: "5px" }} // Adjust margin-right as needed
         >
           <img src="/Image33 (2).png" alt="" height="400px" />
         </div>
         <div
-          className="flex-auto  w-64 rounded"
+          className=" img2 flex-auto  w-64 rounded"
           style={{}} // Adjust height as needed
         >
           <img src="/Image33 (1).png" alt="" height="400px" />
