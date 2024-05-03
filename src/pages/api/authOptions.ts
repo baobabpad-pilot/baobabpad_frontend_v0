@@ -85,7 +85,8 @@ export const authOptions: NextAuthOptions = {
   },
   jwt: {},
   callbacks: {
-    async signIn(user: any, account: any) {
+    async signIn(params: { user: any; account: any }): Promise<boolean> {
+      const { user, account } = params;
       let auth_token = user?.account?.id_token;
       let backendUserData = await fetchBackEndData(
         user?.account?.provider,
@@ -106,13 +107,13 @@ export const authOptions: NextAuthOptions = {
     async jwt({ token, account, profile }) {
       if (account) {
         token.accessToken = account.access_token;
-        token.id = profile?.id;
+        token.id = profile?.email;
       }
       return token;
     },
-    async session({ session, token }) {
-      session.accessToken = token.accessToken;
-      session.user.id = token.id;
+    async session({ session, token }: { session: any; token: any }) {
+      session.accessToken = token?.accessToken;
+      session.user.id = token?.id;
       return session;
     },
   },
