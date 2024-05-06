@@ -57,46 +57,15 @@ function Auth() {
             </button>
           </div>
           <div className="section4 mt-5 text-base font-normal">
-            {/* <span className="tttt ">______________ </span>OR{" "}
-            <span>______________ </span>
-            <p className="mt-3">
-              {" "}
-              <b>Sign up with your email</b>{" "}
-            </p>
-            <label className="text-xs opacity-80" htmlFor="email">
-              email@email.com
-            </label> */}
+
 
             {/* ------------------------------------------------------------------------------------*/}
             <LoginForm />
             {/* ----------------------------------------------------------------------------------- */}
           </div>
-          {/* <p className="text-base font-normal text-xs  opacity-70">
-            By continuing, you agree to our{" "}
-            <span style={{ color: "rgb(0,189,214)" }}>
-              {" "}
-              <b> Terms & Conditions</b>
-            </span>{" "}
-            and{" "}
-            <span style={{ color: "rgb(0,189,214)" }}>
-              {" "}
-              <b>Privacy Policy</b>{" "}
-            </span>
-          </p> */}
+
         </div>
-        {/* <button
-          className=" continue text-white font-bold mt-5  py-2 rounded text-base font-normal "
-          style={{ width: "300px", backgroundColor: "rgb(0,189,214)" }}
-        >
-          continue
-        </button>
-        <p className="text-base font-normal text-xs  opacity-70 mt-3">
-          Existing member?{" "}
-          <span style={{ color: "rgb(0,189,214)" }}>
-            {" "}
-            <b>Sign in</b>{" "}
-          </span>
-        </p> */}
+
       </div>
     </>
   );
