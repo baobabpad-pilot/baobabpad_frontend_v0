@@ -15,7 +15,7 @@ const fetchBackEndData = async (
   userObject: any
 ) => {
   try {
-    const url = process.env.BACKEND_URL + "" + provider + "/";
+    const url = process.env.NEXT_PUBLIC_BACKEND_URL + "" + provider + "/";
     console.log(url);
     const data = {
       userObject,
