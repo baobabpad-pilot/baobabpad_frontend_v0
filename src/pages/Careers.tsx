@@ -4,7 +4,6 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import styles from "../styles/careers.module.css";
 import Auth from "@/components/career_section/Auth";
-// import benefits1 from "";
 
 const Careers = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
