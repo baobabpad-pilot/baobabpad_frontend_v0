@@ -74,14 +74,13 @@ const SigninForm = () => {
       alert(responseData?.access);
       return responseData;
     } catch (error) {
-      alert("Could not login using the provided credentials!");
+      //alert("Could not login using the provided credentials!");
       console.error("Could not login using the provided credentials:", error);    
       if (error.response && error.response.data) {
         const formattedData = JSON.stringify(error.response.data, null, 2);
         alert(formattedData);
         return null;
       } else {
-     
         return null;
       }
     }
