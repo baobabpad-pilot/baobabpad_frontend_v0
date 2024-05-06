@@ -1,9 +1,6 @@
 import { signIn } from "next-auth/react";
 import Image from "next/image";
 import styles from "../../styles/careers.module.css";
-import google from "../../career_images/Google.png";
-import linkedIn from "../../career_images/linkedIn.png";
-import microsoft from "../../career_images/microsoft.png";
 import { useSession } from 'next-auth/react';
 import { useState } from "react";
 import Link from 'next/link';
@@ -58,7 +55,7 @@ function Auth() {
               style={{ width: "220px" }}
               onClick={handleGoogleSignUp}
             >
-              <Image src={google} alt="Google Icon" />
+              <Image src={"/google.png"} alt="Google Icon" width="20" height="20" />
               <span>Sign Up with Google</span>
             </button>
             <button
@@ -66,7 +63,7 @@ function Auth() {
               style={{ width: "220px" }}
               onClick={handleLinkedInSignUp}
             >
-              <Image src={linkedIn} alt="LinkedIn Icon" />
+              <Image src={"/linkedIn.png"} alt="LinkedIn Icon" width="20" height="20" />
               <span>Sign Up with LinkedIn</span>
             </button>
             <button
@@ -74,7 +71,7 @@ function Auth() {
               style={{ width: "220px" }}
               onClick={handleGitHubSignUp}
             >
-              <Image src={microsoft} alt="GitHub Icon" />
+              <Image src={"/microsoft.png"} alt="GitHub Icon" width="20" height="20" />
               <span>Sign Up with GitHub</span>
             </button>
           </div>

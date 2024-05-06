@@ -3,10 +3,6 @@ import Image from "next/image";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import styles from "../styles/careers.module.css";
-import user1 from "../career_images/user1.png";
-import user2 from "../career_images/user2.png";
-import user3 from "../career_images/user3.png";
-import user4 from "../career_images/user4.png";
 import Auth from "@/components/career_section/Auth";
 // import benefits1 from "";
 
@@ -49,7 +45,7 @@ const Careers = () => {
                 style={{ marginRight: "25px", marginTop: "50px" }}
               >
                 <Image
-                  src={user3}
+                  src={"/user3.png"}
                   width={70}
                   height={70}
                   alt="Picture of the author"
@@ -58,7 +54,7 @@ const Careers = () => {
               {/* Image 2 */}
               <div className="img2">
                 <Image
-                  src={user4}
+                  src={"/user4.png"}
                   width={120}
                   height={120}
                   alt="Picture of the author"
@@ -75,7 +71,7 @@ const Careers = () => {
                 style={{ marginRight: "30px", marginBottom: "30px" }}
               >
                 <Image
-                  src={user2}
+                  src={"/user2.png"}
                   width={60}
                   height={60}
                   alt="Picture of the author"
@@ -84,7 +80,7 @@ const Careers = () => {
               {/* Image 2 */}
               <div className="img2 mt-5 " style={{ marginRight: "20px" }}>
                 <Image
-                  src={user1}
+                  src={"/user1.png"}
                   width={90}
                   height={90}
                   alt="Picture of the author"
