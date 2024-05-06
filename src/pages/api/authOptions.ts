@@ -6,13 +6,16 @@ import LinkedInProvider, {
 import GitHubProvider from "next-auth/providers/github";
 import process from "process";
 
+var backend_token = null;
+var provider = null;
+
 const fetchBackEndData = async (
   provider: any,
   authToken: any,
   userObject: any
 ) => {
   try {
-    const url = process.env.BACKEND_URL + "" + provider + "/";
+    const url = process.env.NEXT_PUBLIC_BACKEND_URL + "" + provider + "/";
     console.log(url);
     const data = {
       userObject,
@@ -92,12 +95,17 @@ export const authOptions: NextAuthOptions = {
         auth_token,
         user?.user
       );
-      console.log("backend response -------------------------------");
-      console.log(backendUserData);
-      console.log("backend response -------------------------------");
-      return true;
+      user.jwt = backend_token = backendUserData.token;
+      provider = user?.account?.provider;
+      return {
+        ...user,
+        session: {
+          ...user.session,
+          jwt: backendUserData.token
+        }
+      };
     },
-    // other callbacks
+ 
     async redirect({ url, baseUrl }) {
       if (url.startsWith("/")) return `${baseUrl}${url}`;
       else if (new URL(url).origin === baseUrl) return url;
@@ -113,6 +121,8 @@ export const authOptions: NextAuthOptions = {
     async session({ session, token }) {
       session.accessToken = token.accessToken;
       session.user.id = token.id;
+      session.user.token = backend_token;
+      session.user.provider = provider;
       return session;
     },
   },
