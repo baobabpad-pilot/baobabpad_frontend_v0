@@ -27,7 +27,7 @@ const SigninForm = () => {
       .matches(
         /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{4,}$/,
         "Must Contain 4 Chars, 1 Uppercase, 1 Lowercase, 1 Number & 1 Special Char"
-      )
+      ),
   });
 
   const {
@@ -43,8 +43,8 @@ const SigninForm = () => {
       const url = process.env.NEXT_PUBLIC_BACKEND_URL + "login/";
 
       const dataObject = {
-        username:data?.email,
-        password:data?.password
+        username: data?.email,
+        password: data?.password,
       };
       const response = await fetch(url, {
         method: "POST",
@@ -65,8 +65,8 @@ const SigninForm = () => {
             ...session,
             user: {
               ...session.user,
-              token: responseData?.access // Assuming responseData is available in the component scope
-            }
+              token: responseData?.access, // Assuming responseData is available in the component scope
+            },
           };
           setModifiedSession(modifiedVariables);
         }
@@ -75,7 +75,7 @@ const SigninForm = () => {
       return responseData;
     } catch (error) {
       //alert("Could not login using the provided credentials!");
-      console.error("Could not login using the provided credentials:", error);    
+      console.error("Could not login using the provided credentials:", error);
       if (error.response && error.response.data) {
         const formattedData = JSON.stringify(error.response.data, null, 2);
         alert(formattedData);
@@ -128,7 +128,7 @@ const SigninForm = () => {
         type="submit"
         className="bg-blue-500 text-white py-2 px-4 rounded"
       >
-       Sign in
+        Sign in
       </button>
     </form>
   );
