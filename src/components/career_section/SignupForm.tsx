@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { useSignupMutation } from "../../redux/slices/Auth-api";
 import * as yup from "yup";
 
 interface FormData {
@@ -7,6 +8,7 @@ interface FormData {
   firstName: string;
   lastName: string;
   email: string;
+  username: string; // New field
   password: string;
   passwordConfirmation: string;
 }
@@ -16,6 +18,7 @@ const SigninForm = () => {
     firstName: yup.string().required("First Name is required"),
     lastName: yup.string().required("Last Name is required"),
     email: yup.string().email().required("Email is required"),
+    username: yup.string().required("Username is required"), // Validation for username
     password: yup
       .string()
       .required("Password is required")
@@ -36,45 +39,15 @@ const SigninForm = () => {
     resolver: yupResolver(loginSchema),
   });
 
+  // Define mutation
+  const [signupMutation, { isLoading }] = useSignupMutation();
+
   const onSubmit = async (data: FormData) => {
     try {
-
-      console.log("Input values:", data);
-      const url = process.env.NEXT_PUBLIC_BACKEND_URL + "login/";
-
-      const dataObject = {
-        username: data.email,
-        password: data.password,
-        firstName: data.firstName,
-        lastName: data.lastName,
-      };
-
-      const response = await fetch(url, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(dataObject),
-      });
-
-      if (!response.ok) {
-        throw new Error("Failed to fetch data from the backend");
-      }
-
-      const responseData = await response.json();
-      alert("token : " + responseData?.access);
-
-      // Assuming you have session handling logic here
-      // Modify session variables if needed based on responseData
-
-      return responseData;
+      // Call mutation
+      await signupMutation(data).unwrap();
     } catch (error) {
-      console.error("Could not login using the provided credentials:", error);
-      if (error.response && error.response.data) {
-        const formattedData = JSON.stringify(error.response.data, null, 2);
-        alert(formattedData);
-      }
-      return null;
+      console.error("Error:", error);
     }
   };
 
@@ -98,6 +71,7 @@ const SigninForm = () => {
           <p className="text-red-500 text-sm">{errors.firstName.message}</p>
         )}
       </div>
+
       {/* Last Name field */}
       <div className="mb-2">
         <label className="block mb-1 text-sm" htmlFor="lastName">
@@ -116,6 +90,7 @@ const SigninForm = () => {
           <p className="text-red-500 text-sm">{errors.lastName.message}</p>
         )}
       </div>
+
       {/* Email field */}
       <div className="mb-2">
         <label className="block mb-1 text-sm" htmlFor="email">
@@ -134,6 +109,26 @@ const SigninForm = () => {
           <p className="text-red-500 text-sm">{errors.email.message}</p>
         )}
       </div>
+
+      {/* Username field */}
+      <div className="mb-2">
+        <label className="block mb-1 text-sm" htmlFor="username">
+          Username:
+        </label>
+        <input
+          type="text"
+          id="username"
+          {...register("username")}
+          className={`w-full px-3 py-2 border rounded-md ${
+            errors.username ? "border-red-500" : ""
+          }`}
+          style={{ width: "calc(100% - 6px)", height: "28px" }}
+        />
+        {errors.username && (
+          <p className="text-red-500 text-sm">{errors.username.message}</p>
+        )}
+      </div>
+
       {/* Password field */}
       <div className="mb-2">
         <label className="block mb-1 text-sm" htmlFor="password">
@@ -152,6 +147,7 @@ const SigninForm = () => {
           <p className="text-red-500 text-sm">{errors.password.message}</p>
         )}
       </div>
+
       {/* Password Confirmation field */}
       <div className="mb-2">
         <label className="block mb-1 text-sm" htmlFor="passwordConfirmation">
@@ -172,6 +168,7 @@ const SigninForm = () => {
           </p>
         )}
       </div>
+
       {/* Submit button */}
       <button
         type="submit"

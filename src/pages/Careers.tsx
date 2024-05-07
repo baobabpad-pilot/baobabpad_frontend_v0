@@ -101,7 +101,7 @@ const Careers = () => {
       </div>
       <div
         className="section2"
-        style={{ marginTop: isSmallScreen ? "400px" : "" }}
+        style={{ marginTop: isSmallScreen ? "800px" : "" }}
       >
         <h2 className="mt-10 text-center text-3xl">
           <b style={{ color: "rgb(50, 56, 66)" }}>Our benefits</b>

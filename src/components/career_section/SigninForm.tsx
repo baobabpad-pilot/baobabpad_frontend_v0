@@ -1,24 +1,11 @@
-import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-
-interface FormData {
-  loginType: "company" | "talent";
-  companyName?: string;
-  firstName?: string;
-  lastName?: string;
-  email: string;
-  password: string;
-  passwordConfirmation: string;
-}
+import {
+  useSigninMutation,
+} from "../../redux/slices/Auth-api";
 
 const SigninForm = () => {
-  const [loginType, setLoginType] = useState<"company" | "talent">("company"); // Initialize loginType state
-  const handleLoginTypeChange = (type: "company" | "talent") => {
-    setLoginType(type);
-  };
-
   const loginSchema = yup.object().shape({
     email: yup.string().email().required("Email is required"),
     password: yup
@@ -38,51 +25,18 @@ const SigninForm = () => {
     resolver: yupResolver(loginSchema),
   });
 
-  const onSubmit = async (data: any) => {
-    try {
-      const url = process.env.NEXT_PUBLIC_BACKEND_URL + "login/";
+  const [signinMutation, { isError, error }] = useSigninMutation();
 
-      const dataObject = {
-        username: data?.email,
-        password: data?.password,
-      };
-      const response = await fetch(url, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(dataObject),
-      });
-      if (!response.ok) {
-        throw new Error("Failed to fetch data from the backend");
+  const onSubmit = async (data: FormData) => {
+    try {
+      // console.log(FormData);
+      const response = await signinMutation(data);
+      if (response.data) {
+        alert("token : " + response.data.access);
       }
-      const responseData = await response.json();
-      alert("token : " + responseData?.access);
-      useEffect(() => {
-        if (session) {
-          // Modify session variables
-          const modifiedVariables = {
-            ...session,
-            user: {
-              ...session.user,
-              token: responseData?.access, // Assuming responseData is available in the component scope
-            },
-          };
-          setModifiedSession(modifiedVariables);
-        }
-      }, [session]);
-      alert(responseData?.access);
-      return responseData;
     } catch (error) {
-      //alert("Could not login using the provided credentials!");
-      console.error("Could not login using the provided credentials:", error);
-      if (error.response && error.response.data) {
-        const formattedData = JSON.stringify(error.response.data, null, 2);
-        alert(formattedData);
-        return null;
-      } else {
-        return null;
-      }
+      console.error("Could not signin using the provided credentials:", error);
+      alert(error.message);
     }
   };
 
