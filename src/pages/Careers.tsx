@@ -30,6 +30,21 @@ const Careers = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
+      <section className="flex flex-col md:flex-row bg-[#6B8BEB] flex-wrap">
+  <div className="w-full md:w-[50%] flex justify-center">
+    <img src="/career_hero_image.png" alt="a woman with glasses photo" className="w-full" />
+  </div>
+  <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 text-[1.25rem] max-w-full md:max-w-[50%]">
+    <span className="text-[3rem] font-semibold">WE ARE HIRING </span>
+    <span>Are you Africa-based talented, innovative and creative software and product developer?
+
+Become part of  Baobabpad, a virtual technology village  designed to empower YOU. 
+Become a changemaker and shape the future of technology and innovation across the world. Contribute to projects that tackle real-world challenges and make a positive impact. 
+</span>
+    <button className="bg-[white] text-black p-2 rounded-[1rem] hover:bg-[#00BDD6] hover:text-white">Discover More</button>
+  </div>
+</section>
+
       <div
         className={`${styles.container} flex-1 flex justify-center items-center font-bold text-3xl`}
         style={{
