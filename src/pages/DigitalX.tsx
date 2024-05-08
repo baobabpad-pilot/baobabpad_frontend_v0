@@ -11,10 +11,10 @@ const DigitalX = () => {
   }
 
   const solutionLinks: SolutionsLinks[] = [
-    { label: "Client Support  ", href: "/Client" },
-    { label: "Remote Team Infrastructure", href: "/Remote" },
-    { label: "DigitalX", href: "/DigitalX" },
-    { label: "AI and Cloud", href: "/Cloud" },
+    { label: "CLIENT SUPPORT  ", href: "/Client" },
+    { label: "REMOTE TEAM", href: "/Remote" },
+    { label: "DIGITALX", href: "/DigitalX" },
+    { label: "AI & DATA", href: "/Cloud" },
   ];
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
@@ -69,7 +69,7 @@ const DigitalX = () => {
           </button>
         </div>
 
-        <nav className=" md:flex space-x-12 flex-row justify-center text-lg bg-blue-100 p-4 text-white ">
+        <nav className=" md:flex space-x-12 flex-row justify-end pr-[5rem] text-lg bg-blue-100 p-4 text-white ">
           <div className="flex justify-between items-center ">
             <ul
               className={`${
@@ -102,7 +102,7 @@ const DigitalX = () => {
             />
           </div>
           <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 text-[1.25rem] max-w-full md:max-w-[50%]">
-            <span className="text-[3rem] font-semibold">DigitalX</span>
+            <span className="text-[3rem] font-semibold">DIGITALX</span>
             <span>
               Providing a scalable cloud-based infrastructure service, empower
               its clients to focus on their core business activities.
@@ -209,11 +209,48 @@ const DigitalX = () => {
             </div>
             <p className="text-[3rem]">The Future is cloud </p>
           
-            <div className=" flex flex-row gap-x-5 ">
+            <div className=" flex flex-row gap-x-5 items-center mt-[1rem]">
+               <img src="/cloud_advisor_page.png" alt=""  className="rounded-[1rem]"/>
+              <div className="">
+                <p className=" font-bold font-[1rem]">Martin Sundberg</p>
+                <p className="text-[#9095A0]">Cloud Advisor</p>
+
+              </div>
             
             </div>
           </div>
-          <div className="w-full md:w-[49%] flex justify-center  ">
+          <div className="w-full md:w-[49%] flex-col justify-center m-1 ">
+            <div className="flex  items-center gap-x-1  border-l border-l-[#00BDD6] border-l-[7px] m-2 w-[90%]" >
+                <p className="font-bold text-[1.5rem] ">Virtual Machines</p>
+                <img src="/virtual_image.png" alt="" className="rounded-[0.5rem]" />
+
+            </div>
+
+            <div className="flex  items-center gap-x-1  border-l border-l-[#00BDD6] border-l-[7px] m-2 w-[90%]" >
+                <p className="font-bold text-[1.5rem] ">Collaboration</p>
+                <img src="/collaboration_image.png" alt="" className="rounded-[0.5rem]" />
+
+            </div>
+
+            <div className="flex  items-center gap-x-1 border-l border-l-[#00BDD6] border-l-[7px] m-2 w-[90%]" >
+                <p className="font-bold text-[1.5rem]">Cloud storage</p>
+                <img src="/cloud_storage.png" alt="" className="rounded-[0.5rem]" />
+
+            </div>
+            <div className="flex items-center gap-x-1 border-l border-l-[#00BDD6] border-l-[7px] m-2 w-[90%]" >
+                <p className="font-bold text-[1.5rem] ">Databases</p>
+                <img src="/database_image.png" alt="" className="rounded-[0.5rem] ml-12" />
+
+            </div>
+            <div className="flex  items-center gap-x-1 p-2 border-l border-l-[#00BDD6] border-l-[7px] m-2 w-[90%]" >
+                <p className="font-bold text-[1.5rem]">Management</p>
+                <img src="/management_image.png" alt="" className="rounded-[0.5rem]" />
+
+            </div>
+
+          
+            
+            
           
           </div>
         </section>
@@ -228,3 +265,4 @@ const DigitalX = () => {
 };
 
 export default DigitalX;
+

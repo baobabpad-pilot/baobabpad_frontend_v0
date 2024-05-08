@@ -103,7 +103,7 @@ const Client = () => {
           </div>
           <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 text-[1.25rem] max-w-full md:max-w-[50%]">
             <span className="text-[3rem] font-semibold">
-              Client support Infrastructure
+              Client Support 
             </span>
             <span>
               We offer a comprehensive client support infrastructure service

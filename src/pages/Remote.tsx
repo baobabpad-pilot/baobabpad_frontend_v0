@@ -10,10 +10,10 @@ const Remote = () => {
   }
 
   const solutionLinks: SolutionsLinks[] = [
-    { label: "Client Support  ", href: "/Client" },
-    { label: "Remote Team Infrastructure", href: "/Remote" },
-    { label: "DigitalX", href: "/DigitalX" },
-    { label: "AI and Cloud", href: "/Cloud" },
+    { label: "CLIENT SUPPORT   ", href: "/Client" },
+    { label: "REMOTE TEAM", href: "/Remote" },
+    { label: "DIGITALX", href: "/DigitalX" },
+    { label: "AI & CLOUD", href: "/Cloud" },
   ];
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
@@ -68,7 +68,7 @@ const Remote = () => {
           </button>
         </div>
 
-        <nav className=" md:flex space-x-12 flex-row justify-center text-lg bg-blue-100 p-4 text-white ">
+        <nav className=" md:flex space-x-12 flex-row justify-end pr-[5rem] text-lg bg-blue-100 p-4 text-white ">
           <div className="flex justify-between items-center ">
             <ul
               className={`${
@@ -95,7 +95,7 @@ const Remote = () => {
         <section className="flex mt-1 flex-col md:flex-row bg-[#8353E2] flex-wrap">
           <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 text-[1.25rem] max-w-full md:max-w-[50%]">
             <span className="text-[3rem] font-semibold">
-              Remote Team Infrastructure
+              REMOTE TEAM 
             </span>
             <span>
               Baobabpad's Virtual Tech Village platform connects a vast pool of
