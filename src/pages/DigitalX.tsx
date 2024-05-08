@@ -12,6 +12,10 @@ const DigitalX = () => {
     label: string;
     href: string;
   }
+  interface FAQItem {
+    question: string;
+    answer: string;
+  }
 
   const solutionLinks: SolutionsLinks[] = [
     { label: "CLIENT SUPPORT  ", href: "/Client" },
@@ -33,6 +37,34 @@ const DigitalX = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
   };
+
+
+  const faqs:FAQItem[] = [
+    {
+      question: 'What are the benefits of cloud adoption for businesses?',
+      answer: 'We accept Visa, MasterCard, American Express, and PayPal.',
+    },
+    {
+      question: 'What skills are needed for cloud engineering',
+      answer: 'Yes, we offer refunds within 30 days of purchase.',
+    },
+    {
+      question: 'How will cloud computing evolve in the future?',
+      answer: 'You can contact our customer support team at support@example.com.',
+    },
+    {
+      question: 'What are the challenges associated with cloud computing?',
+      answer: 'You can contact our customer support team at support@example.com.',
+    },
+  ];
+
+ 
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+
+  const handleToggle = (index:number) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  }
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -288,7 +320,7 @@ const DigitalX = () => {
         {...settings}
         className="w-full md:w-4/5 mx-auto"
       >
-        <div className="md:w-1/3 w-full m-3 border border-gray-300 p-6 bg-white flex flex-col justify-between h-[calc(2 * 2rem)] gap-x-7">
+        <div className="md:w-1/3 w-full m-3 border border-gray-300 p-6 bg-white flex flex-col justify-between h-[calc(2 * 2rem)] gap-">
           <div className="flex items-center space-x-2">
             <img src="/kenny.png" alt="" className="rounded-full w-12" />
             <p className="text-sm">Ashley Robinson</p>
@@ -341,9 +373,9 @@ const DigitalX = () => {
           </div>
           <div className="w-full md:w-[35%] flex-col justify-center m-1 ">
             <p className="w-[70%]">
-              {" "}
+              
               By carefully vetting and verifying each author, we ensure that our
-              authors are experienced in their respective fields.{" "}
+              authors are experienced in their respective fields.
             </p>
             <div className="bg-[#00BDD6]  flex flex-col justify-center  items-center text-white w-[65%]  p-2  rounded-[1rem]">
               <img src="jacob_mwale_tech_lead.jpg" alt="" className="w-[90%]" />
@@ -355,6 +387,62 @@ const DigitalX = () => {
             </div>
           </div>
         </section>
+
+
+        <section className="flex flex-col md:flex-row items-center justify-center flex-wrap p-12 border-t border-t-gray ">
+           
+       </section>
+
+      {/* FAQ start */}
+      <section className="container mx-auto mt-[-6rem] py-12">
+      <h2 className="text-3xl font-semibold text-center mb-8">FAQ</h2>
+      <div className="grid gap-6 ">
+        {faqs.map((faq, index) => (
+          <div
+          key={index}
+          className={`bg-white p-6 shadow rounded-lg ${
+            activeIndex === index ? 'border-[#00BDD6] border-2' : ''
+          }`}
+        >
+            <button
+              className="flex justify-between w-full text-left focus:outline-none"
+              onClick={() => handleToggle(index)}
+            >
+              <h3 className="text-lg font-semibold">{faq.question}</h3>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className={`h-6 w-6 transition-transform ${activeIndex === index ? 'rotate-180' : ''}`}
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path fillRule="evenodd" d="M6 8l4 4 4-4"></path>
+              </svg>
+            </button>
+            <p className={`mt-2 ${activeIndex === index ? '' : 'hidden'}`}>{faq.answer}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+    {/* End of FAQ */}
+
+{/* Use cases start */}
+{/* <section className="w-full md:w-[100%] mt-1 md:h-[50vh] flex flex-col bg-[#F3F4F6] items-center p-5 gap-5 rounded-t-[1rem]">
+   <div className="w-[100%] p-2">
+     <h3 className="text-2xl font-semibold mb-4 text-left">Use Cases</h3>
+    </div>
+    <div className="flex ">
+  
+  
+    </div>
+
+      
+     
+    </section> */}
+
+{/* end of use cases */}
+
+
+       
       </Layout>
     </div>
   );
