@@ -111,7 +111,8 @@ const Cloud = () => {
           </button>
         </div>
 
-        <nav className=" md:flex space-x-12 flex-row justify-center text-lg bg-blue-100 p-4 text-white ">
+       
+        <nav className=" md:flex space-x-12 flex-row justify-end pr-[5rem] text-lg bg-blue-100 p-4 text-white ">
           <div className="flex justify-between items-center ">
             <ul
               className={`${
