@@ -69,8 +69,10 @@ const SignupForm = () => {
         email: data?.email,
         first_name: data?.companyName,
         last_name: data?.loginType === 'talent' ? data?.lastName : '',
-        password1: data?.password,
-        password2: data?.passwordConfirmation
+        password: data?.password,
+        password2: data?.passwordConfirmation,
+        otp: 0,
+        is_active: true
       };
       if (data?.loginType === 'talent') {
         dataObject.first_name = data?.firstName;
@@ -86,7 +88,7 @@ const SignupForm = () => {
         throw new Error("Failed to fetch data from the backend");
       }
       const responseData = await response.json();
-      alert("Token="+ responseData.access);
+      alert("Token="+ responseData.token);
       return responseData;
     } catch (error) {
       console.error("Error fetching data from backend:", error);    

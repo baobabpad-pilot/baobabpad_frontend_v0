@@ -22,6 +22,7 @@ const fetchBackEndData = async (
       provider,
       auth_token: authToken,
     };
+   
     const response = await fetch(url, {
       method: "POST",
       headers: {
@@ -29,6 +30,7 @@ const fetchBackEndData = async (
       },
       body: JSON.stringify(data),
     });
+    
     if (!response.ok) {
       throw new Error("Failed to fetch data from the backend");
     }
