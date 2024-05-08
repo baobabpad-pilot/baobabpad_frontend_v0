@@ -2,6 +2,7 @@ import Layout from "@/components/Layout";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
+import Slider from "react-slick";
 
 const Remote = () => {
   interface SolutionsLinks {
@@ -9,11 +10,16 @@ const Remote = () => {
     href: string;
   }
 
+  interface FAQItem {
+    question: string;
+    answer: string;
+  }
+
   const solutionLinks: SolutionsLinks[] = [
-    { label: "CLIENT SUPPORT   ", href: "/Client" },
+    { label: "CLIENT SUPPORT  ", href: "/Client" },
     { label: "REMOTE TEAM", href: "/Remote" },
-    { label: "DIGITALX", href: "/DigitalX" },
-    { label: "AI & CLOUD", href: "/Cloud" },
+    { label: "DIGITAL" + String.fromCharCode(0x02e3), href: "/DigitalX" },
+    { label: "AI & DATA", href: "/Cloud" },
   ];
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
@@ -21,6 +27,51 @@ const Remote = () => {
   const toggleSolutionsNavbar = () => {
     setIsOpen(!isOpen);
   };
+
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+  };
+
+
+  
+  const faqs:FAQItem[] = [
+    {
+      question: 'What best practices can I follow to protect sensitive company data while working remotely?',
+      answer: '',
+    },
+    {
+      question: 'How can I ensure my home network is secure for work?',
+      answer: '.......',
+    },
+    {
+      question: 'How can I identify and avoid phishing scams while working remotely?',
+      answer: 'You can contact our customer support team at support@example.com.',
+    },
+    {
+      question:' What happens if my work device is lost or stolen?',
+      answer: 'You can contact our customer support team at support@example.com.',
+    },
+  ];
+
+ 
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+
+  const handleToggle = (index:number) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  }
+
+
+
+
+
+
+
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -113,6 +164,277 @@ const Remote = () => {
             />
           </div>
         </section>
+
+        <section className="flex flex-col md:flex-row items-center justify-center flex-wrap p-12 ">
+          <div className="w-full md:w-[50%] flex flex-row md:flex-col justify-center flex-wrap p-6 pt-[-1rem] gap-y-7">
+            <div className="flex flex-row bg-[#EBFDFF] w-[13rem] items-center">
+              <img
+                src="/introduction-icon.png"
+                alt="introduction icon"
+                className="w-[4rem]"
+              />
+              <span className=" text-[#00BDD6] text-[1.625rem]">
+                Introduction
+              </span>
+            </div>
+            <p className="text-[3rem]">Build a power Remote team </p>
+            <p className="text-[1.875rem]">
+              Secure remote access to company resources and applications for your team members.
+            </p>
+            <div className=" flex flex-row gap-x-5 ">
+              <button className="border border-black p-2 rounded-[1rem] hover:bg-[#00BDD6] hover:text-white hover:border-none">
+                Learn More
+              </button>
+              <button className="border border-black pl-9 pr-9 rounded-[1rem] bg-[#723CDE] text-white hover:bg-white hover:text-black">
+                Sign up
+              </button>
+            </div>
+          </div>
+          <div className="w-full md:w-[49%] flex justify-center  ">
+            <img
+              src="/remote_intro_image.png"
+              alt="people smiling "
+              className="w-full"
+            />
+          </div>
+        </section>
+
+        <section className="flex mt-1 flex-col md:flex-row bg-[#00BDD6] flex-wrap justify-center items-center">
+          <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 gap-x-12 text-[1.25rem] max-w-full md:max-w-[50%]">
+            <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+              <span className="text-[#171A1F] font-[500] text-[2.5rem]">
+                The Future is Remote
+              </span>
+              <span className="">
+              Strategic management formulates and implements major goals and initiatives.
+              </span>
+              <div className="w-[100%] flex justify-end">
+                <span className="text-[#00BDD6]">Learn More... </span>
+              </div>
+            </div>
+            <div className="sm:w-100% w-[30.75rem] h-[13rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+              <span className="text-[#171A1F] font-[500] text-[2rem]">
+              Managing  remote culture
+              </span>
+              <span className="">
+              Four activities for financial health: planning, budgeting, integrated financial planning, and performance management.
+              </span>
+              <div className="w-[100%] flex justify-end">
+                <span className="text-[#00BDD6]">Learn More... </span>
+              </div>
+            </div>
+            <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+              <span className="text-[#171A1F] font-[500] text-[2.5rem]">
+              Baobabpad Remotelly Hybrid
+              </span>
+              <span className="">
+               Ongoing support services provide assistance to customers for a limited period.
+              </span>
+              <div className="w-[100%]  flex justify-end">
+                <span className="text-[#00BDD6]">Learn More... </span>
+              </div>
+            </div>
+          </div>
+
+          <div className="w-full md:w-[50%] md:h-[50%] flex justify-center p-5">
+            <img src="/remote_second_image.png" alt="a guy smiling" />
+          </div>
+        </section>
+
+        <section className="flex flex-col md:flex-row items-center justify-center flex-wrap p-12 ">
+          <div className="w-full md:w-[55%] flex flex-row md:flex-col justify-center flex-wrap p-6 pt-[-1rem] gap-y-7">
+            <div className="flex flex-row bg-[#EBFDFF] w-[13rem] items-center">
+              <img
+                src="/introduction-icon.png"
+                alt="introduction icon"
+                className="w-[10rem]"
+              />
+              <span className=" text-[#00BDD6] text-[1.625rem]">
+                Core Values
+              </span>
+            </div>
+            <p className="text-[3rem]">Virtual Tech Village on APIs</p>
+
+            <div className=" flex flex-row gap-x-5 items-center mt-[1rem]">
+              <img
+                src="/kenny.png"
+                alt=""
+                className="rounded-[1rem] w-[40px]"
+              />
+              <div className="">
+                <p className=" font-bold font-[1rem]">Kenny Kaluiji</p>
+                <p className="text-[#9095A0]">Founder</p>
+              </div>
+            </div>
+          </div>
+          <div className="w-full md:w-[44%] flex-col justify-center m-1 ">
+            <div className="flex  items-center gap-x-1  border-l border-l-[#00BDD6] border-l-[7px] m-2 w-[90%] hover:bg-[#4069E5] hover:text-white">
+              <p className="font-bold text-[1.5rem] ">Trust & Integrity</p>
+              <img
+                src="/trust_image.png"
+                alt=""
+                className="rounded-[0.5rem]"
+              />
+            </div>
+
+            <div className="flex  items-center gap-x-1  border-l border-l-[#00BDD6] border-l-[7px] m-2 w-[90%]">
+              <p className="font-bold text-[1.5rem] ">Communication</p>
+              <img
+                src="/communication_image.png"
+                alt=""
+                className="rounded-[0.5rem]"
+              />
+            </div>
+
+            <div className="flex  items-center gap-x-1 border-l border-l-[#00BDD6] border-l-[7px] m-2 w-[90%]">
+              <p className="font-bold text-[1.5rem]">Cultural intel</p>
+              <img
+                src="/cultural_image.png"
+                alt=""
+                className="rounded-[0.5rem]"
+              />
+            </div>
+            <div className="flex items-center gap-x-1 border-l border-l-[#00BDD6] border-l-[7px] m-2 w-[90%]">
+              <p className="font-bold text-[1.5rem] ">Local hybrid</p>
+              <img
+                src="/local_hybrid_image.png"
+                alt=""
+                className="rounded-[0.5rem] ml-12"
+              />
+            </div>
+            <div className="flex  items-center gap-x-1 p-2 border-l border-l-[#00BDD6] border-l-[7px] m-2 w-[90%]">
+              <p className="font-bold text-[1.5rem]">Quality</p>
+              <img
+                src="/quality_image.png"
+                alt=""
+                className="rounded-[0.5rem]"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* start of review section */}
+        <section className="w-full md:w-[100%] mt-1 md:h-[50vh] flex flex-col bg-[#00BDD6] items-center p-5 gap-5">
+      <h3 className="text-white text-2xl font-semibold mb-4">Reviews</h3>
+      
+      {/* Review slider */}
+      <Slider
+        {...settings}
+        className="w-full md:w-4/5 mx-auto"
+      >
+        <div className="md:w-1/3 w-full m-3 border border-gray-300 p-6 bg-white flex flex-col justify-between h-[calc(2 * 2rem)] gap-">
+          <div className="flex items-center space-x-2">
+            <img src="/kenny.png" alt="" className="rounded-full w-12" />
+            <p className="text-sm">Ashley Robinson</p>
+          </div>
+          <p className="text-sm mt-4">
+            I highly recommend a membership with baobabpad, the support on managing
+            our cloud backend was excellent.
+          </p>
+        </div>
+
+        <div className="md:w-1/3 w-full m-3 border border-gray-300 p-6 bg-white flex flex-col justify-between h-[calc(2 * 2rem)]">
+          <div className="flex items-center space-x-2">
+            <img src="/kenny.png" alt="" className="rounded-full w-12" />
+            <p className="text-sm">Ashley Robinson</p>
+          </div>
+          <p className="text-sm mt-4">
+            I highly recommend a membership with baobabpad, the support on managing
+            our cloud backend was excellent.
+          </p>
+        </div>
+
+        <div className="md:w-1/3 w-full m-3 border border-gray-300 p-6 bg-white flex flex-col justify-between h-[calc(2 * 2rem)]">
+          <div className="flex items-center space-x-2">
+            <img src="/kenny.png" alt="" className="rounded-full w-12" />
+            <p className="text-sm">Ashley Robinson</p>
+          </div>
+          <p className="text-sm mt-4">
+            I highly recommend a membership with baobabpad, the support on managing
+            our cloud backend was excellent.
+          </p>
+        </div>
+      </Slider>
+    </section>
+  
+        {/* end of review section */}
+
+        <section className="flex flex-col md:flex-row items-center justify-center  flex-wrap p-12 border-t border-t-gray m-6  ">
+          <div className="w-full md:w-[60%] flex flex-row md:flex-col justify-center flex-wrap p-6 pt-[-1rem] gap-y-7">
+            <div className="flex flex-row bg-[#F1F1FE] w-[13rem] items-center">
+              <img
+                src="/community_digitalx_icon.png"
+                alt="community_digitalx_ico"
+                className="w-[12rem]"
+              />
+              <span className=" text-[#3F3DE0] text-[1.625rem]">
+                Our Community
+              </span>
+            </div>
+            <p className="text-[3rem]">Gain from our remote expert </p>
+          </div>
+          <div className="w-full md:w-[35%] flex-col justify-center m-1 ">
+            <p className="w-[70%]">
+              
+              By carefully vetting and verifying each author, we ensure that our
+              authors are experienced in their respective fields.
+            </p>
+            <div className="bg-[#00BDD6]  flex flex-col justify-center  items-center text-white w-[65%]  p-2  rounded-[1rem]">
+              <img src="/selma_h.png" alt="" className="w-[90%]" />
+              <h3 className="text-[2rem]">Selma H.</h3>
+              <p className="w-[90%]">
+              Microverse, a remote software development school volunteer
+              </p>
+            </div>
+          </div>
+        </section>
+
+
+        <section className="flex flex-col md:flex-row items-center justify-center flex-wrap p-12 border-t border-t-gray ">
+           
+       </section>
+
+      {/* FAQ start */}
+      <section className="container mx-auto mt-[-6rem] py-12">
+      <h2 className="text-3xl font-semibold text-center mb-8">FAQ</h2>
+      <div className="grid gap-6 ">
+        {faqs.map((faq, index) => (
+          <div
+          key={index}
+          className={`bg-white p-6 shadow rounded-lg ${
+            activeIndex === index ? 'border-[#00BDD6] border-2' : ''
+          }`}
+        >
+            <button
+              className="flex justify-between w-full text-left focus:outline-none"
+              onClick={() => handleToggle(index)}
+            >
+              <h3 className="text-lg font-semibold">{faq.question}</h3>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className={`h-6 w-6 transition-transform ${activeIndex === index ? 'rotate-180' : ''}`}
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path fillRule="evenodd" d="M6 8l4 4 4-4"></path>
+              </svg>
+            </button>
+            <p className={`mt-2 ${activeIndex === index ? '' : 'hidden'}`}>{faq.answer}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+    {/* End of FAQ */}
+
+
+
+
+
+
+
+
+
+
       </Layout>
     </div>
   );
