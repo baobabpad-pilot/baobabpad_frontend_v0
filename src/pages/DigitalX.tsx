@@ -13,7 +13,7 @@ const DigitalX = () => {
   const solutionLinks: SolutionsLinks[] = [
     { label: "CLIENT SUPPORT  ", href: "/Client" },
     { label: "REMOTE TEAM", href: "/Remote" },
-    { label: "DIGITALX", href: "/DigitalX" },
+    { label: "DIGITAL"+ String.fromCharCode(0x02E3), href: "/DigitalX" },
     { label: "AI & DATA", href: "/Cloud" },
   ];
   const router = useRouter();
@@ -102,7 +102,7 @@ const DigitalX = () => {
             />
           </div>
           <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 text-[1.25rem] max-w-full md:max-w-[50%]">
-            <span className="text-[3rem] font-semibold">DIGITALX</span>
+            <span className="text-[3rem] font-semibold">DIGITAL<sup>X</sup></span>
             <span>
               Providing a scalable cloud-based infrastructure service, empower
               its clients to focus on their core business activities.
@@ -220,7 +220,7 @@ const DigitalX = () => {
             </div>
           </div>
           <div className="w-full md:w-[49%] flex-col justify-center m-1 ">
-            <div className="flex  items-center gap-x-1  border-l border-l-[#00BDD6] border-l-[7px] m-2 w-[90%]" >
+            <div className="flex  items-center gap-x-1  border-l border-l-[#00BDD6] border-l-[7px] m-2 w-[90%] hover:bg-[#4069E5] hover:text-white" >
                 <p className="font-bold text-[1.5rem] ">Virtual Machines</p>
                 <img src="/virtual_image.png" alt="" className="rounded-[0.5rem]" />
 
@@ -255,6 +255,38 @@ const DigitalX = () => {
           </div>
         </section>
         
+
+        <section className="flex flex-col md:flex-row items-center justify-center  flex-wrap p-12 border-t border-t-gray m-6 ">
+          <div className="w-full md:w-[60%] flex flex-row md:flex-col justify-center flex-wrap p-6 pt-[-1rem] gap-y-7">
+            <div className="flex flex-row bg-[#F1F1FE] w-[13rem] items-center">
+              <img
+                src="/community_digitalx_icon.png"
+                alt="community_digitalx_ico"
+                className="w-[12rem]"
+              />
+              <span className=" text-[#3F3DE0] text-[1.625rem]">
+                 Our Community 
+              </span>
+            </div>
+            <p className="text-[3rem]">Gain from our cloud expert </p>
+          
+         
+          </div>
+          <div className="w-full md:w-[35%] flex-col justify-center m-1 ">
+            < p className="w-[70%]"> By carefully vetting and verifying each author, we ensure that our authors are experienced in their respective fields. </p>
+            <div className="bg-[#00BDD6]  flex flex-col justify-center  items-center text-white w-[65%]  p-2  rounded-[1rem]">
+               <img src="jacob_mwale_tech_lead.jpg" alt="" className="w-[90%]" />
+                 <h3 className="text-[2rem]">Jacob Mwale</h3>
+               <p className="w-[90%]">Cloud database and server management, DevOps, and proficiency in Python, JavaScript.</p>
+
+            </div>
+
+          
+            
+            
+          
+          </div>
+        </section>
 
 
 
