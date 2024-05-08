@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import styles from "../styles/careers.module.css";
 import Auth from "@/components/career_section/Auth";
-// import benefits1 from "";
+
 
 const Careers = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
@@ -147,7 +147,7 @@ const Careers = () => {
             marginRight: "5px",
             backgroundImage:
               "url('https://i.pinimg.com/564x/b0/aa/71/b0aa712b004c5458e8ff7fa22394f2e4.jpg')",
-          }} // Adjust margin-right and image URL as needed
+          }} 
         ></div>
         <div
           className="flex-auto bg-blue-600 w-64 bg-cover bg-center"
@@ -156,7 +156,7 @@ const Careers = () => {
             marginLeft: "5px",
             backgroundImage:
               "url('https://i.pinimg.com/564x/82/32/14/823214d1f8e66df38a13465358982924.jpg')",
-          }} // Adjust margin-left and image URL as needed
+          }} 
         ></div>
       </div>
 
@@ -232,7 +232,7 @@ const Careers = () => {
 
         <div
           className="flex-auto  w-64"
-          style={{ marginRight: "5px" }} // Adjust margin-right as needed
+          style={{ marginRight: "5px" }} 
         >
           <img src="/Image33 (2).png" alt="" height="400px" />
         </div>

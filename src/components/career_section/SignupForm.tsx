@@ -1,24 +1,21 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { useSignupMutation } from "../../redux/slices/Auth-api";
 import * as yup from "yup";
+import process from "process";
 
 interface FormData {
   loginType: "talent";
-  firstName: string;
-  lastName: string;
+  firstName?: string;
+  lastName?: string;
   email: string;
-  username: string; // New field
   password: string;
   passwordConfirmation: string;
 }
 
-const SigninForm = () => {
+const SignupForm = () => {
   const loginSchema = yup.object().shape({
-    firstName: yup.string().required("First Name is required"),
-    lastName: yup.string().required("Last Name is required"),
     email: yup.string().email().required("Email is required"),
-    username: yup.string().required("Username is required"), // Validation for username
     password: yup
       .string()
       .required("Password is required")
@@ -29,31 +26,60 @@ const SigninForm = () => {
     passwordConfirmation: yup
       .string()
       .oneOf([yup.ref("password"), null], "Passwords must match"),
+    firstName: yup.string().required("First Name is required"),
+    lastName: yup.string().required("Last Name is required"),
   });
 
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({
-    resolver: yupResolver(loginSchema),
+  } = useForm<FormData>({
+    resolver: yupResolver(loginSchema), // Use loginSchema for validation
   });
-
-  // Define mutation
-  const [signupMutation, { isLoading }] = useSignupMutation();
 
   const onSubmit = async (data: FormData) => {
     try {
-      // Call mutation
-      await signupMutation(data).unwrap();
+      const url = process.env.NEXT_PUBLIC_BACKEND_URL + "register/";
+      const dataObject = {
+        username: data.email,
+        email: data.email,
+        first_name: data.firstName,
+        last_name: data.lastName,
+        password: data.password,
+        password2: data.passwordConfirmation,
+        otp: 0,
+        is_active: true,
+      };
+      const response = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(dataObject),
+      });
+      if (!response.ok) {
+        throw new Error("Failed to fetch data from the backend");
+      }
+      const responseData = await response.json();
+      alert("Token=" + responseData.token);
+      return responseData;
     } catch (error) {
-      console.error("Error:", error);
+      console.error("Error fetching data from backend:", error);
+      if (error.response && error.response.data) {
+        const formattedData = JSON.stringify(error.response.data, null, 2);
+        alert(formattedData);
+        return null;
+      } else {
+        alert("An error occurred. Please try again later.");
+        return null;
+      }
     }
   };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="max-w-md mx-auto">
-      {/* First Name field */}
+      {/* Render talent fields */}
       <div className="mb-2">
         <label className="block mb-1 text-sm" htmlFor="firstName">
           First Name:
@@ -71,8 +97,6 @@ const SigninForm = () => {
           <p className="text-red-500 text-sm">{errors.firstName.message}</p>
         )}
       </div>
-
-      {/* Last Name field */}
       <div className="mb-2">
         <label className="block mb-1 text-sm" htmlFor="lastName">
           Last Name:
@@ -90,8 +114,8 @@ const SigninForm = () => {
           <p className="text-red-500 text-sm">{errors.lastName.message}</p>
         )}
       </div>
-
-      {/* Email field */}
+      {/* Common fields */}
+      {/* Repeat similar pattern for other fields */}
       <div className="mb-2">
         <label className="block mb-1 text-sm" htmlFor="email">
           Email:
@@ -103,33 +127,12 @@ const SigninForm = () => {
           className={`w-full px-3 py-2 border rounded-md ${
             errors.email ? "border-red-500" : ""
           }`}
-          style={{ width: "calc(100% - 6px)", height: "28px" }}
+          style={{ width: "100%", height: "28px" }}
         />
         {errors.email && (
           <p className="text-red-500 text-sm">{errors.email.message}</p>
         )}
       </div>
-
-      {/* Username field */}
-      <div className="mb-2">
-        <label className="block mb-1 text-sm" htmlFor="username">
-          Username:
-        </label>
-        <input
-          type="text"
-          id="username"
-          {...register("username")}
-          className={`w-full px-3 py-2 border rounded-md ${
-            errors.username ? "border-red-500" : ""
-          }`}
-          style={{ width: "calc(100% - 6px)", height: "28px" }}
-        />
-        {errors.username && (
-          <p className="text-red-500 text-sm">{errors.username.message}</p>
-        )}
-      </div>
-
-      {/* Password field */}
       <div className="mb-2">
         <label className="block mb-1 text-sm" htmlFor="password">
           Password:
@@ -141,17 +144,15 @@ const SigninForm = () => {
           className={`w-full px-3 py-2 border rounded-md ${
             errors.password ? "border-red-500" : ""
           }`}
-          style={{ width: "calc(100% - 6px)", height: "28px" }}
+          style={{ width: "100%", height: "28px" }}
         />
         {errors.password && (
           <p className="text-red-500 text-sm">{errors.password.message}</p>
         )}
       </div>
-
-      {/* Password Confirmation field */}
-      <div className="mb-2">
+      <div className="mb-4">
         <label className="block mb-1 text-sm" htmlFor="passwordConfirmation">
-          Confirm Password:
+          Password Confirmation:
         </label>
         <input
           type="password"
@@ -160,7 +161,7 @@ const SigninForm = () => {
           className={`w-full px-3 py-2 border rounded-md ${
             errors.passwordConfirmation ? "border-red-500" : ""
           }`}
-          style={{ width: "calc(100% - 6px)", height: "28px" }}
+          style={{ width: "100%", height: "28px" }}
         />
         {errors.passwordConfirmation && (
           <p className="text-red-500 text-sm">
@@ -168,16 +169,15 @@ const SigninForm = () => {
           </p>
         )}
       </div>
-
       {/* Submit button */}
       <button
         type="submit"
         className="bg-blue-500 text-white py-2 px-4 rounded"
       >
-        Sign in
+        Sign up as Talent
       </button>
     </form>
   );
 };
 
-export default SigninForm;
+export default SignupForm;
