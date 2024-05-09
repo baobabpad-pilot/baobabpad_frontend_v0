@@ -425,21 +425,7 @@ const DigitalX = () => {
     </section>
     {/* End of FAQ */}
 
-{/* Use cases start */}
-{/* <section className="w-full md:w-[100%] mt-1 md:h-[50vh] flex flex-col bg-[#F3F4F6] items-center p-5 gap-5 rounded-t-[1rem]">
-   <div className="w-[100%] p-2">
-     <h3 className="text-2xl font-semibold mb-4 text-left">Use Cases</h3>
-    </div>
-    <div className="flex ">
-  
-  
-    </div>
 
-      
-     
-    </section> */}
-
-{/* end of use cases */}
 
 
        
