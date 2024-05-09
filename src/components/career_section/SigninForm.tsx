@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -58,31 +58,31 @@ const SigninForm = () => {
       }
       const responseData = await response.json();
       alert("token : " + responseData?.access);
-      useEffect(() => {
-        if (session) {
-          // Modify session variables
-          const modifiedVariables = {
-            ...session,
-            user: {
-              ...session.user,
-              token: responseData?.access, // Assuming responseData is available in the component scope
-            },
-          };
-          setModifiedSession(modifiedVariables);
-        }
-      }, [session]);
+      // useEffect(() => {
+      //   if (session) {
+      //     // Modify session variables
+      //     const modifiedVariables = {
+      //       ...session,
+      //       user: {
+      //         ...session.user,
+      //         token: responseData?.access, // Assuming responseData is available in the component scope
+      //       },
+      //     };
+      //     setModifiedSession(modifiedVariables);
+      //   }
+      // }, [session]);
       alert(responseData?.access);
       return responseData;
     } catch (error) {
       //alert("Could not login using the provided credentials!");
       console.error("Could not login using the provided credentials:", error);
-      if (error.response && error.response.data) {
-        const formattedData = JSON.stringify(error.response.data, null, 2);
-        alert(formattedData);
-        return null;
-      } else {
-        return null;
-      }
+      // if (error.response && error.response.data) {
+      //   const formattedData = JSON.stringify(error.response.data, null, 2);
+      //   alert(formattedData);
+      //   return null;
+      // } else {
+      //   return null;
+      // }
     }
   };
 

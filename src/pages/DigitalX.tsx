@@ -1,6 +1,5 @@
 import Layout from "@/components/Layout";
 import React, { useState } from "react";
-import Solutions from "./Solutions";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
@@ -132,7 +131,7 @@ const DigitalX = () => {
             <ul
               className={`${
                 isOpen ? "block" : "hidden"
-              } sm:flex sm:space-x-12 sm:flex sm:justify-center sm:text-lg`}
+              } sm:flex sm:space-x-12 sm:justify-center sm:text-lg`}
             >
               {solutionLinks.map((solutionLink) => (
                 <li key={solutionLink.label}>
@@ -264,27 +263,28 @@ const DigitalX = () => {
                 </div>
             </div>
             <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
-                <span className="text-[#171A1F] font-[500] text-[2.5rem]">Cloud xPert </span>
-                <span className="">Four activities for financial health: planning, budgeting, integrated financial planning, and performance management.</span>
-                <div className="w-[100%] flex justify-end">
-                    {/* <span className="text-[#00BDD6]">Learn More... </span> */}
-                    <a href="#" onClick={(event) => handleClick(event,"Cloud_xPert")} className="text-[#00BDD6] cursor-pointer">
-                      Learn More...
-                    </a>
-
-                </div>
-            </div> 
+              <span className="text-[#171A1F] font-[500] text-[2.5rem]">
+                Cloud xPert{" "}
+              </span>
+              <span className="">
+                Four activities for financial health: planning, budgeting,
+                integrated financial planning, and performance management.
+              </span>
+              <div className="w-[100%] flex justify-end">
+                <span className="text-[#00BDD6]">Learn More... </span>
+              </div>
+            </div>
             <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
-                <span className="text-[#171A1F] font-[500] text-[2.5rem]">Cloud base </span>
-                <span className="">
-                Ongoing support services provide assistance to customers for a limited period.
-                </span>
-                <div className="w-[100%]  flex justify-end">
-                    {/* <span className="text-[#00BDD6]">Learn More... </span> */}
-                    <a href="#" onClick={(event) => handleClick(event,"Cloud_base")} className="text-[#00BDD6] cursor-pointer">
-                      Learn More...
-                    </a>
-                </div>
+              <span className="text-[#171A1F] font-[500] text-[2.5rem]">
+                Cloud base{" "}
+              </span>
+              <span className="">
+                Ongoing support services provide assistance to customers for a
+                limited period.
+              </span>
+              <div className="w-[100%]  flex justify-end">
+                <span className="text-[#00BDD6]">Learn More... </span>
+              </div>
             </div>
           {/* </div> */}
 
@@ -489,6 +489,57 @@ const DigitalX = () => {
     {/* End of FAQ */}
 
 
+        <section className="flex flex-col md:flex-row items-center justify-center flex-wrap p-12 border-t border-t-gray ">
+           
+       </section>
+
+      {/* FAQ start */}
+      <section className="container mx-auto mt-[-6rem] py-12">
+      <h2 className="text-3xl font-semibold text-center mb-8">FAQ</h2>
+      <div className="grid gap-6 ">
+        {faqs.map((faq, index) => (
+          <div
+          key={index}
+          className={`bg-white p-6 shadow rounded-lg ${
+            activeIndex === index ? 'border-[#00BDD6] border-2' : ''
+          }`}
+        >
+            <button
+              className="flex justify-between w-full text-left focus:outline-none"
+              onClick={() => handleToggle(index)}
+            >
+              <h3 className="text-lg font-semibold">{faq.question}</h3>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className={`h-6 w-6 transition-transform ${activeIndex === index ? 'rotate-180' : ''}`}
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path fillRule="evenodd" d="M6 8l4 4 4-4"></path>
+              </svg>
+            </button>
+            <p className={`mt-2 ${activeIndex === index ? '' : 'hidden'}`}>{faq.answer}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+    {/* End of FAQ */}
+
+{/* Use cases start */}
+{/* <section className="w-full md:w-[100%] mt-1 md:h-[50vh] flex flex-col bg-[#F3F4F6] items-center p-5 gap-5 rounded-t-[1rem]">
+   <div className="w-[100%] p-2">
+     <h3 className="text-2xl font-semibold mb-4 text-left">Use Cases</h3>
+    </div>
+    <div className="flex ">
+  
+  
+    </div>
+
+      
+     
+    </section> */}
+
+{/* end of use cases */}
 
 
        

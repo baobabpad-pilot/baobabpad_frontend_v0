@@ -25,7 +25,7 @@ const SigninForm = () => {
       ),
     passwordConfirmation: yup
       .string()
-      .oneOf([yup.ref("password"), null], "Passwords must match"),
+      .oneOf([yup.ref("password"), ], "Passwords must match"),
   });
 
   const {
@@ -40,11 +40,12 @@ const SigninForm = () => {
     try {
 
       console.log("Input values:", data);
-      const url = process.env.NEXT_PUBLIC_BACKEND_URL + "login/";
+      const url = process.env.NEXT_PUBLIC_BACKEND_URL + "email_signup/";
 
       const dataObject = {
-        username: data.email,
+        email: data.email,
         password: data.password,
+        confirmPassword: data.passwordConfirmation,
         firstName: data.firstName,
         lastName: data.lastName,
       };
@@ -70,10 +71,10 @@ const SigninForm = () => {
       return responseData;
     } catch (error) {
       console.error("Could not login using the provided credentials:", error);
-      if (error.response && error.response.data) {
-        const formattedData = JSON.stringify(error.response.data, null, 2);
-        alert(formattedData);
-      }
+      // if (error.response && error.response.data) {
+      //   const formattedData = JSON.stringify(error.response.data, null, 2);
+      //   alert(formattedData);
+      // }
       return null;
     }
   };
