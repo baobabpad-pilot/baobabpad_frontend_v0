@@ -13,7 +13,7 @@ const StepIndicator: React.FC<{ step: number; currentStep: number }> = ({
   ];
 
   return (
-    <div className="flex flex-col justify-center mt-8  px-12">
+    <div className="flex flex-col justify-center mt-8  md:px-12">
       <div
         className={`flex gap-4 items-center transition-all delay-150  ${
           currentStep >= step

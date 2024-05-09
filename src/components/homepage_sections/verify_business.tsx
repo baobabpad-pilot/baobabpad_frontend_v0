@@ -35,11 +35,30 @@ const VerifyBusiness = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(formDataUpdated);
+
+    const sendData = async () => {
+      const response = await fetch(
+        `https://baobabpad-334a8864da0e.herokuapp.com/api/roadmap/userinterests/`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formDataUpdated)
+        }
+      );
+      if (response.ok) {
+        alert("Submitted Successfully");
+        
+      } else {
+        alert(response.status)
+      }
+    }
+    sendData();
   };
 
   return (
-    <div className="flex flex-col gap-10 p-10 px-36">
+    <div className="flex flex-col gap-10 p-10 px-4 lg:px-36">
       <h1 className="text-5xl font-semibold">Free Trial</h1>
 
       <div className="flex w-full">
