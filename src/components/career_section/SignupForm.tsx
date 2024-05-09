@@ -38,48 +38,73 @@ const SignupForm = () => {
     resolver: yupResolver(loginSchema), // Use loginSchema for validation
   });
 
-  const onSubmit = async (data: FormData) => {
-    try {
-      const url = process.env.NEXT_PUBLIC_BACKEND_URL + "register/";
-      const dataObject = {
-        username: data.email,
-        email: data.email,
-        first_name: data.firstName,
-        last_name: data.lastName,
-        password: data.password,
-        password2: data.passwordConfirmation,
-        otp: 0,
-        is_active: true,
-      };
-      const response = await fetch(url, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(dataObject),
-      });
-      if (!response.ok) {
-        throw new Error("Failed to fetch data from the backend");
-      }
-      const responseData = await response.json();
-      alert("Token=" + responseData.token);
-      return responseData;
-    } catch (error) {
-      console.error("Error fetching data from backend:", error);
-      if (error.response && error.response.data) {
-        const formattedData = JSON.stringify(error.response.data, null, 2);
-        alert(formattedData);
-        return null;
-      } else {
-        alert("An error occurred. Please try again later.");
-        return null;
-      }
+  const [alertType, setAlertType] = useState<"success" | "error" | null>(null);
+  const [alertMessage, setAlertMessage] = useState<string>("");
+
+const onSubmit = async (data: FormData) => {
+  try {
+    const url = process.env.NEXT_PUBLIC_BACKEND_URL + "register/";
+    const dataObject = {
+      username: data.email,
+      email: data.email,
+      first_name: data.firstName,
+      last_name: data.lastName,
+      password: data.password,
+      password2: data.passwordConfirmation,
+      otp: 0,
+      is_active: true,
+    };
+    const response = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(dataObject),
+    });
+    if (!response.ok) {
+      throw new Error("Failed to fetch data from the backend");
     }
-  };
+    const responseData = await response.json();
+    setAlertType("success");
+    setAlertMessage("Signup successful!"); // Set your success message here
+    return responseData;
+  } catch (error) {
+    setAlertType("error");
+    if (error.response && error.response.data && error.response.data.username) {
+      if (error.response.data.username.includes("already exists")) {
+        setAlertMessage("A user with that email already exists.");
+      } else {
+        const formattedData = JSON.stringify(error.response.data, null, 2);
+        setAlertMessage(formattedData);
+      }
+    } else {
+      setAlertMessage("Check credential and try again."); // Set your generic error message here
+    }
+    console.error("Error fetching data from backend:", error);
+    return null;
+  }
+};
+
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="max-w-md mx-auto">
-      {/* Render talent fields */}
+      {/* Render Tailwind CSS alerts */}
+      {alertType && (
+        <div
+          className={`p-4 mb-4 text-sm rounded-lg ${
+            alertType === "success"
+              ? "bg-green-50 text-green-800"
+              : "bg-red-50 text-red-800"
+          }`}
+          role="alert"
+        >
+          <span className="font-medium">
+            {alertType === "success" ? "Success !" : "Failed!"}
+          </span>{" "}
+          {alertMessage}
+        </div>
+      )}
+      {/* Input fields */}
       <div className="mb-2">
         <label className="block mb-1 text-sm" htmlFor="firstName">
           First Name:
