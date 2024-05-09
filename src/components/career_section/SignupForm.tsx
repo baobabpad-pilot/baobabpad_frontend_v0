@@ -3,15 +3,8 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import process from "process";
+import { SubmitHandler } from "react-hook-form";
 
-interface FormData {
-  loginType: "talent";
-  firstName?: string;
-  lastName?: string;
-  email: string;
-  password: string;
-  passwordConfirmation: string;
-}
 
 const SignupForm = () => {
   const loginSchema = yup.object().shape({
@@ -25,23 +18,30 @@ const SignupForm = () => {
       ),
     passwordConfirmation: yup
       .string()
-      .oneOf([yup.ref("password"), null], "Passwords must match"),
+      .oneOf([yup.ref("password"), undefined], "Passwords must match"),
     firstName: yup.string().required("First Name is required"),
     lastName: yup.string().required("Last Name is required"),
   });
+
+  // const {
+  //   register,
+  //   handleSubmit,
+  //   formState: { errors },
+  // } = useForm<FormData>({
+  //   resolver: yupResolver(loginSchema), // Use loginSchema for validation
+  // });
 
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<FormData>({
-    resolver: yupResolver(loginSchema), // Use loginSchema for validation
+  } = useForm({
+    resolver: yupResolver(loginSchema),
   });
-
   const [alertType, setAlertType] = useState<"success" | "error" | null>(null);
   const [alertMessage, setAlertMessage] = useState<string>("");
 
-const onSubmit = async (data: FormData) => {
+  const onSubmit: SubmitHandler<{ email: string; firstName: string, lastName:string, password: string , passwordConfirmation?:string; }> = async (data) => {
   try {
     const url = process.env.NEXT_PUBLIC_BACKEND_URL + "register/";
     const dataObject = {
@@ -68,7 +68,7 @@ const onSubmit = async (data: FormData) => {
     setAlertType("success");
     setAlertMessage("Signup successful!"); // Set your success message here
     return responseData;
-  } catch (error) {
+  } catch (error:any) {
     setAlertType("error");
     if (error.response && error.response.data && error.response.data.username) {
       if (error.response.data.username.includes("already exists")) {

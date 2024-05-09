@@ -6,8 +6,8 @@ import LinkedInProvider, {
 import GitHubProvider from "next-auth/providers/github";
 import process from "process";
 
-var backend_token = null;
-var provider = null;
+var backend_token: null = null;
+var provider: null = null;
 
 const fetchBackEndData = async (
   provider: any,
@@ -33,6 +33,7 @@ const fetchBackEndData = async (
       throw new Error("Failed to fetch data from the backend");
     }
     const responseData = await response.json();
+
     return responseData;
   } catch (error) {
     console.error("Error fetching data from backend:", error);
@@ -88,20 +89,21 @@ export const authOptions: NextAuthOptions = {
   },
   jwt: {},
   callbacks: {
-    async signIn(user: any, account: any) {
+    async signIn(params: { user: any; account: any }) {
+      const { user, account } = params;
       let auth_token = user?.account?.id_token;
       let backendUserData = await fetchBackEndData(
         user?.account?.provider,
         auth_token,
         user?.user
       );
-      user.jwt = backend_token = backendUserData.token;
+      user.jwt = backend_token = backendUserData?.token;
       provider = user?.account?.provider;
       return {
         ...user,
         session: {
           ...user.session,
-          jwt: backendUserData.token
+          jwt: backendUserData?.token
         }
       };
     },
@@ -114,16 +116,22 @@ export const authOptions: NextAuthOptions = {
     async jwt({ token, account, profile }) {
       if (account) {
         token.accessToken = account.access_token;
-        token.id = profile?.id;
+        //token.id = profile?.id;
       }
       return token;
     },
     async session({ session, token }) {
-      session.accessToken = token.accessToken;
-      session.user.id = token.id;
-      session.user.token = backend_token;
-      session.user.provider = provider;
-      return session;
+      return {
+        ...(session || {}),
+        accessToken: token.accessToken,
+        token : backend_token,
+        provider : provider
+      };   
+      //   session.accessToken = token.accessToken;
+      //   session.user.id = token.id;
+      //   session.user.token = backend_token;
+      //   session.user.provider = provider; 
+      // return session;
     },
   },
   pages: {

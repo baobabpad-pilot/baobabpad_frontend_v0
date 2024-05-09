@@ -29,7 +29,7 @@ const DigitalX = () => {
 
   const [componentVisible, setComponentVisible] = useState(null);
 
-  const handleClick = (event:any, componentName) => {
+  const handleClick = (event:any, componentName:any) => {
     event.preventDefault();
     setComponentVisible(componentName);
   };
