@@ -74,7 +74,7 @@ const DigitalX = () => {
 
   const [componentVisible, setComponentVisible] = useState(null);
 
-  const handleClick = (event:any, componentName) => {
+  const handleClick = (event:any, componentName:any) => {
     event.preventDefault();
     setComponentVisible(componentName);
   };
@@ -286,7 +286,7 @@ const DigitalX = () => {
                     </a>
                 </div>
             </div>
-          </div>
+          {/* </div> */}
 
           <div className="w-full md:w-[50%] md:h-[50%] flex justify-center p-5" id="right-sub-section">
             {componentVisible === "Future_is_cloud" && <Future_is_cloud />}
