@@ -4,137 +4,437 @@ import Footer from "@/components/Footer";
 import Layout from "@/components/Layout";
 import Link from "next/link";
 import { useRouter } from 'next/router';
+import Slider from "react-slick";
 
 const Solutions = () => {
 
- interface SolutionsLinks{
-  label:string,
-  href:string
- }
+  interface SolutionsLinks {
+    label: string;
+    href: string;
+  }
+  interface FAQItem {
+    question: string;
+    answer: string;
+  }
 
-
- const solutionLinks:SolutionsLinks[] = [
-  { label: "Client Support  ", href: "/Client" },
-  { label: "Remote Team Infrastructure", href: "/Remote" },
-  { label: "DigitalX", href: "/DigitalX"},
-  { label: "AI and Cloud", href: "/Cloud" },
-
-];
-const router = useRouter();
- const [isOpen, setIsOpen] = useState(false);
-
+  const solutionLinks: SolutionsLinks[] = [
+    { label: "CLIENT SUPPORT  ", href: "/Client" },
+    { label: "REMOTE TEAM", href: "/Remote" },
+    { label: "DIGITAL" + String.fromCharCode(0x02e3), href: "/DigitalX" },
+    { label: "AI & DATA", href: "/Cloud" },
+  ];
+  const router = useRouter();
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleSolutionsNavbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+  };
 
 
+  const faqs:FAQItem[] = [
+    {
+      question: 'What are Service Level Agreements (SLAs)?',
+      answer: '.............................',
+    },
+    {
+      question: 'Who can I contact with questions about my Baobabpad account?',
+      answer: '..................................',
+    },
+    {
+      question: 'How can I determine the time difference when contacting support?',
+      answer: '...................................',
+    },
+    {
+      question: 'What if I need immediate assistance with a critical issue?',
+      answer: '.........................................',
+    },
+  ];
+
+ 
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
 
-
+  const handleToggle = (index:number) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  }
 
   return (
-    
-<Layout>
-
-      <div className="md:hidden">
-        <button
-          onClick={toggleSolutionsNavbar}
-          className="text-[#00BDD6] focus:outline-none"
-        >
-          {isOpen ? (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-8 w-8"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          ) : (
-            <>
-              {" "}
-              <span className="sr-only">Toggle menu</span>
+    <div className="min-h-screen flex flex-col">
+      <Layout>
+        <div className="md:hidden">
+          <button
+            onClick={toggleSolutionsNavbar}
+            className="text-[#00BDD6] focus:outline-none"
+          >
+            {isOpen ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-8 w-8"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-                strokeWidth="2"
               >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  d="M4 6h16M4 12h16M4 18h16"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
                 />
               </svg>
-            </>
-          )}
-        </button>
-      </div>
+            ) : (
+              <>
+                {" "}
+                <span className="sr-only">Toggle menu</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-8 w-8"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              </>
+            )}
+          </button>
+        </div>
 
-<nav className=" md:flex space-x-12 flex-row justify-center text-lg bg-blue-100 p-4 text-white ">
-      <div className="flex justify-between items-center ">
-        
-        <ul
-          className={`${
-            isOpen ? 'block' : 'hidden'
-          } sm:flex sm:space-x-12 sm:flex sm:justify-center sm:text-lg`}
+        <nav className=" md:flex space-x-12 flex-row justify-end pr-[5rem] text-lg bg-blue-100 p-4 text-white ">
+          <div className="flex justify-between items-center ">
+            <ul
+              className={`${
+                isOpen ? "block" : "hidden"
+              } sm:flex sm:space-x-12 sm:flex sm:justify-center sm:text-lg`}
+            >
+              {solutionLinks.map((solutionLink) => (
+                <li key={solutionLink.label}>
+                  <Link
+                    href={solutionLink.href}
+                    className={`text-gray-700 ${
+                      router.pathname === solutionLink.href
+                        ? "text-blue-500"
+                        : "hover:text-blue-500"
+                    } transition-colors duration-200 ease-in-out`}
+                  >
+                    {solutionLink.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </nav>
+
+        <section className="flex flex-col md:flex-row bg-[#E8C245] flex-wrap">
+          <div className="w-full md:w-[50%] flex justify-center">
+            <img
+              src="/new_solution_image_1.png"
+              alt="a woman with glasses photo"
+              className="w-full"
+            />
+          </div>
+          <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 text-[1.25rem] max-w-full md:max-w-[50%]">
+            <span className="text-[3rem] font-semibold">
+              Client Support 
+            </span>
+            <span>
+              We offer a comprehensive client support infrastructure service
+              designed to provide you with timely, efficient, and professional
+              assistance.
+            </span>
+            <button className="bg-[white] text-black p-2 rounded-[1rem] hover:bg-[#00BDD6] hover:text-white">
+              Discover More
+            </button>
+          </div>
+        </section>
+
+        <section className="flex flex-col md:flex-row items-center justify-center flex-wrap p-12 ">
+          <div className="w-full md:w-[50%] flex flex-row md:flex-col justify-center flex-wrap p-6 pt-[-1rem] gap-y-7">
+            <div className="flex flex-row bg-[#EBFDFF] w-[13rem] items-center">
+              <img
+                src="/introduction-icon.png"
+                alt="introduction icon"
+                className="w-[4rem]"
+              />
+              <span className=" text-[#00BDD6] text-[1.625rem]">
+                Introduction
+              </span>
+            </div>
+            <p className="text-[3rem]">From bugs to bucks client  support  </p>
+            <p className="text-[1.875rem]">
+            End to end client support infrastructure built to empower technology for operational improvement and creating long-term growth.
+            </p>
+            <div className=" flex flex-row gap-x-5 ">
+              <button className="border border-black p-2 rounded-[1rem] hover:bg-[#00BDD6] hover:text-white hover:border-none">
+                Learn More
+              </button>
+              <button className="border border-black pl-9 pr-9 rounded-[1rem] bg-[#723CDE] text-white hover:bg-white hover:text-black">
+                Sign up
+              </button>
+            </div>
+          </div>
+          <div className="w-full md:w-[49%] flex justify-center  ">
+            <img
+              src="/client.png"
+              alt="people smiling "
+              className="w-full"
+            />
+          </div>
+        </section>
+
+        <section className="flex mt-1 flex-col md:flex-row bg-[#00BDD6] flex-wrap justify-center items-center">
+          <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 gap-x-12 text-[1.25rem] max-w-full md:max-w-[50%]">
+            <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+              <span className="text-[#171A1F] font-[500] text-[2.5rem]">
+              Business Strategy
+              </span>
+              <span className="">
+              Strategic management formulates and implements major goals and initiatives.
+              </span>
+              <div className="w-[100%] flex justify-end">
+                <span className="text-[#00BDD6]">Learn More... </span>
+              </div>
+            </div>
+            <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+              <span className="text-[#171A1F] font-[500] text-[2.5rem]">
+              Planning and Analysis
+              </span>
+              <span className="">
+              Four activities for financial health: planning, budgeting, integrated financial planning, and performance management.
+              </span>
+              <div className="w-[100%] flex justify-end">
+                <span className="text-[#00BDD6]">Learn More... </span>
+              </div>
+            </div>
+            <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+              <span className="text-[#171A1F] font-[500] text-[2.5rem]">
+              Ongoing Support
+              </span>
+              <span className="">
+              Ongoing support services provide assistance to customers for a limited period.
+              </span>
+              <div className="w-[100%]  flex justify-end">
+                <span className="text-[#00BDD6]">Learn More... </span>
+              </div>
+            </div>
+          </div>
+
+          <div className="w-full md:w-[50%] md:h-[50%] flex justify-center p-5">
+            <img src="/client_intro_image.png" alt="a guy smiling" />
+          </div>
+        </section>
+
+        <section className="flex flex-col md:flex-row items-center justify-center flex-wrap p-12 ">
+          <div className="w-full md:w-[55%] flex flex-row md:flex-col justify-center flex-wrap p-6 pt-[-1rem] gap-y-7">
+            <div className="flex flex-row bg-[#EBFDFF] w-[13rem] items-center">
+              <img
+                src="/introduction-icon.png"
+                alt="introduction icon"
+                className="w-[10rem]"
+              />
+              <span className=" text-[#00BDD6] text-[1.625rem]">
+                Core Values
+              </span>
+            </div>
+            <p className="text-[3rem]">Technology needs a helping team </p>
+
+            <div className=" flex flex-row gap-x-5 items-center mt-[1rem]">
+              <img
+                src="/cloud_advisor_page.png"
+                alt=""
+                className="rounded-[1rem]"
+              />
+              <div className="">
+                <p className=" font-bold font-[1rem]">Martin Sundberg</p>
+                <p className="text-[#9095A0]">Cloud Advisor</p>
+              </div>
+            </div>
+          </div>
+          <div className="w-full md:w-[44%] flex-col justify-center m-1 ">
+            <div className="flex  items-center gap-x-1  border-l border-l-[#00BDD6] border-l-[7px] m-2 w-[90%] hover:bg-[#4069E5] hover:text-white">
+              <p className="font-bold text-[1.5rem] ">Efficiency</p>
+              <img
+                src="/virtual_image.png"
+                alt=""
+                className="rounded-[0.5rem]"
+              />
+            </div>
+
+            <div className="flex  items-center gap-x-1  border-l border-l-[#00BDD6] border-l-[7px] m-2 w-[90%]">
+              <p className="font-bold text-[1.5rem] ">Productivity</p>
+              <img
+                src="/collaboration_image.png"
+                alt=""
+                className="rounded-[0.5rem]"
+              />
+            </div>
+
+            <div className="flex  items-center gap-x-1 border-l border-l-[#00BDD6] border-l-[7px] m-2 w-[90%]">
+              <p className="font-bold text-[1.5rem]">UXpereience</p>
+              <img
+                src="/cloud_storage.png"
+                alt=""
+                className="rounded-[0.5rem]"
+              />
+            </div>
+            <div className="flex items-center gap-x-1 border-l border-l-[#00BDD6] border-l-[7px] m-2 w-[90%]">
+              <p className="font-bold text-[1.5rem] ">Analytics</p>
+              <img
+                src="/database_image.png"
+                alt=""
+                className="rounded-[0.5rem] ml-12"
+              />
+            </div>
+            <div className="flex  items-center gap-x-1 p-2 border-l border-l-[#00BDD6] border-l-[7px] m-2 w-[90%]">
+              <p className="font-bold text-[1.5rem]">Feedback</p>
+              <img
+                src="/management_image.png"
+                alt=""
+                className="rounded-[0.5rem]"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* start of review section */}
+        <section className="w-full md:w-[100%] mt-1 md:h-[50vh] flex flex-col bg-[#00BDD6] items-center p-5 gap-5">
+      <h3 className="text-white text-2xl font-semibold mb-4">Reviews</h3>
+      
+      {/* Review slider */}
+      <Slider
+        {...settings}
+        className="w-full md:w-4/5 mx-auto"
+      >
+        <div className="md:w-1/3 w-full m-3 border border-gray-300 p-6 bg-white flex flex-col justify-between h-[calc(2 * 2rem)] gap-">
+          <div className="flex items-center space-x-2">
+            <img src="/kenny.png" alt="" className="rounded-full w-12" />
+            <p className="text-sm">Ashley Robinson</p>
+          </div>
+          <p className="text-sm mt-4">
+            I highly recommend a membership with baobabpad, the support on managing
+            our cloud backend was excellent.
+          </p>
+        </div>
+
+        <div className="md:w-1/3 w-full m-3 border border-gray-300 p-6 bg-white flex flex-col justify-between h-[calc(2 * 2rem)]">
+          <div className="flex items-center space-x-2">
+            <img src="/kenny.png" alt="" className="rounded-full w-12" />
+            <p className="text-sm">Ashley Robinson</p>
+          </div>
+          <p className="text-sm mt-4">
+            I highly recommend a membership with baobabpad, the support on managing
+            our cloud backend was excellent.
+          </p>
+        </div>
+
+        <div className="md:w-1/3 w-full m-3 border border-gray-300 p-6 bg-white flex flex-col justify-between h-[calc(2 * 2rem)]">
+          <div className="flex items-center space-x-2">
+            <img src="/kenny.png" alt="" className="rounded-full w-12" />
+            <p className="text-sm">Ashley Robinson</p>
+          </div>
+          <p className="text-sm mt-4">
+            I highly recommend a membership with baobabpad, the support on managing
+            our cloud backend was excellent.
+          </p>
+        </div>
+      </Slider>
+    </section>
+  
+        {/* end of review section */}
+
+        <section className="flex flex-col md:flex-row items-center justify-center  flex-wrap p-12 border-t border-t-gray m-6  ">
+          <div className="w-full md:w-[60%] flex flex-row md:flex-col justify-center flex-wrap p-6 pt-[-1rem] gap-y-7">
+            <div className="flex flex-row bg-[#F1F1FE] w-[13rem] items-center">
+              <img
+                src="/community_digitalx_icon.png"
+                alt="community_digitalx_ico"
+                className="w-[12rem]"
+              />
+              <span className=" text-[#3F3DE0] text-[1.625rem]">
+                Our Community
+              </span>
+            </div>
+            <p className="text-[3rem]">Gain insights from our expert. </p>
+          </div>
+          <div className="w-full md:w-[35%] flex-col justify-center m-1 ">
+            <p className="w-[70%]">
+              
+              By carefully vetting and verifying each author, we ensure that our
+              authors are experienced in their respective fields.
+            </p>
+            <div className="bg-[#00BDD6]  flex flex-col justify-center  items-center text-white w-[65%]  p-2  rounded-[1rem]">
+              <img src="jacob_mwale_tech_lead.jpg" alt="" className="w-[90%]" />
+              <h3 className="text-[2rem]">JRichson Simba</h3>
+              <p className="w-[90%]">
+              Full stack software engineer with a strong foundation in data structures and algorithms.
+              </p>
+            </div>
+          </div>
+        </section>
+
+
+        <section className="flex flex-col md:flex-row items-center justify-center flex-wrap p-12 border-t border-t-gray ">
+           
+       </section>
+
+      {/* FAQ start */}
+      <section className="container mx-auto mt-[-6rem] py-12">
+      <h2 className="text-3xl font-semibold text-center mb-8">FAQ</h2>
+      <div className="grid gap-6 ">
+        {faqs.map((faq, index) => (
+          <div
+          key={index}
+          className={`bg-white p-6 shadow rounded-lg ${
+            activeIndex === index ? 'border-[#00BDD6] border-2' : ''
+          }`}
         >
-          {solutionLinks.map((solutionLink) => (
-            <li key={solutionLink.label}>
-              <Link
-                href={solutionLink.href}
-                className={`text-gray-700 ${
-                  router.pathname === solutionLink.href
-                    ? 'text-blue-500'
-                    : 'hover:text-blue-500'
-                } transition-colors duration-200 ease-in-out`}
+            <button
+              className="flex justify-between w-full text-left focus:outline-none"
+              onClick={() => handleToggle(index)}
+            >
+              <h3 className="text-lg font-semibold">{faq.question}</h3>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className={`h-6 w-6 transition-transform ${activeIndex === index ? 'rotate-180' : ''}`}
+                viewBox="0 0 20 20"
+                fill="currentColor"
               >
-                {solutionLink.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
+                <path fillRule="evenodd" d="M6 8l4 4 4-4"></path>
+              </svg>
+            </button>
+            <p className={`mt-2 ${activeIndex === index ? '' : 'hidden'}`}>{faq.answer}</p>
+          </div>
+        ))}
       </div>
-    </nav>
-
-
-   
-  
-
-  
-   {/* Start of the Hero section  */}
- <section className="flex flex-col md:flex-row bg-[#E8C245] flex-wrap">
-  <div className="w-full md:w-[50%] flex justify-center">
-    <img src="/new_solution_image_1.png" alt="a woman with glasses photo" className="w-full" />
-  </div>
-  <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 text-[1.25rem] max-w-full md:max-w-[50%]">
-    <span className="text-[3rem] font-semibold">Client support Infrastructure</span>
-    <span>We offer a comprehensive client support infrastructure service designed to provide you with timely, efficient, and professional assistance.</span>
-    <button className="bg-[white] text-black p-2 rounded-[1rem] hover:bg-[#00BDD6] hover:text-white">Discover More</button>
-  </div>
-</section>
+    </section>
+    {/* End of FAQ */}
 
 
 
 
 
-
-
-
-
-
-</Layout>
+      </Layout>
+    </div>
   );
+
+
+
+
+
+
+  
 };
 
 export default Solutions;
