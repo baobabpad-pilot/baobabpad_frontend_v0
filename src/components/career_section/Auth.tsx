@@ -37,7 +37,7 @@ function Auth() {
   return (
     <>
       <div className={styles.part2}>
-        {/* <pre>{JSON.stringify(session, null, 2)}</pre> */}
+          {/* <pre>{JSON.stringify(session?.user?.token, null, 2)}</pre> */}
         {session ? (
             <div>
               <p className="text-2xl">Karibu Sana , {session?.user?.name}</p>
