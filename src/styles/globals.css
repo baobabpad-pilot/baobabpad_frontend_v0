@@ -170,3 +170,11 @@
 /*
 -- End BackGround Animation 
 */
+
+@media (max-width: 768px) {
+	.img2 {
+		margin-top: 20px;
+	}
+
+	
+}

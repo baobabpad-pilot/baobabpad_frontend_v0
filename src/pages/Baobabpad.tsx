@@ -17,12 +17,23 @@ import { FaPeopleGroup } from "react-icons/fa6";
 import { CiPlay1 } from "react-icons/ci";
 
 
+
+
+
+
+
+
+
+
+
+
+
 const Baobabpad = () => {
 
   const teamDetailsArray=[
     {
       image:'/brenda_mkeshwa_CEO.jpg',
-      username:'Brenda Mkwesha',
+      username:'Brenda Mkeshwa',
       position:'CEO'
     },
     {

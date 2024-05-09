@@ -3,10 +3,6 @@ import Image from "next/image";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import styles from "../styles/careers.module.css";
-import user1 from "../career_images/user1.png";
-import user2 from "../career_images/user2.png";
-import user3 from "../career_images/user3.png";
-import user4 from "../career_images/user4.png";
 import Auth from "@/components/career_section/Auth";
 // import benefits1 from "";
 
@@ -64,7 +60,7 @@ Become a changemaker and shape the future of technology and innovation across th
                 style={{ marginRight: "25px", marginTop: "50px" }}
               >
                 <Image
-                  src={user3}
+                  src={"/user3.png"}
                   width={70}
                   height={70}
                   alt="Picture of the author"
@@ -73,7 +69,7 @@ Become a changemaker and shape the future of technology and innovation across th
               {/* Image 2 */}
               <div className="img2">
                 <Image
-                  src={user4}
+                  src={"/user4.png"}
                   width={120}
                   height={120}
                   alt="Picture of the author"
@@ -90,7 +86,7 @@ Become a changemaker and shape the future of technology and innovation across th
                 style={{ marginRight: "30px", marginBottom: "30px" }}
               >
                 <Image
-                  src={user2}
+                  src={"/user2.png"}
                   width={60}
                   height={60}
                   alt="Picture of the author"
@@ -99,7 +95,7 @@ Become a changemaker and shape the future of technology and innovation across th
               {/* Image 2 */}
               <div className="img2 mt-5 " style={{ marginRight: "20px" }}>
                 <Image
-                  src={user1}
+                  src={"/user1.png"}
                   width={90}
                   height={90}
                   alt="Picture of the author"
@@ -165,17 +161,16 @@ Become a changemaker and shape the future of technology and innovation across th
             height: "200px",
             marginRight: "5px",
             backgroundImage:
-              "url('https://i.pinimg.com/236x/5c/b9/a3/5cb9a382ed518b21c8a25f8f4a82c24b.jpg')",
-          }}
+              "url('https://i.pinimg.com/564x/b0/aa/71/b0aa712b004c5458e8ff7fa22394f2e4.jpg')",
+          }} // Adjust margin-right and image URL as needed
         ></div>
-
         <div
           className="flex-auto bg-blue-600 w-64 bg-cover bg-center"
           style={{
             height: "200px",
             marginLeft: "5px",
             backgroundImage:
-              "url('https://i.pinimg.com/236x/60/de/f0/60def0fc042e9690ff3393155d1343dd.jpg')",
+              "url('https://i.pinimg.com/564x/82/32/14/823214d1f8e66df38a13465358982924.jpg')",
           }} // Adjust margin-left and image URL as needed
         ></div>
       </div>
@@ -187,7 +182,7 @@ Become a changemaker and shape the future of technology and innovation across th
             height: "400px",
             marginRight: "5px",
             backgroundImage:
-              "url('https://i.pinimg.com/236x/5e/df/9d/5edf9d8f35391c67bb8658b8ba4c0de5.jpg')",
+              "url('https://i.pinimg.com/564x/59/16/6d/59166da12bcdd1a621b02381413ee256.jpg')",
           }} // Adjust margin-right as needed
         ></div>
 
