@@ -28,7 +28,7 @@ const Homepage: React.FC = () => {
         <Header />
         <About />
         <div className="w-full grid grid-cols-1 md:grid-cols-2">
-          <div className="flex flex-col gap-28 pl-28">
+          <div className="flex-col gap-28 hidden lg:flex pl-4 lg:pl-28">
             {Array.from({ length: totalSteps }, (_, index) => index + 1).map(
               (step) => (
                 <StepIndicator
