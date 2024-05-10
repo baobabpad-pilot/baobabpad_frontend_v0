@@ -11,6 +11,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Future_is_cloud from "@/components/homepage_sections/Future_is_cloud";
 import Cloud_xPert from "@/components/homepage_sections/Cloud_xPert";
 import Cloud_base from "@/components/homepage_sections/Cloud_base";
+import Faq from "@/components/FAQs/Faq";
 
 
 const DigitalX = () => {
@@ -65,16 +66,11 @@ const DigitalX = () => {
   ];
 
  
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-
-  const handleToggle = (index:number) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  }
 
   const [componentVisible, setComponentVisible] = useState(null);
 
-  const handleClick = (event:any, componentName) => {
+  const handleClick = (event:any, componentName:any) => {
     event.preventDefault();
     setComponentVisible(componentName);
   };
@@ -210,83 +206,51 @@ const DigitalX = () => {
         </section>
 
         <section className="flex mt-1 flex-col md:flex-row bg-[#00BDD6] flex-wrap justify-center items-center">
+         
+
           <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 gap-x-12 text-[1.25rem] max-w-full md:max-w-[50%]">
-            <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+                    
+          <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
 
-              <span className="text-[#171A1F] font-[500] text-[2.5rem]">
-                The Future is Cloud{" "}
-              </span>
-              <span className="">
-                Strategic management formulates and implements major goals and
-                initiatoves
-              </span>
-              <div className="w-[100%] flex justify-end">
-                <span className="text-[#00BDD6]">Learn More... </span>
-              </div>
-            </div>
-            <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
-              <span className="text-[#171A1F] font-[500] text-[2.5rem]">
-                Cloud xPert{" "}
-              </span>
-              <span className="">
-                Four activities for financial health: planning, budgeting,
-                integrated financial planning, and performance management.
-              </span>
-              <div className="w-[100%] flex justify-end">
-                <span className="text-[#00BDD6]">Learn More... </span>
-              </div>
-            </div>
-            <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
-              <span className="text-[#171A1F] font-[500] text-[2.5rem]">
-                Cloud base{" "}
-              </span>
-              <span className="">
-                Ongoing support services provide assistance to customers for a
-                limited period.
-              </span>
-              <div className="w-[100%]  flex justify-end">
-                <span className="text-[#00BDD6]">Learn More... </span>
-              </div>
-            </div>
+          <span className="text-[#171A1F] font-[500] text-[2.5rem]">The Future is Cloud </span>
+          <span className="">Strategic management formulates and implements major goals and initiatoves</span>
+          <div className="w-[100%] flex justify-end">
+              {/* <span className="text-[#00BDD6]">Learn More... </span> */}
+              <a href="#" onClick={(event) => handleClick(event,"Future_is_cloud")} className="text-[#00BDD6] cursor-pointer">
+                Learn More...
+              </a>
+
+          </div>
           </div>
 
-          <div className="w-full md:w-[50%] md:h-[50%] flex justify-center p-5">
-            <img src="/digital_section_3_image.png" alt="a guy smiling" />
+          <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+          <span className="text-[#171A1F] font-[500] text-[2.5rem]">Cloud xPert </span>
+          <span className="">Four activities for financial health: planning, budgeting, integrated financial planning, and performance management.</span>
+          <div className="w-[100%] flex justify-end">
+              {/* <span className="text-[#00BDD6]">Learn More... </span> */}
+              <a href="#" onClick={(event) => handleClick(event,"Cloud_xPert")} className="text-[#00BDD6] cursor-pointer">
+                Learn More...
+              </a>
 
-                <span className="text-[#171A1F] font-[500] text-[2.5rem]">The Future is Cloud </span>
-                <span className="">Strategic management formulates and implements major goals and initiatoves</span>
-                <div className="w-[100%] flex justify-end">
-                    {/* <span className="text-[#00BDD6]">Learn More... </span> */}
-                    <a href="#" onClick={(event) => handleClick(event,"Future_is_cloud")} className="text-[#00BDD6] cursor-pointer">
-                      Learn More...
-                    </a>
-
-                </div>
-            </div>
-            <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
-                <span className="text-[#171A1F] font-[500] text-[2.5rem]">Cloud xPert </span>
-                <span className="">Four activities for financial health: planning, budgeting, integrated financial planning, and performance management.</span>
-                <div className="w-[100%] flex justify-end">
-                    {/* <span className="text-[#00BDD6]">Learn More... </span> */}
-                    <a href="#" onClick={(event) => handleClick(event,"Cloud_xPert")} className="text-[#00BDD6] cursor-pointer">
-                      Learn More...
-                    </a>
-
-                </div>
-            </div> 
-            <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
-                <span className="text-[#171A1F] font-[500] text-[2.5rem]">Cloud base </span>
-                <span className="">
-                Ongoing support services provide assistance to customers for a limited period.
-                </span>
-                <div className="w-[100%]  flex justify-end">
-                    {/* <span className="text-[#00BDD6]">Learn More... </span> */}
-                    <a href="#" onClick={(event) => handleClick(event,"Cloud_base")} className="text-[#00BDD6] cursor-pointer">
-                      Learn More...
-                    </a>
-                </div>
-            </div>
           </div>
+          </div> 
+          <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+          <span className="text-[#171A1F] font-[500] text-[2.5rem]">Cloud base </span>
+          <span className="">
+          Ongoing support services provide assistance to customers for a limited period.
+          </span>
+          <div className="w-[100%]  flex justify-end">
+              {/* <span className="text-[#00BDD6]">Learn More... </span> */}
+              <a href="#" onClick={(event) => handleClick(event,"Cloud_base")} className="text-[#00BDD6] cursor-pointer">
+                Learn More...
+              </a>
+          </div>
+          </div>
+
+          </div>
+
+          
+          
 
           <div className="w-full md:w-[50%] md:h-[50%] flex justify-center p-5" id="right-sub-section">
             {componentVisible === "Future_is_cloud" && <Future_is_cloud />}
@@ -457,7 +421,7 @@ const DigitalX = () => {
        </section>
 
       {/* FAQ start */}
-      <section className="container mx-auto mt-[-6rem] py-12">
+      {/* <section className="container mx-auto mt-[-6rem] py-12">
       <h2 className="text-3xl font-semibold text-center mb-8">FAQ</h2>
       <div className="grid gap-6 ">
         {faqs.map((faq, index) => (
@@ -485,7 +449,15 @@ const DigitalX = () => {
           </div>
         ))}
       </div>
-    </section>
+
+        
+    </section> */}
+    
+
+    <Faq faqs={faqs}/>
+
+
+
     {/* End of FAQ */}
 
 
