@@ -90,7 +90,7 @@ const SigninForm = () => {
           role="alert"
         >
           <span className="font-medium">
-            {alertType === "success" ? "Success" : " "}
+            {alertType === "success" ? "Success" : ""}
           </span>{" "}
           {alertMessage}
         </div>
