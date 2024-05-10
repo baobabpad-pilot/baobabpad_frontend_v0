@@ -1,4 +1,8 @@
+import Faq from "@/components/FAQs/Faq";
 import Layout from "@/components/Layout";
+import Reviews from "@/components/Reviews/Reviews";
+import SolutionNavbar from "@/components/SolutionsNavbar/SolutionNavbar";
+import Features from "@/components/features/Features";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
@@ -55,6 +59,15 @@ const Client = () => {
     },
   ];
 
+
+  const features = [
+    { title: "Efficiency", imageSrc: "/virtual_image.png" },
+    { title: "Productivity", imageSrc: "/collaboration_image.png" },
+    { title: "UXperience", imageSrc: "/cloud_storage.png" },
+    { title: "Analytics", imageSrc: "/database_image.png" },
+    { title: "Feedback", imageSrc: "/management_image.png" },
+  ];
+
  
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
@@ -66,79 +79,16 @@ const Client = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Layout>
-        <div className="md:hidden">
-          <button
-            onClick={toggleSolutionsNavbar}
-            className="text-[#00BDD6] focus:outline-none"
-          >
-            {isOpen ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-8 w-8"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            ) : (
-              <>
-                {" "}
-                <span className="sr-only">Toggle menu</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              </>
-            )}
-          </button>
-        </div>
+           
 
-        <nav className=" md:flex space-x-12 flex-row justify-end pr-[5rem] text-lg bg-blue-100 p-4 text-white ">
-          <div className="flex justify-between items-center ">
-            <ul
-              className={`${
-                isOpen ? "block" : "hidden"
-              } sm:flex sm:space-x-12 sm:flex sm:justify-center sm:text-lg`}
-            >
-              {solutionLinks.map((solutionLink) => (
-                <li key={solutionLink.label}>
-                  <Link
-                    href={solutionLink.href}
-                    className={`text-gray-700 ${
-                      router.pathname === solutionLink.href
-                        ? "text-blue-500"
-                        : "hover:text-blue-500"
-                    } transition-colors duration-200 ease-in-out`}
-                  >
-                    {solutionLink.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </nav>
+        <SolutionNavbar/>
 
         <section className="flex flex-col md:flex-row bg-[#E8C245] flex-wrap">
           <div className="w-full md:w-[50%] flex justify-center">
-            <img
-              src="/new_solution_image_1.png"
-              alt="a woman with glasses photo"
+          
+          <img
+              src="/client.png"
+              alt="people smiling "
               className="w-full"
             />
           </div>
@@ -183,16 +133,17 @@ const Client = () => {
             </div>
           </div>
           <div className="w-full md:w-[49%] flex justify-center  ">
-            <img
-              src="/client.png"
-              alt="people smiling "
+          <img
+              src="/new_solution_image_1.png"
+              alt="a woman with glasses photo"
               className="w-full"
             />
+
           </div>
         </section>
 
-        <section className="flex mt-1 flex-col md:flex-row bg-[#00BDD6] flex-wrap justify-center items-center">
-          <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 gap-x-12 text-[1.25rem] max-w-full md:max-w-[50%]">
+        <section className="flex mt-1 flex-col md:flex-row bg-[#00BDD6] flex-wrap justify-center items-center gap-x-[5rem]">
+          <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 gap-x-12 text-[1.25rem] max-w-full md:max-w-[60%]">
             <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] text-[2.5rem]">
               Business Strategy
@@ -228,8 +179,8 @@ const Client = () => {
             </div>
           </div>
 
-          <div className="w-full md:w-[50%] md:h-[50%] flex justify-center p-5">
-            <img src="/client_intro_image.png" alt="a guy smiling" />
+          <div className="w-full md:w-[40%] md:h-[50%] flex justify-center p-5">
+            <img src="/client_intro_image.png" alt="a guy smiling" className="w-[100%]" />
           </div>
         </section>
 
@@ -259,97 +210,13 @@ const Client = () => {
               </div>
             </div>
           </div>
-          <div className="w-full md:w-[44%] flex-col justify-center m-1 ">
-            <div className="flex  items-center gap-x-1  border-l border-l-[#00BDD6] border-l-[7px] m-2 w-[90%] hover:bg-[#4069E5] hover:text-white">
-              <p className="font-bold text-[1.5rem] ">Efficiency</p>
-              <img
-                src="/virtual_image.png"
-                alt=""
-                className="rounded-[0.5rem]"
-              />
-            </div>
+  
+          <Features features={features}/>
 
-            <div className="flex  items-center gap-x-1  border-l border-l-[#00BDD6] border-l-[7px] m-2 w-[90%]">
-              <p className="font-bold text-[1.5rem] ">Productivity</p>
-              <img
-                src="/collaboration_image.png"
-                alt=""
-                className="rounded-[0.5rem]"
-              />
-            </div>
-
-            <div className="flex  items-center gap-x-1 border-l border-l-[#00BDD6] border-l-[7px] m-2 w-[90%]">
-              <p className="font-bold text-[1.5rem]">UXpereience</p>
-              <img
-                src="/cloud_storage.png"
-                alt=""
-                className="rounded-[0.5rem]"
-              />
-            </div>
-            <div className="flex items-center gap-x-1 border-l border-l-[#00BDD6] border-l-[7px] m-2 w-[90%]">
-              <p className="font-bold text-[1.5rem] ">Analytics</p>
-              <img
-                src="/database_image.png"
-                alt=""
-                className="rounded-[0.5rem] ml-12"
-              />
-            </div>
-            <div className="flex  items-center gap-x-1 p-2 border-l border-l-[#00BDD6] border-l-[7px] m-2 w-[90%]">
-              <p className="font-bold text-[1.5rem]">Feedback</p>
-              <img
-                src="/management_image.png"
-                alt=""
-                className="rounded-[0.5rem]"
-              />
-            </div>
-          </div>
         </section>
 
-        {/* start of review section */}
-        <section className="w-full md:w-[100%] mt-1 md:h-[50vh] flex flex-col bg-[#00BDD6] items-center p-5 gap-5">
-      <h3 className="text-white text-2xl font-semibold mb-4">Reviews</h3>
-      
-      {/* Review slider */}
-      <Slider
-        {...settings}
-        className="w-full md:w-4/5 mx-auto"
-      >
-        <div className="md:w-1/3 w-full m-3 border border-gray-300 p-6 bg-white flex flex-col justify-between h-[calc(2 * 2rem)] gap-">
-          <div className="flex items-center space-x-2">
-            <img src="/kenny.png" alt="" className="rounded-full w-12" />
-            <p className="text-sm">Ashley Robinson</p>
-          </div>
-          <p className="text-sm mt-4">
-            I highly recommend a membership with baobabpad, the support on managing
-            our cloud backend was excellent.
-          </p>
-        </div>
-
-        <div className="md:w-1/3 w-full m-3 border border-gray-300 p-6 bg-white flex flex-col justify-between h-[calc(2 * 2rem)]">
-          <div className="flex items-center space-x-2">
-            <img src="/kenny.png" alt="" className="rounded-full w-12" />
-            <p className="text-sm">Ashley Robinson</p>
-          </div>
-          <p className="text-sm mt-4">
-            I highly recommend a membership with baobabpad, the support on managing
-            our cloud backend was excellent.
-          </p>
-        </div>
-
-        <div className="md:w-1/3 w-full m-3 border border-gray-300 p-6 bg-white flex flex-col justify-between h-[calc(2 * 2rem)]">
-          <div className="flex items-center space-x-2">
-            <img src="/kenny.png" alt="" className="rounded-full w-12" />
-            <p className="text-sm">Ashley Robinson</p>
-          </div>
-          <p className="text-sm mt-4">
-            I highly recommend a membership with baobabpad, the support on managing
-            our cloud backend was excellent.
-          </p>
-        </div>
-      </Slider>
-    </section>
-  
-        {/* end of review section */}
+          <Reviews/>
+    
 
         <section className="flex flex-col md:flex-row items-center justify-center  flex-wrap p-12 border-t border-t-gray m-6  ">
           <div className="w-full md:w-[60%] flex flex-row md:flex-col justify-center flex-wrap p-6 pt-[-1rem] gap-y-7">
@@ -380,46 +247,9 @@ const Client = () => {
             </div>
           </div>
         </section>
+       
 
-
-        <section className="flex flex-col md:flex-row items-center justify-center flex-wrap p-12 border-t border-t-gray ">
-           
-       </section>
-
-      {/* FAQ start */}
-      <section className="container mx-auto mt-[-6rem] py-12">
-      <h2 className="text-3xl font-semibold text-center mb-8">FAQ</h2>
-      <div className="grid gap-6 ">
-        {faqs.map((faq, index) => (
-          <div
-          key={index}
-          className={`bg-white p-6 shadow rounded-lg ${
-            activeIndex === index ? 'border-[#00BDD6] border-2' : ''
-          }`}
-        >
-            <button
-              className="flex justify-between w-full text-left focus:outline-none"
-              onClick={() => handleToggle(index)}
-            >
-              <h3 className="text-lg font-semibold">{faq.question}</h3>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className={`h-6 w-6 transition-transform ${activeIndex === index ? 'rotate-180' : ''}`}
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path fillRule="evenodd" d="M6 8l4 4 4-4"></path>
-              </svg>
-            </button>
-            <p className={`mt-2 ${activeIndex === index ? '' : 'hidden'}`}>{faq.answer}</p>
-          </div>
-        ))}
-      </div>
-    </section>
-    {/* End of FAQ */}
-
-
-
+      <Faq faqs={faqs}/>
 
 
       </Layout>

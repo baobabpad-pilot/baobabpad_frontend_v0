@@ -1,8 +1,5 @@
 import React, { useState } from 'react'
 
-
-
-
 interface FAQItem {
     question: string;
     answer: string;
