@@ -1,6 +1,5 @@
 import Layout from "@/components/Layout";
 import React, { useState } from "react";
-import Solutions from "./Solutions";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
@@ -58,7 +57,8 @@ const DigitalX = () => {
 
   const [componentVisible, setComponentVisible] = useState(false);
 
-  const handleClick = (event: any, componentName: any) => {
+
+  const handleClick = (event:any, componentName:any) => {
     event.preventDefault();
     setComponentVisible(componentName);
   };
@@ -74,7 +74,9 @@ const DigitalX = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Layout>
+
         <SolutionNavbar />
+     
         <section className="flex mt-1 flex-col md:flex-row bg-[#00BDD6] flex-wrap">
           <div className="w-full md:w-[50%] flex justify-center">
             <img
@@ -132,8 +134,7 @@ const DigitalX = () => {
             />
           </div>
         </section>
-
-        <section className="flex mt-1 flex-col md:flex-row bg-[#00BDD6] flex-wrap justify-center items-center gap-x-[0.2rem]">
+         <section className="flex mt-1 flex-col md:flex-row bg-[#00BDD6] flex-wrap justify-center items-center gap-x-[0.2rem]">
           <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 gap-x-12 text-[1.25rem] max-w-full md:max-w-[50%]">
             <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] text-[2.5rem]">
@@ -266,8 +267,8 @@ const DigitalX = () => {
             </div>
           </div>
         </section>
-
         <Faq faqs={faqs} />
+
       </Layout>
     </div>
   );

@@ -75,6 +75,14 @@ const MultiSelectForm: React.FC<Props> = ({ onNextStep, onFreeTrialClick }) => {
     ],
   };
 
+  const stepTexts = [
+    { text: "What is your frontend stack?", key: "Frontend" },
+    { text: "What is your backend stack?", key: "Backend" },
+    { text: "What is your company type?", key: "Business" },
+    { text: "What industry do you operate in?", key: "Industry" },
+    { text: "What is your Technology Readiness Level?", key: "TRL" },
+  ];
+
   const handleOptionClick = (question: string, option: string) => {
     setFormData((prevData) => {
       const updatedOptions = prevData[question]
@@ -97,16 +105,17 @@ const MultiSelectForm: React.FC<Props> = ({ onNextStep, onFreeTrialClick }) => {
     onNextStep(currentStep);
   }, [formData, onNextStep]);
 
-  const handleVerifyBusiness = () => {
-    router.push("/verify_business");
-  };
-
   return (
     <div className="max-w-lg mt-8 overflow-hidden">
       <div className="space-y-4">
         {Object.entries(options).map(([question, optionList]) => (
           <div key={question} className=" border rounded-md p-4 px-8">
-            <h3 className="text-lg font-medium">{question}</h3>
+
+            <h3 className="text-lg font-medium flex lg:hidden mb-2">
+              {stepTexts.find((step) => step.key === question)?.text}
+            </h3>
+
+            <h3 className="text-lg font-medium hidden lg:flex mb-2">{question}</h3>
             <div className="flex flex-wrap gap-2">
               {optionList.map((option) => (
                 <div
@@ -127,7 +136,7 @@ const MultiSelectForm: React.FC<Props> = ({ onNextStep, onFreeTrialClick }) => {
       </div>
 
       <button
-        className="mt-20 bg-[#00BDD6] text-white py-2 px-4 rounded-full hover:bg-gray-300 transition-colors delay-75"
+        className="m-4 lg:mt-20 bg-[#00BDD6] text-white py-2 px-4 rounded-full hover:bg-gray-300 transition-colors delay-75"
         onClick={() => onFreeTrialClick()}
       >
         Free Trial
