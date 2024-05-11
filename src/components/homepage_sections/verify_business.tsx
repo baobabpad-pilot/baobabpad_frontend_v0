@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import Layout from "@/components/Layout";
+import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
 import { updateFormData } from "@/redux/slices/formDataSlice";
 import { RootState } from "@/redux/rootReducer";
 import { CiCircleAlert } from "react-icons/ci";
 
 const VerifyBusiness = () => {
+  const router = useRouter();
   const dispatch = useDispatch();
   const formDataUpdated = useSelector((state: RootState) => state.formData);
 
@@ -13,10 +14,10 @@ const VerifyBusiness = () => {
     company_name: "",
     business_type: "",
     phone_number: "",
-    email: "",
-    address: "",
-    country: "",
-    business_number: "",
+    company_email: "",
+    office_address: "",
+    company_country: "",
+    registration_number: "",
     city: "",
   });
 
@@ -44,16 +45,16 @@ const VerifyBusiness = () => {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(formDataUpdated)
+          body: JSON.stringify(formDataUpdated),
         }
       );
       if (response.ok) {
         alert("Submitted Successfully");
-        
+        router.push("/confirm_company_otp");
       } else {
-        alert(response.status)
+        alert(response.status);
       }
-    }
+    };
     sendData();
   };
 
@@ -148,9 +149,9 @@ const VerifyBusiness = () => {
                 </label>
                 <input
                   type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
+                  id="company_email"
+                  name="company_email"
+                  value={formData.company_email}
                   onChange={handleChange}
                   placeholder="Email"
                   className="border p-2 rounded bg-slate-100"
@@ -163,9 +164,9 @@ const VerifyBusiness = () => {
                 </label>
                 <input
                   type="text"
-                  id="address"
-                  name="address"
-                  value={formData.address}
+                  id="office_address"
+                  name="office_address"
+                  value={formData.office_address}
                   onChange={handleChange}
                   placeholder="Address"
                   className="border p-2 rounded bg-slate-100"
@@ -178,9 +179,9 @@ const VerifyBusiness = () => {
                 </label>
                 <input
                   type="text"
-                  id="country"
-                  name="country"
-                  value={formData.country}
+                  id="company_country"
+                  name="company_country"
+                  value={formData.company_country}
                   onChange={handleChange}
                   placeholder="e.g., Switzerland"
                   className="border p-2 rounded bg-slate-100"
@@ -211,9 +212,9 @@ const VerifyBusiness = () => {
                 </label>
                 <input
                   type="text"
-                  id="business_number"
-                  name="business_number"
-                  value={formData.business_number}
+                  id="registration_number"
+                  name="registration_number"
+                  value={formData.registration_number}
                   onChange={handleChange}
                   placeholder="Business Number"
                   className="border p-2 rounded bg-slate-100"

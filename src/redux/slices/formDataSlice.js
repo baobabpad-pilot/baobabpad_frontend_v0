@@ -14,10 +14,10 @@ const formDataSlice = createSlice({
       company_name: "",
       business_type: "",
       phone_number: "",
-      email: "",
-      address: "",
-      country: "",
-      business_number: "",
+      company_email: "",
+      office_address: "",
+      company_country: "",
+      registration_number: "",
       city: ""
     }
   },
@@ -38,10 +38,10 @@ const formDataSlice = createSlice({
           company_name: "",
           business_type: "",
           phone_number: "",
-          email: "",
-          address: "",
-          country: "",
-          business_number: "",
+          company_email: "",
+          office_address: "",
+          company_country: "",
+          registration_number: "",
           city: ""
         }
       };
