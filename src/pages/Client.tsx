@@ -39,26 +39,25 @@ const Client = () => {
     slidesToScroll: 1,
   };
 
-
-  const faqs:FAQItem[] = [
+  const faqs: FAQItem[] = [
     {
-      question: 'What are Service Level Agreements (SLAs)?',
-      answer: '.............................',
+      question: "What are Service Level Agreements (SLAs)?",
+      answer: ".............................",
     },
     {
-      question: 'Who can I contact with questions about my Baobabpad account?',
-      answer: '..................................',
+      question: "Who can I contact with questions about my Baobabpad account?",
+      answer: "..................................",
     },
     {
-      question: 'How can I determine the time difference when contacting support?',
-      answer: '...................................',
+      question:
+        "How can I determine the time difference when contacting support?",
+      answer: "...................................",
     },
     {
-      question: 'What if I need immediate assistance with a critical issue?',
-      answer: '.........................................',
+      question: "What if I need immediate assistance with a critical issue?",
+      answer: ".........................................",
     },
   ];
-
 
   const features = [
     { title: "Efficiency", imageSrc: "/virtual_image.png" },
@@ -68,34 +67,23 @@ const Client = () => {
     { title: "Feedback", imageSrc: "/management_image.png" },
   ];
 
- 
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-
-  const handleToggle = (index:number) => {
+  const handleToggle = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
-  }
+  };
 
   return (
     <div className="min-h-screen flex flex-col">
       <Layout>
-           
-
-        <SolutionNavbar/>
+        <SolutionNavbar />
 
         <section className="flex flex-col md:flex-row bg-[#E8C245] flex-wrap">
           <div className="w-full md:w-[50%] flex justify-center">
-          
-          <img
-              src="/client.png"
-              alt="people smiling "
-              className="w-full"
-            />
+            <img src="/client.png" alt="people smiling " className="w-full" />
           </div>
           <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 text-[1.25rem] max-w-full md:max-w-[50%]">
-            <span className="text-[3rem] font-semibold">
-              Client Support 
-            </span>
+            <span className="text-[3rem] font-semibold">Client Support</span>
             <span>
               We offer a comprehensive client support infrastructure service
               designed to provide you with timely, efficient, and professional
@@ -119,9 +107,11 @@ const Client = () => {
                 Introduction
               </span>
             </div>
-            <p className="text-[3rem]">From bugs to bucks client  support  </p>
+            <p className="text-[3rem]">From bugs to bucks client support </p>
             <p className="text-[1.875rem]">
-            End to end client support infrastructure built to empower technology for operational improvement and creating long-term growth.
+              End to end client support infrastructure built to empower
+              technology for operational improvement and creating long-term
+              growth.
             </p>
             <div className=" flex flex-row gap-x-5 ">
               <button className="border border-black p-2 rounded-[1rem] hover:bg-[#00BDD6] hover:text-white hover:border-none">
@@ -133,12 +123,11 @@ const Client = () => {
             </div>
           </div>
           <div className="w-full md:w-[49%] flex justify-center  ">
-          <img
+            <img
               src="/new_solution_image_1.png"
               alt="a woman with glasses photo"
               className="w-full"
             />
-
           </div>
         </section>
 
@@ -146,10 +135,11 @@ const Client = () => {
           <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 gap-x-12 text-[1.25rem] max-w-full md:max-w-[60%]">
             <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] text-[2.5rem]">
-              Business Strategy
+                Business Strategy
               </span>
               <span className="">
-              Strategic management formulates and implements major goals and initiatives.
+                Strategic management formulates and implements major goals and
+                initiatives.
               </span>
               <div className="w-[100%] flex justify-end">
                 <span className="text-[#00BDD6]">Learn More... </span>
@@ -157,10 +147,11 @@ const Client = () => {
             </div>
             <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] text-[2.5rem]">
-              Planning and Analysis
+                Planning and Analysis
               </span>
               <span className="">
-              Four activities for financial health: planning, budgeting, integrated financial planning, and performance management.
+                Four activities for financial health: planning, budgeting,
+                integrated financial planning, and performance management.
               </span>
               <div className="w-[100%] flex justify-end">
                 <span className="text-[#00BDD6]">Learn More... </span>
@@ -168,10 +159,11 @@ const Client = () => {
             </div>
             <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] text-[2.5rem]">
-              Ongoing Support
+                Ongoing Support
               </span>
               <span className="">
-              Ongoing support services provide assistance to customers for a limited period.
+                Ongoing support services provide assistance to customers for a
+                limited period.
               </span>
               <div className="w-[100%]  flex justify-end">
                 <span className="text-[#00BDD6]">Learn More... </span>
@@ -180,7 +172,11 @@ const Client = () => {
           </div>
 
           <div className="w-full md:w-[40%] md:h-[50%] flex justify-center p-5">
-            <img src="/client_intro_image.png" alt="a guy smiling" className="w-[100%]" />
+            <img
+              src="/client_intro_image.png"
+              alt="a guy smiling"
+              className="w-[100%]"
+            />
           </div>
         </section>
 
@@ -210,13 +206,11 @@ const Client = () => {
               </div>
             </div>
           </div>
-  
-          <Features features={features}/>
 
+          <Features features={features} />
         </section>
 
-          <Reviews/>
-    
+        <Reviews />
 
         <section className="flex flex-col md:flex-row items-center justify-center  flex-wrap p-12 border-t border-t-gray m-6  ">
           <div className="w-full md:w-[60%] flex flex-row md:flex-col justify-center flex-wrap p-6 pt-[-1rem] gap-y-7">
@@ -234,7 +228,6 @@ const Client = () => {
           </div>
           <div className="w-full md:w-[35%] flex-col justify-center m-1 ">
             <p className="w-[70%]">
-              
               By carefully vetting and verifying each author, we ensure that our
               authors are experienced in their respective fields.
             </p>
@@ -242,16 +235,14 @@ const Client = () => {
               <img src="jacob_mwale_tech_lead.jpg" alt="" className="w-[90%]" />
               <h3 className="text-[2rem]">JRichson Simba</h3>
               <p className="w-[90%]">
-              Full stack software engineer with a strong foundation in data structures and algorithms.
+                Full stack software engineer with a strong foundation in data
+                structures and algorithms.
               </p>
             </div>
           </div>
         </section>
-       
 
-      <Faq faqs={faqs}/>
-
-
+        <Faq faqs={faqs} />
       </Layout>
     </div>
   );

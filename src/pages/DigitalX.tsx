@@ -71,14 +71,10 @@ const DigitalX = () => {
     { title: "Quality", imageSrc: "/quality_image.png" },
   ];
 
-
-
-
-
   return (
     <div className="min-h-screen flex flex-col">
       <Layout>
-      <SolutionNavbar/>
+        <SolutionNavbar />
         <section className="flex mt-1 flex-col md:flex-row bg-[#00BDD6] flex-wrap">
           <div className="w-full md:w-[50%] flex justify-center">
             <img
@@ -236,8 +232,7 @@ const DigitalX = () => {
             </div>
           </div>
 
-         <Features features={features}/>
-          
+          <Features features={features} />
         </section>
 
         <Reviews />
