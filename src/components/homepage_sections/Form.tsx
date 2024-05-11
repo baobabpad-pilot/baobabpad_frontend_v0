@@ -73,6 +73,13 @@ const MultiSelectForm: React.FC<Props> = ({ onNextStep, onFreeTrialClick }) => {
       "8: System Qualification",
       "9: Mission Proven",
     ],
+    Services: [
+      "AI & Data",
+      "Digitalx",
+      "Remote Teams",
+      "Customer support",
+      "Other",    
+    ],
   };
 
   const stepTexts = [
@@ -81,6 +88,7 @@ const MultiSelectForm: React.FC<Props> = ({ onNextStep, onFreeTrialClick }) => {
     { text: "What is your company type?", key: "Business" },
     { text: "What industry do you operate in?", key: "Industry" },
     { text: "What is your Technology Readiness Level?", key: "TRL" },
+    { text: "What services are you looking for?", key: "Services" },
   ];
 
   const handleOptionClick = (question: string, option: string) => {
@@ -136,7 +144,7 @@ const MultiSelectForm: React.FC<Props> = ({ onNextStep, onFreeTrialClick }) => {
       </div>
 
       <button
-        className="m-4 lg:mt-20 bg-[#00BDD6] text-white py-2 px-4 rounded-full hover:bg-gray-300 transition-colors delay-75"
+        className="md:m-4 ml-[10rem] lg:mt-20 mt-8 bg-[#00BDD6] text-white py-2 px-4 rounded-full hover:bg-gray-300 transition-colors delay-75"
         onClick={() => onFreeTrialClick()}
       >
         Free Trial
