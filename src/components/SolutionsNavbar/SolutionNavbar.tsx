@@ -11,6 +11,9 @@ interface SolutionsLinks {
     question: string;
     answer: string;
   }
+  interface SolutionNavbarProps {
+    onSelectPage: (href: string) => void;
+  }
 
   const solutionLinks: SolutionsLinks[] = [
     { label: "CLIENT SUPPORT  ", href: "/Client" },
@@ -20,7 +23,7 @@ interface SolutionsLinks {
   ];
 
 
-const SolutionNavbar = () => {
+const SolutionNavbar :React.FC<SolutionNavbarProps>= ({onSelectPage}) => {
     const [isOpen, setIsOpen] = useState(false);
     const router = useRouter();
       const toggleSolutionsNavbar = () => {
