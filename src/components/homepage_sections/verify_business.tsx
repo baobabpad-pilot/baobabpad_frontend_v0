@@ -19,6 +19,8 @@ const VerifyBusiness = () => {
     company_country: "",
     registration_number: "",
     city: "",
+    password: "",
+    confirm_password: ""
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -36,6 +38,7 @@ const VerifyBusiness = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    console.log(formDataUpdated)
 
     const sendData = async () => {
       const response = await fetch(
@@ -217,6 +220,40 @@ const VerifyBusiness = () => {
                   value={formData.registration_number}
                   onChange={handleChange}
                   placeholder="Business Number"
+                  className="border p-2 rounded bg-slate-100"
+                />
+              </div>
+              <div className="flex flex-col gap-2 p-2">
+                <label
+                  htmlFor="password"
+                  className="font-medium text-lg"
+                >
+                  Password
+                </label>
+                <input
+                  type="text"
+                  id="password"
+                  name="password"
+                  value={formData.password}
+                  onChange={handleChange}
+                  placeholder="e.g., password@1234"
+                  className="border p-2 rounded bg-slate-100"
+                />
+              </div>
+              <div className="flex flex-col gap-2 p-2">
+                <label
+                  htmlFor="business_number"
+                  className="font-medium text-lg"
+                >
+                  Confirm Passowrd
+                </label>
+                <input
+                  type="text"
+                  id="confirm_password"
+                  name="confirm_password"
+                  value={formData.confirm_password}
+                  onChange={handleChange}
+                  placeholder="e.g., password@1234"
                   className="border p-2 rounded bg-slate-100"
                 />
               </div>
