@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Solutions from "./Solutions";
 import { useRouter } from "next/router";
 import Link from "next/link";
-
 import Future_is_cloud from "@/components/homepage_sections/Future_is_cloud";
 import Cloud_xPert from "@/components/homepage_sections/Cloud_xPert";
 import Cloud_base from "@/components/homepage_sections/Cloud_base";
