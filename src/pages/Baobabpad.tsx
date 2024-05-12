@@ -90,31 +90,32 @@ const Baobabpad = () => {
 
   const adversoryTeamArray=[
     {
-      image:'/Andrea.png',
-      username:'Andrea Sanchez',
-      position:'Content Marketing'
+      image:'/Kofo Obasanjo.jpeg',
+      username:'Kofo Obasanjo',
+      position:'Advisory Board Member'
     },
     {
-      image:'/kenny.png',
-      username:'Kenny Kaluiji',
-      position:'Founder'
-    },
-    {
-      image:'/Ashley Baker.png',
-      username:'Ashley Baker',
-      position:'Marketing Executive'
-    },
-    {
-      image:'/Richard Davis.png',
-      username:'Richard Davis',
-      position:'Social Marketing'
-    },
-    {
-      image:'/Caleb Jones.png',
-      username:'Caleb Jones',
-      position:'Head of HR'
+      image:'/Henry Ogbuagu.jpeg',
+      username:'Henry Ogbuagu',
+      position:'Advisory Board Member'
     },
     
+    {
+      image:'/Lamisi Gurah.jpeg',
+      username:'Lamisi Gurah',
+      position:'Marketing Executive'
+    },
+  
+    {
+      image:'/Yannick_Di_Mondo.jpg',
+      username:'Yannick di Mondo',
+      position:'Advisory Board Member'
+    },
+    {
+      image:'/Tish_Gilberts.jpeg',
+      username:'Tish Gilberts',
+      position:'Advisory Board Member'
+    },
   ]
 
 
@@ -266,7 +267,7 @@ const Baobabpad = () => {
                        />
                        <span className="font-bold font-700 text-xl">{member.username}</span>
                         <span className="text-[#9095A0]">{member.position}</span>
-                        <button type="button" className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center ">View Profile</button>
+                        {/* <button type="button" className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center ">View Profile</button> */}
                         {/* <div className="bg-[#C8F9FF] text-white rounded-[100%] w-10 h-10 px-3 py-1  "><span className="text-black  text-2xl">+</span></div> */}
                                               
                     </div>
