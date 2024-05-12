@@ -23,7 +23,7 @@ interface SolutionsLinks {
   ];
 
 
-const SolutionNavbar :React.FC<SolutionNavbarProps>= ({onSelectPage}) => {
+const SolutionNavbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const router = useRouter();
       const toggleSolutionsNavbar = () => {
