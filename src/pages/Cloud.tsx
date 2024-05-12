@@ -2,29 +2,33 @@ import Faq from "@/components/FAQs/Faq";
 import Layout from "@/components/Layout";
 import Reviews from "@/components/Reviews/Reviews";
 import SolutionNavbar from "@/components/SolutionsNavbar/SolutionNavbar";
+import AI_strategy from "@/components/ai_and_data_sections/AI_strategy";
+import Large_Language_Modelling from "@/components/ai_and_data_sections/Large_Language_Modelling";
+import Machine_Learning_Ops from "@/components/ai_and_data_sections/Machine_Learning_Ops";
 import Features from "@/components/features/Features";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 import Slider from "react-slick";
 
+
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
 const Cloud = () => {
 
-  interface SolutionsLinks {
-    label: string;
-    href: string;
-  }
-  interface FAQItem {
-    question: string;
-    answer: string;
-  }
 
-  const solutionLinks: SolutionsLinks[] = [
-    { label: "CLIENT SUPPORT  ", href: "/Client" },
-    { label: "REMOTE TEAM", href: "/Remote" },
-    { label: "DIGITAL" + String.fromCharCode(0x02e3), href: "/DigitalX" },
-    { label: "AI & DATA", href: "/Cloud" },
-  ];
+ 
+  const [componentVisible, setComponentVisible] = useState(false);
+
+  const handleClick = (event: any, componentName: any) => {
+    event.preventDefault();
+    setComponentVisible(componentName);
+  };
+
+
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -32,13 +36,6 @@ const Cloud = () => {
     setIsOpen(!isOpen);
   };
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-  };
 
 
   const features = [
@@ -141,45 +138,81 @@ const Cloud = () => {
         </section>
 
         <section className="flex mt-1 flex-col md:flex-row bg-[#00BDD6] flex-wrap justify-center items-center gap-x-[0.2rem]">
-          <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 gap-x-12 text-[1.25rem] max-w-full md:w-[60%]">
+          <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 gap-x-12 text-[1.25rem] max-w-full md:max-w-[50%]">
             <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
-              <span className="text-[#171A1F] font-[500] text-[2.5rem]">
+              <span className="text-[#171A1F] font-[500] text-[1.8rem]">
                  AI strategy
               </span>
               <span className="">
               Strategic management formulates and implements major goals and initiatives.
               </span>
               <div className="w-[100%] flex justify-end">
-                <span className="text-[#00BDD6]">Learn More... </span>
+              <a
+                  href="#"
+                  onClick={(event) => handleClick(event, "AI strategy")}
+                  className="text-[#00BDD6] cursor-pointer"
+                >
+                  Learn More...
+                </a>
               </div>
             </div>
             <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
-              <span className="text-[#171A1F] font-[500] text-[2.5rem]">
-                Machine Laerning Ops
+              <span className="text-[#171A1F] font-[500] text-[1.8rem]">
+                Machine Learning Ops
               </span>
               <span className="">
               Four activities for financial health: planning, budgeting, integrated financial planning, and performance management.
               </span>
               <div className="w-[100%] flex justify-end">
-                <span className="text-[#00BDD6]">Learn More... </span>
+              <a
+                  href="#"
+                  onClick={(event) => handleClick(event, "Machine Learning Ops")}
+                  className="text-[#00BDD6] cursor-pointer"
+                >
+                  Learn More...
+                </a>
               </div>
             </div>
             <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
-              <span className="text-[#171A1F] font-[500] text-[2.5rem]">
+              <span className="text-[#171A1F] font-[500] text-[1.8rem]">
             Large Language Modelling
               </span>
               <span className="">
               Ongoing support services provide assistance to customers for a limited period.
               </span>
               <div className="w-[100%]  flex justify-end">
-                <span className="text-[#00BDD6]">Learn More... </span>
+              <a
+                  href="#"
+                  onClick={(event) => handleClick(event, "Large Language Modelling")}
+                  className="text-[#00BDD6] cursor-pointer"
+                >
+                  Learn More...
+                </a>
               </div>
             </div>
           </div>
 
-          <div className="w-full md:w-[37%] md:h-[40%] flex justify-center p-5">
-            <img src="/digital_section_3_image.png" alt="a guy smiling"  className="w-100%"/>
-          </div>
+          <div
+            className="w-full md:w-[50%] md:h-[50%] flex justify-center p-5"
+            id="right-sub-section"
+          >
+            {componentVisible === "AI strategy" && <AI_strategy />}
+            {componentVisible === "Machine Learning Ops" && <Machine_Learning_Ops />}
+            {componentVisible === "Large Language Modelling" && <Large_Language_Modelling />}
+            
+            {!componentVisible && (
+              <img src="/introduction-solution-image.png" alt="a guy smiling" />
+            )}
+            </div>
+           
+           
+
+
+
+
+
+
+         
         </section>
 
         <section className="flex flex-col md:flex-row items-center justify-center flex-wrap p-12 ">
