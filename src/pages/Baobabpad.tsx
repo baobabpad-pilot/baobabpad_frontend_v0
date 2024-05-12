@@ -265,7 +265,7 @@ const Baobabpad = () => {
                  
 
                  {adversoryTeamArray.map((member, index)=>(
-                      <div key={index} className="pt-2 w-[18rem] h-[20.75rem] flex flex-col items-center justify-center gap-y-4 my-12 border border-600  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer ">
+                      <div key={index} className="pt-2 w-[15rem] h-[20.75rem] flex flex-col items-center justify-center gap-y-4 my-12 border border-600  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer ">
                           <img
                           src={member.image}
                           alt="Team Member"
