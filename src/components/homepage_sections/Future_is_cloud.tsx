@@ -3,8 +3,10 @@ import Image from "next/image";
 
 const Future_is_cloud = () => {
   return (
-    <div className="px-10 p-4 flex flex-col gap-2">   
-                <p>Cloud computing offers a couple of benefits that are particularly relevant to Baobabpad's mission.
+    <div className="px-4 py-4 flex flex-col gap-8 bg-[url('/introduction-solution-image.png')] bg-cover bg-center relative text-white bg-white bg-opacity-50 backdrop-blur-5 text-base">
+    <div className="absolute top-0 left-0 right-0 bottom-0 bg-gray-200 opacity-30 z-10"></div>
+               <div className="bg-black  bg-opacity-75 p-4 rounded-lg">
+               <p className="">Cloud computing offers a couple of benefits that are particularly relevant to Baobabpad's mission.
                 By providing scalable, on-demand access to computing resources, storage, and applications over the internet, 
                 the cloud empowers organizations to innovate rapidly, optimize costs, and enhance efficiency. 
                 Baobabpad's adoption of cloud technology serves as a catalyst for digital transformation, 
@@ -38,6 +40,7 @@ const Future_is_cloud = () => {
                
                 </ol>
    
+               </div>
     </div>
   );
 };
