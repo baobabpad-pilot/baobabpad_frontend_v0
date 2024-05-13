@@ -18,7 +18,9 @@ const formDataSlice = createSlice({
       office_address: "",
       company_country: "",
       registration_number: "",
-      city: ""
+      city: "",
+      password: "",
+      confirm_password: ""
     }
   },
   reducers: {
@@ -42,7 +44,9 @@ const formDataSlice = createSlice({
           office_address: "",
           company_country: "",
           registration_number: "",
-          city: ""
+          city: "",
+          password: "",
+          confirm_password: ""
         }
       };
     }

@@ -144,8 +144,9 @@ const MultiSelectForm: React.FC<Props> = ({ onNextStep, onFreeTrialClick }) => {
       </div>
 
       <button
-        className="md:m-4 ml-[10rem] lg:mt-20 mt-8 bg-[#00BDD6] text-white py-2 px-4 rounded-full hover:bg-gray-300 transition-colors delay-75"
-        onClick={() => onFreeTrialClick()}
+        className="md:m-4 m-8 ml-[10rem] lg:mt-20 mt-8 bg-[#00BDD6] text-white py-2 px-4 rounded-full hover:bg-gray-300 transition-colors delay-75"
+       onClick={() => onFreeTrialClick()}  
+
       >
         Free Trial
       </button>
