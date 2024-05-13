@@ -10,7 +10,7 @@ interface NavLink {
 
 const navLinks: NavLink[] = [
   { label: "The Village", href: "/Village" },
-  { label: "Baobabpad", href: "/Baobabpad" },
+  // { label: "Baobabpad", href: "/Baobabpad" },
   { label: "Solutions", href: "/Solutions"},
   { label: "Careers", href: "/Careers" },
 
@@ -53,7 +53,7 @@ const Navbar = () => {
           Login
         </Link>
         <a
-          href={"/try-for-free"}
+          href={"/Businessform"}
           className="text-white bg-[#00BDD6] px-2 p-1 rounded-full"
         >
           Try for free

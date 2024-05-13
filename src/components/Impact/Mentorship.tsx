@@ -13,11 +13,11 @@ const Mentorship = () => {
              <div className=" bg-gray-100 w-[100%]  ">
              <div className="h-5"></div>
                 <img src="mentorship.png" alt="mentors" className="w-[80%] mx-auto " />
-                <h1 className="font-bold text-4xl p-4 ml-[10%]">Mentorship Program</h1>
+                <h1 className="font-bold text-4xl p-4  text-center">Mentorship Program</h1>
                 <div>
                   <p className="mt-3">
-                    <Link href="/Careers" className="ml-11" >
-                    <button className="rounded-full text-center text-white bg-violet-600  ml-[40%] my-4 py-2 w-[20%] hover:bg-violet-200 ">Sign Up  </button>
+                    <Link href="/Careers" >
+                    <button className="rounded-full text-center text-white bg-violet-600  ml-[38%] my-4 py-2 w-[20%] hover:bg-violet-200 ">Sign Up  </button>
                     </Link>
                   </p>
                   
