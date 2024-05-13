@@ -9,10 +9,10 @@ import Customers from "@/components/homepage_sections/Customers";
 import VerifyBusiness from "@/components/homepage_sections/verify_business";
 import AnimatedWrapper from "@/components/AnimatedWrapper";
 
-const Homepage: React.FC = () => {
+const Businessform: React.FC = () => {
   const [currentStep, setCurrentStep] = useState<number>(1);
   const [showVerifyBusiness, setShowVerifyBusiness] = useState(false);
-  const totalSteps =5;
+  const totalSteps = 5;
 
   const handleNextStep = (nextStep: number) => {
     setCurrentStep(nextStep);
@@ -24,10 +24,10 @@ const Homepage: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Layout>
-        <Header />
-        <About />
-        <div className="w-full grid grid-cols-1 md:grid-cols-2">
+        <div> <h1 className="text-4xl text-[#00BDD6] text-center font-bold p-6">Fill the form to identify you && your Business</h1></div>
+      <div className="w-[98%] mx-auto">
+      
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 bg-gray-100 rounded-lg">
           <div className="flex-col gap-28 hidden lg:flex pl-4 lg:pl-28">
             {Array.from({ length: 6 }, (_, index) => index +1).map(
               (step) => (
@@ -43,6 +43,7 @@ const Homepage: React.FC = () => {
             <MyForm
               onNextStep={handleNextStep}
               onFreeTrialClick={handleVerifyBusiness}
+              
             />
           </div>
         </div>
@@ -52,11 +53,9 @@ const Homepage: React.FC = () => {
           </AnimatedWrapper>
         )}
 
-        <TrustedBy />
-        <Customers />
-      </Layout>
+      </div>
     </div>
   );
 };
 
-export default Homepage;
+export default Businessform;
