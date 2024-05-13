@@ -141,7 +141,7 @@ const Management = () => {
                   <span className="text-[#9095A0]">{member.position}</span>
                   <button
                     type="button"
-                    className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center"
+                    className="bg-[#C8F9FF] pt-2 pb-2 px-4 py-8 align-center w-[20%]"
                   >
                      <a href={member.profile}>View Profile</a>
                     
