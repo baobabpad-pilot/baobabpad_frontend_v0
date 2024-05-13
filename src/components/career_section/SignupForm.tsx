@@ -4,9 +4,11 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import process from "process";
 import { SubmitHandler } from "react-hook-form";
+import { useRouter } from "next/router";
 
 
 const SignupForm = () => {
+  const router = useRouter();
   const loginSchema = yup.object().shape({
     email: yup.string().email().required("Email is required"),
     password: yup
@@ -43,7 +45,7 @@ const SignupForm = () => {
 
   const onSubmit: SubmitHandler<{ email: string; firstName: string, lastName:string, password: string , passwordConfirmation?:string; }> = async (data) => {
   try {
-    const url = process.env.NEXT_PUBLIC_BACKEND_URL + "register/";
+    const url = "https://baobabpad-334a8864da0e.herokuapp.com/api/email_signup/";
     const dataObject = {
       username: data.email,
       email: data.email,
@@ -66,7 +68,8 @@ const SignupForm = () => {
     }
     const responseData = await response.json();
     setAlertType("success");
-    setAlertMessage("Signup successful!"); // Set your success message here
+    setAlertMessage("Signup successful!");
+    router.push("/confirm_otp")
     return responseData;
   } catch (error:any) {
     setAlertType("error");

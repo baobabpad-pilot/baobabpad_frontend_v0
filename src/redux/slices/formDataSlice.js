@@ -14,11 +14,13 @@ const formDataSlice = createSlice({
       company_name: "",
       business_type: "",
       phone_number: "",
-      email: "",
-      address: "",
-      country: "",
-      business_number: "",
-      city: ""
+      company_email: "",
+      office_address: "",
+      company_country: "",
+      registration_number: "",
+      city: "",
+      password: "",
+      confirm_password: ""
     }
   },
   reducers: {
@@ -38,11 +40,13 @@ const formDataSlice = createSlice({
           company_name: "",
           business_type: "",
           phone_number: "",
-          email: "",
-          address: "",
-          country: "",
-          business_number: "",
-          city: ""
+          company_email: "",
+          office_address: "",
+          company_country: "",
+          registration_number: "",
+          city: "",
+          password: "",
+          confirm_password: ""
         }
       };
     }

@@ -48,7 +48,11 @@ const Businessform: React.FC = () => {
             />
           </div>
         </div>
-        <VerifyBusiness/>
+        {showVerifyBusiness && (
+          <AnimatedWrapper>
+            <VerifyBusiness />
+          </AnimatedWrapper>
+        )}
 
       </div>
     </div>
