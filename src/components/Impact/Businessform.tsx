@@ -9,7 +9,10 @@ import Customers from "@/components/homepage_sections/Customers";
 import VerifyBusiness from "@/components/homepage_sections/verify_business";
 import AnimatedWrapper from "@/components/AnimatedWrapper";
 
+
 const Businessform: React.FC = () => {
+
+
   const [currentStep, setCurrentStep] = useState<number>(1);
   const [showVerifyBusiness, setShowVerifyBusiness] = useState(false);
   const totalSteps = 5;
