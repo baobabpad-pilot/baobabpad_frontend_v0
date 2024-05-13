@@ -5,6 +5,8 @@ import Layout from "@/components/Layout";
 import Link from "next/link";
 import { useRouter } from 'next/router';
 import Slider from "react-slick";
+import Businessform  from "@/components/Impact/Businessform"
+import Internship  from "@/components/Impact/Internship"
 
 const Solutions = () => {
 
@@ -64,7 +66,10 @@ const Solutions = () => {
 
   const handleToggle = (index:number) => {
     setActiveIndex(activeIndex === index ? null : index);
+  
   }
+
+  const [isVisible, setIsVisible] = useState(false);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -117,7 +122,7 @@ const Solutions = () => {
             <ul
               className={`${
                 isOpen ? "block" : "hidden"
-              } sm:flex sm:space-x-12 sm:flex sm:justify-center sm:text-lg`}
+              } sm:flex sm:space-x-12 sm:justify-center sm:text-lg`}
             >
               {solutionLinks.map((solutionLink) => (
                 <li key={solutionLink.label}>
@@ -177,12 +182,23 @@ const Solutions = () => {
             End to end client support infrastructure built to empower technology for operational improvement and creating long-term growth.
             </p>
             <div className=" flex flex-row gap-x-5 ">
-              <button className="border border-black p-2 rounded-[1rem] hover:bg-[#00BDD6] hover:text-white hover:border-none">
+              <Link href="/Businessform">
+              <button className="border border-black p-2 rounded-[1rem] hover:bg-[#00BDD6]  hover:text-white hover:border-black">
                 Learn More
               </button>
-              <button className="border border-black pl-9 pr-9 rounded-[1rem] bg-[#723CDE] text-white hover:bg-white hover:text-black">
+              </Link>
+              <Link href="/Businessform">
+              <button className="border border-black p-2 rounded-[1rem] w-40  text-white bg-violet-500 hover:bg-white hover:text-black hover:border-black">
                 Sign up
               </button>
+              </Link>
+             
+              {/*
+              <button onClick={() => setIsVisible(!isVisible)} className="border border-black pl-9 pr-9 rounded-[1rem] bg-[#723CDE] text-white hover:bg-white hover:text-black">
+                Sign up
+              </button>
+              {isVisible && <Businessform />}
+              */}
             </div>
           </div>
           <div className="w-full md:w-[49%] flex justify-center  ">

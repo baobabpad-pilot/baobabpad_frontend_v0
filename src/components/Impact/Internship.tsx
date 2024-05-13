@@ -13,7 +13,7 @@ const Internship = () => {
              <div className=" bg-gray-100 w-[100%]  ">
              <div className="h-5"></div>
                 <img src="intern1.png" alt="intern1" className="w-[80%] mx-auto " />
-                <h1 className="font-bold text-4xl p-4 ml-[10%]">Virtual Internship Program</h1>
+                <h1 className="font-bold md:text-4xl text-2xl p-4 ml-[30%] ">Virtual Internship Program</h1>
                 
                 <div>
                   <p className="mt-3">

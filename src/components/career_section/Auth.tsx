@@ -43,7 +43,7 @@ function Auth() {
               <p className="text-2xl ">Karibu Sana , {session?.user?.name}</p>
             </div>
           ) : (
-          <p className="text-2xl">Karibu Sana</p>
+          <p className="text-2xl mt-11">Sign up to Baobabpad</p>
           )}
         <div>
           <div
@@ -81,7 +81,7 @@ function Auth() {
 
             <div>
               <p className="mt-3">
-                <Link  href="#" onClick={toggleSignupForm}>
+                <Link  href="#SignupForm" onClick={toggleSignupForm}>
                   <b style={{ color: 'blue', textDecoration: 'underline' }}>Sign up with your email</b>
                 </Link>
               </p>

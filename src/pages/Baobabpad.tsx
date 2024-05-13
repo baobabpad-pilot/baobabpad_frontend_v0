@@ -10,6 +10,7 @@ import { TbNorthStar } from "react-icons/tb";
 import { SlEmotsmile } from "react-icons/sl";
 import { FaShareNodes } from "react-icons/fa6";
 import { CiSearch } from "react-icons/ci";
+import { FiPlus } from "react-icons/fi";
 import { VscGraph } from "react-icons/vsc";
 import { FaRegHandshake } from "react-icons/fa";
 import { HiOutlineUserAdd } from "react-icons/hi";
@@ -120,15 +121,16 @@ const Baobabpad = () => {
 
   const [showIntern, setShowIntern] = useState(false);
   const toggleInternship = () => {
-      setShowIntern(!showIntern);
-      
+      setShowIntern(!showIntern);  
     };
   const [ showMentor, setShowMentor] = useState(false);
+  
+
   const toggleMentorship = () => {
-      setShowMentor(!showMentor);
+      setShowMentor(!showMentor);  
       
     };
- 
+
 
 
   return (
@@ -186,9 +188,13 @@ const Baobabpad = () => {
               and innovative platform with top African technology talent,
               providing state of art technology value creation for businesses.
             </p>
+
+            <Link href="#why-baobabpad">
             <button className=" text-blue-500 text-2xl bg-transparent border border-blue-500 hover:bg-blue-600 hover:text-white px-4 py-2 rounded-full transition duration-300 px-20">
               Learn more
             </button>
+            </Link>
+            
           </div>
 
           
@@ -284,10 +290,9 @@ const Baobabpad = () => {
     
 
         {/* Start of why baobabpad section */}
-        <section className="border-t border-500  md:flex items-center flex-wrap p-10">
+        <section id="why-baobabpad" className="border-t border-500  md:flex items-center flex-wrap p-10 " >
             <div className="flex flex-col justify-center md:w-[60%] w-[100%] gap-y-5  p-4">
               <div className="flex flex-col ">
-                  <span className="text-[#00BDD6]">Officia esse deserunt magna</span>
                   <span className="font-bold text-5xl text-[#323842]">Why Baobabpad</span>
               </div>
 
@@ -297,7 +302,10 @@ const Baobabpad = () => {
 
               <div className="flex flex-row gap-x-4 items-center">
                    <button className="w-[7rem] bg-[#00BDD6] text-white font-[1.125rem] p-[0.4rem] rounded-[1rem] hover:bg-white hover:text-[#00BDD6] hover:border hover:border-500"> Try Free</button>
-                   <span className="text-[#9095A0] font-[1.125rem] cursor-pointer hover:bg-[#00BDD6] hover:border  hover:text-[#FFF] hover:p-[0.4rem]  hover:rounded-[1rem]">Learn More</span>
+                   <Link href="#client">
+                   <button className="w-[7rem]  text-[#9095A0] border border-[#9095A0]  font-[1.125rem] p-[0.4rem] rounded-[1rem] cursor-pointer hover:bg-gray-200 hover:border hover:border-500"> Learn more</button>
+                   </Link> 
+                   
               </div>
   
              {/*Right with phone in hand*/}       
@@ -310,21 +318,21 @@ const Baobabpad = () => {
         {/* End of why baobabpad section */}
 
         {/* Start of  Clients benefits and  devops benefits */}
-          <section className="border-t border-500 flex  flex-row justify-center w-[100%] items-center flex-wrap  gap-x-7  gap-y-10 p-10">
+          <section id="client" className="border-t border-500 flex  flex-row justify-center w-[100%] items-center flex-wrap  gap-x-7  gap-y-10 p-10">
             <div className="border border-white-100 bg-[#EBFDFF] flex flex-col w-[30.625rem] h-[22.625rem] p-4 ">
                 <span className="font-bold text-3xl ml-[35%]">Client </span>
                 <span className="mb-4">Baobabpad is a membership based platform, for our clients this means no additional costs for scaling your product development. The annual membership fee is exclusive and comes with perks and benefits, such as:</span>
-                <ul className="list-disc pl-8">
-                    <li className="mb-2">Acccess to remote team management support </li>
-                    <li className="mb-2">Culture and team building excellence across locations</li>
-                    <li className="mb-2">Merit-reward infrastructure for our talent</li>
-                    <li className="mb-2">High return on investment and profitability</li>
+                <ul className=" pl-4">
+                    <li className="mb-2 flex "><span className="text-blue-400 size-40 w-[6%] mt- h-[6%] my-auto text-2xl" ><FiPlus /></span> Acccess to remote team management support </li>
+                    <li className="mb-2  flex"> <span className="text-blue-400 size-40 w-[6%] mt- h-[6%] my-auto text-2xl" ><FiPlus /></span>Culture and team building excellence across locations</li>
+                    <li className="mb-2  flex"> <span className="text-blue-400 size-40 w-[6%] mt- h-[6%] my-auto text-2xl" ><FiPlus /></span>Merit-reward infrastructure for our talent</li>
+                    <li className="mb-2  flex"> <span className="text-blue-400 size-40 w-[6%] mt- h-[6%] my-auto text-2xl" ><FiPlus /></span>High return on investment and profitability</li>
                 </ul>
             </div>
 
             <div className="border border-white-100 bg-[#F5F2FD] flex flex-col w-[30.625rem] h-[22.625rem] p-8">
                 <span className="font-bold text-3xl ml-[40%]"> DevOps</span>
-                <span>adipisicing elit. Quidem officiis explicabo quos dolorem perspiciatis vel asperiores odit harum, itaque quas maxime eveniet numquam hic, iste error omnis! Ad, rerum provident</span>
+                <span>Working with Baobabpad DevOps empowers our clients to faster software delivery by streamlining the development and deployment process. Our clients are able  to optimize new features and products to market more quickly. Our competitive  business advantage is: </span>
 
             <div className="flex flex-row justify-around">
             <div className="flex flex-col justify-center">
@@ -334,7 +342,7 @@ const Baobabpad = () => {
                    </div>
 
                      <div>
-                        <span className="p-4 text-[2rem] font-bold font-700">+40%</span>
+                        <span className="p-4 text-[2rem] font-bold font-700">+45%</span>
                      </div>
               </div>
 
@@ -367,7 +375,7 @@ const Baobabpad = () => {
                   <div><HiOutlineUserAdd className="text-[#00BDD6] text-[3rem]  "/></div>
                   <span className="text-[#00BDD6] text-[2rem] py-4">Timezone</span>
              </div>
-             <div className="flex flex-col items-center text-center w-[25rem] h-[25rem] p-2">               
+             <div className="flex flex-col items-center text-center w-[30rem] h-[25rem] p-2 bg-[#ead1ad]">               
                   <span className=" font-bold text-[2rem]">Management</span>
                   <span className="text-[1.25rem]">
                   Baobabpad provides dedicated In-house Project Managers and Account Managers to our clients with limited human resources, to manage project workflows and project workstreams. Our membership subscription comes with a full suite of project and account management support. 
@@ -416,12 +424,12 @@ const Baobabpad = () => {
            </div>
 
            <div className="flex justify-center  flex-wrap gap-x-7 gap-y-7  ">
-             <div className=" flex flex-col p-4 gap-y-5 shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer">
+             <div className=" flex flex-col p-4 gap-y-5 shadow-2xl hover:transform hover:scale-100 transition-transform duration-300 hover:cursor-pointer">
           
-                <img src="/Pascaline 1.png" alt="Pascaline's photo"  className="w-[19rem] " />
+                <img src="/pascaline-colored.jpg" alt="Pascaline's photo"  className="w-[19rem] mx-auto " />
                   {/* Link to Internship page */}
-                <Link  href="#Internship" className="display-none" onClick={toggleInternship}>
-                 <span className="text-[1.5rem] font-bold hover hover:text-[#00BDD6]">Virtual Intership Program </span>
+                <Link  href="#Internship" className="display-none " onClick={toggleInternship}>
+                 <span className="text-[1.5rem] font-bold hover hover:text-[#00BDD6] "><p className="text-center">Virtual Intership Program </p></span>
                 </Link>
                 {showIntern && <Internship />}
             
@@ -432,31 +440,34 @@ const Baobabpad = () => {
                 </div>
                
              </div>
-              <div className="flex flex-col p-4  gap-y-5 shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer ">
-                <img src="/kenny.png" alt="Kenny's photo" className="w-[19rem] h-[15rem]"  />
+              <div className="flex flex-col p-4 gap-y-5 shadow-2xl hover:transform hover:scale-100 transition-transform duration-300 hover:cursor-pointer ">
+                <img src="/kenny.png" alt="Kenny's photo" className="w-[19rem] h-[17rem] mx-auto "  />
                 <Link  href="#Mentorship" onClick={toggleMentorship}>
-                <span className="text-[1.5rem] font-bold hover hover:text-[#00BDD6] ">Growth Mentorship</span>
+                <span id="pasi"className="text-[1.5rem] font-bold hover hover:text-[#00BDD6]  w-[100%]"><p className="  text-center ">Growth Mentorship</p></span>
                 </Link>
                 {showMentor && <Mentorship />}
+                
+
                 <div>
                      <span className="bg-[#F1F4FD] text-[#4069E5] text-[0.7rem] p-1 rounded-[1rem]">Human Capital</span>
                 </div>
               </div>
-              {/*
+              
+
+             {/*umwana 
+
               <div className="flex flex-col p-4 gap-y-5 shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer">
                 <img src="/team_haniken.png" alt="A boy holding a ball photo" className="w-[19rem]" />
                 <span className="text-[1.5rem] font-bold">Team Hanniken</span>
                <div>
                    <span className="bg-[#EBFDFF] text-[#00BDD6] text-[0.7rem] p-1 rounded-[1rem]">Sports</span>
                </div>
-                  </div>*/}
-              
-          
+                  </div>
+
+                   {/*end of umwana */}
+         
                 
            </div>
-
-
-
 
           </section>
 
@@ -505,9 +516,6 @@ const Baobabpad = () => {
           </section>
 
           {/* End of featured by section */}
-
-
-
 
       </Layout>
     </div>

@@ -105,8 +105,8 @@ const SignupForm = () => {
         </div>
       )}
       {/* Input fields */}
-      <div className="mb-2">
-        <label className="block mb-1 text-sm" htmlFor="firstName">
+      <div className="mb-2 md:flex mt-4">
+        <label className="block mb-1 text-sm md:w-[20%] md:mr-5 " htmlFor="firstName">
           First Name:
         </label>
         <input
@@ -122,8 +122,8 @@ const SignupForm = () => {
           <p className="text-red-500 text-sm">{errors.firstName.message}</p>
         )}
       </div>
-      <div className="mb-2">
-        <label className="block mb-1 text-sm" htmlFor="lastName">
+      <div className="mb-2 md:flex mt-4">
+        <label className="block mb-1 text-sm md:w-[20%] md:mr-5" htmlFor="lastName">
           Last Name:
         </label>
         <input
@@ -141,8 +141,8 @@ const SignupForm = () => {
       </div>
       {/* Common fields */}
       {/* Repeat similar pattern for other fields */}
-      <div className="mb-2">
-        <label className="block mb-1 text-sm" htmlFor="email">
+      <div className="mb-2 md:flex mt-4">
+        <label className="block mb-1 text-sm md:w-[20%] md:mr-5" htmlFor="email">
           Email:
         </label>
         <input
@@ -158,8 +158,8 @@ const SignupForm = () => {
           <p className="text-red-500 text-sm">{errors.email.message}</p>
         )}
       </div>
-      <div className="mb-2">
-        <label className="block mb-1 text-sm" htmlFor="password">
+      <div className="mb-2 md:flex mt-4">
+        <label className="block mb-1 text-sm md:w-[20%] md:mr-5" htmlFor="password">
           Password:
         </label>
         <input
@@ -175,8 +175,8 @@ const SignupForm = () => {
           <p className="text-red-500 text-sm">{errors.password.message}</p>
         )}
       </div>
-      <div className="mb-4">
-        <label className="block mb-1 text-sm" htmlFor="passwordConfirmation">
+      <div className="mb-4 md:flex md:mt-4">
+        <label className="block mb-1 text-sm md:w-[20%] md:mr-2" htmlFor="passwordConfirmation">
           Password Confirmation:
         </label>
         <input
