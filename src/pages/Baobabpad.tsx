@@ -320,8 +320,8 @@ const Baobabpad = () => {
         {/* Start of  Clients benefits and  devops benefits */}
           <section id="client" className="border-t border-500 flex  flex-row justify-center w-[100%] items-center flex-wrap  gap-x-7  gap-y-10 p-10">
             <div className="border border-white-100 bg-[#EBFDFF] flex flex-col w-[30.625rem] h-[22.625rem] p-4 ">
-                <span className="font-bold text-3xl ml-[35%]">Client </span>
-                <span className="mb-4">Baobabpad is a membership based platform, for our clients this means no additional costs for scaling your product development. The annual membership fee is exclusive and comes with perks and benefits, such as:</span>
+                <span className="font-bold text-3xl ml-[35%] mt-4">Client </span>
+                <span className="mb-4 text-justify">Baobabpad is a membership based platform, for our clients this means no additional costs for scaling your product development. The annual membership fee is exclusive and comes with perks and benefits, such as:</span>
                 <ul className=" pl-4">
                     <li className="mb-2 flex "><span className="text-blue-400 size-40 w-[6%] mt- h-[6%] my-auto text-2xl" ><FiPlus /></span> Acccess to remote team management support </li>
                     <li className="mb-2  flex"> <span className="text-blue-400 size-40 w-[6%] mt- h-[6%] my-auto text-2xl" ><FiPlus /></span>Culture and team building excellence across locations</li>
@@ -332,7 +332,7 @@ const Baobabpad = () => {
 
             <div className="border border-white-100 bg-[#F5F2FD] flex flex-col w-[30.625rem] h-[22.625rem] p-8">
                 <span className="font-bold text-3xl ml-[40%]"> DevOps</span>
-                <span>Working with Baobabpad DevOps empowers our clients to faster software delivery by streamlining the development and deployment process. Our clients are able  to optimize new features and products to market more quickly. Our competitive  business advantage is: </span>
+                <span className="text-justify ">Working with Baobabpad DevOps empowers our clients to faster software delivery by streamlining the development and deployment process. Our clients are able  to optimize new features and products to market more quickly. Our competitive  business advantage is: </span>
 
             <div className="flex flex-row justify-around">
             <div className="flex flex-col justify-center">
@@ -367,17 +367,17 @@ const Baobabpad = () => {
           {/* End of  Clients benefits and  devops benefits */}
 
           {/* Start of team building and project management section */}
-          <section className="flex flex-row justify-evenly items-center flex-wrap p-10">
-            <div className="flex flex-col items-center text-center  w-[30rem] h-[25rem] p-2 bg-violet-200 my-8">
+          <section className="border-t border-500 flex  flex-row justify-center w-[100%] items-center flex-wrap  gap-x-7  gap-y-10 p-10">
+            <div className="flex flex-col items-center text-center w-[30.625rem] h-[23.625rem] p-4 bg-violet-200 my-8 ">
                  
                   <span className=" text-[2rem] font-bold">Timezone</span>
-                  <span className="text-[1.25rem] py-2">Improved collaboration across global timezoes. Baobabpad's collaboration features bridge the time zone gap by providing a centralized platform for communication and project management in real time. </span>
+                  <span className="text-[1.20rem] py-3 mt-1 text-justify">Improved collaboration across global timezoes. Baobabpad's collaboration features bridge the time zone gap by providing a centralized platform for communication and project management in real time. </span>
                   <div><HiOutlineUserAdd className="text-[#00BDD6] text-[3rem]  "/></div>
                   <span className="text-[#00BDD6] text-[2rem] py-4">Timezone</span>
              </div>
-             <div className="flex flex-col items-center text-center w-[30rem] h-[25rem] p-2 bg-[#ead1ad]">               
+             <div className="flex flex-col items-center text-center w-[30.625rem] h-[23.625rem] p-4  bg-[#ead1ad] ">               
                   <span className=" font-bold text-[2rem]">Management</span>
-                  <span className="text-[1.25rem]">
+                  <span className="text-[1.20rem] py-5 mt-1 text-justify">
                   Baobabpad provides dedicated In-house Project Managers and Account Managers to our clients with limited human resources, to manage project workflows and project workstreams. Our membership subscription comes with a full suite of project and account management support. 
                   </span>
                   <FaPeopleGroup  className="text-[#4069E5] text-[3rem] "/>
@@ -453,19 +453,6 @@ const Baobabpad = () => {
                 </div>
               </div>
               
-
-             {/*umwana 
-
-              <div className="flex flex-col p-4 gap-y-5 shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer">
-                <img src="/team_haniken.png" alt="A boy holding a ball photo" className="w-[19rem]" />
-                <span className="text-[1.5rem] font-bold">Team Hanniken</span>
-               <div>
-                   <span className="bg-[#EBFDFF] text-[#00BDD6] text-[0.7rem] p-1 rounded-[1rem]">Sports</span>
-               </div>
-                  </div>
-
-                   {/*end of umwana */}
-         
                 
            </div>
 
@@ -477,38 +464,49 @@ const Baobabpad = () => {
           <section className="bg-[#F8F9FA] flex flex-col items-center mt-8 p-6 gap-y-4 ">
 
             <div>
-              <span className="text-[2rem] font-medium text-[#341473]">Featured by:</span>
+              <span className="text-[2rem] font-medium text-[#341473] mb-">Featured by:</span>
             </div>
 
-            <div className="flex flex-row gap-x-8 justify-between">
-            <div className="flex flex-row ">
-                  <img src="/apex-fusion-icon-1.png" alt=" apex fusion icon" />
+            <div className="flex md:flex-col-3 flex-row-3 gap-[10%] ">
+
+              <div className="w-[20%] ml-12 md:mb-5  ">
+                  <div className="md:h-[75%] h-[70%] w-full shadow-2xl hover:transform hover:scale-110 transition-transform duration-300">
+                  <img src="/NF.jpg" alt=" startup extreme logo" className="w-full h-full" />
+                  </div>
+                  <div className="mt-7">
+                  <Link href="https://open.spotify.com/episode/0iV5UHXUqLtg7Z9gKEluNF?si=cdCQIVtHQS2x2lXGy-XsKg" className="mt-4">
+                  <span className="text-xl font-medium text-gray-800 mt-11 hover hover:text-[#00BDD6] h-[40%] my-auto">Next frontier</span>
+                  </Link>
+                  </div>
+               
+              </div>
+
+              <div className="w-[20%]">
+                  <div className="h-[70%] w-full  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300">
+                  <img src="/Nature.jpg" alt="nature backend Logo" className="w-full h-full rounded-lg"/>
+                  </div>
+                  <div className="mt-7">
+                  <Link href="https://naturebacked.com/episode/how-to-fix-carbon-markets-with-kenny-kaluiji" className="mt-4">
+                  <span className="text-xl font-medium text-gray-800 mt-11 hover hover:text-[#00BDD6] h-[40%] my-auto">Nature Backend</span>
+                  </Link>
+                  </div>
+               
+              </div>
+
+              <div className="w-[20%]">
+                  <div className="h-[70%] w-full  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300">
+                  <img src="/StartUp.jpg" alt=" startup extreme logo" className="w-full h-full rounded-lg"/>
+                  </div>
+                  <div className="mt-7">
+                  <Link href="https://www.startupextreme.co/" className="mt-4">
+                  <span className="text-xl font-medium text-gray-800 mt-11 hover hover:text-[#00BDD6] h-[40%] my-auto">Startup Extreme</span>
+                  </Link>
+                  </div>
+               
+              </div>
+
               
-              </div>
-              <div className="flex flex-row">
-                  <img src="/nebulla-dynamics-1.png" alt="nebulla dynamics icon" />
-               
-              </div>
 
-              <div className="flex flex-row">
-                  <img src="/virtuoso-icon-1.png" alt=" virtuoso icon" />
-               
-              </div>
-
-              <div className="flex flex-row">
-                  <img src="/quantum-icon-1.png" alt="quantum icon" />
-            
-              </div>
-
-              <div className="flex flex-row">
-                  <img src="/pinnacle-nexus-icon-1.png" alt="pinnacle-nexus icon" />
-               
-              </div>
-              
-              <div className="flex flex-row">
-                  <img src="/elysium-global-icon.png" alt="elysium-global icon" />
-                
-              </div>
             </div>
               
 

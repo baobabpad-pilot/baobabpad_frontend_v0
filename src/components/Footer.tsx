@@ -13,8 +13,8 @@ const navLinks: NavLink[] = [
   { id: "tfgbuyhejni3m", label: "Baobabpad", href: "/Baobabpad" },
   { id: "4389hunref", label: "Solutions", href: "/Solutions" },
   { id: "9ol,ytgrer", label: "Careers", href: "/Careers" },
-  { id: "buh43jnadsgqwe", label: "Contact Us", href: "/Contact" },
-  { id: "akljhqkjwebr", label: "FAQs", href: "/FAQs" },
+  { id: "buh43jnadsgqwe", label: "Try for free", href: "/Businessform" },
+  { id: "akljhqkjwebr", label: "Login", href: "/LoginForm" },
 ];
 
 interface FooterProps {}
@@ -86,10 +86,10 @@ const Footer: React.FC<FooterProps> = () => {
             <a href="#" className="mr-4 text-gray-400 hover:text-gray-300">
               <FaFacebook />
             </a>
-            <a href="#" className="mr-4 text-gray-400 hover:text-gray-300">
+            <a href="https://www.linkedin.com/company/baobabpad/mycompany/?viewAsMember=true" className="mr-4 text-gray-400 hover:text-gray-300">
               <FaLinkedin />
             </a>
-            <a href="#" className="text-gray-400 hover:text-gray-300">
+            <a href="https://www.instagram.com/baobabpad/" className="text-gray-400 hover:text-gray-300">
               <FaYoutube />
             </a>
           </div>

@@ -112,41 +112,43 @@ const Careers = () => {
           {/* ------------------------------------------------ */}
          
           {/* component */}
+          <div className="md:mt-0 mt-[5rem]">
           <Auth />
+          </div>
           {/* -------------------------------------------------------- */}
         </div>
       </div>
       <div
-        className="section2"
+        className="section2  "
         style={{ marginTop: isSmallScreen ? "800px" : "" }}
       >
-        <h2 className="mt-10 text-center text-3xl">
+        <h2 className="md:mt-10 mt-[-20rem] text-center text-3xl">
           <b style={{ color: "rgb(50, 56, 66)" }}>Our benefits</b>
         </h2>
-
-        <div className={styles.part}>
-          <div className="container mx-auto px-4 lg:px-20 mt-10 flex flex-row justify-between items-center flex-wrap">
-            <div className="img1">
-              <img src="/benefits (5).png" alt="" className="w-full h-auto" />
+       
+        <div >
+          <div className="flex gap-3 w-[90%] mx-auto my-8">
+            <div className="img1 md:mt-0 mt-5   hover:transform hover:scale-105 transition-transform duration-300">
+              <img src="/benefits (5).png" alt="Competitive salary" className="w-full h-[100%]" />
             </div>
             {/* Image 2 */}
-            <div className="img2">
-              <img src="benefits (4).png" alt="" className="w-full h-auto" />
+            <div className="img2 hover:transform hover:scale-105 transition-transform duration-300">
+              <img src="benefits (4).png" alt="Health and vision insurance" className="w-full h-auto" />
             </div>
-            <div className="img2">
-              <img src="benefits (3).png" alt="" className="w-full h-auto" />
+            <div className="img2 hover:transform hover:scale-105 transition-transform duration-300">
+              <img src="benefits (3).png" alt="Mental health" className="w-full h-full" />
             </div>
           </div>
-          <div className="container mx-auto px-4 lg:px-20 mt-10 flex flex-row justify-between items-center flex-wrap">
-            <div className="img1">
-              <img src="/benefits (2).png" alt="" className="w-full h-auto" />
+          <div className="flex gap-3 w-[90%] mx-auto my-8">
+            <div className="img1 md:mt-0 mt-5 hover:transform hover:scale-105 transition-transform duration-300">
+              <img src="/benefits (2).png" alt="Growth Mentorship" className="w-full h-auto" />
             </div>
             {/* Image 2 */}
-            <div className="img2">
-              <img src="benefits (6).png" alt="" className="w-full h-auto" />
+            <div className="img2 hover:transform hover:scale-105 transition-transform duration-300">
+              <img src="benefits (6).png" alt="Coworking space" className="w-full h-auto" />
             </div>
-            <div className="img2">
-              <img src="benefits (1).png" alt="" className="w-full h-auto" />
+            <div className="img2 hover:transform hover:scale-105 transition-transform duration-300">
+              <img src="benefits (1).png" alt="Learning & development" className="w-full h-auto" />
             </div>
           </div>
         </div>
@@ -156,7 +158,7 @@ const Careers = () => {
         <b style={{ color: "rgb(50, 56, 66)" }}>Office Space</b>
       </h2>
 
-      <div className="container flex mx-auto px-4 lg:px-20 mt-10 flex flex-row justify-between items-center flex-wrap">
+      <div className="flex gap-3 w-[90%] mx-auto my-8">
         <div
           className="flex-auto bg-red-600 w-46 bg-cover bg-center"
           style={{
