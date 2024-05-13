@@ -270,7 +270,7 @@ const Baobabpad = () => {
                     type="button"
                     className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center "
                   >
-                    <a href={member.profile}>View Profile</a>
+                    <a href={member.profile} target="_blank">View Profile</a>
                
                   </button>
                   {/* <div className="bg-[#C8F9FF] text-white rounded-[100%] w-10 h-10 px-3 py-1  "><span className="text-black  text-2xl">+</span></div> */}
@@ -306,9 +306,9 @@ const Baobabpad = () => {
                   <span className="text-[#9095A0]">{member.position}</span>
                   <button
                     type="button"
-                    className="bg-[#C8F9FF] pt-2 pb-2 px-4 py-8 align-center w-[20%]"
+                    className="bg-[#C8F9FF] pt-2 pb-2 px-4 py-12 align-center "
                   >
-                     <a href={member.profile}>View Profile</a>
+                     <a href={member.profile} target="_blank">View Profile</a>
                     
                   </button>
                 </div>
