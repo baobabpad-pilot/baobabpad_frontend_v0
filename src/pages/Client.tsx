@@ -2,6 +2,7 @@ import Faq from "@/components/FAQs/Faq";
 import Layout from "@/components/Layout";
 import Reviews from "@/components/Reviews/Reviews";
 import SolutionNavbar from "@/components/SolutionsNavbar/SolutionNavbar";
+import BusinessStrategy from "@/components/client_sections/BusinessStrategy";
 import Features from "@/components/features/Features";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -73,6 +74,15 @@ const Client = () => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
+
+
+  const [componentVisible, setComponentVisible] = useState(null);
+
+  const handleClick = (event: any, componentName: any) => {
+    event.preventDefault();
+    setComponentVisible(componentName);
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <Layout>
@@ -117,6 +127,7 @@ const Client = () => {
               <button className="border border-black p-2 rounded-[1rem] hover:bg-[#00BDD6] hover:text-white hover:border-none">
                 Learn More
               </button>
+              
               <button className="border border-black pl-9 pr-9 rounded-[1rem] bg-[#723CDE] text-white hover:bg-white hover:text-black">
                 Sign up
               </button>
@@ -138,12 +149,16 @@ const Client = () => {
                 Business Strategy
               </span>
               <span className="">
-                Strategic management formulates and implements major goals and
-                initiatives.
+              High costs associated with technology development are a major barrier for startups and growth
+              companies.
               </span>
-              <div className="w-[100%] flex justify-end">
-                <span className="text-[#00BDD6]">Learn More... </span>
-              </div>
+              <a
+                  href="#"
+                  onClick={(event) => handleClick(event, "Business Strategy")}
+                  className="text-[#00BDD6] cursor-pointer"
+                >Learn More .....</a>
+
+
             </div>
             <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] text-[2.5rem]">
@@ -171,13 +186,28 @@ const Client = () => {
             </div>
           </div>
 
-          <div className="w-full md:w-[40%] md:h-[50%] flex justify-center p-5">
-            <img
-              src="/client_intro_image.png"
-              alt="a guy smiling"
-              className="w-[100%]"
-            />
-          </div>
+         
+
+
+          <div
+            className="w-full md:w-[50%] md:h-[50%] flex justify-center p-5"
+            id="right-sub-section"
+          >
+            {componentVisible === "Business Strategy" && <BusinessStrategy />}
+            
+            {!componentVisible && (
+             <img
+             src="/client_intro_image.png"
+             alt="a guy smiling"
+             className="w-[100%]"
+           />
+            )}
+            </div>
+
+
+
+
+
         </section>
 
         <section className="flex flex-col md:flex-row items-center justify-center flex-wrap p-12 ">
