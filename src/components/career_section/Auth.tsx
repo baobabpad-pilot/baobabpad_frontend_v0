@@ -43,7 +43,7 @@ function Auth() {
               <p className="text-2xl ">Karibu Sana , {session?.user?.name}</p>
             </div>
           ) : (
-          <p className="text-2xl mt-11">Sign up to Baobabpad</p>
+          <p className="text-2xl mt-5">Sign up to Baobabpad</p>
           )}
         <div>
           <div

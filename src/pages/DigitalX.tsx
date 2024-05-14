@@ -92,9 +92,11 @@ const DigitalX = () => {
               Providing a scalable cloud-based infrastructure service, empower
               its clients to focus on their core business activities.
             </span>
+            <Link href="#2">
             <button className="bg-[white] text-black p-2 rounded-[1rem] hover:bg-[#00BDD6] hover:text-white">
               Discover More
             </button>
+            </Link>
           </div>
         </section>
 
@@ -110,8 +112,8 @@ const DigitalX = () => {
                 Introduction
               </span>
             </div>
-            <p className="text-[3rem]">Digital infrastructure optimization </p>
-            <p className="text-[1.875rem]">
+            <p className="md:text-[3rem] text-[2rem]">Digital infrastructure optimization </p>
+            <p className="md:text-[1.875rem] text-[1.5rem]">
               We leverage cutting-edge cloud technologies to provide you with a
               secure, reliable, and cost-effective foundation for your IT
               infrastructure.
@@ -123,7 +125,7 @@ const DigitalX = () => {
               </button>
               </Link>
               <Link href="/Businessform">
-              <button className="border border-black p-2 rounded-[1rem] w-40  text-white bg-violet-500 hover:bg-white hover:text-black hover:border-black">
+              <button className="border border-black p-2 rounded-[1rem] w-35  text-white bg-violet-500 hover:bg-white hover:text-black hover:border-black">
                 Sign up
               </button>
               </Link>
@@ -147,8 +149,8 @@ const DigitalX = () => {
 
         <section id="2" className="flex mt-1 flex-col md:flex-row bg-[#00BDD6] flex-wrap justify-center items-center">
           <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 gap-x-12 text-[1.25rem] max-w-full md:max-w-[50%]">
-            <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
-              <span className="text-[#171A1F] font-[500] text-[2.5rem]">
+            <div className="sm:w-100% md:w-[30.75rem] w-[24rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+              <span className="text-[#171A1F] font-[500] md:text-[2.5rem] text-[2rem]">
                 The Future is Cloud{" "}
               </span>
               <span className="">
@@ -166,8 +168,8 @@ const DigitalX = () => {
               </div>
             </div>
 
-            <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
-              <span className="text-[#171A1F] font-[500] text-[2.5rem]">
+            <div className="sm:w-100% md:w-[30.75rem] w-[24rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+              <span className="text-[#171A1F] font-[500] md:text-[2.5rem] text-[2rem]">
                 Cloud xPert{" "}
               </span>
               <span className="">
@@ -184,7 +186,7 @@ const DigitalX = () => {
                 </a>
               </div>
             </div>
-            <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+            <div className="sm:w-100%md:w-[30.75rem] w-[24rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] text-[2.5rem]">
                 Cloud base{" "}
               </span>
@@ -229,7 +231,7 @@ const DigitalX = () => {
                 Core Values
               </span>
             </div>
-            <p className="text-[3rem]">The Future is cloud </p>
+            <p className="md:text-[3rem] text-[2rem]">The Future is cloud </p>
 
             <div className=" flex flex-row gap-x-5 items-center mt-[1rem]">
               <img
@@ -249,7 +251,7 @@ const DigitalX = () => {
 
         <Reviews />
 
-        <section className="flex flex-col md:flex-row items-center justify-center  flex-wrap p-12 border-t border-t-gray m-6  ">
+        <section className="hidden md:flex flex-col md:flex-row items-center justify-center  flex-wrap p-12 border-t border-t-gray m-6  ">
           <div className="w-full md:w-[60%] flex flex-row md:flex-col justify-center flex-wrap p-6 pt-[-1rem] gap-y-7">
             <div className="flex flex-row bg-[#F1F1FE] w-[13rem] items-center">
               <img
@@ -278,7 +280,9 @@ const DigitalX = () => {
             </div>
           </div>
         </section>
+        <div className="hidden md:flex">
         <Faq faqs={faqs} />
+        </div>
 
       </Layout>
     </div>

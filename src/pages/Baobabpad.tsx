@@ -101,6 +101,7 @@ const Baobabpad = () => {
   const visibleCards = showAllCards
     ? teamDetailsArray
     : teamDetailsArray.slice(0, 2);
+    
   const buttonLabel = showAllCards ? "See Less" : "See More";
 
   const toggleShowAllCards = () => {
@@ -299,7 +300,7 @@ const Baobabpad = () => {
               {teamDetailsArray.map((member, index) => (
                 <div
                   key={index}
-                  className="pt-2 w-[15rem] h-[20rem] flex flex-col items-center justify-center gap-y-4 my-12 border border-600 shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer"
+                  className="pt-2 w-[15rem] h-[20rem]  flex flex-col items-center justify-center gap-y-4 my-12 border border-600 shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer"
                 >
                   <img
                     src={member.image}
@@ -358,6 +359,15 @@ const Baobabpad = () => {
               
 
           </div>
+
+          <button
+              onClick={() => setShowAllCards(!showAllCards)}
+              className={`mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded sm:block   ${
+                showAllCards ? "" : "md:hidden"
+              }`}
+            >
+              {buttonLabel}
+            </button>
         </section>
           {/* end of Village management team  */}
    
@@ -375,7 +385,9 @@ const Baobabpad = () => {
               </div>
 
               <div className="flex flex-row gap-x-4 items-center">
+                   <Link href="/Businessform">
                    <button className="w-[7rem] bg-[#00BDD6] text-white font-[1.125rem] p-[0.4rem] rounded-[1rem] hover:bg-white hover:text-[#00BDD6] hover:border hover:border-500"> Try Free</button>
+                   </Link>
                    <Link href="#client">
                    <button className="w-[7rem]  text-[#9095A0] border border-[#9095A0]  font-[1.125rem] p-[0.4rem] rounded-[1rem] cursor-pointer hover:bg-gray-200 hover:border hover:border-500"> Learn more</button>
                    </Link> 
@@ -393,19 +405,19 @@ const Baobabpad = () => {
 
         {/* Start of  Clients benefits and  devops benefits */}
           <section id="client" className="border-t border-500 flex  flex-row justify-center w-[100%] items-center flex-wrap  gap-x-7  gap-y-10 p-10">
-            <div className="border border-white-100 bg-[#EBFDFF] flex flex-col w-[30.625rem] h-[22.625rem] p-4 ">
-                <span className="font-bold text-3xl ml-[35%] mt-4">Client </span>
-                <span className="mb-4 text-justify">Baobabpad is a membership based platform, for our clients this means no additional costs for scaling your product development. The annual membership fee is exclusive and comes with perks and benefits, such as:</span>
+            <div className=" md:text-lg text-sm border border-white-100 bg-[#EBFDFF] flex flex-col w-[30.625rem] md:h-[22.625rem] h-[25.625rem] p-4 ">
+                <span className="font-bold md:text-[2rem] text-[1.5rem] ml-[35%] mt-4">Client </span>
+                <span className="mb-4 text-justify ">Baobabpad is a membership based platform, for our clients this means no additional costs for scaling your product development. The annual membership fee is exclusive and comes with perks and benefits, such as:</span>
                 <ul className=" pl-4">
-                    <li className="mb-2 flex "><span className="text-blue-400 size-40 w-[6%] mt- h-[6%] my-auto text-2xl" ><FiPlus /></span> Acccess to remote team management support </li>
-                    <li className="mb-2  flex"> <span className="text-blue-400 size-40 w-[6%] mt- h-[6%] my-auto text-2xl" ><FiPlus /></span>Culture and team building excellence across locations</li>
-                    <li className="mb-2  flex"> <span className="text-blue-400 size-40 w-[6%] mt- h-[6%] my-auto text-2xl" ><FiPlus /></span>Merit-reward infrastructure for our talent</li>
-                    <li className="mb-2  flex"> <span className="text-blue-400 size-40 w-[6%] mt- h-[6%] my-auto text-2xl" ><FiPlus /></span>High return on investment and profitability</li>
+                    <li className="mb-2 flex  "><span className="text-blue-400 size-40 w-[6%] mr-4 h-[6%] my-auto md:text-2xl text-xl" ><FiPlus /></span> Acccess to remote team management support </li>
+                    <li className="mb-2  flex"> <span className="text-blue-400 size-40 w-[6%] mr-4 h-[6%] my-auto md:text-2xl text-xl" ><FiPlus /></span>Culture and team building excellence across locations</li>
+                    <li className="mb-2  flex"> <span className="text-blue-400 size-40 w-[6%] mr-4 h-[6%] my-auto md:text-2xl text-xl" ><FiPlus /></span>Merit-reward infrastructure for our talent</li>
+                    <li className="mb-2  flex"> <span className="text-blue-400 size-40 w-[6%] mr-4 h-[6%] my-auto md:text-2xl text-xl" ><FiPlus /></span>High return on investment and profitability</li>
                 </ul>
             </div>
 
-            <div className="border border-white-100 bg-[#F5F2FD] flex flex-col w-[30.625rem] h-[22.625rem] p-8">
-                <span className="font-bold text-3xl ml-[40%]"> DevOps</span>
+            <div className="md:text-lg text-sm border border-white-100 bg-[#F5F2FD] flex flex-col w-[30.625rem] h-[22.625rem] p-8">
+                <span className="font-bold md:text-[2rem] text-[1.5rem] text-2xl ml-[40%]"> DevOps</span>
                 <span className="text-justify ">Working with Baobabpad DevOps empowers our clients to faster software delivery by streamlining the development and deployment process. Our clients are able  to optimize new features and products to market more quickly. Our competitive  business advantage is: </span>
 
             <div className="flex flex-row justify-around">
@@ -416,7 +428,7 @@ const Baobabpad = () => {
                    </div>
 
                      <div>
-                        <span className="p-4 text-[2rem] font-bold font-700">+45%</span>
+                        <span className="p-4 md:text-[2rem] text-[1.5rem] font-bold font-700">+45%</span>
                      </div>
               </div>
 
@@ -426,7 +438,7 @@ const Baobabpad = () => {
                       <span className="p-2">Quality Assurance</span>
                    </div>
                    <div>
-                        <span className="p-4 text-[2rem] font-bold font-700">100%</span>
+                        <span className="p-4 md:text-[2rem] text-[1.5rem] font-bold font-700">100%</span>
                    </div>
               </div>
             </div>
@@ -442,25 +454,25 @@ const Baobabpad = () => {
 
           {/* Start of team building and project management section */}
           <section className="border-t border-500 flex  flex-row justify-center w-[100%] items-center flex-wrap  gap-x-7  gap-y-10 p-10">
-            <div className="flex flex-col items-center text-center w-[30.625rem] h-[23.625rem] p-4 bg-violet-200 my-8 ">
+            <div className="md:text-lg text-sm flex flex-col items-center text-center w-[30.625rem] h-[23.625rem] p-4 bg-violet-200 my-8 ">
                  
-                  <span className=" text-[2rem] font-bold">Timezone</span>
-                  <span className="text-[1.20rem] py-3 mt-1 text-justify">Improved collaboration across global timezoes. Baobabpad's collaboration features bridge the time zone gap by providing a centralized platform for communication and project management in real time. </span>
+                  <span className=" md:text-[2rem] text-[1.5rem] font-bold md:mt-1 mt-9">Timezone</span>
+                  <span className="text-[1.20rem] py-3 mt-1 text-justify md:text-lg text-sm">Improved collaboration across global timezoes. Baobabpad's collaboration features bridge the time zone gap by providing a centralized platform for communication and project management in real time. </span>
                   <div><HiOutlineUserAdd className="text-[#00BDD6] text-[3rem]  "/></div>
-                  <span className="text-[#00BDD6] text-[2rem] py-4">Timezone</span>
+                  <span className="text-[#00BDD6] md:text-[2rem] text-[1.5rem] py-4">Timezone</span>
              </div>
-             <div className="flex flex-col items-center text-center w-[30.625rem] h-[23.625rem] p-4  bg-[#ead1ad] ">               
-                  <span className=" font-bold text-[2rem]">Management</span>
-                  <span className="text-[1.20rem] py-5 mt-1 text-justify">
+             <div className="md:text-lg text-sm flex flex-col items-center text-center w-[30.625rem] h-[23.625rem] p-4  bg-[#ead1ad] ">               
+                  <span className=" font-bold md:text-[2rem] text-[1.5rem] md:mt-1 mt-9">Management</span>
+                  <span className="text-[1.20rem] py-5 mt-1 text-justify md:text-lg text-sm">
                   Baobabpad provides dedicated In-house Project Managers and Account Managers to our clients with limited human resources, to manage project workflows and project workstreams. Our membership subscription comes with a full suite of project and account management support. 
                   </span>
                   <FaPeopleGroup  className="text-[#4069E5] text-[3rem] "/>
-                  <span className="text-[#4069E5] text-[2rem]">Project Management</span>
+                  <span className="text-[#4069E5] md:text-[2rem] text-[1rem]">Project Management</span>
              </div>
           </section>
           {/* End of team building and project management section */}
           {/* Start of message from  our village  */}
-          <section className="flex flex-col justify-center  ">
+          <section className="hidden md:flex flex-col justify-center  ">
               <div className="flex flex-row justify-center">
               <span className="align-center font-extrabold font text-[3rem]">Message from Our Village</span>
               </div>
@@ -489,7 +501,7 @@ const Baobabpad = () => {
           {/* End of message from our village  */}
 
           {/* Start of the impact section */}
-          <section className="flex flex-col justify-center mt-7 ">
+          <section className="hidden md:flex flex-col justify-center mt-7 ">
               <div className="flex flex-row justify-center">
               <span className="align-left font-extrabold font text-[3rem]">Our Impact</span>
               </div>

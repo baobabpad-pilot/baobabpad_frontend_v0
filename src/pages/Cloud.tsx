@@ -82,7 +82,7 @@ const Cloud = () => {
 
         <section className="flex mt-1 flex-col md:flex-row bg-[#ED7D2D] flex-wrap">
           <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 text-[1.25rem] max-w-full md:max-w-[50%]">
-            <span className="text-[3rem] font-semibold">
+            <span className="md:text-[3rem] text-[2.5rem] font-semibold">
               AI and Data Infrastructure
             </span>
             <span>
@@ -115,8 +115,8 @@ const Cloud = () => {
                 Introduction
               </span>
             </div>
-            <p className="text-[3rem]">Launch AI models integration</p>
-            <p className="text-[1.875rem]">
+            <p className="md:text-[3rem] text-[2rem]">Launch AI models integration</p>
+            <p className="md:text-[1.875rem] text-[1.500rem]">
             Leveraging technology for operational improvement and long-term growth strategies.
             </p>
             <div className=" flex flex-row gap-x-5 ">
@@ -126,7 +126,7 @@ const Cloud = () => {
               </button>
               </Link>
               <Link href="/Businessform">
-              <button className="border border-black p-2 rounded-[1rem] w-40  text-white bg-violet-500 hover:bg-white hover:text-black hover:border-black">
+              <button className="border border-black p-2 rounded-[1rem] w-35  text-white bg-violet-500 hover:bg-white hover:text-black hover:border-black">
                 Sign up
               </button>
               </Link>
@@ -150,7 +150,7 @@ const Cloud = () => {
 
         <section id="2" className="flex mt-1 flex-col md:flex-row bg-[#00BDD6] flex-wrap justify-center items-center">
           <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 gap-x-12 text-[1.25rem] max-w-full md:max-w-[50%]">
-            <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+            <div className="sm:w-100% md:w-[30.75rem] w-[24rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] text-[1.8rem]">
                  AI strategy
               </span>
@@ -167,7 +167,7 @@ const Cloud = () => {
                 </a>
               </div>
             </div>
-            <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+            <div className="sm:w-100% md:w-[30.75rem] w-[24rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] text-[1.8rem]">
                 Machine Learning Ops
               </span>
@@ -184,7 +184,7 @@ const Cloud = () => {
                 </a>
               </div>
             </div>
-            <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+            <div className="sm:w-100% md:w-[30.75rem] w-[24rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] text-[1.8rem]">
             Large Language Modelling
               </span>
@@ -216,13 +216,7 @@ const Cloud = () => {
             )}
             </div>
            
-           
-
-
-
-
-
-
+        
          
         </section>
 
@@ -234,11 +228,11 @@ const Cloud = () => {
                 alt="introduction icon"
                 className="w-[10rem]"
               />
-              <span className=" text-[#00BDD6] text-[1.625rem]">
+              <span className=" text-[#00BDD6] md:text-[1.625rem] text-[1.300rem] ">
                 Core Values
               </span>
             </div>
-            <p className="text-[3rem]">AI Model Integrations  </p>
+            <p className="md:text-[3rem] text-[2rem]">AI Model Integrations  </p>
 
             <div className=" flex flex-row gap-x-5 items-center mt-[1rem]">
               <img
@@ -259,7 +253,7 @@ const Cloud = () => {
           <Reviews/>
       
 
-        <section className="flex flex-col md:flex-row items-center justify-center  flex-wrap p-12 border-t border-t-gray m-6  ">
+        <section className=" hidden md:flex flex-col md:flex-row items-center justify-center  flex-wrap p-12 border-t border-t-gray m-6  ">
           <div className="w-full md:w-[60%] flex flex-row md:flex-col justify-center flex-wrap p-6 pt-[-1rem] gap-y-7">
             <div className="flex flex-row bg-[#F1F1FE] w-[13rem] items-center">
               <img
@@ -289,9 +283,9 @@ const Cloud = () => {
           </div>
         </section>
 
-     
+       <div className="hidden md:flex">
         <Faq  faqs={faqs}/>
-  
+        </div> 
       </Layout>
     </div>
   );

@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import styles from "../styles/careers.module.css";
 import Auth from "@/components/career_section/Auth";
+import Link from "next/link";
 
 
 const Careers = () => {
@@ -37,24 +38,21 @@ const Careers = () => {
           Become part of  Baobabpad, a virtual technology village  designed to empower YOU. 
           Become a changemaker and shape the future of technology and innovation across the world. Contribute to projects that tackle real-world challenges and make a positive impact. 
           </span>
+          <Link href="#2">
           <button className="bg-[white] text-black p-2 rounded-[1rem] hover:bg-[#00BDD6] hover:text-white">Discover More</button>
+          </Link>
         </div>
       </section>
       {/*end of section 1*/}
 
       <div
-        className={`${styles.container} flex-1 flex justify-center items-center font-bold text-3xl`}
-        style={{
-          backgroundColor: "rgb(245,245,245) ",
-          height: "100vh",
-          width: "100%",
-        }}
+       className="flex-1 flex justify-center items-center font-bold text-3x bg-gray-50  "
+       
       >
         <div
-          className={`${styles.flexContainer} flex flex-row`}
-          style={{ height: "100vh" }}
+         className="w-[98%]  md:flex mt-[3rem] md:mb-[8rem] mb-4"
         >
-          <div className={styles.part1}>
+          <div className=" md:w-[50%] w-[100%]">
             <div className="container mx-30 mt-10 flex flex-row justify-center items-center">
               <div
                 className="img1"
@@ -103,7 +101,7 @@ const Careers = () => {
                 />
               </div>
             </div>
-            <div className="info mt-20">
+            <div className="info mt-15 md:w-[50%] w-[70%] text-xl mx-auto mt-4">
               <p style={{ marginLeft: "10px", color: "rgb(0,189,214)" }}>
                 Connecting Africa Talent, <br /> Virtually, and Globally
               </p>
@@ -119,10 +117,10 @@ const Careers = () => {
         </div>
       </div>
       <div
-        className="section2  "
-        style={{ marginTop: isSmallScreen ? "800px" : "" }}
+        className="mt-[8%] "
+        
       >
-        <h2 className="md:mt-10 mt-[-20rem] text-center text-3xl">
+        <h2 className=" text-center text-3xl">
           <b style={{ color: "rgb(50, 56, 66)" }}>Our benefits</b>
         </h2>
        
@@ -154,6 +152,7 @@ const Careers = () => {
         </div>
       </div>
 
+       {/*
       <h2 className="mt-10 text-center text-3xl">
         <b style={{ color: "rgb(50, 56, 66)" }}>Office Space</b>
       </h2>
@@ -203,12 +202,16 @@ const Careers = () => {
           <img src="/Image33 (1).png" alt="" height="400px" />
         </div>
       </div>
+        */}
 
-      <h2 className="mt-10 text-center text-3xl">
+
+        {/*division of stores*/}
+
+        <h2 id="2" className="mt-10 text-center text-3xl">
         <b style={{ color: "rgb(50, 56, 66)" }}>Stories</b>
       </h2>
 
-      <div className="container flex mx-auto px-4 lg:px-20 mt-10 flex flex-row justify-between items-center flex-wrap">
+      <div className="md:flex gap-8 w-[80%] mx-auto mt-11">
         <div
           className="flex-auto w-46"
           style={{ height: "200px", marginRight: "5px" }}
@@ -219,49 +222,52 @@ const Careers = () => {
             title="Google Drive video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-          ></iframe>
+            
+          >1</iframe>
         </div>
         <div
-          className="flex-auto w-64"
-          style={{ height: "200px", marginLeft: "5px" }}
+          className="flex-auto w-46"
+          style={{ height: "200px", marginRight: "5px" }}
         >
-          <iframe
-            className="w-full h-full"
+           <iframe
+            className="w-full h-full md:mt-0 mt-5"
             src="https://drive.google.com/file/d/1SAkENMU536n9lh9cbPFE8mr_6zBdRc1G/preview"
             title="Google Drive video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-          ></iframe>
+          >2</iframe>
         </div>
       </div>
 
-      <div className="container flex mx-auto px-4 lg:px-20 mt-5 flex flex-row justify-between items-center flex-wrap">
+      <div className="md:flex gap-8 w-[80%] mx-auto mt-5 mb-11">
         <div
-          className="flex-auto w-64"
-          style={{ height: "400px", marginRight: "5px" }}
+          className="flex-auto w-46"
+          style={{ height: "200px", marginRight: "5px" }}
         >
-          <iframe
+           <iframe
             className="w-full h-full"
             src="https://drive.google.com/file/d/1nhnhYopT172YPmDfpiNit4YdCEixEkx4/preview"
             title="Google Drive video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-          ></iframe>
+          >3</iframe>
         </div>
 
         <div
-          className="flex-auto  w-64"
-          style={{ marginRight: "5px" }} 
+          className="flex-auto w-46 md:mt-0 mt-5"
+          style={{ height: "200px", marginRight: "5px" }}
         >
-          <img src="/Image33 (2).png" alt="" height="400px" />
+           <iframe
+            className="w-full h-full"
+            src="https://drive.google.com/file/d/1SAkENMU536n9lh9cbPFE8mr_6zBdRc1G/preview"
+            title="Google Drive video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          >2</iframe>
         </div>
-        <div
-          className="flex-auto  w-64 rounded"
-          style={{}} // Adjust height as needed
-        >
-          <img src="/Image33 (1).png" alt="" height="400px" />
-        </div>
+      
       </div>
+      {/*End of stories*/}
 
       <div
         className="footer"

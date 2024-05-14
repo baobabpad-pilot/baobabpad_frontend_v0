@@ -128,9 +128,11 @@ const Remote = () => {
               Baobabpad's Virtual Tech Village platform connects a vast pool of
               skilled tech talent across Africa..
             </span>
-            <button className="bg-[white] text-black p-2 rounded-[1rem] hover:bg-[#00BDD6] hover:text-white">
+            <Link href="#2">
+            <button className="bg-[white] text-black p-2 rounded-[1rem] hover:bg-[#00BDD6] hover:text-white ">
               Discover More
             </button>
+            </Link>
           </div>
           <div className="w-full md:w-[50%] flex justify-center">
             <img
@@ -153,8 +155,8 @@ const Remote = () => {
                 Introduction
               </span>
             </div>
-            <p className="text-[3rem]">Build a power Remote team </p>
-            <p className="text-[1.875rem]">
+            <p className="md:text-[3rem] text-[2rem]">Build a power Remote team </p>
+            <p className="md:text-[1.875rem] text-[1.5rem]">
               Secure remote access to company resources and applications for your team members.
             </p>
             <div className=" flex flex-row gap-x-5 ">
@@ -164,7 +166,7 @@ const Remote = () => {
               </button>
               </Link>
               <Link href="/Businessform">
-              <button className="border border-black p-2 rounded-[1rem] w-40  text-white bg-violet-500 hover:bg-white hover:text-black hover:border-black">
+              <button className="border border-black p-2 rounded-[1rem] w-35  text-white bg-violet-500 hover:bg-white hover:text-black hover:border-black">
                 Sign up
               </button>
               </Link>
@@ -188,8 +190,8 @@ const Remote = () => {
 
         <section id="2" className="flex mt-1 flex-col md:flex-row bg-[#00BDD6] flex-wrap justify-center items-center">
           <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 gap-x-12 text-[1.25rem] max-w-full md:max-w-[50%]">
-            <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
-              <span className="text-[#171A1F] font-[500] text-[2.5rem]">
+            <div className="sm:w-100% md:w-[30.75rem] w-[24rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+              <span className="text-[#171A1F] font-[500] md:text-[2.5rem] text-[2rem]">
                 The Future is Remote
               </span>
               <span className="">
@@ -199,8 +201,8 @@ const Remote = () => {
                 <span className="text-[#00BDD6]">Learn More... </span>
               </div>
             </div>
-            <div className="sm:w-100% w-[30.75rem] h-[13rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
-              <span className="text-[#171A1F] font-[500] text-[2rem]">
+            <div className="sm:w-100% md:w-[30.75rem] w-[24rem] h-[13rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+              <span className="text-[#171A1F] font-[500] md:text-[2.5rem] text-[2rem]">
               Managing  remote culture
               </span>
               <span className="">
@@ -210,8 +212,8 @@ const Remote = () => {
                 <span className="text-[#00BDD6]">Learn More... </span>
               </div>
             </div>
-            <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
-              <span className="text-[#171A1F] font-[500] text-[2.5rem]">
+            <div className="sm:w-100% md:w-[30.75rem] w-[24rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+              <span className="text-[#171A1F] font-[500] md:text-[2.5rem] text-[2rem]">
               Baobabpad Remotelly Hybrid
               </span>
               <span className="">
@@ -240,7 +242,7 @@ const Remote = () => {
                 Core Values
               </span>
             </div>
-            <p className="text-[3rem]">Virtual Tech Village on APIs</p>
+            <p className="md:text-[3rem] text-[2rem]">Virtual Tech Village on APIs</p>
 
             <div className=" flex flex-row gap-x-5 items-center mt-[1rem]">
               <img
@@ -259,14 +261,11 @@ const Remote = () => {
         
         </section>
 
-
-
-
         
        <Reviews/>
   
        
-        <section className="flex flex-col md:flex-row items-center justify-center  flex-wrap p-12 border-t border-t-gray m-6  ">
+        <section className="hidden md:flex flex-col md:flex-row items-center justify-center  flex-wrap p-12 border-t border-t-gray m-6  ">
           <div className="w-full md:w-[60%] flex flex-row md:flex-col justify-center flex-wrap p-6 pt-[-1rem] gap-y-7">
             <div className="flex flex-row bg-[#F1F1FE] w-[13rem] items-center">
               <img
@@ -297,8 +296,9 @@ const Remote = () => {
         </section>
 
 
-       
+       <div className="hidden md:flex">
       <Faq faqs={faqs}/>
+      </div>
   
 
       </Layout>

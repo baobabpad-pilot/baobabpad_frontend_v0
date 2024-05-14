@@ -107,8 +107,8 @@ const Client = () => {
                 Introduction
               </span>
             </div>
-            <p className="text-[3rem]">From bugs to bucks client support </p>
-            <p className="text-[1.875rem]">
+            <p className="md:text-[3rem] text-[2rem]">From bugs to bucks client support </p>
+            <p className="md:text-[1.875rem] text-[1.5rem] ">
               End to end client support infrastructure built to empower
               technology for operational improvement and creating long-term
               growth.
@@ -120,7 +120,7 @@ const Client = () => {
               </button>
               </Link>
               <Link href="/Businessform">
-              <button className="border border-black p-2 rounded-[1rem] w-40  text-white bg-violet-500 hover:bg-white hover:text-black hover:border-black">
+              <button className="w-35 border border-black p-2 rounded-[1rem]   text-white bg-violet-500 hover:bg-white hover:text-black hover:border-black">
                 Sign up
               </button>
               </Link>
@@ -144,8 +144,8 @@ const Client = () => {
 
         <section id="2" className="flex mt-1 flex-col md:flex-row bg-[#00BDD6] flex-wrap justify-center items-center">
           <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 gap-x-12 text-[1.25rem] max-w-full md:max-w-[50%]">
-            <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
-              <span className="text-[#171A1F] font-[500] text-[2.5rem]">
+            <div className="sm:w-100% md:w-[30.75rem] w-[24rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+              <span className="text-[#171A1F] font-[500] md:text-[2.5rem] text-[2rem]">
                 Business Strategy
               </span>
               <span className="">
@@ -156,8 +156,8 @@ const Client = () => {
                 <span className="text-[#00BDD6]">Learn More... </span>
               </div>
             </div>
-            <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
-              <span className="text-[#171A1F] font-[500] text-[2.5rem]">
+            <div className="sm:w-100%  md:w-[30.75rem] w-[24rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+              <span className="text-[#171A1F] font-[500] md:text-[2.5rem] text-[2rem]">
                 Planning and Analysis
               </span>
               <span className="">
@@ -168,8 +168,8 @@ const Client = () => {
                 <span className="text-[#00BDD6]">Learn More... </span>
               </div>
             </div>
-            <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
-              <span className="text-[#171A1F] font-[500] text-[2.5rem]">
+            <div className="sm:w-100%  md:w-[30.75rem] w-[24rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+              <span className="text-[#171A1F] font-[500] md:text-[2.5rem] text-[2rem]">
                 Ongoing Support
               </span>
               <span className="">
@@ -203,7 +203,7 @@ const Client = () => {
                 Core Values
               </span>
             </div>
-            <p className="text-[3rem]">Technology needs a helping team </p>
+            <p className="md:text-[3rem] text-[2rem]">Technology needs a helping team </p>
 
             <div className=" flex flex-row gap-x-5 items-center mt-[1rem]">
               <img
@@ -221,9 +221,11 @@ const Client = () => {
           <Features features={features} />
         </section>
 
+        <section>
         <Reviews />
+        </section>
 
-        <section className="flex flex-col md:flex-row items-center justify-center  flex-wrap p-12 border-t border-t-gray m-6  ">
+        <section className="hidden md:flex flex-col md:flex-row items-center justify-center  flex-wrap p-12 border-t border-t-gray m-6  ">
           <div className="w-full md:w-[60%] flex flex-row md:flex-col justify-center flex-wrap p-6 pt-[-1rem] gap-y-7">
             <div className="flex flex-row bg-[#F1F1FE] w-[13rem] items-center">
               <img
@@ -253,7 +255,10 @@ const Client = () => {
           </div>
         </section>
 
-        <Faq faqs={faqs} />
+        <section className="hidden md:flex">
+        <Faq faqs={faqs}  />
+
+        </section>
       </Layout>
     </div>
   );
