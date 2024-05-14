@@ -66,6 +66,8 @@ const Solutions = () => {
     setActiveIndex(activeIndex === index ? null : index);
   }
 
+  const [isVisible, setIsVisible] = useState(false);
+
   return (
     <div className="min-h-screen flex flex-col">
       <Layout>
@@ -177,13 +179,25 @@ const Solutions = () => {
             End to end client support infrastructure built to empower technology for operational improvement and creating long-term growth.
             </p>
             <div className=" flex flex-row gap-x-5 ">
-              <button className="border border-black p-2 rounded-[1rem] hover:bg-[#00BDD6] hover:text-white hover:border-none">
+              <Link href="#2">
+              <button  className="border border-black p-2 rounded-[1rem] hover:bg-[#00BDD6]  hover:text-white hover:border-black">
                 Learn More
               </button>
-              <button className="border border-black pl-9 pr-9 rounded-[1rem] bg-[#723CDE] text-white hover:bg-white hover:text-black">
+              </Link>
+            
+              <Link href="/Businessform">
+              <button className="border border-black p-2 rounded-[1rem] w-40  text-white bg-violet-500 hover:bg-white hover:text-black hover:border-black">
                 Sign up
               </button>
-            </div>
+              </Link>
+           
+                {/*
+              <button onClick={() => setIsVisible(!isVisible) } className="border border-black pl-9 pr-9 rounded-[1rem] bg-[#723CDE] text-white hover:bg-white hover:text-black">
+                Sign up
+              </button>
+              {isVisible && <Businessform />}
+               */}
+               </div>
           </div>
           <div className="w-full md:w-[49%] flex justify-center  ">
             <img
@@ -194,7 +208,7 @@ const Solutions = () => {
           </div>
         </section>
 
-        <section className="flex mt-1 flex-col md:flex-row bg-[#00BDD6] flex-wrap justify-center items-center">
+        <section id="2" className="flex mt-1 flex-col md:flex-row bg-[#00BDD6] flex-wrap justify-center items-center">
           <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 gap-x-12 text-[1.25rem] max-w-full md:max-w-[50%]">
             <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] text-[2.5rem]">
