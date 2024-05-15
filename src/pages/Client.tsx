@@ -99,13 +99,13 @@ const Client = () => {
 
         <section id="1" className="flex flex-col md:flex-row items-center justify-center flex-wrap p-12 ">
           <div className="w-full md:w-[50%] flex flex-row md:flex-col justify-center flex-wrap p-6 pt-[-1rem] gap-y-7">
-            <div className="flex flex-row bg-[#EBFDFF] w-[13rem] items-center">
+            <div className="flex gap-3 flex-row bg-[#EBFDFF] w-[13rem] items-center">
               <img
                 src="/introduction-icon.png"
                 alt="introduction icon"
                 className="w-[4rem]"
               />
-              <span className=" text-[#00BDD6] text-[1.625rem]">
+              <span className=" text-[#00BDD6] text-[1.625rem] pr-2 rounded-r-sm">
                 Introduction
               </span>
             </div>
@@ -195,13 +195,13 @@ const Client = () => {
 
         <section className="flex flex-col md:flex-row items-center justify-center flex-wrap p-12 ">
           <div className="w-full md:w-[55%] flex flex-row md:flex-col justify-center flex-wrap p-6 pt-[-1rem] gap-y-7">
-            <div className="flex flex-row bg-[#EBFDFF] w-[13rem] items-center">
+            <div className="flex flex-row bg-[#EBFDFF] w-[13rem] gap-2 items-center">
               <img
                 src="/introduction-icon.png"
                 alt="introduction icon"
                 className="w-[10rem]"
               />
-              <span className=" text-[#00BDD6] text-[1.625rem]">
+              <span className=" text-[#00BDD6] pr-2 rounded-r-sm text-[1.625rem]">
                 Core Values
               </span>
             </div>
@@ -242,13 +242,13 @@ const Client = () => {
             <p className="text-[3rem]">Gain insights from our expert. </p>
           </div>
           <div className="w-full md:w-[35%] flex-col justify-center m-1 ">
-            <p className="w-[70%]">
+            <p className="w-[70%] mb-4">
               By carefully vetting and verifying each author, we ensure that our
               authors are experienced in their respective fields.
             </p>
-            <div className="bg-[#00BDD6]  flex flex-col justify-center  items-center text-white w-[65%]  p-2  rounded-[1rem]">
-              <img src="jacob_mwale_tech_lead.jpg" alt="" className="w-[90%]" />
-              <h3 className="text-[2rem]">JRichson Simba</h3>
+            <div className="bg-[#00BDD6]  flex flex-col justify-center gap-3  items-center text-white w-[65%]  p-2  rounded-[1rem]">
+              <img src="rodney.jpeg" alt="" className="w-[90%] rounded" />
+              <h3 className="text-[1.5rem]">Chimwemwe Masona</h3>
               <p className="w-[90%]">
                 Full stack software engineer with a strong foundation in data
                 structures and algorithms.
