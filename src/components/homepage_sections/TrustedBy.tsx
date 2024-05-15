@@ -9,7 +9,7 @@ const TrustedBy = () => {
         <h1 className="text-4xl font-medium py-4 mb-8">Trusted by</h1>
         <h4 className="text-xl">Our Partners :</h4>
 
-        <div className="lg:w-[90%] w-[100%] grid grid-cols-3 gap-8 lg:ml-[10%] ">
+        <div className="lg:w-[90%] w-[100%] grid md:grid-cols-4 gap-3 grid-cols-2 lg:ml-[10%] ">
           <div className="relative md:h-[8rem] h-[5rem] sm:mt-4 w-[100%] ">
             <Image
               src={"/Greentec.png"}
@@ -35,6 +35,16 @@ const TrustedBy = () => {
               layout="fill"
             //   objectFit="cover"
               className="cursor-pointer  z-10"
+            />
+          </div>
+
+          <div className="relative md:h-[6rem] bg-black mt-5 w-[60%] md:ml-0 ml-7 rounded-md">
+            <Image
+              src={"/diza.png"}
+              alt="diza"
+              layout="fill"
+            //   objectFit="cover"
+              className="cursor-pointer size-5  "
             />
           </div>
           <div className="relative mt-4">
