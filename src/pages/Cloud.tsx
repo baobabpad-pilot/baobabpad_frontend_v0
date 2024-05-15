@@ -40,10 +40,10 @@ const Cloud = () => {
 
   const features = [
     { title: "Integrity", imageSrc: "/virtual_image.png" },
-    { title: "Collaboration", imageSrc: "/collaboration_image.png" },
-    { title: "Growth", imageSrc: "/cloud_storage.png" },
+    { title: "Security", imageSrc: "/collaboration_image.png" },
+    { title: "Scalability", imageSrc: "/cloud_storage.png" },
     { title: "Reliability", imageSrc: "/database_image.png" },
-    { title: "Commitment", imageSrc: "/management_image.png" },
+    { title: "Performance", imageSrc: "/management_image.png" },
   ];
 
 
@@ -89,9 +89,11 @@ const Cloud = () => {
               Providing a scalable cloud-based infrastructure service, empower
               its clients to focus on their core business activities.
             </span>
+            <Link href="#1">
             <button className="bg-[white] text-black p-2 rounded-[1rem] hover:bg-[#00BDD6] hover:text-white">
               Discover More
             </button>
+            </Link>
           </div>
 
           <div className="w-full md:w-[50%] flex justify-center">
@@ -103,7 +105,7 @@ const Cloud = () => {
           </div>
         </section>
 
-        <section className="flex flex-col md:flex-row items-center justify-center flex-wrap p-12 ">
+        <section id="1" className="flex flex-col md:flex-row items-center justify-center flex-wrap p-12 ">
           <div className="w-full md:w-[50%] flex flex-row md:flex-col justify-center flex-wrap p-6 pt-[-1rem] gap-y-7">
             <div className="flex flex-row bg-[#EBFDFF] w-[13rem] items-center">
               <img
@@ -115,8 +117,8 @@ const Cloud = () => {
                 Introduction
               </span>
             </div>
-            <p className="md:text-[3rem] text-[2rem]">Launch AI models integration</p>
-            <p className="md:text-[1.875rem] text-[1.500rem]">
+            <p className="md:text-[3rem] text-[2rem]">Launch AI models </p>
+            <p className="md:text-[1.875rem] text-[1.500rem] text-justify">
             Leveraging technology for operational improvement and long-term growth strategies.
             </p>
             <div className=" flex flex-row gap-x-5 ">
@@ -167,7 +169,7 @@ const Cloud = () => {
                 </a>
               </div>
             </div>
-            <div className="sm:w-100% md:w-[30.75rem] w-[24rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+            <div className="sm:w-100% md:w-[30.75rem] w-[22rem] md:h-[12.75rem] h-[13.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] text-[1.8rem]">
                 Machine Learning Ops
               </span>
@@ -184,7 +186,7 @@ const Cloud = () => {
                 </a>
               </div>
             </div>
-            <div className="sm:w-100% md:w-[30.75rem] w-[24rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+            <div className="sm:w-100% md:w-[30.75rem] w-[22rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] text-[1.8rem]">
             Large Language Modelling
               </span>
@@ -232,17 +234,17 @@ const Cloud = () => {
                 Core Values
               </span>
             </div>
-            <p className="md:text-[3rem] text-[2rem]">AI Model Integrations  </p>
+            <p className="md:text-[3rem] text-[2rem]">Our Key Strategic Approach</p>
 
             <div className=" flex flex-row gap-x-5 items-center mt-[1rem]">
               <img
-                src="/cloud_advisor_page.png"
+                src="/kenny.png"
                 alt=""
-                className="rounded-[1rem]"
+                className="rounded-[1rem] w-[40px]"
               />
               <div className="">
-                <p className=" font-bold font-[1rem]">Martin Sundberg</p>
-                <p className="text-[#9095A0]">Advisor</p>
+                <p className=" font-bold font-[1rem]">Kenny Kaluiji</p>
+                <p className="text-[#9095A0]">Founder</p>
               </div>
             </div>
           </div>
@@ -265,7 +267,7 @@ const Cloud = () => {
                 Our Community
               </span>
             </div>
-            <p className="text-[3rem]">Build AI Models with our AI expert </p>
+            <p className="text-[3rem]"> Gain insights from our AI Expert </p>
           </div>
           <div className="w-full md:w-[35%] flex-col justify-center m-1 ">
             <p className="w-[70%]">

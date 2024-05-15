@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
-import { FaTwitter, FaFacebook, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { FaTwitter, FaFacebook, FaLinkedin, FaYoutube,FaInstagram } from "react-icons/fa";
+
 
 interface NavLink {
   label: string;
@@ -108,7 +109,7 @@ const Footer: React.FC<FooterProps> = () => {
               <FaLinkedin />
             </a>
             <a href="https://www.instagram.com/baobabpad/" className="text-gray-400 hover:text-gray-300">
-              <FaYoutube />
+            <FaInstagram />
             </a>
           </div>
         </div>

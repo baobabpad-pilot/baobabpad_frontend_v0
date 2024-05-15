@@ -101,7 +101,7 @@ const Remote = () => {
 
   const features = [
     { title: "Trust and Integrity", imageSrc: "/trust_image.png" },
-    { title: "Communication", imageSrc: "/communication_image.png" },
+    { title: "Communi- cation", imageSrc: "/communication_image.png" },
     { title: "Cultural Intel", imageSrc: "/cultural_image.png" },
     { title: "Local Hybrid", imageSrc: "/local_hybrid_image.png" },
     { title: "Quality", imageSrc: "/quality_image.png" },
@@ -128,7 +128,7 @@ const Remote = () => {
               Baobabpad's Virtual Tech Village platform connects a vast pool of
               skilled tech talent across Africa..
             </span>
-            <Link href="#2">
+            <Link href="#1">
             <button className="bg-[white] text-black p-2 rounded-[1rem] hover:bg-[#00BDD6] hover:text-white ">
               Discover More
             </button>
@@ -143,7 +143,7 @@ const Remote = () => {
           </div>
         </section>
 
-        <section className="flex flex-col md:flex-row items-center justify-center flex-wrap p-12 ">
+        <section id="1" className="flex flex-col md:flex-row items-center justify-center flex-wrap p-12 ">
           <div className="w-full md:w-[50%] flex flex-row md:flex-col justify-center flex-wrap p-6 pt-[-1rem] gap-y-7">
             <div className="flex flex-row bg-[#EBFDFF] w-[13rem] items-center">
               <img
@@ -156,7 +156,7 @@ const Remote = () => {
               </span>
             </div>
             <p className="md:text-[3rem] text-[2rem]">Build a power Remote team </p>
-            <p className="md:text-[1.875rem] text-[1.5rem]">
+            <p className="md:text-[1.875rem] text-[1.5rem] ">
               Secure remote access to company resources and applications for your team members.
             </p>
             <div className=" flex flex-row gap-x-5 ">
@@ -201,9 +201,9 @@ const Remote = () => {
                 <span className="text-[#00BDD6]">Learn More... </span>
               </div>
             </div>
-            <div className="sm:w-100% md:w-[30.75rem] w-[24rem] h-[13rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+            <div className="sm:w-100% md:w-[30.75rem] w-[24rem] h-[17rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] md:text-[2.5rem] text-[2rem]">
-              Managing  remote culture
+              Remote culture
               </span>
               <span className="">
               Four activities for financial health: planning, budgeting, integrated financial planning, and performance management.
@@ -214,7 +214,7 @@ const Remote = () => {
             </div>
             <div className="sm:w-100% md:w-[30.75rem] w-[24rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] md:text-[2.5rem] text-[2rem]">
-              Baobabpad Remotelly Hybrid
+              Remotely Hybrid
               </span>
               <span className="">
                Ongoing support services provide assistance to customers for a limited period.
@@ -242,19 +242,20 @@ const Remote = () => {
                 Core Values
               </span>
             </div>
-            <p className="md:text-[3rem] text-[2rem]">Virtual Tech Village on APIs</p>
-
+            <p className="md:text-[3rem] text-[2rem]">Our Key Strategic Approach</p>
+            
             <div className=" flex flex-row gap-x-5 items-center mt-[1rem]">
-              <img
-                src="/kenny.png"
-                alt=""
-                className="rounded-[1rem] w-[40px]"
-              />
-              <div className="">
-                <p className=" font-bold font-[1rem]">Kenny Kaluiji</p>
-                <p className="text-[#9095A0]">Founder</p>
-              </div>
+             <img
+               src="/brenda_mkeshwa_CEO.jpg"
+               alt=""
+               className="rounded-[1rem] w-[40px]"
+             />
+             <div className="">
+               <p className=" font-bold font-[1rem]">Brenda Mkwesha</p>
+               <p className="text-[#9095A0]">CEO</p>
+             </div>
             </div>
+            
           </div>
 
           <Features features={features}/>
@@ -277,7 +278,7 @@ const Remote = () => {
                 Our Community
               </span>
             </div>
-            <p className="text-[3rem]">Gain from our remote expert </p>
+            <p className="text-[3rem]">Gain insights from our remote expert </p>
           </div>
           <div className="w-full md:w-[35%] flex-col justify-center m-1 ">
             <p className="w-[70%]">
