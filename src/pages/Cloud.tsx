@@ -117,8 +117,8 @@ const Cloud = () => {
                 Introduction
               </span>
             </div>
-            <p className="md:text-[3rem] text-[2rem]">Launch AI models </p>
-            <p className="md:text-[1.875rem] text-[1.500rem] text-justify">
+            <p className="md:text-[3rem] text-[1.8rem]">Launch AI models </p>
+            <p className="md:text-[1.875rem] text-[1.400rem] text-align: center;">
             Leveraging technology for operational improvement and long-term growth strategies.
             </p>
             <div className=" flex flex-row gap-x-5 ">
@@ -127,7 +127,7 @@ const Cloud = () => {
                 Learn More
               </button>
               </Link>
-              <Link href="/Businessform">
+              <Link href="/Subscription">
               <button className="border border-black p-2 rounded-[1rem] w-35  text-white bg-violet-500 hover:bg-white hover:text-black hover:border-black">
                 Sign up
               </button>
@@ -152,7 +152,7 @@ const Cloud = () => {
 
         <section id="2" className="flex mt-1 flex-col md:flex-row bg-[#00BDD6] flex-wrap justify-center items-center">
           <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 gap-x-12 text-[1.25rem] max-w-full md:max-w-[50%]">
-            <div className="sm:w-100% md:w-[30.75rem] w-[24rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+            <div className="sm:w-100% md:w-[30.75rem] w-[22rem] md:h-[12.75rem] h-[14.75rem]  bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] text-[1.8rem]">
                  AI strategy
               </span>
@@ -163,13 +163,13 @@ const Cloud = () => {
               <a
                   href="#"
                   onClick={(event) => handleClick(event, "AI strategy")}
-                  className="text-[#00BDD6] cursor-pointer"
+                  className="text-[#00BDD6] cursor-pointer mt-4"
                 >
                   Learn More...
                 </a>
               </div>
             </div>
-            <div className="sm:w-100% md:w-[30.75rem] w-[22rem] md:h-[12.75rem] h-[13.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+            <div className="sm:w-100% md:w-[30.75rem] w-[22rem] md:h-[12.75rem] h-[14.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] text-[1.8rem]">
                 Machine Learning Ops
               </span>
@@ -186,7 +186,7 @@ const Cloud = () => {
                 </a>
               </div>
             </div>
-            <div className="sm:w-100% md:w-[30.75rem] w-[22rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+            <div className="sm:w-100% md:w-[30.75rem] w-[22rem] md:h-[12.75rem] h-[15.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] text-[1.8rem]">
             Large Language Modelling
               </span>
@@ -234,7 +234,7 @@ const Cloud = () => {
                 Core Values
               </span>
             </div>
-            <p className="md:text-[3rem] text-[2rem]">Our Key Strategic Approach</p>
+            <p className="md:text-[3rem] text-[1.8rem]">Our Key Strategic Approach</p>
 
             <div className=" flex flex-row gap-x-5 items-center mt-[1rem]">
               <img

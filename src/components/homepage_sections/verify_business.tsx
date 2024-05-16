@@ -62,12 +62,12 @@ const VerifyBusiness = () => {
   };
 
   return (
-    <div className="md:flex flex-col gap-10 p-10 px-4 lg:px-36">
-      <h1 className="text-5xl font-semibold md:mb-4 mb-[3rem] ">Free Trial</h1>
+    <div className="md:flex flex-col gap-10 p-10 px-2 md:px-36">
+     {/* <h1 className="text-5xl font-semibold md:mb-4 mb-[3rem] ">Free Trial</h1>*/}
 
-      <div className=" md:flex w-full">
-        <div className=" w-1/3 flex md:flex-col  gap-2 mb-11">
-          <div className="flex gap-3 items-center">
+      <div className=" md:flex w-[100] ">
+         <div className=" md:w-1/3 w-full flex md:flex-col  gap-2 mb-11  border-2 border-gray-300  md:border-none ">
+          <div className="md:flex gap-3 items-center">
             <div className="md:h-10 h-5 md:w-10 w-8 flex items-center justify-center rounded-full border text-white bg-[#00BDD6]">
               1
             </div>
@@ -76,7 +76,7 @@ const VerifyBusiness = () => {
 
           <span className="h-20 w-fit border-l-2 ml-4 border-dotted"></span>
 
-          <div className="flex gap-3 items-center">
+          <div className="md:flex gap-3 items-center">
             <div className="md:h-10 h-5 md:w-10 w-8 flex items-center justify-center rounded-full border text-slate-500 bg-gray">
               2
             </div>
@@ -85,7 +85,7 @@ const VerifyBusiness = () => {
 
           <span className="h-12 w-fit border-l-2 ml-4 border-dotted"></span>
 
-          <div className="flex gap-3 items-center">
+          <div className="md:flex gap-3 items-center">
             <div className="md:h-10 h-5 md:w-10 w-8 flex items-center justify-center rounded-full border text-slate-500 bg-gray">
               3
             </div>
@@ -94,13 +94,14 @@ const VerifyBusiness = () => {
 
           <span className="h-12 w-fit border-l-2 ml-4 border-dotted"></span>
 
-          <div className="flex gap-3 items-center">
+          <div className="md:flex gap-3 items-center">
             <div className="md:h-10 h-6 md:w-10 w-6 flex items-center justify-center rounded-full border text-slate-500 bg-gray">
               4
             </div>
             <h4 className="text-medium font-normal">Login</h4>
           </div>
         </div>
+
 
         {/* Form Component */}
         <div className="md:w-2/3 flex flex-col gap-3   mx-auto">
@@ -116,7 +117,7 @@ const VerifyBusiness = () => {
 
           <form onSubmit={handleSubmit} className="flex flex-col gap-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="flex flex-col gap-2 p-2">
+              <div className="flex flex-col gap-2 py-2">
                 <label htmlFor="company_name" className="font-medium text-lg">
                   Company Name
                 </label>
@@ -131,7 +132,7 @@ const VerifyBusiness = () => {
                 />
               </div>
 
-              <div className="flex flex-col gap-2 p-2">
+              <div className="flex flex-col gap-2 py-2">
                 <label htmlFor="phone_number" className="font-medium text-lg">
                   Phone Number
                 </label>
@@ -146,7 +147,7 @@ const VerifyBusiness = () => {
                 />
               </div>
 
-              <div className="flex flex-col gap-2 p-2">
+              <div className="flex flex-col gap-2 py-2">
                 <label htmlFor="email" className="font-medium text-lg">
                   Email
                 </label>
@@ -161,7 +162,7 @@ const VerifyBusiness = () => {
                 />
               </div>
 
-              <div className="flex flex-col gap-2 p-2">
+              <div className="flex flex-col gap-2 py-2">
                 <label htmlFor="address" className="font-medium text-lg">
                   Address
                 </label>
@@ -176,7 +177,7 @@ const VerifyBusiness = () => {
                 />
               </div>
 
-              <div className="flex flex-col gap-2 p-2">
+              <div className="flex flex-col gap-2 py-2">
                 <label htmlFor="country" className="font-medium text-lg">
                   Country/Region
                 </label>
@@ -191,7 +192,7 @@ const VerifyBusiness = () => {
                 />
               </div>
 
-              <div className="flex flex-col gap-2 p-2">
+              <div className="flex flex-col gap-2 py-2">
                 <label htmlFor="city" className="font-medium text-lg">
                   City
                 </label>
@@ -206,7 +207,7 @@ const VerifyBusiness = () => {
                 />
               </div>
 
-              <div className="flex flex-col gap-2 p-2">
+              <div className="flex flex-col gap-2 py-2">
                 <label
                   htmlFor="business_number"
                   className="font-medium text-lg"
@@ -223,7 +224,7 @@ const VerifyBusiness = () => {
                   className="border p-2 rounded bg-slate-100"
                 />
               </div>
-              <div className="flex flex-col gap-2 p-2">
+              <div className="flex flex-col gap-2 py-2">
                 <label
                   htmlFor="password"
                   className="font-medium text-lg"
@@ -240,7 +241,7 @@ const VerifyBusiness = () => {
                   className="border p-2 rounded bg-slate-100"
                 />
               </div>
-              <div className="flex flex-col gap-2 p-2">
+              <div className="flex flex-col gap-2 py-2">
                 <label
                   htmlFor="business_number"
                   className="font-medium text-lg"

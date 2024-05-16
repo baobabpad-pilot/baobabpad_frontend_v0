@@ -124,7 +124,7 @@ const Remote = () => {
             <span className="text-[3rem] font-semibold">
               REMOTE TEAM 
             </span>
-            <span>
+            <span >
               Baobabpad's Virtual Tech Village platform connects a vast pool of
               skilled tech talent across Africa..
             </span>
@@ -165,7 +165,7 @@ const Remote = () => {
                 Learn More
               </button>
               </Link>
-              <Link href="/Businessform">
+              <Link href="/Subscription">
               <button className="border border-black p-2 rounded-[1rem] w-35  text-white bg-violet-500 hover:bg-white hover:text-black hover:border-black">
                 Sign up
               </button>
@@ -190,7 +190,7 @@ const Remote = () => {
 
         <section id="2" className="flex mt-1 flex-col md:flex-row bg-[#00BDD6] flex-wrap justify-center items-center">
           <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 gap-x-12 text-[1.25rem] max-w-full md:max-w-[50%]">
-            <div className="sm:w-100% md:w-[30.75rem] w-[24rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+            <div className="sm:w-100% md:w-[30.75rem] w-[22rem]  md:h-[12.75rem]  h-[14.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] md:text-[2.5rem] text-[2rem]">
                 The Future is Remote
               </span>
@@ -201,7 +201,7 @@ const Remote = () => {
                 <span className="text-[#00BDD6]">Learn More... </span>
               </div>
             </div>
-            <div className="sm:w-100% md:w-[30.75rem] w-[24rem] h-[17rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+            <div className="sm:w-100% md:w-[30.75rem] w-[22rem] h-[17rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] md:text-[2.5rem] text-[2rem]">
               Remote culture
               </span>
@@ -212,7 +212,7 @@ const Remote = () => {
                 <span className="text-[#00BDD6]">Learn More... </span>
               </div>
             </div>
-            <div className="sm:w-100% md:w-[30.75rem] w-[24rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+            <div className="sm:w-100% md:w-[30.75rem] w-[22rem] md:h-[12.75rem] h-[15.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] md:text-[2.5rem] text-[2rem]">
               Remotely Hybrid
               </span>
@@ -242,7 +242,7 @@ const Remote = () => {
                 Core Values
               </span>
             </div>
-            <p className="md:text-[3rem] text-[2rem]">Our Key Strategic Approach</p>
+            <p className="md:text-[3rem] text-[1.8rem] text-center">Our Key Strategic Approach</p>
             
             <div className=" flex flex-row gap-x-5 items-center mt-[1rem]">
              <img
