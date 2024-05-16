@@ -44,6 +44,8 @@ const SignupForm = () => {
   const onSubmit: SubmitHandler<{ email: string; firstName: string, lastName:string, password: string , passwordConfirmation?:string; }> = async (data) => {
   try {
     const url = process.env.NEXT_PUBLIC_BACKEND_URL + "register/";
+    console.log("Form values:", data); 
+    
     const dataObject = {
       username: data.email,
       email: data.email,

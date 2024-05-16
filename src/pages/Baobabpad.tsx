@@ -30,58 +30,58 @@ import { CiPlay1 } from "react-icons/ci";
 
 const Baobabpad = () => {
 
-  const teamDetailsArray=[
+  const teamDetailsArray = [
     {
-      image:'/brenda_mkeshwa_CEO.jpg',
-      username:'Brenda Mkeshwa',
-      position:'CEO'
+      image: "/brenda_mkeshwa_CEO.jpg",
+      username: "Brenda Mkeshwa",
+      position: "CEO",
     },
     {
-      image:'/kenny.png',
-      username:'Kenny Kaluiji',
-      position:'Founder'
+      image: "/kenny.png",
+      username: "Kenny Kaluiji",
+      position: "Founder",
     },
     {
-      image:'/jacob_mwale_tech_lead.jpg',
-      username:'Jacob Mwale',
-      position:'Tech Lead'
+      image: "/jacob_mwale_tech_lead.jpg",
+      username: "Jacob Mwale",
+      position: "Tech Lead",
     },
     {
-      image:'/chimwemwe_masona_tech_lead.png',
-      username:'Chimwemwe Masona',
-      position:'Tech Lead'
+      image: "/chimwemwe_masona_tech_lead.png",
+      username: "Chimwemwe Masona",
+      position: "Tech Lead",
     },
     {
-      image:'/selma_hamutenya_product_manager.png',
-      username:'Selma Hamutenya',
-      position:'Product Manager'
+      image: "/selma_hamutenya_product_manager.png",
+      username: "Selma Hamutenya",
+      position: "Product Manager",
     },
     {
-      image:'/Mark_Ai.jpg',
-      username:'Mark Njoroge',
-      position:'AI Lead'
+      image: "/Mark_Ai.jpg",
+      username: "Mark Njoroge",
+      position: "AI Lead",
     },
     {
-      image:'/steve.jpg',
-      username:'Stephen Ondieki',
-      position:'Testing Lead'
+      image: "/steve.jpg",
+      username: "Stephen Ondieki",
+      position: "Testing Lead",
     },
     {
-      image:'/crispin_manda_product_manager.png',
-      username:'Crispin Manda ',
-      position:'Product Manager'
+      image: "/crispin_manda_product_manager.png",
+      username: "Crispin Manda ",
+      position: "Product Manager",
     },
     {
-      image:'/sidney_kipron_cloud_manager.png',
-      username:'Sidney Kiprono ',
-      position:'Cloud Manager'
+      image: "/sidney_kipron_cloud_manager.png",
+      username: "Sidney Kiprono ",
+      position: "Cloud Manager",
     },
     {
-      image:'/martin_mundia_cloud_manager.jpg',
-      username:'Martin Mundia ',
-      position:'Cloud Manager'
+      image: "/martin.jpeg",
+      username: "Martin Mundia ",
+      position: "Cloud Manager",
     },
-  ]
+  ];
 
 
 

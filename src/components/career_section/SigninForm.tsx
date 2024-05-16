@@ -4,7 +4,6 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { SubmitHandler } from "react-hook-form";
 
-
 const SigninForm = () => {
   const [loginType, setLoginType] = useState<"company" | "talent">("company");
   const handleLoginTypeChange = (type: "company" | "talent") => {
@@ -33,18 +32,17 @@ const SigninForm = () => {
   const [alertType, setAlertType] = useState<"success" | "error" | null>(null);
   const [alertMessage, setAlertMessage] = useState<string>("");
 
-
-  
-
- //
- const onSubmit: SubmitHandler<{ email: string; password: string; }> = async (data) => {   
- try {
+  //
+  const onSubmit: SubmitHandler<{ email: string; password: string }> = async (
+    data
+  ) => {
+    try {
       const url = process.env.NEXT_PUBLIC_BACKEND_URL + "login/";
 
       const dataObject = {
         username: data.email,
         password: data.password,
-      };   
+      };
       const response = await fetch(url, {
         method: "POST",
         headers: {
@@ -59,7 +57,7 @@ const SigninForm = () => {
       setAlertType("success");
       setAlertMessage("Login successful!"); // Set your success message here
       return responseData;
-    } catch (error : any) {
+    } catch (error: any) {
       setAlertType("error");
       setAlertMessage("Could not login using the provided credentials!"); // Set your error message here
       console.error("Could not login using the provided credentials:", error);
