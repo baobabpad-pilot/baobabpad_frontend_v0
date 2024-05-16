@@ -102,18 +102,36 @@ const Navbar = () => {
         </button>
       </div>
       {isOpen && (
-        <ul className="md:hidden absolute top-full left-0 w-full py-4 z-50 bg-white space-y-2">
+        <div className="">
+        <ul className="md:hidden  absolute top-full left-0 w-full py-4 z-50 bg-white space-y-2 ">
           {navLinks.map((navLink) => (
             <li key={navLink.label}>
               <a
                 href={navLink.href}
-                className="text-gray-800 hover:text-[#00BDD6] block px-4 py-2"
+                className="text-gray-800 hover:text-[#00BDD6] block px-4 py-2 "
               >
                 {navLink.label}
               </a>
             </li>
+            
           ))}
+          
+          {/* Try for free and login for small screen */}
+          <div className=" i flex gap-[4rem] w-[70%] mx-auto" >
+          <Link href={"/login"} className="bg-[#00BDD6] px-2 p-1 rounded-full w-[6rem] text-center text-white hover hover:bg-[#40646a]">
+          Login
+        </Link>
+        <a
+          href={"/Subscription"}
+          className="text-white bg-[#00BDD6] px-2 p-1 rounded-full hover hover:bg-[#40646a]"
+        >
+          Try for free
+        </a>
+          </div>
+          
         </ul>
+
+        </div>
       )}
     </nav>
   );
