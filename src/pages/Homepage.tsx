@@ -58,7 +58,7 @@ const Homepage: React.FC = () => {
 
         <div className=" w-[100%] mx-auto  ">{/* div for button free trial*/}
         <button
-            className=" md:mt-6  mt-12 md:ml-[50%] ml-[40%] bg-[#00BDD6] text-white py-2 px-4 rounded-full hover:bg-gray-300 transition-colors delay-75"
+            className=" md:mt-6  mt-12 md:ml-[40%] ml-[40%] bg-[#00BDD6] text-white py-2 px-4 rounded-full hover:bg-gray-300 transition-colors delay-75"
             onClick={() => setIsVisible(!isVisible) }  >
              Free Trial
           </button>

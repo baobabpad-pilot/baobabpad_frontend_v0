@@ -84,7 +84,7 @@ const Client = () => {
           </div>
           <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 text-[1.25rem] max-w-full md:max-w-[50%]">
             <span className="text-[3rem] font-semibold">Client Support</span>
-            <span>
+            <span className="text-center">
               We offer a comprehensive client support infrastructure service
               designed to provide you with timely, efficient, and professional
               assistance.
@@ -109,8 +109,8 @@ const Client = () => {
                 Introduction
               </span>
             </div>
-            <p className="md:text-[3rem] text-[2rem]">Building Strategic Partnerships </p>
-            <p className="md:text-[1.875rem] text-[1.5rem] ">
+            <p className="md:text-[3rem] text-[1.8rem] text-center">Building Strategic Partnerships </p>
+            <p className="md:text-[1.875rem] text-[1.3rem] text-center">
               End to end client support infrastructure built to empower
               technology for operational improvement and creating long-term
               growth.
@@ -121,7 +121,7 @@ const Client = () => {
                 Learn More
               </button>
               </Link>
-              <Link href="/Businessform">
+              <Link href="/Subscription">
               <button className="w-35 border border-black p-2 rounded-[1rem]   text-white bg-violet-500 hover:bg-white hover:text-black hover:border-black">
                 Sign up
               </button>
@@ -146,7 +146,7 @@ const Client = () => {
 
         <section id="2" className="flex mt-1 flex-col md:flex-row bg-[#00BDD6] flex-wrap justify-center items-center">
           <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 gap-x-12 text-[1.25rem] max-w-full md:max-w-[50%]">
-            <div className="sm:w-100% md:w-[30.75rem] w-[24rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+            <div className="sm:w-100% md:w-[30.75rem] w-[22rem] md:h-[12.75rem] h-[14.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] md:text-[2.5rem] text-[2rem]">
                 Business Strategy
               </span>
@@ -158,7 +158,7 @@ const Client = () => {
                 <span className="text-[#00BDD6]">Learn More... </span>
               </div>
             </div>
-            <div className="sm:w-100%  md:w-[30.75rem] w-[24rem] md:h-[12.75rem] h-[14.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+            <div className="sm:w-100%  md:w-[30.75rem] w-[22rem] md:h-[12.75rem] h-[15.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] md:text-[2.5rem] text-[2rem]">
                 Planning and Analysis
               </span>
@@ -170,7 +170,7 @@ const Client = () => {
                 <span className="text-[#00BDD6]">Learn More... </span>
               </div>
             </div>
-            <div className="sm:w-100%  md:w-[30.75rem] w-[24rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+            <div className="sm:w-100%  md:w-[30.75rem] w-[22rem] md:h-[12.75rem] h-[14.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] md:text-[2.5rem] text-[2rem]">
                 Ongoing Support
               </span>
@@ -205,7 +205,7 @@ const Client = () => {
                 Core Values
               </span>
             </div>
-            <p className="md:text-[3rem] text-[2rem]">Our Key Strategic Approach</p>
+            <p className="md:text-[3rem] text-[1.8rem] text-center">Our Key Strategic Approach</p>
 
             <div className=" flex flex-row gap-x-5 items-center mt-[1rem]">
               <img

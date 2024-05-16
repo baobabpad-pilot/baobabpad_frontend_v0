@@ -28,7 +28,7 @@ const Baobabpad = () => {
   const teamDetailsArray = [
     {
       image: "/brenda_mkeshwa_CEO.jpg",
-      username: "Brenda Mkeshwa",
+      username: "Brenda Mkwesha",
       position: "CEO",
       profile: "https://www.linkedin.com/in/brenda-mkwesha-mba-52599a75/",
     },
@@ -45,7 +45,7 @@ const Baobabpad = () => {
       profile: "https://github.com/Alsaahir",
     },
     {
-      image: "/chimwemwe_masona_tech_lead.png",
+      image: "/rodney.jpeg",
       username: "Chimwemwe Masona",
       position: "Tech Lead",
       profile: "https://github.com/Chimz-Codes-ZM",
@@ -133,7 +133,21 @@ const Baobabpad = () => {
       position: "Impact Advisor",
       LinkedIn: "https://www.linkedin.com/in/tish-gilbert-2b084497/",
     },
-  ];
+  ]
+  /// for team adversory
+
+  const [showAllCards1, setShowAllCards1] = useState(false);
+  const visibleCards1 = showAllCards1
+    ? adversoryTeamArray
+    :  adversoryTeamArray.slice(0, 2);
+    
+  const buttonLabel1 = showAllCards1 ? "See Less" : "See More";
+
+  const toggleShowAllCards1 = () => {
+    setShowAllCards1(!showAllCards1);
+  };
+  ////
+
 
   const [showIntern, setShowIntern] = useState(false);
   const toggleInternship = () => {
@@ -273,7 +287,7 @@ const Baobabpad = () => {
                   <span className="text-[#9095A0]">{member.position}</span>
                   <button
                     type="button"
-                    className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center "
+                    className="bg-[#C8F9FF] pt-2 pb-2 px-8 py-8 align-center  "
                   >
                     <a href={member.profile}>View Profile</a>
                   </button>
@@ -309,7 +323,7 @@ const Baobabpad = () => {
                   <span className="text-[#9095A0]">{member.position}</span>
                   <button
                     type="button"
-                    className="bg-[#C8F9FF] pt-2 pb-2 px-4 py-8 align-center w-[20%]"
+                    className="bg-[#C8F9FF] pt-2 pb-2 px-4 py-8 align-center w-[40%]"
                   >
                     <a href={member.profile}>View Profile</a>
                   </button>
@@ -319,18 +333,18 @@ const Baobabpad = () => {
             {/* end of the medium and above view for the team profile */}
           </div>
         </section>
+        {/* start of Advisory Team/*/}
         <section className="border-t border-500 p-12">
-          <div className=" p-4 flex flex-col gap-y-1 justify-center">
-            <span className="font-bold text-600 text-[1.5rem]">
-              Advisory Team
-            </span>
+          <div className=" p-2 flex flex-col gap-y-1 justify-center">
+          <span className="font-bold text-600 text-[1.5rem]">Advisory Team </span>
 
-            {/*  start of profile cards */}
-            <div className=" px-4  flex gap-x-6  flex-wrap justify-center">
-              {adversoryTeamArray.map((member, index) => (
+            {/*  start of profile cards view for small screen */}
+            <div className=" px-4  sm:flex gap-x-6   sm:flex-wrap justify-center md:hidden">
+              {visibleCards1.map((member, index) => (
                 <div
                   key={index}
-                  className="pt-2 w-[15rem] h-[20rem] flex flex-col items-center justify-center gap-y-4 my-12 border border-600  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer "
+                  className="pt-2 w-[15rem] h-[20rem] flex flex-col items-center justify-center gap-y-4 my-12 border border-600  shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer
+                      "
                 >
                   <img
                     src={member.image}
@@ -341,33 +355,60 @@ const Baobabpad = () => {
                     {member.username}
                   </span>
                   <span className="text-[#9095A0]">{member.position}</span>
-                  <div className=" pt-2 pb-2 px-8 py-8   flex flex-row ">
-                    <img src="/linkedIn.png" alt="" className="px-2" />
-                    <a
-                      href={member.LinkedIn}
-                      className="hover:text-[#00BDD6] hover:text-underline"
-                      target="_blank"
-                    >
-                      View Profile
-                    </a>
-                  </div>
+                  <div  className=" pt-2 pb-2 px-8 py-8   flex flex-row "> 
+                        <img src="/linkedIn.png" alt=""  className="px-2"/>
+                        <a href={member.LinkedIn} className="hover:text-[#00BDD6] hover:text-underline" target="_blank"> 
+                        View Profile</a>
+                        </div>
+                  
                   {/* <div className="bg-[#C8F9FF] text-white rounded-[100%] w-10 h-10 px-3 py-1  "><span className="text-black  text-2xl">+</span></div> */}
                 </div>
               ))}
             </div>
-            {/* end of profile cards */}
-          </div>
+            {/* end of profile cards view for small screen*/}
+            <button
+              onClick={() => setShowAllCards1(!showAllCards1)}
+              className={`mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded sm:block   ${
+                showAllCards1 ? "" : "md:hidden"
+              }`}
+            >
+              {buttonLabel1}
+            </button>
+              
 
-          <button
-            onClick={() => setShowAllCards(!showAllCards)}
-            className={`mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded sm:block   ${
-              showAllCards ? "" : "md:hidden"
-            }`}
-          >
-            {buttonLabel}
-          </button>
+              {/* Medium screen and above view for the team profile */}
+             <div className="px-4 md:flex gap-x-6 md:flex-wrap md:justify-center hidden">
+              {adversoryTeamArray.map((member, index) => (
+                <div
+                  key={index}
+                  className="pt-2 w-[15rem] h-[20rem]  flex flex-col items-center justify-center gap-y-4 my-12 border border-600 shadow-2xl hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer"
+                >
+                  <img
+                    src={member.image}
+                    alt="Team Member"
+                    className="w-[40%] h-[30%] rounded-[50%]"
+                  />
+                  <span className="font-bold font-700 text-xl">
+                    {member.username}
+                  </span>
+                  <span className="text-[#9095A0]">{member.position}</span>
+                  <div  className=" pt-2 pb-2 px-8 py-8   flex flex-row "> 
+                        <img src="/linkedIn.png" alt=""  className="px-2"/>
+                        <a href={member.LinkedIn} className="hover:text-[#00BDD6] hover:text-underline" target="_blank"> 
+                        View Profile</a>
+                        </div>
+                </div>
+              ))}
+             </div>
+            {/* end of the medium and above view for the team profile */}
+
+          </div>
         </section>
-        {/* end of Village management team  */}
+       
+         {/*End of Advisory Team*/}  
+          {/* end of Village management team  */}
+   
+    
 
         {/* Start of why baobabpad section */}
         <section
@@ -388,26 +429,22 @@ const Baobabpad = () => {
               </span>
             </div>
 
-            <div className="flex flex-row gap-x-4 items-center">
-              <Link href="/Businessform">
-                <button className="w-[7rem] bg-[#00BDD6] text-white font-[1.125rem] p-[0.4rem] rounded-[1rem] hover:bg-white hover:text-[#00BDD6] hover:border hover:border-500">
-                  {" "}
-                  Try Free
-                </button>
-              </Link>
-              <Link href="#client">
-                <button className="w-[7rem]  text-[#9095A0] border border-[#9095A0]  font-[1.125rem] p-[0.4rem] rounded-[1rem] cursor-pointer hover:bg-gray-200 hover:border hover:border-500">
-                  {" "}
-                  Learn more
-                </button>
-              </Link>
-            </div>
-
-            {/*Right with phone in hand*/}
-          </div>
-          <div className="    md:w-[22rem] w-[18rem] md:h-[27rem] h-[15rem] relative z-99 ml-11 mb-8">
-            <img src="/hand_holding_phone.png" alt="hand holiding a phone" />
-          </div>
+              <div className="flex flex-row gap-x-4 items-center">
+                   <Link href="/Subscription">
+                   <button className="w-[7rem] bg-[#00BDD6] text-white font-[1.125rem] p-[0.4rem] rounded-[1rem] hover:bg-white hover:text-[#00BDD6] hover:border hover:border-500"> Try Free</button>
+                   </Link>
+                   <Link href="#client">
+                   <button className="w-[7rem]  text-[#9095A0] border border-[#9095A0]  font-[1.125rem] p-[0.4rem] rounded-[1rem] cursor-pointer hover:bg-gray-200 hover:border hover:border-500"> Learn more</button>
+                   </Link> 
+                   
+              </div>
+  
+             {/*Right with phone in hand*/}       
+            </div>           
+              <div className="    md:w-[22rem] w-[18rem] md:h-[27rem] h-[15rem] relative z-99 ml-11 mb-8">
+                 <img src="/hand_holding_phone.png" alt="hand holiding a phone"  />
+              </div>
+            
         </section>
         {/* End of why baobabpad section */}
 

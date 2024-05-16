@@ -88,10 +88,11 @@ const Businessform: React.FC = () => {
 
 
   return (
-    <Layout>
+    <>
     <div className="min-h-screen flex flex-col">
-        <div className=" bg-gray-200 w-[98%] mx-auto rounded-lg my-4">
-           <h1 className="text-4xl text-[#00BDD6] text-center font-bold p-6">Fill the form to identify you && your Business</h1></div>
+       {/* <div className=" bg-gray-200 w-[98%] mx-auto rounded-lg my-4">
+           <h1 className="text-4xl text-[#00BDD6] text-center font-bold p-6">Fill the form </h1></div>*/}
+           <div className="h-8"></div>
       <div className="w-[98%] mx-auto">
       
         <div className="w-full grid grid-cols-1 md:grid-cols-2 bg-gray-100 rounded-lg">
@@ -117,10 +118,11 @@ const Businessform: React.FC = () => {
        
       </div>
       {/* Division for verify business*/}
-      <div className="md:flex flex-col gap-10 p-10 px-4 lg:px-36 mt-11">
+      <div className="md:flex flex-col gap-10 p-10 px-2 lg:px-36 mt-11">
       {/*<h1 className="text-5xl font-semibold md:mb-4 mb-[3rem] ">Free Trial</h1>*/}
 
       <div className=" md:flex w-full">
+        
         <div className=" md:w-1/3 flex md:flex-col  gap-2 mb-11  border-2 border-gray-300  md:border-none ">
           <div className="md:flex gap-3 items-center">
             <div className="md:h-10 h-5 md:w-10 w-8 flex items-center justify-center rounded-full border text-white bg-[#00BDD6]">
@@ -171,7 +173,7 @@ const Businessform: React.FC = () => {
 
           <form onSubmit={handleSubmit} className="flex flex-col gap-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="flex flex-col gap-2 p-2">
+              <div className="flex flex-col gap-2 py-2">
                 <label htmlFor="company_name" className="font-medium text-lg">
                   Company Name
                 </label>
@@ -186,7 +188,7 @@ const Businessform: React.FC = () => {
                 />
               </div>
 
-              <div className="flex flex-col gap-2 p-2">
+              <div className="flex flex-col gap-2 py-2">
                 <label htmlFor="phone_number" className="font-medium text-lg">
                   Phone Number
                 </label>
@@ -201,7 +203,7 @@ const Businessform: React.FC = () => {
                 />
               </div>
 
-              <div className="flex flex-col gap-2 p-2">
+              <div className="flex flex-col gap-2 py-2">
                 <label htmlFor="email" className="font-medium text-lg">
                   Email
                 </label>
@@ -216,7 +218,7 @@ const Businessform: React.FC = () => {
                 />
               </div>
 
-              <div className="flex flex-col gap-2 p-2">
+              <div className="flex flex-col gap-2 py-2">
                 <label htmlFor="address" className="font-medium text-lg">
                   Address
                 </label>
@@ -231,7 +233,7 @@ const Businessform: React.FC = () => {
                 />
               </div>
 
-              <div className="flex flex-col gap-2 p-2">
+              <div className="flex flex-col gap-2 py-2">
                 <label htmlFor="country" className="font-medium text-lg">
                   Country/Region
                 </label>
@@ -246,7 +248,7 @@ const Businessform: React.FC = () => {
                 />
               </div>
 
-              <div className="flex flex-col gap-2 p-2">
+              <div className="flex flex-col gap-2 py-2">
                 <label htmlFor="city" className="font-medium text-lg">
                   City
                 </label>
@@ -261,7 +263,7 @@ const Businessform: React.FC = () => {
                 />
               </div>
 
-              <div className="flex flex-col gap-2 p-2">
+              <div className="flex flex-col gap-2 py-2">
                 <label
                   htmlFor="business_number"
                   className="font-medium text-lg"
@@ -278,7 +280,7 @@ const Businessform: React.FC = () => {
                   className="border p-2 rounded bg-slate-100"
                 />
               </div>
-              <div className="flex flex-col gap-2 p-2">
+              <div className="flex flex-col gap-2 py-2">
                 <label
                   htmlFor="password"
                   className="font-medium text-lg"
@@ -295,7 +297,7 @@ const Businessform: React.FC = () => {
                   className="border p-2 rounded bg-slate-100"
                 />
               </div>
-              <div className="flex flex-col gap-2 p-2">
+              <div className="flex flex-col gap-2 py-2">
                 <label
                   htmlFor="business_number"
                   className="font-medium text-lg"
@@ -321,7 +323,7 @@ const Businessform: React.FC = () => {
     </div>
 
     </div>
-    </Layout>
+    </>
   );
 };
 

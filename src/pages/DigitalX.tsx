@@ -88,7 +88,7 @@ const DigitalX = () => {
             <span className="text-[3rem] font-semibold">
               DIGITAL<sup>X</sup>
             </span>
-            <span>
+            <span >
               Providing a scalable cloud-based infrastructure service, empower
               its clients to focus on their core business activities.
             </span>
@@ -113,7 +113,7 @@ const DigitalX = () => {
               </span>
             </div>
             <p className="md:text-[3rem] text-[2rem]">The Future is Cloud. </p>
-            <p className="md:text-[1.875rem] text-[1.5rem] text-justify ">
+            <p className="md:text-[1.875rem] text-[1.3rem] text-justify">
               We leverage cutting-edge cloud technologies to provide you with a
               secure, reliable, and cost-effective foundation for your IT
               infrastructure.
@@ -124,7 +124,7 @@ const DigitalX = () => {
                 Learn More
               </button> 
               </Link>
-              <Link href="/Businessform">
+              <Link href="/Subscription">
               <button className="border border-black p-2 rounded-[1rem] w-35  text-white bg-violet-500 hover:bg-white hover:text-black hover:border-black">
                 Sign up
               </button>
@@ -149,7 +149,7 @@ const DigitalX = () => {
 
         <section id="2" className="flex mt-1 flex-col md:flex-row bg-[#00BDD6] flex-wrap justify-center items-center">
           <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 gap-x-12 text-[1.25rem] max-w-full md:max-w-[50%] ">
-            <div className="sm:w-100% md:w-[30.75rem] w-[24rem] h-[15.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+            <div className="sm:w-100% md:w-[30.75rem] w-[22rem] h-[15.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] md:text-[2.5rem] text-[2rem]">
               Digital infrastructure {" "}
               </span>
@@ -161,14 +161,14 @@ const DigitalX = () => {
                 <a
                   href="#"
                   onClick={(event) => handleClick(event, "Future_is_cloud")}
-                  className="text-[#00BDD6] cursor-pointer mt-11"
+                  className="text-[#00BDD6] cursor-pointer md:mt-11 mt-6"
                 >
                   Learn More...
                 </a>
               </div>
             </div>
 
-            <div className="sm:w-100% md:w-[30.75rem] w-[24rem] md:h-[12.75rem] h-[15.75rem]  bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+            <div className="sm:w-100% md:w-[30.75rem] w-[22rem] md:h-[12.75rem] h-[15.75rem]  bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] md:text-[2.5rem] text-[2rem]">
                 Cloud xPert{" "}
               </span>
@@ -186,7 +186,7 @@ const DigitalX = () => {
                 </a>
               </div>
             </div>
-            <div className="sm:w-100% md:w-[30.75rem] w-[24rem] md:h-[12.75rem] h-[14.75rem]  bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+            <div className="sm:w-100% md:w-[30.75rem] w-[22rem] md:h-[12.75rem] h-[14.75rem]  bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] text-[2.5rem]">
                 Cloud base{" "}
               </span>
@@ -231,7 +231,7 @@ const DigitalX = () => {
                 Core Values
               </span>
             </div>
-            <p className="md:text-[3rem] text-[2rem]">Our Key Strategic Approach</p>
+            <p className="md:text-[3rem] text-[1.8rem]">Our Key Strategic Approach</p>
 
             <div className=" flex flex-row gap-x-5 items-center mt-[1rem]">
               <img
