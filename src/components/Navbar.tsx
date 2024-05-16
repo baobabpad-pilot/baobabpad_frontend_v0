@@ -117,7 +117,7 @@ const Navbar = () => {
           ))}
           
           {/* Try for free and login for small screen */}
-          <div className="  flex gap-[4rem] w-[70%] mx-auto" >
+          <div className=" i flex gap-[4rem] w-[70%] mx-auto" >
           <Link href={"/login"} className="bg-[#00BDD6] px-2 p-1 rounded-full w-[6rem] text-center text-white hover hover:bg-[#40646a]">
           Login
         </Link>
