@@ -81,7 +81,7 @@ const Baobabpad = () => {
       profile: "https://github.com/siddny",
     },
     {
-      image: "/martin_mundia_cloud_manager.jpg",
+      image: "/martin.jpg",
       username: "Martin Mundia ",
       position: "Cloud Manager",
       profile: "https://github.com/MartinDeMundia",
