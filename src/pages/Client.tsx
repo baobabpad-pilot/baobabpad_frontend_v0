@@ -148,37 +148,34 @@ const Client = () => {
           <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 gap-x-12 text-[1.25rem] max-w-full md:max-w-[50%]">
             <div className="sm:w-100% md:w-[30.75rem] w-[22rem] md:h-[12.75rem] h-[14.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] md:text-[2.5rem] text-[2rem]">
-                Business Strategy
+              Cost Optimization
               </span>
               <span className="">
-                Strategic management formulates and implements major goals and
-                initiatives.
+              This solutions is included in the annual membership, which allows you access services without recurring cost.
               </span>
-              <div className="w-[100%] flex justify-end">
+              <div  className="w-[100%] hidden md:flex justify-end">
                 <span className="text-[#00BDD6]">Learn More... </span>
               </div>
             </div>
             <div className="sm:w-100%  md:w-[30.75rem] w-[22rem] md:h-[12.75rem] h-[15.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] md:text-[2.5rem] text-[2rem]">
-                Planning and Analysis
+              Time Management
               </span>
               <span className="">
-                Four activities for financial health: planning, budgeting,
-                integrated financial planning, and performance management.
+              Our services for client support empowers our clients to manage time zones seamlessly, making it easy to communicate and work in real time with our team.
               </span>
-              <div className="w-[100%] flex justify-end">
+              <div className="w-[100%] hidden md:flex justify-end">
                 <span className="text-[#00BDD6]">Learn More... </span>
               </div>
             </div>
             <div className="sm:w-100%  md:w-[30.75rem] w-[22rem] md:h-[12.75rem] h-[14.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] md:text-[2.5rem] text-[2rem]">
-                Ongoing Support
+              Ongoing support
               </span>
               <span className="">
-                Ongoing support services provide assistance to customers for a
-                limited period.
+              We empower our clients with recurring annual support on their digital infrastructure without costs.
               </span>
-              <div className="w-[100%]  flex justify-end">
+              <div className="w-[100%] hidden md:flex justify-end">
                 <span className="text-[#00BDD6]">Learn More... </span>
               </div>
             </div>

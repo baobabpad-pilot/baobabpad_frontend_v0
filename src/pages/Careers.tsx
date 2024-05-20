@@ -218,7 +218,7 @@ const Careers = () => {
         >
           <iframe
             className="w-full h-full"
-            src="https://drive.google.com/file/d/1ZRC8S7SBO8E8fT_6wvM9z04gAZeUCawN/preview"
+            src="Blenda-video.mp4"
             title="Google Drive video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
@@ -231,8 +231,8 @@ const Careers = () => {
         >
            <iframe
             className="w-full h-full md:mt-0 mt-5"
-            src="https://drive.google.com/file/d/1SAkENMU536n9lh9cbPFE8mr_6zBdRc1G/preview"
-            title="Google Drive video player"
+            src="/pascaline-video.mp4"
+            title="Pascaline's video"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           >2</iframe>
