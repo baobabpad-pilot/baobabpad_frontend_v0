@@ -101,7 +101,7 @@ const Remote = () => {
 
   const features = [
     { title: "Trust and Integrity", imageSrc: "/trust_image.png" },
-    { title: "Communication", imageSrc: "/communication_image.png" },
+    { title: "Communi- cation", imageSrc: "/communication_image.png" },
     { title: "Cultural Intel", imageSrc: "/cultural_image.png" },
     { title: "Local Hybrid", imageSrc: "/local_hybrid_image.png" },
     { title: "Quality", imageSrc: "/quality_image.png" },
@@ -124,13 +124,15 @@ const Remote = () => {
             <span className="text-[3rem] font-semibold">
               REMOTE TEAM 
             </span>
-            <span>
+            <span >
               Baobabpad's Virtual Tech Village platform connects a vast pool of
               skilled tech talent across Africa..
             </span>
-            <button className="bg-[white] text-black p-2 rounded-[1rem] hover:bg-[#00BDD6] hover:text-white">
+            <Link href="#1">
+            <button className="bg-[white] text-black p-2 rounded-[1rem] hover:bg-[#00BDD6] hover:text-white ">
               Discover More
             </button>
+            </Link>
           </div>
           <div className="w-full md:w-[50%] flex justify-center">
             <img
@@ -141,7 +143,7 @@ const Remote = () => {
           </div>
         </section>
 
-        <section className="flex flex-col md:flex-row items-center justify-center flex-wrap p-12 ">
+        <section id="1" className="flex flex-col md:flex-row items-center justify-center flex-wrap p-12 ">
           <div className="w-full md:w-[50%] flex flex-row md:flex-col justify-center flex-wrap p-6 pt-[-1rem] gap-y-7">
             <div className="flex flex-row bg-[#EBFDFF] w-[13rem] items-center">
               <img
@@ -153,17 +155,28 @@ const Remote = () => {
                 Introduction
               </span>
             </div>
-            <p className="text-[3rem]">Build a power Remote team </p>
-            <p className="text-[1.875rem]">
+            <p className="md:text-[3rem] text-[2rem]">Build a power Remote team </p>
+            <p className="md:text-[1.875rem] text-[1.5rem] ">
               Secure remote access to company resources and applications for your team members.
             </p>
             <div className=" flex flex-row gap-x-5 ">
-              <button className="border border-black p-2 rounded-[1rem] hover:bg-[#00BDD6] hover:text-white hover:border-none">
+              <Link href="#2">
+              <button  className="border border-black p-2 rounded-[1rem] hover:bg-[#00BDD6]  hover:text-white hover:border-black">
                 Learn More
               </button>
-              <button className="border border-black pl-9 pr-9 rounded-[1rem] bg-[#723CDE] text-white hover:bg-white hover:text-black">
+              </Link>
+              <Link href="/Subscription">
+              <button className="border border-black p-2 rounded-[1rem] w-35  text-white bg-violet-500 hover:bg-white hover:text-black hover:border-black">
                 Sign up
               </button>
+              </Link>
+             
+              {/*
+              <button onClick={() => setIsVisible(!isVisible)} className="border border-black pl-9 pr-9 rounded-[1rem] bg-[#723CDE] text-white hover:bg-white hover:text-black">
+                Sign up
+              </button>
+              {isVisible && <Businessform />}
+              */}
             </div>
           </div>
           <div className="w-full md:w-[49%] flex justify-center  ">
@@ -175,10 +188,10 @@ const Remote = () => {
           </div>
         </section>
 
-        <section className="flex mt-1 flex-col md:flex-row bg-[#00BDD6] flex-wrap justify-center items-center">
+        <section id="2" className="flex mt-1 flex-col md:flex-row bg-[#00BDD6] flex-wrap justify-center items-center">
           <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 gap-x-12 text-[1.25rem] max-w-full md:max-w-[50%]">
-            <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
-              <span className="text-[#171A1F] font-[500] text-[2.5rem]">
+            <div className="sm:w-100% md:w-[30.75rem] w-[22rem]  md:h-[12.75rem]  h-[14.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+              <span className="text-[#171A1F] font-[500] md:text-[2.5rem] text-[2rem]">
                 The Future is Remote
               </span>
               <span className="">
@@ -188,9 +201,9 @@ const Remote = () => {
                 <span className="text-[#00BDD6]">Learn More... </span>
               </div>
             </div>
-            <div className="sm:w-100% w-[30.75rem] h-[13rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
-              <span className="text-[#171A1F] font-[500] text-[2rem]">
-              Managing  remote culture
+            <div className="sm:w-100% md:w-[30.75rem] w-[22rem] h-[17rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+              <span className="text-[#171A1F] font-[500] md:text-[2.5rem] text-[2rem]">
+              Remote culture
               </span>
               <span className="">
               Four activities for financial health: planning, budgeting, integrated financial planning, and performance management.
@@ -199,9 +212,9 @@ const Remote = () => {
                 <span className="text-[#00BDD6]">Learn More... </span>
               </div>
             </div>
-            <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
-              <span className="text-[#171A1F] font-[500] text-[2.5rem]">
-              Baobabpad Remotelly Hybrid
+            <div className="sm:w-100% md:w-[30.75rem] w-[22rem] md:h-[12.75rem] h-[15.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+              <span className="text-[#171A1F] font-[500] md:text-[2.5rem] text-[2rem]">
+              Remotely Hybrid
               </span>
               <span className="">
                Ongoing support services provide assistance to customers for a limited period.
@@ -229,33 +242,31 @@ const Remote = () => {
                 Core Values
               </span>
             </div>
-            <p className="text-[3rem]">Virtual Tech Village on APIs</p>
-
+            <p className="md:text-[3rem] text-[1.8rem] text-center">Our Key Strategic Approach</p>
+            
             <div className=" flex flex-row gap-x-5 items-center mt-[1rem]">
-              <img
-                src="/kenny.png"
-                alt=""
-                className="rounded-[1rem] w-[40px]"
-              />
-              <div className="">
-                <p className=" font-bold font-[1rem]">Kenny Kaluiji</p>
-                <p className="text-[#9095A0]">Founder</p>
-              </div>
+             <img
+               src="/brenda_mkeshwa_CEO.jpg"
+               alt=""
+               className="rounded-[1rem] w-[40px]"
+             />
+             <div className="">
+               <p className=" font-bold font-[1rem]">Brenda Mkwesha</p>
+               <p className="text-[#9095A0]">CEO</p>
+             </div>
             </div>
+            
           </div>
 
           <Features features={features}/>
         
         </section>
 
-
-
-
         
        <Reviews/>
   
        
-        <section className="flex flex-col md:flex-row items-center justify-center  flex-wrap p-12 border-t border-t-gray m-6  ">
+        <section className="hidden md:flex flex-col md:flex-row items-center justify-center  flex-wrap p-12 border-t border-t-gray m-6  ">
           <div className="w-full md:w-[60%] flex flex-row md:flex-col justify-center flex-wrap p-6 pt-[-1rem] gap-y-7">
             <div className="flex flex-row bg-[#F1F1FE] w-[13rem] items-center">
               <img
@@ -267,7 +278,7 @@ const Remote = () => {
                 Our Community
               </span>
             </div>
-            <p className="text-[3rem]">Gain from our remote expert </p>
+            <p className="text-[3rem]">Gain insights from our remote expert </p>
           </div>
           <div className="w-full md:w-[35%] flex-col justify-center m-1 ">
             <p className="w-[70%]">
@@ -286,8 +297,9 @@ const Remote = () => {
         </section>
 
 
-       
+       <div className="hidden md:flex">
       <Faq faqs={faqs}/>
+      </div>
   
 
       </Layout>

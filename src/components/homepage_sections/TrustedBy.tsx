@@ -9,14 +9,17 @@ const TrustedBy = () => {
         <h1 className="text-4xl font-medium py-4 mb-8">Trusted by</h1>
         <h4 className="text-xl">Our Partners :</h4>
 
-        <div className="lg:w-[90%] w-[100%] grid grid-cols-3 gap-8 lg:ml-[10%] ">
+     
+     <div className="lg:w-[90%] w-[100%] h-[40%] grid  gap-3 grid-row-2 lg:ml-[10%] h-100 ">
+          {/*Logos part 1 */}
+          <div className="grid grid-cols-3">
           <div className="relative md:h-[8rem] h-[5rem] sm:mt-4 w-[100%] ">
             <Image
               src={"/Greentec.png"}
               alt="Baobabpad logo"
               layout="fill"
             //   objectFit="cover"
-              className="cursor-pointer  z-10"
+              
             />
           </div>
           <div className="relative md:h-[8rem] h-[5rem] w-[50%] ml-[20%]">
@@ -37,9 +40,31 @@ const TrustedBy = () => {
               className="cursor-pointer  z-10"
             />
           </div>
-          <div className="relative mt-4">
-          
           </div>
+
+          {/* logo part 2*/}
+          <div className="grid grid-cols-2 md:h-[10rem] h-[8rem]">
+          <div className="relative md:h-[6rem] h-[4rem] bg-black mt-5 w-[60%] md:ml-0 ml-7 rounded-md text-right">
+            <Image
+              src={"/diza.png"}
+              alt="diza"
+              layout="fill"
+            //   objectFit="cover"
+              className="cursor-pointer size-5  "
+            />
+          </div>
+
+          <div className="relative md:h-[6rem] h-[4rem] mt-5 w-[60%] border border-gray-400 rounded-md">
+            <Image
+              src={"/aws-logo.jpeg"}
+              alt="aws"
+              layout="fill"
+            //   objectFit="cover"
+              className="cursor-pointer size-5  "
+            />
+          </div>
+          </div>
+          
           {/*</div>*/}
       </div>
 

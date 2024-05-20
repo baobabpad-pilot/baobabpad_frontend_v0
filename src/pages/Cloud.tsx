@@ -40,10 +40,10 @@ const Cloud = () => {
 
   const features = [
     { title: "Integrity", imageSrc: "/virtual_image.png" },
-    { title: "Collaboration", imageSrc: "/collaboration_image.png" },
-    { title: "Growth", imageSrc: "/cloud_storage.png" },
+    { title: "Security", imageSrc: "/collaboration_image.png" },
+    { title: "Scalability", imageSrc: "/cloud_storage.png" },
     { title: "Reliability", imageSrc: "/database_image.png" },
-    { title: "Commitment", imageSrc: "/management_image.png" },
+    { title: "Performance", imageSrc: "/management_image.png" },
   ];
 
 
@@ -82,16 +82,18 @@ const Cloud = () => {
 
         <section className="flex mt-1 flex-col md:flex-row bg-[#ED7D2D] flex-wrap">
           <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 text-[1.25rem] max-w-full md:max-w-[50%]">
-            <span className="text-[3rem] font-semibold">
+            <span className="md:text-[3rem] text-[2.5rem] font-semibold">
               AI and Data Infrastructure
             </span>
             <span>
               Providing a scalable cloud-based infrastructure service, empower
               its clients to focus on their core business activities.
             </span>
+            <Link href="#1">
             <button className="bg-[white] text-black p-2 rounded-[1rem] hover:bg-[#00BDD6] hover:text-white">
               Discover More
             </button>
+            </Link>
           </div>
 
           <div className="w-full md:w-[50%] flex justify-center">
@@ -103,7 +105,7 @@ const Cloud = () => {
           </div>
         </section>
 
-        <section className="flex flex-col md:flex-row items-center justify-center flex-wrap p-12 ">
+        <section id="1" className="flex flex-col md:flex-row items-center justify-center flex-wrap p-12 ">
           <div className="w-full md:w-[50%] flex flex-row md:flex-col justify-center flex-wrap p-6 pt-[-1rem] gap-y-7">
             <div className="flex flex-row bg-[#EBFDFF] w-[13rem] items-center">
               <img
@@ -115,17 +117,28 @@ const Cloud = () => {
                 Introduction
               </span>
             </div>
-            <p className="text-[3rem]">Launch AI models integration</p>
-            <p className="text-[1.875rem]">
+            <p className="md:text-[3rem] text-[1.8rem]">Launch AI models </p>
+            <p className="md:text-[1.875rem] text-[1.400rem] text-align: center;">
             Leveraging technology for operational improvement and long-term growth strategies.
             </p>
             <div className=" flex flex-row gap-x-5 ">
-              <button className="border border-black p-2 rounded-[1rem] hover:bg-[#00BDD6] hover:text-white hover:border-none">
+              <Link href="#2">
+              <button  className="border border-black p-2 rounded-[1rem] hover:bg-[#00BDD6]  hover:text-white hover:border-black">
                 Learn More
               </button>
-              <button className="border border-black pl-9 pr-9 rounded-[1rem] bg-[#723CDE] text-white hover:bg-white hover:text-black">
+              </Link>
+              <Link href="/Subscription">
+              <button className="border border-black p-2 rounded-[1rem] w-35  text-white bg-violet-500 hover:bg-white hover:text-black hover:border-black">
                 Sign up
               </button>
+              </Link>
+             
+              {/*
+              <button onClick={() => setIsVisible(!isVisible)} className="border border-black pl-9 pr-9 rounded-[1rem] bg-[#723CDE] text-white hover:bg-white hover:text-black">
+                Sign up
+              </button>
+              {isVisible && <Businessform />}
+              */}
             </div>
           </div>
           <div className="w-full md:w-[49%] flex justify-center  ">
@@ -137,9 +150,9 @@ const Cloud = () => {
           </div>
         </section>
 
-        <section className="flex mt-1 flex-col md:flex-row bg-[#00BDD6] flex-wrap justify-center items-center gap-x-[0.2rem]">
+        <section id="2" className="flex mt-1 flex-col md:flex-row bg-[#00BDD6] flex-wrap justify-center items-center">
           <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 gap-x-12 text-[1.25rem] max-w-full md:max-w-[50%]">
-            <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+            <div className="sm:w-100% md:w-[30.75rem] w-[22rem] md:h-[12.75rem] h-[14.75rem]  bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] text-[1.8rem]">
                  AI strategy
               </span>
@@ -150,13 +163,13 @@ const Cloud = () => {
               <a
                   href="#"
                   onClick={(event) => handleClick(event, "AI strategy")}
-                  className="text-[#00BDD6] cursor-pointer"
+                  className="text-[#00BDD6] cursor-pointer mt-4"
                 >
                   Learn More...
                 </a>
               </div>
             </div>
-            <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+            <div className="sm:w-100% md:w-[30.75rem] w-[22rem] md:h-[12.75rem] h-[14.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] text-[1.8rem]">
                 Machine Learning Ops
               </span>
@@ -173,7 +186,7 @@ const Cloud = () => {
                 </a>
               </div>
             </div>
-            <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+            <div className="sm:w-100% md:w-[30.75rem] w-[22rem] md:h-[12.75rem] h-[15.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] text-[1.8rem]">
             Large Language Modelling
               </span>
@@ -205,13 +218,7 @@ const Cloud = () => {
             )}
             </div>
            
-           
-
-
-
-
-
-
+        
          
         </section>
 
@@ -223,21 +230,21 @@ const Cloud = () => {
                 alt="introduction icon"
                 className="w-[10rem]"
               />
-              <span className=" text-[#00BDD6] text-[1.625rem]">
+              <span className=" text-[#00BDD6] md:text-[1.625rem] text-[1.300rem] ">
                 Core Values
               </span>
             </div>
-            <p className="text-[3rem]">AI Model Integrations  </p>
+            <p className="md:text-[3rem] text-[1.8rem]">Our Key Strategic Approach</p>
 
             <div className=" flex flex-row gap-x-5 items-center mt-[1rem]">
               <img
-                src="/cloud_advisor_page.png"
+                src="/kenny.png"
                 alt=""
-                className="rounded-[1rem]"
+                className="rounded-[1rem] w-[40px]"
               />
               <div className="">
-                <p className=" font-bold font-[1rem]">Martin Sundberg</p>
-                <p className="text-[#9095A0]">Advisor</p>
+                <p className=" font-bold font-[1rem]">Kenny Kaluiji</p>
+                <p className="text-[#9095A0]">Founder</p>
               </div>
             </div>
           </div>
@@ -248,7 +255,7 @@ const Cloud = () => {
           <Reviews/>
       
 
-        <section className="flex flex-col md:flex-row items-center justify-center  flex-wrap p-12 border-t border-t-gray m-6  ">
+        <section className=" hidden md:flex flex-col md:flex-row items-center justify-center  flex-wrap p-12 border-t border-t-gray m-6  ">
           <div className="w-full md:w-[60%] flex flex-row md:flex-col justify-center flex-wrap p-6 pt-[-1rem] gap-y-7">
             <div className="flex flex-row bg-[#F1F1FE] w-[13rem] items-center">
               <img
@@ -260,7 +267,7 @@ const Cloud = () => {
                 Our Community
               </span>
             </div>
-            <p className="text-[3rem]">Build AI Models with our AI expert </p>
+            <p className="text-[3rem]"> Gain insights from our AI Expert </p>
           </div>
           <div className="w-full md:w-[35%] flex-col justify-center m-1 ">
             <p className="w-[70%]">
@@ -278,9 +285,9 @@ const Cloud = () => {
           </div>
         </section>
 
-     
+       <div className="hidden md:flex">
         <Faq  faqs={faqs}/>
-  
+        </div> 
       </Layout>
     </div>
   );

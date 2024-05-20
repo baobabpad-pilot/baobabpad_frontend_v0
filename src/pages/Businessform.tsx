@@ -1,11 +1,36 @@
 import React, { useState } from "react";
+import Header from "@/components/homepage_sections/Header";
+import Layout from "@/components/Layout";
+import MyForm from "@/components/homepage_sections/Form";
+import StepIndicator from "@/components/homepage_sections/StepIndicator";
+import About from "@/components/homepage_sections/About";
+import TrustedBy from "@/components/homepage_sections/TrustedBy";
+import Customers from "@/components/homepage_sections/Customers";
+import VerifyBusiness from "@/components/homepage_sections/verify_business";
+import AnimatedWrapper from "@/components/AnimatedWrapper";
+import { CiCircleAlert } from "react-icons/ci";
 import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
 import { updateFormData } from "@/redux/slices/formDataSlice";
 import { RootState } from "@/redux/rootReducer";
-import { CiCircleAlert } from "react-icons/ci";
 
-const VerifyBusiness = () => {
+
+const Businessform: React.FC = () => {
+
+
+  const [currentStep, setCurrentStep] = useState<number>(1);
+  const [showVerifyBusiness, setShowVerifyBusiness] = useState(false);
+  const totalSteps = 5;
+
+  const handleNextStep = (nextStep: number) => {
+    setCurrentStep(nextStep);
+  };
+
+  const handleVerifyBusiness = () => {
+    setShowVerifyBusiness(true);
+  };
+
+  // part of verify business
   const router = useRouter();
   const dispatch = useDispatch();
   const formDataUpdated = useSelector((state: RootState) => state.formData);
@@ -61,12 +86,44 @@ const VerifyBusiness = () => {
     sendData();
   };
 
-  return (
-    <div className="md:flex flex-col gap-10 p-10 px-2 md:px-36">
-     {/* <h1 className="text-5xl font-semibold md:mb-4 mb-[3rem] ">Free Trial</h1>*/}
 
-      <div className=" md:flex w-[100] ">
-         <div className=" md:w-1/3 w-full flex md:flex-col  gap-2 mb-11  border-2 border-gray-300  md:border-none ">
+  return (
+    <>
+    <div className="min-h-screen flex flex-col">
+       {/* <div className=" bg-gray-200 w-[98%] mx-auto rounded-lg my-4">
+           <h1 className="text-4xl text-[#00BDD6] text-center font-bold p-6">Fill the form </h1></div>*/}
+           <div className="h-8"></div>
+      <div className="w-[98%] mx-auto">
+      
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 bg-gray-100 rounded-lg">
+          <div className="flex-col gap-28 hidden lg:flex pl-4 lg:pl-28">
+            {Array.from({ length: 6 }, (_, index) => index +1).map(
+              (step) => (
+                <StepIndicator
+                  key={step}
+                  step={step}
+                  currentStep={currentStep}
+                />
+              )
+            )}
+          </div>
+          <div>
+            <MyForm
+              onNextStep={handleNextStep}
+              onFreeTrialClick={handleVerifyBusiness}
+              
+            />
+          </div>
+        </div>
+       
+      </div>
+      {/* Division for verify business*/}
+      <div className="md:flex flex-col gap-10 p-10 px-2 lg:px-36 mt-11">
+      {/*<h1 className="text-5xl font-semibold md:mb-4 mb-[3rem] ">Free Trial</h1>*/}
+
+      <div className=" md:flex w-full">
+        
+        <div className=" md:w-1/3 flex md:flex-col  gap-2 mb-11  border-2 border-gray-300  md:border-none ">
           <div className="md:flex gap-3 items-center">
             <div className="md:h-10 h-5 md:w-10 w-8 flex items-center justify-center rounded-full border text-white bg-[#00BDD6]">
               1
@@ -101,7 +158,6 @@ const VerifyBusiness = () => {
             <h4 className="text-medium font-normal">Login</h4>
           </div>
         </div>
-
 
         {/* Form Component */}
         <div className="md:w-2/3 flex flex-col gap-3   mx-auto">
@@ -265,7 +321,11 @@ const VerifyBusiness = () => {
         </div>
       </div>
     </div>
+
+    </div>
+    </>
   );
 };
 
-export default VerifyBusiness;
+export default Businessform;
+

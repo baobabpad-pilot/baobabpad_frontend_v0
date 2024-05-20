@@ -35,13 +35,6 @@ const Solutions:React.FC<SolutionsProps> = () => {
       </>
   
   );
-
-
-
-
-
-
-  
 };
 
 export default Solutions;
