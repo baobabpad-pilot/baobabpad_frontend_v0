@@ -142,45 +142,38 @@ const Client = () => {
           </div>
         </section>
 
-        <section className="flex mt-1 flex-col md:flex-row bg-[#00BDD6] flex-wrap justify-center items-center gap-x-[5rem]">
-          <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 gap-x-12 text-[1.25rem] max-w-full md:max-w-[60%]">
-            <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
-              <span className="text-[#171A1F] font-[500] text-[2.5rem]">
-                Business Strategy
+        <section id="2" className="flex mt-1 flex-col md:flex-row bg-[#00BDD6] flex-wrap justify-center items-center">
+          <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 gap-x-12 text-[1.25rem] max-w-full md:max-w-[50%]">
+            <div className="sm:w-100% md:w-[30.75rem] w-[22rem] md:h-[12.75rem] h-[14.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+              <span className="text-[#171A1F] font-[500] md:text-[2.5rem] text-[2rem]">
+              Cost Optimization
               </span>
               <span className="">
-              High costs associated with technology development are a major barrier for startups and growth
-              companies.
+              This solutions is included in the annual membership, which allows you access services without recurring cost.
               </span>
-              <a
-                  href="#"
-                  onClick={(event) => handleClick(event, "Business Strategy")}
-                  className="text-[#00BDD6] cursor-pointer"
-                >Learn More .....</a>
-
-
-            </div>
-            <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
-              <span className="text-[#171A1F] font-[500] text-[2.5rem]">
-                Planning and Analysis
-              </span>
-              <span className="">
-                Four activities for financial health: planning, budgeting,
-                integrated financial planning, and performance management.
-              </span>
-              <div className="w-[100%] flex justify-end">
+              <div  className="w-[100%] hidden md:flex justify-end">
                 <span className="text-[#00BDD6]">Learn More... </span>
               </div>
             </div>
-            <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
-              <span className="text-[#171A1F] font-[500] text-[2.5rem]">
-                Ongoing Support
+            <div className="sm:w-100%  md:w-[30.75rem] w-[22rem] md:h-[12.75rem] h-[15.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+              <span className="text-[#171A1F] font-[500] md:text-[2.5rem] text-[2rem]">
+              Time Management
               </span>
               <span className="">
-                Ongoing support services provide assistance to customers for a
-                limited period.
+              Our services for client support empowers our clients to manage time zones seamlessly, making it easy to communicate and work in real time with our team.
               </span>
-              <div className="w-[100%]  flex justify-end">
+              <div className="w-[100%] hidden md:flex justify-end">
+                <span className="text-[#00BDD6]">Learn More... </span>
+              </div>
+            </div>
+            <div className="sm:w-100%  md:w-[30.75rem] w-[22rem] md:h-[12.75rem] h-[14.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+              <span className="text-[#171A1F] font-[500] md:text-[2.5rem] text-[2rem]">
+              Ongoing support
+              </span>
+              <span className="">
+              We empower our clients with recurring annual support on their digital infrastructure without costs.
+              </span>
+              <div className="w-[100%] hidden md:flex justify-end">
                 <span className="text-[#00BDD6]">Learn More... </span>
               </div>
             </div>

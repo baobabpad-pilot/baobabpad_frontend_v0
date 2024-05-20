@@ -75,7 +75,7 @@ const Customers = () => {
             organized. It's a game-changer!"
           </h1>
           <p className="text-start font-medium text-xl ml-8">John Anderson</p>
-          <div className="flex justify-between w-[15%] ml-[3rem] mb-4">
+          <div className="flex justify-between md:w-[15%] w-[20%] ml-[3rem] mb-4">
             <a href="#" className="bg-[#00BDD6] text-white  rounded-full"><IoIosArrowBack  className="size-7"/></a>
             <a href="#"  className="bg-[#00BDD6] text-white  rounded-full"><IoIosArrowForward className="size-7"/></a>
           

@@ -12,7 +12,7 @@ import AnimatedWrapper from "@/components/AnimatedWrapper";
 const Homepage: React.FC = () => {
   const [currentStep, setCurrentStep] = useState<number>(1);
   const [showVerifyBusiness, setShowVerifyBusiness] = useState(false);
-  const totalSteps = 5;
+  const totalSteps =5;
 
   const handleNextStep = (nextStep: number) => {
     setCurrentStep(nextStep);
@@ -21,6 +21,7 @@ const Homepage: React.FC = () => {
   const handleVerifyBusiness = () => {
     setShowVerifyBusiness(true);
   };
+  const [isVisible, setIsVisible] = useState(false);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -39,6 +40,9 @@ const Homepage: React.FC = () => {
               )
             )}
           </div>
+
+          
+
           <div>
             <MyForm
               onNextStep={handleNextStep}
@@ -51,6 +55,15 @@ const Homepage: React.FC = () => {
             <VerifyBusiness />
           </AnimatedWrapper>
         )}
+
+        <div className=" w-[100%] mx-auto  ">{/* div for button free trial*/}
+        <button
+            className=" md:mt-6  mt-12 md:ml-[40%] ml-[40%] bg-[#00BDD6] text-white py-2 px-4 rounded-full hover:bg-gray-300 transition-colors delay-75"
+            onClick={() => setIsVisible(!isVisible) }  >
+             Free Trial
+          </button>
+           {isVisible && <VerifyBusiness />}
+        </div>
 
         <TrustedBy />
         <Customers />
