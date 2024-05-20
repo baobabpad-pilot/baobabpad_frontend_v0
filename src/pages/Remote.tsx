@@ -52,11 +52,11 @@ const Remote = () => {
   const faqs:FAQItem[] = [
     {
       question: 'What best practices can I follow to protect sensitive company data while working remotely?',
-      answer: '',
+      answer: 'All our staff members are trained on General Data Protection Regulation(GDPR) protocols, to protect sensitive company data',
     },
     {
-      question: 'How can I ensure my home network is secure for work?',
-      answer: '.......',
+      question: 'How can I trust the  security of my team working remotely?',
+      answer: '',
     },
     {
       question: 'How can I identify and avoid phishing scams while working remotely?',
