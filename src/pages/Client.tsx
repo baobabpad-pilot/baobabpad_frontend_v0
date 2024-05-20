@@ -42,21 +42,21 @@ const Client = () => {
 
   const faqs: FAQItem[] = [
     {
-      question: "What are Service Level Agreements (SLAs)?",
-      answer: ".............................",
+      question: "What subscription sservice is Client Support included in ?",
+      answer: "Client support is part of the annual membership and free trial on time fee",
     },
     {
       question: "Who can I contact with questions about my Baobabpad account?",
-      answer: "..................................",
+      answer: "All queries or questions about Baobabpad accounts should be addressed to admin@babobabpad.com",
     },
     {
       question:
         "How can I determine the time difference when contacting support?",
-      answer: "...................................",
+      answer: "Please check your time zone with GMT+2",
     },
     {
       question: "What if I need immediate assistance with a critical issue?",
-      answer: ".........................................",
+      answer: "Your account manager is available for any critical issue and ready to help ",
     },
   ];
 

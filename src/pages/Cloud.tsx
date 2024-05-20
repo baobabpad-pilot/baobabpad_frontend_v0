@@ -178,7 +178,7 @@ const Cloud = () => {
             Large Language Modelling
               </span>
               <span className="">
-              Ongoing support services provide assistance to customers for a limited period.
+              Integrating Generative AI ~AI21 Labs’ models for businesses can boost SEO quality and efficiency by optimizing page rank on the first page when you search for something related to hotels, places, and all-things-travel and ensuring a promising path forward for online success 
               </span>
               <div className="w-[100%]  flex justify-end">
               <a
