@@ -6,7 +6,7 @@ const Managing_Remote = () => {
     <div className="absolute top-0 left-0 right-0 bottom-0 bg-gray-200 opacity-30 z-10"></div>
     <div className="bg-black  bg-opacity-75 p-4 rounded-lg">
         <p>
-        Managing Remote As remote work becomes a permanent fixture in the modern workplace, managing and nurturing a strong company culture remotely has become a critical challenge for leaders. A thriving remote culture can lead to higher employee satisfaction, improved productivity, and a more cohesive team. Here are key strategies for managing remote culture effectively.
+        Managing Remote as remote work becomes a permanent fixture in the modern workplace, managing and nurturing a strong company culture remotely has become a critical challenge for leaders. A thriving remote culture can lead to higher employee satisfaction, improved productivity, and a more cohesive team. Here are key strategies for managing remote culture effectively.
         </p>
 
         <p>

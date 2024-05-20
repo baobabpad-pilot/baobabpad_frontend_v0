@@ -194,7 +194,7 @@ const Remote = () => {
                 The Future is Remote
               </span>
               <span className="">
-              Strategic management formulates and implements major goals and initiatives.
+              The era of remote has been occasioned by the rapid technological advancement and the global connectivity.
               </span>
               <div className="w-[100%] flex justify-end">
               <a
@@ -211,7 +211,7 @@ const Remote = () => {
               Managing  remote culture
               </span>
               <span className="">
-              Four activities for financial health: planning, budgeting, integrated financial planning, and performance management.
+              Managing Remote As remote work becomes a permanent fixture in the modern workplace..
               </span>
               <div className="w-[100%] flex justify-end">
               <a
@@ -228,7 +228,8 @@ const Remote = () => {
               Baobabpad Remotely Hybrid
               </span>
               <span className="">
-               Ongoing support services provide assistance to customers for a limited period.
+              Handling Remote-Hybrid Culture: Juggling Face-to-Face and Online Work
+          The adoption of a remote-hybrid work model, in which workers alternate
               </span>
               <div className="w-[100%]  flex justify-end">
               <a
