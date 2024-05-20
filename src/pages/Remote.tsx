@@ -55,17 +55,19 @@ const Remote = () => {
       answer: 'All our staff members are trained on General Data Protection Regulation(GDPR) protocols, to protect sensitive company data',
     },
     {
-      question: 'How can I trust the  security of my team working remotely?',
-      answer: '',
+      question: 'How can I trust the security of my team working remotely?',
+      answer: 'All Baobabpad members work remotely from a co-working space to ensure security and access to work infrastructure',
     },
     {
       question: 'How can I identify and avoid phishing scams while working remotely?',
-      answer: 'You can contact our customer support team at support@example.com.',
+      answer: 'We have highend Cloud identity and security management infrastructure ',
     },
-    {
-      question:' What happens if my work device is lost or stolen?',
-      answer: 'You can contact our customer support team at support@example.com.',
-    },
+     {
+      question:'Do you offer support after the project is completed?',
+
+      answer:'Yes, we offer ongoing support and maintenance services to ensure that your software continues to perform at its best.'
+     }
+   
   ];
 
   const values:ValueItem[]=[

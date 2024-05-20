@@ -42,7 +42,7 @@ const Client = () => {
 
   const faqs: FAQItem[] = [
     {
-      question: "What subscription sservice is Client Support included in ?",
+      question: "What subscription service is Client Support included in ?",
       answer: "Client support is part of the annual membership and free trial on time fee",
     },
     {
