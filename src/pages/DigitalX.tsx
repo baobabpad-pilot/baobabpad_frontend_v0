@@ -154,10 +154,10 @@ const DigitalX = () => {
               Digital infrastructure {" "}
               </span>
               <span className="">
-                Strategic management formulates and implements major goals and
-                initiatoves
+              Cloud computing offers a couple of benefits that are particularly relevant to
+              Baobabpad's mission.
               </span>
-              <div className="w-[100%] flex justify-end">
+              <div className="w-[100%] hidden md:flex justify-end">
                 <a
                   href="#"
                   onClick={(event) => handleClick(event, "Future_is_cloud")}
@@ -168,15 +168,15 @@ const DigitalX = () => {
               </div>
             </div>
 
-            <div className="sm:w-100% md:w-[30.75rem] w-[22rem] md:h-[12.75rem] h-[15.75rem]  bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+            <div className="sm:w-100% md:w-[30.75rem] w-[22rem] md:h-[18.75rem] h-[20.75rem]  bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] md:text-[2.5rem] text-[2rem]">
                 Cloud xPert{" "}
               </span>
-              <span className="">
-                Four activities for financial health: planning, budgeting,
-                integrated financial planning, and performance management.
+              <span className=" ">
+               In today's digital landscape, the realm of technology is evolving at breaneck speed. Companies, regardless of size or indusrty , are constantly seeking ways to streamline operations,enhance scalability
+               , and ensure data security.
               </span>
-              <div className="w-[100%] flex justify-end">
+              <div className="w-[100%] hidden md:flex justify-end">
                 <a
                   href="#"
                   onClick={(event) => handleClick(event, "Cloud_xPert")}
@@ -186,15 +186,14 @@ const DigitalX = () => {
                 </a>
               </div>
             </div>
-            <div className="sm:w-100% md:w-[30.75rem] w-[22rem] md:h-[12.75rem] h-[14.75rem]  bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+            <div className="sm:w-100% md:w-[30.75rem] w-[22rem] md:h-[15.75rem] h-[17.75rem]  bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] text-[2.5rem]">
                 Cloud base{" "}
               </span>
               <span className="">
-                Ongoing support services provide assistance to customers for a
-                limited period.
+               Cloud base,often termed" cloud infrastructure," stands as digital bedrock powering Baobabpad's mission to elevate African teck talent and foster global partnerships.
               </span>
-              <div className="w-[100%]  flex justify-end">
+              <div className="w-[100%] hidden md:flex justify-end">
                 <a
                   href="#"
                   onClick={(event) => handleClick(event, "Cloud_base")}

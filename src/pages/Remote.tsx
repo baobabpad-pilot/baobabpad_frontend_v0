@@ -197,7 +197,7 @@ const Remote = () => {
               <span className="">
               Strategic management formulates and implements major goals and initiatives.
               </span>
-              <div className="w-[100%] flex justify-end">
+              <div className="w-[100%] hidden md:flex justify-end">
                 <span className="text-[#00BDD6]">Learn More... </span>
               </div>
             </div>
@@ -208,7 +208,7 @@ const Remote = () => {
               <span className="">
               Four activities for financial health: planning, budgeting, integrated financial planning, and performance management.
               </span>
-              <div className="w-[100%] flex justify-end">
+              <div className="w-[100%] hidden md:flex justify-end">
                 <span className="text-[#00BDD6]">Learn More... </span>
               </div>
             </div>
@@ -219,7 +219,7 @@ const Remote = () => {
               <span className="">
                Ongoing support services provide assistance to customers for a limited period.
               </span>
-              <div className="w-[100%]  flex justify-end">
+              <div className="w-[100%] hidden md:flex justify-end">
                 <span className="text-[#00BDD6]">Learn More... </span>
               </div>
             </div>
