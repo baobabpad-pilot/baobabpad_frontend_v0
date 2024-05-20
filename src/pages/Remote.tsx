@@ -3,11 +3,15 @@ import Layout from "@/components/Layout";
 import Reviews from "@/components/Reviews/Reviews";
 import SolutionNavbar from "@/components/SolutionsNavbar/SolutionNavbar";
 import Features from "@/components/features/Features";
+import Future_is_Remote from "@/components/remote_sections/Future_is_Remote";
+import Managing_Remote from "@/components/remote_sections/Managing_Remote";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { features } from "process";
 import React, { useState } from "react";
 import Slider from "react-slick";
+import Baobabpad from "./Baobabpad";
+import Baobabpad_Remote_Hybrid from "@/components/remote_sections/Baobabpad_Remote_Hybrid";
 
 const Remote = () => {
   interface SolutionsLinks {
@@ -109,9 +113,15 @@ const Remote = () => {
     { title: "Quality", imageSrc: "/quality_image.png" },
   ];
 
+
+  const [componentVisible, setComponentVisible] = useState(null);
+
+
+  const handleClick = (event:any, componentName:any) => {
+    event.preventDefault();
+    setComponentVisible(componentName);
+  };
   
-
-
 
 
 
@@ -180,43 +190,69 @@ const Remote = () => {
         <section className="flex mt-1 flex-col md:flex-row bg-[#00BDD6] flex-wrap justify-center items-center">
           <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 gap-x-12 text-[1.25rem] max-w-full md:max-w-[50%]">
             <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
-              <span className="text-[#171A1F] font-[500] text-[2.5rem]">
+              <span className="text-[#171A1F] font-[500] text-[1.8rem]">
                 The Future is Remote
               </span>
               <span className="">
               Strategic management formulates and implements major goals and initiatives.
               </span>
               <div className="w-[100%] flex justify-end">
-                <span className="text-[#00BDD6]">Learn More... </span>
+              <a
+                  href="#"
+                  onClick={(event) => handleClick(event, "Future is Remote")}
+                  className="text-[#00BDD6] cursor-pointer"
+                >
+                  Learn More...
+                </a>
               </div>
             </div>
             <div className="sm:w-100% w-[30.75rem] h-[13rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
-              <span className="text-[#171A1F] font-[500] text-[2rem]">
+              <span className="text-[#171A1F] font-[500] text-[1.8rem]">
               Managing  remote culture
               </span>
               <span className="">
               Four activities for financial health: planning, budgeting, integrated financial planning, and performance management.
               </span>
               <div className="w-[100%] flex justify-end">
-                <span className="text-[#00BDD6]">Learn More... </span>
+              <a
+                  href="#"
+                  onClick={(event) => handleClick(event, "Managing Remote Culture")}
+                  className="text-[#00BDD6] cursor-pointer"
+                >
+                  Learn More...
+                </a>
               </div>
             </div>
             <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
-              <span className="text-[#171A1F] font-[500] text-[2.5rem]">
-              Baobabpad Remotelly Hybrid
+              <span className="text-[#171A1F] font-[500] text-[1.8rem]">
+              Baobabpad Remotely Hybrid
               </span>
               <span className="">
                Ongoing support services provide assistance to customers for a limited period.
               </span>
               <div className="w-[100%]  flex justify-end">
-                <span className="text-[#00BDD6]">Learn More... </span>
+              <a
+                  href="#"
+                  onClick={(event) => handleClick(event, "Baobabpad Remotely Hybrid")}
+                  className="text-[#00BDD6] cursor-pointer"
+                >
+                  Learn More...
+                </a>
               </div>
             </div>
           </div>
-
-          <div className="w-full md:w-[50%] md:h-[50%] flex justify-center p-5">
-            <img src="/remote_second_image.png" alt="a guy smiling" />
+          <div
+            className="w-full md:w-[50%] md:h-[50%] flex justify-center p-5"
+            id="right-sub-section"
+          >
+            {componentVisible === "Managing Remote Culture" && <Managing_Remote />}
+            {componentVisible === "Future is Remote" && <Future_is_Remote/>}
+            {componentVisible === "Baobabpad Remotely Hybrid" && <Baobabpad_Remote_Hybrid />}
+            {!componentVisible && (
+              <img src="/introduction-solution-image.png" alt="a guy smiling" />
+            )}
           </div>
+          
         </section>
 
         <section className="flex flex-col md:flex-row items-center justify-center flex-wrap p-12 ">
