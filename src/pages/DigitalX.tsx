@@ -265,10 +265,7 @@ const DigitalX = () => {
             <p className="text-[3rem]">Gain insights from our cloud expert </p>
           </div>
           <div className="w-full md:w-[35%] flex-col justify-center m-1 ">
-            <p className="w-[70%]">
-              By carefully vetting and verifying each author, we ensure that our
-              authors are experienced in their respective fields.
-            </p>
+            
             <div className="bg-[#00BDD6]  flex flex-col justify-center  items-center text-white w-[65%]  p-2  rounded-[1rem]">
               <img src="jacob_mwale_tech_lead.jpg" alt="" className="w-[90%]" />
               <h3 className="text-[2rem]">Jacob Mwale</h3>

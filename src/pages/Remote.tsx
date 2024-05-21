@@ -190,36 +190,36 @@ const Remote = () => {
 
         <section id="2" className="flex mt-1 flex-col md:flex-row bg-[#00BDD6] flex-wrap justify-center items-center">
           <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 gap-x-12 text-[1.25rem] max-w-full md:max-w-[50%]">
-            <div className="sm:w-100% md:w-[30.75rem] w-[22rem]  md:h-[12.75rem]  h-[14.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+            <div className="sm:w-100% md:w-[30.75rem] w-[22rem]  md:h-[14.75rem]  h-[14.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] md:text-[2.5rem] text-[2rem]">
                 The Future is Remote
               </span>
               <span className="">
-              Strategic management formulates and implements major goals and initiatives.
+              Baobabpad recognizes that it is crucial to remain adaptable and responsive to the evolving needs and rights of its remote and or hybrid workforce.
               </span>
-              <div className="w-[100%] hidden md:flex justify-end">
+              <div className="w-[100%] hidden md:flex justify-end mt-4">
                 <span className="text-[#00BDD6]">Learn More... </span>
               </div>
             </div>
-            <div className="sm:w-100% md:w-[30.75rem] w-[22rem] h-[17rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+            <div className="sm:w-100% md:w-[30.75rem] w-[22rem] md:h-[19rem] h-[23rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] md:text-[2.5rem] text-[2rem]">
               Remote culture
               </span>
               <span className="">
-              Four activities for financial health: planning, budgeting, integrated financial planning, and performance management.
+              Nurturing a culture of accountability where employees take ownership of their work and leading by example.Setting expectations regarding communication responsiveness including meeting attendance punctuality and encouraging participation from all employees.
               </span>
               <div className="w-[100%] hidden md:flex justify-end">
                 <span className="text-[#00BDD6]">Learn More... </span>
               </div>
             </div>
-            <div className="sm:w-100% md:w-[30.75rem] w-[22rem] md:h-[12.75rem] h-[15.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+            <div className="sm:w-100% md:w-[30.75rem] w-[22rem] md:h-[18.75rem] h-[20.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] md:text-[2.5rem] text-[2rem]">
               Remotely Hybrid
               </span>
               <span className="">
-               Ongoing support services provide assistance to customers for a limited period.
+              Establishing clear goals, priorities, and deadlines for remote teams. Utilizing project management tools to track progress and allocate tasks efficiently. Implementing flexible scheduling to accommodate different time zones and individual preferences.
               </span>
-              <div className="w-[100%] hidden md:flex justify-end">
+              <div className="w-[100%] hidden md:flex justify-end mt-3">
                 <span className="text-[#00BDD6]">Learn More... </span>
               </div>
             </div>
@@ -281,11 +281,7 @@ const Remote = () => {
             <p className="text-[3rem]">Gain insights from our remote expert </p>
           </div>
           <div className="w-full md:w-[35%] flex-col justify-center m-1 ">
-            <p className="w-[70%]">
-              
-              By carefully vetting and verifying each author, we ensure that our
-              authors are experienced in their respective fields.
-            </p>
+            
             <div className="bg-[#00BDD6]  flex flex-col justify-center  items-center text-white w-[65%]  p-2  rounded-[1rem]">
               <img src="/selma_h.png" alt="" className="w-[90%]" />
               <h3 className="text-[2rem]">Selma H.</h3>

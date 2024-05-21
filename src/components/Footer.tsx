@@ -14,8 +14,8 @@ const navLinks: NavLink[] = [
   { id: "tfgbuyhejni3m", label: "Baobabpad", href: "/Baobabpad" },
   { id: "4389hunref", label: "Solutions", href: "/Solutions" },
   { id: "9ol,ytgrer", label: "Careers", href: "/Careers" },
-  { id: "buh43jnadsgqwe", label: "Try for free", href: "/Businessform" },
-  { id: "akljhqkjwebr", label: "Login", href: "/LoginForm" },
+  { id: "buh43jnadsgqwe", label: "Try for free", href: "/Subscription" },
+  { id: "akljhqkjwebr", label: "Login", href: "/login" },
 ];
 
 interface FooterProps {}
@@ -73,8 +73,8 @@ const Footer: React.FC<FooterProps> = () => {
            </div>
            <div className="flex flex-col">
             <a href="/Careers" className="hover:text-gray-300 ">Careers</a>
-            <a  href="/Businessform" className="hover:text-gray-300">Try for free</a>
-            <a  href="/LoginForm" className="hover:text-gray-300">Login</a>
+            <a  href="/Subscription" className="hover:text-gray-300">Try for free</a>
+            <a  href="/login" className="hover:text-gray-300">Login</a>
            </div>
           </div>
           
