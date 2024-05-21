@@ -524,19 +524,26 @@ const Baobabpad = () => {
            </div>
            */}  
 
-           <div className="flex justify-center  flex-wrap gap-x-4 gap-y-11 w-[90%] mx-auto mb-11 mt-[4rem]">
-             <div className=" hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer">
-             < CiPlay1  className="text-[2rem] text-[#000] absolute  "/>
-                <img src="/our-village-image1.png" alt="woman smiling photo 2" className="w-[32rem] h-[25rem] "  />
-             </div>
-              <div className=" hover:transform hover:scale-110 transition-transform duration-300 hover:cursor-pointer">
-              < CiPlay1  className="text-[2rem] text-[#000] absolute  "/>      
-                <img src="/our-village-Image.png" alt="woman smiling photo 1" className="w-[32rem] h-[25rem] " />
-              </div>
-          
-                
-           </div>
+<div className="md:flex gap-8 w-[80%] mx-auto mt-11 ">
+        
+          <iframe
+            className="w-[50rem] h-[18rem] mx-auto"
+            src="Blenda-video.mp4 "
+            
+            title="Google Drive video player"
+            allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            
+          >1</iframe>
+        
+        
+      </div>
 
+      <div className="md:flex gap-8 w-[80%] mx-auto mt-5 mb-11">
+       
+
+      
+      </div>
 
 
 

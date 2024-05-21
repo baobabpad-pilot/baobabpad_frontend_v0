@@ -110,7 +110,7 @@ const Client = () => {
               </span>
             </div>
             <p className="md:text-[3rem] text-[1.8rem] text-center">Building Strategic Partnerships </p>
-            <p className="md:text-[1.875rem] text-[1.3rem] text-center">
+            <p className="md:text-[1.875rem] text-[1.3rem] text-left">
               End to end client support infrastructure built to empower
               technology for operational improvement and creating long-term
               growth.
@@ -239,13 +239,10 @@ const Client = () => {
             <p className="text-[3rem]">Gain insights from our expert. </p>
           </div>
           <div className="w-full md:w-[35%] flex-col justify-center m-1 ">
-            <p className="w-[70%]">
-              By carefully vetting and verifying each author, we ensure that our
-              authors are experienced in their respective fields.
-            </p>
+            
             <div className="bg-[#00BDD6]  flex flex-col justify-center  items-center text-white w-[65%]  p-2  rounded-[1rem]">
               <img src="jacob_mwale_tech_lead.jpg" alt="" className="w-[90%]" />
-              <h3 className="text-[2rem]">JRichson Simba</h3>
+              <h3 className="text-[2rem]">Jacob Mwale</h3>
               <p className="w-[90%]">
                 Full stack software engineer with a strong foundation in data
                 structures and algorithms.

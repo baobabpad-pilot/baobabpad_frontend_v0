@@ -26,7 +26,7 @@ const Reviews = () => {
 
   return (
     <div>
-    <div className="hidden w-full md:w-[100%] mt-1 md:h-[50vh] md:flex flex-col bg-[#00BDD6] items-center p-5 gap-5 ">
+    <div className="hidden w-full md:w-[100%] mt-1 md:h-[60vh] md:flex flex-col bg-[#00BDD6] items-center p-5 gap-5 ">
     <h3 className="text-white text-2xl font-semibold mb-4">Reviews</h3>
     
     {/* Review slider */}

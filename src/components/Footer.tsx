@@ -63,7 +63,7 @@ const Footer: React.FC<FooterProps> = () => {
             ))}
           </ul>
 
-          <div className="md:hidden grid grid-cols-2 gap-40 sm:items-center pl-4 md:pl-0  text-gray-400   px-1 mb-2 ">
+          <div className="md:hidden grid grid-cols-2 gap-[7rem] sm:items-center pl-4 md:pl-0  text-gray-400   px-1 mb-2 ">
             
             {/*<h3 className="font-semibold mb-2 md:hidden">Navigation</h3>*/}
            <div className="flex flex-col ">

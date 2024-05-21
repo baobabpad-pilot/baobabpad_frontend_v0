@@ -240,31 +240,6 @@ const Careers = () => {
       </div>
 
       <div className="md:flex gap-8 w-[80%] mx-auto mt-5 mb-11">
-        <div
-          className="flex-auto w-46"
-          style={{ height: "200px", marginRight: "5px" }}
-        >
-           <iframe
-            className="w-full h-full"
-            src="https://drive.google.com/file/d/1nhnhYopT172YPmDfpiNit4YdCEixEkx4/preview"
-            title="Google Drive video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          >3</iframe>
-        </div>
-
-        <div
-          className="flex-auto w-46 md:mt-0 mt-5"
-          style={{ height: "200px", marginRight: "5px" }}
-        >
-           <iframe
-            className="w-full h-full"
-            src="https://drive.google.com/file/d/1SAkENMU536n9lh9cbPFE8mr_6zBdRc1G/preview"
-            title="Google Drive video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          >2</iframe>
-        </div>
       
       </div>
       {/*End of stories*/}
