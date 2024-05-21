@@ -197,9 +197,11 @@ const Remote = () => {
               <span className="">
               Baobabpad recognizes that it is crucial to remain adaptable and responsive to the evolving needs and rights of its remote and or hybrid workforce.
               </span>
+              {/* 
               <div className="w-[100%] hidden md:flex justify-end mt-4">
                 <span className="text-[#00BDD6]">Learn More... </span>
               </div>
+              */}
             </div>
             <div className="sm:w-100% md:w-[30.75rem] w-[22rem] md:h-[19rem] h-[23rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] md:text-[2.5rem] text-[2rem]">
@@ -208,9 +210,11 @@ const Remote = () => {
               <span className="">
               Nurturing a culture of accountability where employees take ownership of their work and leading by example.Setting expectations regarding communication responsiveness including meeting attendance punctuality and encouraging participation from all employees.
               </span>
+              {/* 
               <div className="w-[100%] hidden md:flex justify-end">
                 <span className="text-[#00BDD6]">Learn More... </span>
               </div>
+              */}
             </div>
             <div className="sm:w-100% md:w-[30.75rem] w-[22rem] md:h-[18.75rem] h-[20.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] md:text-[2.5rem] text-[2rem]">
@@ -219,9 +223,11 @@ const Remote = () => {
               <span className="">
               Establishing clear goals, priorities, and deadlines for remote teams. Utilizing project management tools to track progress and allocate tasks efficiently. Implementing flexible scheduling to accommodate different time zones and individual preferences.
               </span>
+              {/*
               <div className="w-[100%] hidden md:flex justify-end mt-3">
                 <span className="text-[#00BDD6]">Learn More... </span>
               </div>
+               */}
             </div>
           </div>
 

@@ -157,6 +157,7 @@ const DigitalX = () => {
               Cloud computing offers a couple of benefits that are particularly relevant to
               Baobabpad's mission.
               </span>
+              {/* 
               <div className="w-[100%] hidden md:flex justify-end">
                 <a
                   href="#"
@@ -166,6 +167,7 @@ const DigitalX = () => {
                   Learn More...
                 </a>
               </div>
+              */}
             </div>
 
             <div className="sm:w-100% md:w-[30.75rem] w-[22rem] md:h-[18.75rem] h-[20.75rem]  bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
@@ -176,6 +178,7 @@ const DigitalX = () => {
                In today's digital landscape, the realm of technology is evolving at breaneck speed. Companies, regardless of size or indusrty , are constantly seeking ways to streamline operations,enhance scalability
                , and ensure data security.
               </span>
+              {/* 
               <div className="w-[100%] hidden md:flex justify-end">
                 <a
                   href="#"
@@ -185,6 +188,7 @@ const DigitalX = () => {
                   Learn More...
                 </a>
               </div>
+              */}
             </div>
             <div className="sm:w-100% md:w-[30.75rem] w-[22rem] md:h-[15.75rem] h-[17.75rem]  bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] text-[2.5rem]">
@@ -193,6 +197,7 @@ const DigitalX = () => {
               <span className="">
                Cloud base,often termed" cloud infrastructure," stands as digital bedrock powering Baobabpad's mission to elevate African teck talent and foster global partnerships.
               </span>
+              {/* 
               <div className="w-[100%] hidden md:flex justify-end">
                 <a
                   href="#"
@@ -202,6 +207,7 @@ const DigitalX = () => {
                   Learn More...
                 </a>
               </div>
+              */}
             </div>
           </div>
 

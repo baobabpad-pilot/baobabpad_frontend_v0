@@ -153,9 +153,11 @@ const Client = () => {
               <span className="">
               This solutions is included in the annual membership, which allows you access services without recurring cost.
               </span>
+              {/* 
               <div  className="w-[100%] hidden md:flex justify-end">
                 <span className="text-[#00BDD6]">Learn More... </span>
               </div>
+              */}
             </div>
             <div className="sm:w-100%  md:w-[30.75rem] w-[22rem] md:h-[12.75rem] h-[15.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] md:text-[2.5rem] text-[2rem]">
@@ -164,9 +166,11 @@ const Client = () => {
               <span className="">
               Our services for client support empowers our clients to manage time zones seamlessly, making it easy to communicate and work in real time with our team.
               </span>
+              {/* 
               <div className="w-[100%] hidden md:flex justify-end">
                 <span className="text-[#00BDD6]">Learn More... </span>
               </div>
+              */}
             </div>
             <div className="sm:w-100%  md:w-[30.75rem] w-[22rem] md:h-[12.75rem] h-[14.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] md:text-[2.5rem] text-[2rem]">
@@ -175,9 +179,11 @@ const Client = () => {
               <span className="">
               We empower our clients with recurring annual support on their digital infrastructure without costs.
               </span>
+              {/* 
               <div className="w-[100%] hidden md:flex justify-end">
                 <span className="text-[#00BDD6]">Learn More... </span>
               </div>
+              */}
             </div>
           </div>
 

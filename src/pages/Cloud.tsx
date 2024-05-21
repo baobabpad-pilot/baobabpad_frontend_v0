@@ -161,6 +161,7 @@ const Cloud = () => {
                startups can ship product without much bureaucracy.
                
               </span>
+            {/* 
               <div className="w-[100%] hidden md:flex justify-end">
               <a
                   href="#"
@@ -170,6 +171,7 @@ const Cloud = () => {
                   Learn More...
                 </a>
               </div>
+              */}
             </div>
             <div className="sm:w-100% md:w-[30.75rem] w-[22rem] md:h-[12.75rem] h-[14.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] md:text-[1.8rem] text-[1.6rem]">
@@ -178,6 +180,7 @@ const Cloud = () => {
               <span className="">
               It highlights the paradigm shift machine learning represents and its  application beyond software products.
               </span>
+              {/* 
               <div className="w-[100%] hidden md:flex justify-end">
               <a
                   href="#"
@@ -187,6 +190,7 @@ const Cloud = () => {
                   Learn More...
                 </a>
               </div>
+              */}
             </div>
             <div className="sm:w-100% md:w-[30.75rem] w-[22rem] md:h-[12.75rem] h-[17.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
               <span className="text-[#171A1F] font-[500] md:text-[1.8rem] text-[1.4rem]">
@@ -195,6 +199,7 @@ const Cloud = () => {
               <span className="">
               Integrating Generative AI ~AI21 Labs models for businesses can boost SEO quality and efficiency by optimizing page rank on the first page when rank on the first page when you search.
               </span>
+              {/*
               <div className="w-[100%] hidden md:flex justify-end">
               <a
                   href="#"
@@ -204,6 +209,7 @@ const Cloud = () => {
                   Learn More...
                 </a>
               </div>
+               */}
             </div>
           </div>
 
