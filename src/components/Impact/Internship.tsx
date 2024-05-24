@@ -1,10 +1,20 @@
 import Layout from "@/components/Layout";
+import React, { useState } from "react";
 import Accordion  from "@/components/Impact/Accordion"
 import { MdOutlineQuestionMark } from "react-icons/md";
 import Link from 'next/link';
+import Intern_story from "@/components/stories/Intern_story";
 
 
 const Internship = () => {
+
+    const [componentVisible, setComponentVisible] = useState(null);
+
+
+    const handleClick = (event:any, componentName:any) => {
+      event.preventDefault();
+      setComponentVisible(componentName);
+    };
    
     return ( 
         <>
@@ -35,32 +45,30 @@ const Internship = () => {
              </div>
              {/*second part*/}
                 <div className=" flex gap-[10%] w-[90%] mx-auto my-11">
-                    {/*left part*/}
-                    <div className=" p-2 w-[60%] ">
-                        <p>
-                           Objectives of the virtual internship program are providing hands-on experience in software
-                           development, fostering diversity and inclusion in the tech industry, and empowering young women in technology in Africa. Baobabpad selects pilot projects or ongoing projects within the organization that offer meaningful learning experiences for interns. These projects offer remote collaboration and aligned with interns' learning goals.
 
-                            <span className="">
-                                <img src="Pascaline 1.png" alt="" className="w-[60%] mx-auto rounded-sm my-2"  />
-                            </span>
-                            Baobabpad then develops a structured curriculum that outlines the skills, tools, and technologies interns will learn during the program. Incorporated in it is a mix of technical training, mentorship, and project-based learning to enhance interns' software development capabilities.  Experienced supervisors are assigned to interns to guide them throughout the program. They also provide ongoing support, feedback, and guidance to help interns navigate their projects and career development. Regular monitoring of interns' progress and performance is conducted throughout the program. Interns are given opportunities to showcase their work, receive feedback, and address any challenges they encounter during project implementation.
-                            <span>
-                                <img src="intern2.png" alt="intern2" className="w-[100%] mx-auto rounded-sm my-5" />
-                            </span>
-                        </p>
+                    {/*left part with stories*/}
+                    <div className="w-[60%]">
+                       {componentVisible === "Intern_story" && <Intern_story />}
+                       {!componentVisible && (
+                       <img src="/intern2.png" alt="a lady" className="rounded-lg " />
+                        )}
                     </div>
                     {/*right part*/}
                     <div className="w-[40%]">
                         <h1 className="text-2xl  py-2 mb-6">Success stories</h1>
                         <div className="border-t border-b border-gray-500">
-                            <h2 className="font-bold mb-8 ">
-                                Internship journey insights for female graduates.
+                            <a 
+                             href="#"
+                             onClick={(event) => handleClick(event, "Intern_story")} >
+                            <h2 className="font-bold mb-8 hover hover:text-blue-600 ">
+                            Internship Journey by Pascaline 
                             </h2>
+                            </a>
                             <p className="text-sm text-gray-500">
                                 5 min read
                             </p>
                         </div>
+                        {/* 
                         <div className=" border-b border-gray-500">
                             <h2 className="font-bold mb-8 ">
                                From grad to growth, a pathway for virtual internship program
@@ -93,8 +101,9 @@ const Internship = () => {
                                 5 min read
                             </p>
                         </div>
-
+                        */}
                     </div>
+                    
 
                 </div>
                 {/*QUESTION PART*/}
