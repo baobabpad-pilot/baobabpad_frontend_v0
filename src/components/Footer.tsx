@@ -85,10 +85,10 @@ const Footer: React.FC<FooterProps> = () => {
           <div className="flex md:order-1">
             <p className="text-sm text-center md:text-left">
               © 2024 Baobabpad
-              <a href="#" className="hover:underline px-2">
+              <a href="/Terms" className="hover:underline px-2">
                 Privacy
               </a>
-              <a href="#" className="hover:underline px-2">
+              <a href="/Terms" className="hover:underline px-2">
                 Terms
               </a>
               <a href="#" className="hover:underline px-2">
