@@ -3,7 +3,7 @@ import Accordion  from "@/components/Impact/Accordion"
 import { MdOutlineQuestionMark } from "react-icons/md";
 import Link from 'next/link';
 import React, { useState } from "react";
-import Mentor_story from "@/components/stories/Mentor_story";
+import Growth_mentorship from "@/components/stories/Growth_mentorship";
 
 
 const Mentorship = () => {
@@ -40,63 +40,31 @@ const Mentorship = () => {
                 <div className="h-5"></div>
              </div>
              {/*second part*/}
-                <div className=" flex gap-[10%] w-[90%] mx-auto my-11">
+                <div className=" flex gap-[5%] w-[90%] mx-auto my-11">
                     {/*left part with stories*/}
-                    <div className="w-[60%]">
-                       {componentVisible === "Intern_story" && <Mentor_story />}
+                    <div className="w-[70%]">
+                       {componentVisible === "Growth_mentorship" && <Growth_mentorship />}
                        {!componentVisible && (
                        <img src="/mentor1.png" alt="mentor" className="rounded-lg " />
                         )}
                     </div>
                     
                     {/*right part*/}
-                    <div className="w-[40%]">
+                    <div className="w-[30%]">
                         <h1 className="text-2xl  py-2 mb-6">Success stories</h1>
                         <div className="border-t border-b border-gray-500">
                            <a 
                                href="#"
-                               onClick={(event) => handleClick(event, "Intern_story")} 
+                               onClick={(event) => handleClick(event, "Growth_mentorship")} 
                                className="font-bold mb-8 hover hover:text-blue-600">
-                                How expert-based mentorship is executed.
+                                Growth Mentorship Program.
                             </a>
                             <p className="text-sm text-gray-500 mt-8">
                                 5 min read
                             </p>
                         </div>
-                        {/*
-                        <div className=" border-b border-gray-500">
-                            <a href="#" className="font-bold mb-8 ">
-                               Mentorship for Growth opportunities 
-                            </a>
-                            <p className="text-sm text-gray-500 mt-8">
-                                5 min read
-                            </p>
-                        </div>
-                        <div className=" border-b border-gray-500">
-                            <a href="#" className="font-bold mb-8">
-                               Why growth mentorship is important for Baobabpad 
-                            </a>
-                            <p className="text-sm text-gray-500 mt-8">
-                                5 min read
-                            </p>
-                        </div>
-                        <div className=" border-b border-gray-500">
-                            <a href="#" className="font-bold mb-8">
-                            What's in it for Baobabpad mentors? 
-                            </a>
-                            <p className="text-sm text-gray-500 mt-8">
-                                5 min read
-                            </p>
-                        </div>
-                        <div className=" border-b border-gray-500">
-                            <a href="#" className="font-bold mb-8">
-                             Baobabpad International Mentorship Day 
-                            </a>
-                            <p className="text-sm text-gray-500 mt">
-                                5 min read
-                            </p>
-                        </div>
-                         */}
+                       
+                        
 
                     </div>
 
@@ -112,20 +80,20 @@ const Mentorship = () => {
                     <div className="py-4 ">
                       <Accordion
                           title="How can I get a mentor?"
-                          answer="-----------------------------"
+                          answer=" Mentors are allocated based on mutual growth mindset and leadership goals  between professionals and mentors."
                           
                       />
                       <Accordion
                           title="What's in it for mentors?"
-                          answer="-------------------------------"
+                          answer="Mentors in Baobabpad are part of the community and social impact."
                       />
                       <Accordion
                        title="What are the thematic mentorship areas?"
-                       answer="----------------------------------" 
+                       answer="Baobabpad mentorship program thematic areas are: Growth mindset, leadership drive, women leadership, Impact and business innovation. " 
                        />
                         <Accordion
                        title="Why mentorship is important for remotely work?"
-                       answer="----------------------------------" 
+                       answer="Working remotely and virtually could be mentally tasking, our Mentors provide professional guidance and advice for growth." 
                        />
                        
                     </div>

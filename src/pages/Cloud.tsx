@@ -50,19 +50,19 @@ const Cloud = () => {
   const faqs:FAQItem[] = [
     {
       question: 'What is the best environment for launching AI models?',
-      answer: '..................',
+      answer: ' With a saved model, depending on the application and use case, eg speech commands for device control, or a language model on your own corporate data, utilization of local resources are more cost effective long term for text due to high memory usage, while for image and speech consumer level cloud servers may apply. Microcontrollers (Raspberry) can house image recognition models as well as transmitting data to cloud for processing in the presence of high bandwidth for more real time use cases.',
     },
     {
       question: 'How can we apply AI models in our Minimum Viable Product (MVP)?',
-      answer: '..................................',
+      answer: ' If your clients need to have a chat and get more detail about your company on your landing page, or your company has several branches overseas - there is a language barrier and you need real time translation during your correspondence,  or even you day to day company operations using image processing to detect faults in production, or you are in art and want to bring out other futuristic elements or mix various tastes/niches in your work, our text, image and speech models are the right ones for your MVP. ',
     },
     {
       question: 'How do I know which data is the right fit for launching AI in development operations?',
-      answer: '.................',
+      answer: ' A1 data always brings out A1 models. If your images are well labeled showing the various attributes, your text is well structured in question answer format and proper labelled from themes to sub-themes, if the speech has a mix of day to day operation level/varying dialect sound (with colloquial interjections) and pure studio level/noiseless sound with the right text to speech matching for the shortened audio clips, if your numerical data does not have some missing data in some columns and is well, and most of all, you have as much (there can never be enough, accuracy can always improve) then your data is ripe for development operations. ',
     },
     {
-      question: 'How do I know which data is the right fit for launching AI in development operations?',
-      answer: '...............................',
+      question: 'What are the considerations for deploying AI models in regulated industries, such as finance or social services, to ensure compliance with industry standards?',
+      answer: ' Purpose limitation by virtue of a clear definitions of the objective outcomes of the model training and deployment process, Transparency and user consent - where in use of personal data explicit consent is provided with the use cases well defined, Data protection impact assessments (DPIA):where the risks on the data subjects rights and freedoms are well assessed, Data security and storage on proper encryption methods both in storage and transmission, Vendor and third-party management interacting with the training and deployment on regulatory compliance, and Ongoing monitoring and auditing of the model with respect to regulatory changes.',
     },
   ];
 

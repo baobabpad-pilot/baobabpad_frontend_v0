@@ -4,6 +4,7 @@ import Accordion  from "@/components/Impact/Accordion"
 import { MdOutlineQuestionMark } from "react-icons/md";
 import Link from 'next/link';
 import Intern_story from "@/components/stories/Intern_story";
+import Second_intern_story from "../stories/Second_intern_story";
 
 
 const Internship = () => {
@@ -49,6 +50,7 @@ const Internship = () => {
                     {/*left part with stories*/}
                     <div className="w-[60%]">
                        {componentVisible === "Intern_story" && <Intern_story />}
+                       {componentVisible === "Second_intern_story" && <Second_intern_story />}
                        {!componentVisible && (
                        <img src="/intern2.png" alt="a lady" className="rounded-lg " />
                         )}
@@ -68,40 +70,22 @@ const Internship = () => {
                                 5 min read
                             </p>
                         </div>
-                        {/* 
-                        <div className=" border-b border-gray-500">
-                            <h2 className="font-bold mb-8 ">
-                               From grad to growth, a pathway for virtual internship program
+                        {/*Second story */}
+                        <div className="border-t border-b border-gray-500">
+                            <a 
+                             href="#"
+                             onClick={(event) => handleClick(event, "Second_intern_story")} >
+                            <h2 className="font-bold mb-8 hover hover:text-blue-600 ">
+                             From grad to growth, a pathway for virtual internship program 
                             </h2>
+                            </a>
                             <p className="text-sm text-gray-500">
-                                5 min read
+                                7 min read
                             </p>
                         </div>
-                        <div className=" border-b border-gray-500">
-                            <h2 className="font-bold mb-8">
-                               Empowering social and economic inclusion for girls in tech
-                            </h2>
-                            <p className="text-sm text-gray-500">
-                                5 min read
-                            </p>
-                        </div>
-                        <div className=" border-b border-gray-500">
-                            <h2 className="font-bold mb-8">
-                            The future of tech is Africa young women and girls 
-                            </h2>
-                            <p className="text-sm text-gray-500">
-                                5 min read
-                            </p>
-                        </div>
-                        <div className=" border-b border-gray-500">
-                            <h2 className="font-bold mb-8">
-                            The virtual internship program impact and opportunities  
-                            </h2>
-                            <p className="text-sm text-gray-500">
-                                5 min read
-                            </p>
-                        </div>
-                        */}
+
+
+                        {/*End ofSecond story */}
                     </div>
                     
 
@@ -117,20 +101,20 @@ const Internship = () => {
                     <div className="py-4 ">
                       <Accordion
                           title="Who is eligible to apply for the virtual internship program?"
-                          answer="-----------------------------"
+                          answer=" Baobabpad's program offers a strong foundation for interns to gain valuable skills and experience in software development, with a key focus for girls & women in tech. "
                           
                       />
                       <Accordion
                           title="How is the recruitment and selection of interns conducted?"
-                          answer="-------------------------------"
+                          answer=" Baobabpad application for recruitment and selection of interns is open for all between 0 to 1 year of experience. The recruitment and selection process is easy, signing through social media auth, followed by one to one interview and then feedback."
                       />
                       <Accordion
                        title="What are the professional  opportunities after the internship program?"
-                       answer="----------------------------------" 
+                       answer=" After an internship program, based on performance, passion and growth mindset indicators, interns are given an opportunity to be part of the equity ownership in Baobabpad" 
                        />
                         <Accordion
                        title="In the internship a paid internship program?"
-                       answer="----------------------------------" 
+                       answer="Yes and No. Interns will be given a stipend for internet access to facilitate their continuous learning remotely. " 
                        />
                        
                     </div>

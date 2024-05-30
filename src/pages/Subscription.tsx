@@ -94,20 +94,20 @@ const Subscription = () => {
             </div>
 
             {/*End of triangles*/}
-            <div className=" flex gap-1  md:w-[50%] w-[80%] mx-auto mt-[3rem] ">
-             {/*   
+            <div className=" flex gap-1  md:w-[60%] w-[80%] mx-auto mt-[3rem] ">
+                
             <input type="checkbox" id="checkboxId" name="checkboxName" value="checkboxValue" className="size-6"/>
-            */} 
+           
             <label id="checkboxId"className="text-center md:flex gap-2">By clicking the continue button, you agree to our
-               <div className="flex gap-2 md:ml-1 ml-2">
-              <a href="#1" className=" hover hover:text-[#00BDD6]">terms,</a>
-              <a href="#1" className=" hover hover:text-[#00BDD6]">conditions</a> and
-              <a href="#1" className=" hover hover:text-[#00BDD6]">privacy policy.</a>
-              </div>
-              </label> 
+                <a href="/Terms" className="hover hover:text-[#00BDD6]">
+                <span className="flex gap-2 md:ml-1 ml-2">
+                  terms, conditions and privacy policy.
+                </span>
+                </a>
+            </label> 
             </div>
 
-            <div className="text-center mt-[3rem]">
+            <div id="1" className="text-center mt-[3rem]">
                 <button className="bg-[#00BDD6] text-white rounded-md md:w-[25rem] w-[15rem] h-[3rem] mx-auto hover:bg-[#314e52] "
                   onClick={() => setIsVisible(!isVisible) }>
                 Continue
