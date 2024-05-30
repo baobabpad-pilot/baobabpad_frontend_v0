@@ -29,7 +29,7 @@ const Terms = () => {
                 {/*top division */}
                 <div className="grid md:grid-cols-2 gap-5 bg-[#12BC7E] md:h-[20rem] h-[30rem] p-4 rounded-lg">
                     <div className="h-[70%] my-auto w-[60%] mx-auto">
-                        <h1 className="font-bold text-3xl">Term of Service</h1>
+                        <h1 className="font-bold text-3xl">Terms of Service</h1>
                         <p className="py-3 font-medium">Read our terms below to learn more about your rights and responsibilities</p>
                     </div>
                     <div className="flex md:w-[100%]">
@@ -167,7 +167,7 @@ const Terms = () => {
                  {/*last part with buttons */}
                  <div className="md:flex justify-between w-[90%] mx-auto my-[2rem] md:h-[2.5rem] h-[8rem] ">
                     
-                    <a  href="/Terms.pdf" download="Term of service.pdf"  className=" download-button flex gap-1  text-blue-500 bg-white rounded-lg px-2 py-2 items-center hover  hover:text-blue-900 md:w-[15%] w-[50%] md:mb-0 mb-[2rem] md:mx-0 mx-auto border border-gray-200"><MdOutlineFileDownload className="text-blue-500 ml-2"/>
+                    <a  href="/Terms.pdf" download="Baobabpad's Terms of service.pdf"  className=" download-button flex gap-1  text-blue-500 bg-white rounded-lg px-2 py-2 items-center hover  hover:text-blue-900 md:w-[15%] w-[50%] md:mb-0 mb-[2rem] md:mx-0 mx-auto border border-gray-200"><MdOutlineFileDownload className="text-blue-500 ml-2"/>
                         <span className="mr-3 mb-1 text-sm">Download PDF</span>
                     </a>
 
