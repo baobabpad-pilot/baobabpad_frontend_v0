@@ -43,7 +43,7 @@ const Terms = () => {
                             <h2 className="w-[90%] mx-auto mt-2">Compliant </h2>
                             <div className="flex mt-2 ">
                             <button className="flex gap-1 h-[13%] text-white bg-[#FFC414] rounded-lg px-2 items-center ml-[-5.2rem]"><FaCheck className="text-white rounded-full size-3 ml-2 mt-1 border border-white mb-1"/>
-                        <span className="mr-3 mb-1 text-sm">Accept</span>
+                        <span className="mr-3 mb-1 text-sm md:mt-0 mt-[0.1rem]">Accept</span>
                         </button>
                            
                             <div className="w-[90%] mx-auto">
@@ -58,7 +58,7 @@ const Terms = () => {
 
                         </div>
                         <button className="flex gap-1 h-[10%] text-black bg-white rounded-lg px-2 items-center mt-[6.4rem] md:ml-[-15rem] ml-[-3rem]"><MdOutlineFileDownload className="text-blue-500"/>
-                        <span className="mr-3 mb-1 text-sm">Download</span>
+                        <span className="mr-3 md:mb-1 mb-0 text-sm ">Download</span>
                         </button>
                     </div>
 
@@ -104,8 +104,9 @@ const Terms = () => {
                     </div>
 
                     {/* Five Policy for small size screen */}
-                    <div className=" lg:hidden md:hidden border-2 border-gray-500 grid grid-cols-2 h-[8rem] mt-[1rem] rounded-lg py-[1rem]">
-                        <div className="grid grid-rows-3 gap-3 border-r-2 border-gray-500 pl-4">
+                    <div className=" lg:hidden md:hidden grid grid-rows-5  gap-[3.3rem] h-[6rem] mt-[2rem]
+                      bg-gray-100 rounded-l-lg  overflow-auto pl-8 py-2">
+                        
                         <a 
                          href="#"
                          onClick={(event) => handleClick(event, "Terms_condition")} 
@@ -124,8 +125,8 @@ const Terms = () => {
                          onClick={(event) => handleClick(event, "EULA_policy")} 
                         className="hover hover:text-green-600 font-medium">
                             <span>3. EULA Policy</span></a>
-                     </div>
-                     <div className="grid grid-rows-2 gap-3 pl-4">
+                     
+                    
                         <a  
                           href="#"
                           onClick={(event) => handleClick(event, "Refund_policy")} 
@@ -138,7 +139,7 @@ const Terms = () => {
                           className="hover hover:text-green-600 font-medium">
                             <span>5. Cookie Policy</span>
                         </a>
-                        </div>
+                       
 
                     </div>
 
@@ -155,8 +156,8 @@ const Terms = () => {
                     {componentVisible === "Refund_policy" && <Refund_policy />}
                     {componentVisible === "Cookie_policy" && <Cookie_policy />}
                        {!componentVisible && (
-                          <div className="h-[28rem] bg-gray-200 border border-gray-500 rounded-lg items-center">
-                            <h1 className="text-3xl font medium text-center my-auto md:mt-[24%] mt-[38%] text-gray-700">Understand our Terms of Service</h1>
+                          <div className="md:h-[28rem]  h-[12rem] mt-[3rem] border border-gray-100 rounded-lg items-center opacity-30 md:pt-0 pt-4 ">
+                           <img src="logo.png" alt="logo" />
 
                           </div>
                         )}

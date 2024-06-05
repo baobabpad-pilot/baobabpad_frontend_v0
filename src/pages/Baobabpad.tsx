@@ -568,7 +568,7 @@ const Baobabpad = () => {
                 <img src="/pascaline-colored.jpg" alt="Pascaline's photo"  className="w-[19rem] mx-auto " />
                   {/* Link to Internship page */}
                 <Link  href="#Internship" className="display-none " onClick={toggleInternship}>
-                 <span className="text-[1.5rem] font-bold hover hover:text-[#00BDD6] "><p className="text-center">Virtual Intership Program </p></span>
+                 <span className="text-[1.5rem] font-bold hover hover:text-[#00BDD6] "><p className="text-center">Virtual Internship Program </p></span>
                 </Link>
                 {showIntern && <Internship />}
             
@@ -626,7 +626,7 @@ const Baobabpad = () => {
                   </div>
                   <div className="mt-7">
                   <Link href="https://naturebacked.com/episode/how-to-fix-carbon-markets-with-kenny-kaluiji" className="mt-4">
-                  <span className="text-xl font-medium text-gray-800 mt-11 hover hover:text-[#00BDD6] h-[40%] my-auto">Nature Backend</span>
+                  <span className="text-xl font-medium text-gray-800 mt-11 hover hover:text-[#00BDD6] h-[40%] my-auto">Nature Backed</span>
                   </Link>
                   </div>
                
