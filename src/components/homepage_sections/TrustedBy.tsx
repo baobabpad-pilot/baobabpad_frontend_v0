@@ -1,93 +1,74 @@
 import React from "react";
 import Image from "next/image";
 
+
 const TrustedBy = () => {
   return (
-    <div className="my-12 py-12 px-32 grid grid-cols-3 gap-2">
-      <div className="col-span-1 border-y-8 border-[#C5D1F7] py-4 flex flex-col gap-8 rounded-xl text-center">
-        <h4>Our Partners</h4>
+    <div className=" py-3 lg:px-32 px-8 ">
+      {/*<div className="col-span-1 border-y-8 border-[#C5D1F7] py-4 flex flex-col gap-8 rounded-xl text-center">*/}
+        <h1 className="text-4xl font-medium py-4 mb-8">Trusted by</h1>
+        <h4 className="text-xl">Our Partners :</h4>
 
-        <div className="w-full grid grid-cols-3 gap-14">
-          <div className="relative h-12">
+     
+     <div className="lg:w-[90%] w-[100%] h-[40%] grid  gap-3 grid-row-2 lg:ml-[10%] h-100 ">
+          {/*Logos part 1 */}
+          <div className="grid grid-cols-3">
+          <div className="relative md:h-[8rem] h-[5rem] sm:mt-4 w-[100%] ">
             <Image
-              src={"/JLVINAR.png"}
+              src={"/Greentec.png"}
+              alt="Baobabpad logo"
+              layout="fill"
+            //   objectFit="cover"
+              
+            />
+          </div>
+          <div className="relative md:h-[8rem] h-[5rem] w-[50%] ml-[20%]">
+            <Image
+              src={"/OIP.png"}
               alt="Baobabpad logo"
               layout="fill"
             //   objectFit="cover"
               className="cursor-pointer  z-10"
             />
           </div>
-          <div className="relative">
+          <div className="relative md:h-[6rem] h-[3rem] mt-5 w-[60%] ">
             <Image
-              src={"/consectetur.png"}
+              src={"/Logo-WV.png"}
               alt="Baobabpad logo"
               layout="fill"
             //   objectFit="cover"
               className="cursor-pointer  z-10"
             />
           </div>
-          <div className="relative mt-4">
+          </div>
+
+          {/* logo part 2*/}
+          <div className="grid grid-cols-2 md:h-[10rem] h-[8rem]">
+          <div className="relative md:h-[6rem] h-[4rem] bg-black mt-5 w-[60%] md:ml-0 ml-7 rounded-md text-right">
             <Image
-              src={"/Bibendum.png"}
-              alt="Baobabpad logo"
+              src={"/diza.png"}
+              alt="diza"
               layout="fill"
-            //   objectFit="cover"  
-              className="cursor-pointer  z-10"
+            //   objectFit="cover"
+              className="cursor-pointer size-5  "
             />
           </div>
-        </div>
+
+          <div className="relative md:h-[6rem] h-[4rem] mt-5 w-[60%] border border-gray-400 rounded-md">
+            <Image
+              src={"/aws-logo.jpeg"}
+              alt="aws"
+              layout="fill"
+            //   objectFit="cover"
+              className="cursor-pointer size-5  "
+            />
+          </div>
+          </div>
+          
+          {/*</div>*/}
       </div>
 
-      <div className="col-span-2 border-y-8 border-[#A6F5FF] py-4 flex flex-col gap-8 rounded-xl text-center">
-        <h4>Our Customers</h4>
-        <div className="w-full grid grid-cols-5 gap-14">
-        <div className="relative h-12">
-            <Image
-              src={"/JLVINAR.png"}
-              alt="Baobabpad logo"
-              layout="fill"
-            //   objectFit="cover"
-              className="cursor-pointer  z-10"
-            />
-          </div>
-          <div className="relative">
-            <Image
-              src={"/consectetur.png"}
-              alt="Baobabpad logo"
-              layout="fill"
-            //   objectFit="cover"
-              className="cursor-pointer  z-10"
-            />
-          </div>
-          <div className="relative mt-4">
-            <Image
-              src={"/Bibendum.png"}
-              alt="Baobabpad logo"
-              layout="fill"
-            //   objectFit="cover"  
-              className="cursor-pointer  z-10"
-            />
-          </div>
-          <div className="relative h-12">
-            <Image
-              src={"/JLVINAR.png"}
-              alt="Baobabpad logo"
-              layout="fill"
-            //   objectFit="cover"
-              className="cursor-pointer  z-10"
-            />
-          </div>
-          <div className="relative">
-            <Image
-              src={"/consectetur.png"}
-              alt="Baobabpad logo"
-              layout="fill"
-            //   objectFit="cover"
-              className="cursor-pointer  z-10"
-            />
-          </div>
-        </div>
-      </div>
+      
     </div>
   );
 };

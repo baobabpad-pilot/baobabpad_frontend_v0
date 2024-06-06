@@ -4,9 +4,11 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import process from "process";
 import { SubmitHandler } from "react-hook-form";
+import { useRouter } from "next/router";
 
 
 const SignupForm = () => {
+  const router = useRouter();
   const loginSchema = yup.object().shape({
     email: yup.string().email().required("Email is required"),
     password: yup
@@ -43,9 +45,7 @@ const SignupForm = () => {
 
   const onSubmit: SubmitHandler<{ email: string; firstName: string, lastName:string, password: string , passwordConfirmation?:string; }> = async (data) => {
   try {
-    const url = process.env.NEXT_PUBLIC_BACKEND_URL + "register/";
-    console.log("Form values:", data); 
-    
+    const url = "https://baobabpad-334a8864da0e.herokuapp.com/api/email_signup/";
     const dataObject = {
       username: data.email,
       email: data.email,
@@ -68,7 +68,8 @@ const SignupForm = () => {
     }
     const responseData = await response.json();
     setAlertType("success");
-    setAlertMessage("Signup successful!"); // Set your success message here
+    setAlertMessage("Signup successful!");
+    router.push("/confirm_otp")
     return responseData;
   } catch (error:any) {
     setAlertType("error");
@@ -107,8 +108,8 @@ const SignupForm = () => {
         </div>
       )}
       {/* Input fields */}
-      <div className="mb-2">
-        <label className="block mb-1 text-sm" htmlFor="firstName">
+      <div className="mb-2 md:flex mt-4">
+        <label className="block mb-1 text-sm md:w-[20%] md:mr-5 " htmlFor="firstName">
           First Name:
         </label>
         <input
@@ -124,8 +125,8 @@ const SignupForm = () => {
           <p className="text-red-500 text-sm">{errors.firstName.message}</p>
         )}
       </div>
-      <div className="mb-2">
-        <label className="block mb-1 text-sm" htmlFor="lastName">
+      <div className="mb-2 md:flex mt-4">
+        <label className="block mb-1 text-sm md:w-[20%] md:mr-5" htmlFor="lastName">
           Last Name:
         </label>
         <input
@@ -143,8 +144,8 @@ const SignupForm = () => {
       </div>
       {/* Common fields */}
       {/* Repeat similar pattern for other fields */}
-      <div className="mb-2">
-        <label className="block mb-1 text-sm" htmlFor="email">
+      <div className="mb-2 md:flex mt-4">
+        <label className="block mb-1 text-sm md:w-[20%] md:mr-5" htmlFor="email">
           Email:
         </label>
         <input
@@ -160,8 +161,8 @@ const SignupForm = () => {
           <p className="text-red-500 text-sm">{errors.email.message}</p>
         )}
       </div>
-      <div className="mb-2">
-        <label className="block mb-1 text-sm" htmlFor="password">
+      <div className="mb-2 md:flex mt-4">
+        <label className="block mb-1 text-sm md:w-[20%] md:mr-5" htmlFor="password">
           Password:
         </label>
         <input
@@ -177,8 +178,8 @@ const SignupForm = () => {
           <p className="text-red-500 text-sm">{errors.password.message}</p>
         )}
       </div>
-      <div className="mb-4">
-        <label className="block mb-1 text-sm" htmlFor="passwordConfirmation">
+      <div className="mb-4 md:flex md:mt-4">
+        <label className="block mb-1 text-sm md:w-[20%] md:mr-2" htmlFor="passwordConfirmation">
           Password Confirmation:
         </label>
         <input

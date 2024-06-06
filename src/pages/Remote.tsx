@@ -1,8 +1,17 @@
+import Faq from "@/components/FAQs/Faq";
 import Layout from "@/components/Layout";
+import Reviews from "@/components/Reviews/Reviews";
+import SolutionNavbar from "@/components/SolutionsNavbar/SolutionNavbar";
+import Features from "@/components/features/Features";
+import Future_is_Remote from "@/components/remote_sections/Future_is_Remote";
+import Managing_Remote from "@/components/remote_sections/Managing_Remote";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { features } from "process";
 import React, { useState } from "react";
 import Slider from "react-slick";
+import Baobabpad from "./Baobabpad";
+import Baobabpad_Remote_Hybrid from "@/components/remote_sections/Baobabpad_Remote_Hybrid";
 
 const Remote = () => {
   interface SolutionsLinks {
@@ -13,6 +22,11 @@ const Remote = () => {
   interface FAQItem {
     question: string;
     answer: string;
+  }
+
+  interface ValueItem{
+    title:string,
+    image:string
   }
 
   const solutionLinks: SolutionsLinks[] = [
@@ -42,21 +56,46 @@ const Remote = () => {
   const faqs:FAQItem[] = [
     {
       question: 'What best practices can I follow to protect sensitive company data while working remotely?',
-      answer: '',
+      answer: 'All our staff members are trained on General Data Protection Regulation(GDPR) protocols, to protect sensitive company data',
     },
     {
-      question: 'How can I ensure my home network is secure for work?',
-      answer: '.......',
+      question: 'How can I trust the security of my team working remotely?',
+      answer: 'All Baobabpad members work remotely from a co-working space to ensure security and access to work infrastructure',
     },
     {
       question: 'How can I identify and avoid phishing scams while working remotely?',
-      answer: 'You can contact our customer support team at support@example.com.',
+      answer: 'We have highend Cloud identity and security management infrastructure ',
     },
-    {
-      question:' What happens if my work device is lost or stolen?',
-      answer: 'You can contact our customer support team at support@example.com.',
-    },
+     {
+      question:'Do you offer support after the project is completed?',
+
+      answer:'Yes, we offer ongoing support and maintenance services to ensure that your software continues to perform at its best.'
+     }
+   
   ];
+
+  const values:ValueItem[]=[
+    {
+      title:'Trust & Integrity',
+      image: "/trust_image.png"
+    },
+     {
+      title:'Communication',
+      image: "/communication_image.png"
+    },
+     {
+      title:'Cultural Intel',
+      image: "/cultural_image.png"
+    },
+     {
+      title:'Local Hybrid',
+      image: "/local_hybrid_image.png"
+    },
+     {
+      title:'Quality ',
+      image: "/quality_image.png"
+    }
+   ]
 
  
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -66,8 +105,23 @@ const Remote = () => {
     setActiveIndex(activeIndex === index ? null : index);
   }
 
+  const features = [
+    { title: "Trust and Integrity", imageSrc: "/trust_image.png" },
+    { title: "Communication", imageSrc: "/communication_image.png" },
+    { title: "Cultural Intel", imageSrc: "/cultural_image.png" },
+    { title: "Local Hybrid", imageSrc: "/local_hybrid_image.png" },
+    { title: "Quality", imageSrc: "/quality_image.png" },
+  ];
 
 
+  const [componentVisible, setComponentVisible] = useState(null);
+
+
+  const handleClick = (event:any, componentName:any) => {
+    event.preventDefault();
+    setComponentVisible(componentName);
+  };
+  
 
 
 
@@ -76,73 +130,7 @@ const Remote = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Layout>
-        <div className="md:hidden">
-          <button
-            onClick={toggleSolutionsNavbar}
-            className="text-[#00BDD6] focus:outline-none"
-          >
-            {isOpen ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-8 w-8"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            ) : (
-              <>
-                {" "}
-                <span className="sr-only">Toggle menu</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              </>
-            )}
-          </button>
-        </div>
-
-        <nav className=" md:flex space-x-12 flex-row justify-end pr-[5rem] text-lg bg-blue-100 p-4 text-white ">
-          <div className="flex justify-between items-center ">
-            <ul
-              className={`${
-                isOpen ? "block" : "hidden"
-              } sm:flex sm:space-x-12 sm:flex sm:justify-center sm:text-lg`}
-            >
-              {solutionLinks.map((solutionLink) => (
-                <li key={solutionLink.label}>
-                  <Link
-                    href={solutionLink.href}
-                    className={`text-gray-700 ${
-                      router.pathname === solutionLink.href
-                        ? "text-blue-500"
-                        : "hover:text-blue-500"
-                    } transition-colors duration-200 ease-in-out`}
-                  >
-                    {solutionLink.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </nav>
+        <SolutionNavbar/>
         <section className="flex mt-1 flex-col md:flex-row bg-[#8353E2] flex-wrap">
           <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 text-[1.25rem] max-w-full md:max-w-[50%]">
             <span className="text-[3rem] font-semibold">
@@ -202,43 +190,70 @@ const Remote = () => {
         <section className="flex mt-1 flex-col md:flex-row bg-[#00BDD6] flex-wrap justify-center items-center">
           <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 gap-x-12 text-[1.25rem] max-w-full md:max-w-[50%]">
             <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
-              <span className="text-[#171A1F] font-[500] text-[2.5rem]">
+              <span className="text-[#171A1F] font-[500] text-[1.8rem]">
                 The Future is Remote
               </span>
               <span className="">
-              Strategic management formulates and implements major goals and initiatives.
+              The era of remote has been occasioned by the rapid technological advancement and the global connectivity.
               </span>
               <div className="w-[100%] flex justify-end">
-                <span className="text-[#00BDD6]">Learn More... </span>
+              <a
+                  href="#"
+                  onClick={(event) => handleClick(event, "Future is Remote")}
+                  className="text-[#00BDD6] cursor-pointer"
+                >
+                  Learn More...
+                </a>
               </div>
             </div>
             <div className="sm:w-100% w-[30.75rem] h-[13rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
-              <span className="text-[#171A1F] font-[500] text-[2rem]">
+              <span className="text-[#171A1F] font-[500] text-[1.8rem]">
               Managing  remote culture
               </span>
               <span className="">
-              Four activities for financial health: planning, budgeting, integrated financial planning, and performance management.
+              Managing Remote As remote work becomes a permanent fixture in the modern workplace..
               </span>
               <div className="w-[100%] flex justify-end">
-                <span className="text-[#00BDD6]">Learn More... </span>
+              <a
+                  href="#"
+                  onClick={(event) => handleClick(event, "Managing Remote Culture")}
+                  className="text-[#00BDD6] cursor-pointer"
+                >
+                  Learn More...
+                </a>
               </div>
             </div>
             <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
-              <span className="text-[#171A1F] font-[500] text-[2.5rem]">
-              Baobabpad Remotelly Hybrid
+              <span className="text-[#171A1F] font-[500] text-[1.8rem]">
+              Baobabpad Remotely Hybrid
               </span>
               <span className="">
-               Ongoing support services provide assistance to customers for a limited period.
+              Handling Remote-Hybrid Culture: Juggling Face-to-Face and Online Work
+          The adoption of a remote-hybrid work model, in which workers alternate
               </span>
               <div className="w-[100%]  flex justify-end">
-                <span className="text-[#00BDD6]">Learn More... </span>
+              <a
+                  href="#"
+                  onClick={(event) => handleClick(event, "Baobabpad Remotely Hybrid")}
+                  className="text-[#00BDD6] cursor-pointer"
+                >
+                  Learn More...
+                </a>
               </div>
             </div>
           </div>
-
-          <div className="w-full md:w-[50%] md:h-[50%] flex justify-center p-5">
-            <img src="/remote_second_image.png" alt="a guy smiling" />
+          <div
+            className="w-full md:w-[50%] md:h-[50%] flex justify-center p-5"
+            id="right-sub-section"
+          >
+            {componentVisible === "Managing Remote Culture" && <Managing_Remote />}
+            {componentVisible === "Future is Remote" && <Future_is_Remote/>}
+            {componentVisible === "Baobabpad Remotely Hybrid" && <Baobabpad_Remote_Hybrid />}
+            {!componentVisible && (
+              <img src="/introduction-solution-image.png" alt="a guy smiling" />
+            )}
           </div>
+          
         </section>
 
         <section className="flex flex-col md:flex-row items-center justify-center flex-wrap p-12 ">
@@ -267,98 +282,18 @@ const Remote = () => {
               </div>
             </div>
           </div>
-          <div className="w-full md:w-[44%] flex-col justify-center m-1 ">
-            <div className="flex  items-center gap-x-1  border-l border-l-[#00BDD6] border-l-[7px] m-2 w-[90%] hover:bg-[#4069E5] hover:text-white">
-              <p className="font-bold text-[1.5rem] ">Trust & Integrity</p>
-              <img
-                src="/trust_image.png"
-                alt=""
-                className="rounded-[0.5rem]"
-              />
-            </div>
 
-            <div className="flex  items-center gap-x-1  border-l border-l-[#00BDD6] border-l-[7px] m-2 w-[90%]">
-              <p className="font-bold text-[1.5rem] ">Communication</p>
-              <img
-                src="/communication_image.png"
-                alt=""
-                className="rounded-[0.5rem]"
-              />
-            </div>
-
-            <div className="flex  items-center gap-x-1 border-l border-l-[#00BDD6] border-l-[7px] m-2 w-[90%]">
-              <p className="font-bold text-[1.5rem]">Cultural intel</p>
-              <img
-                src="/cultural_image.png"
-                alt=""
-                className="rounded-[0.5rem]"
-              />
-            </div>
-            <div className="flex items-center gap-x-1 border-l border-l-[#00BDD6] border-l-[7px] m-2 w-[90%]">
-              <p className="font-bold text-[1.5rem] ">Local hybrid</p>
-              <img
-                src="/local_hybrid_image.png"
-                alt=""
-                className="rounded-[0.5rem] ml-12"
-              />
-            </div>
-            <div className="flex  items-center gap-x-1 p-2 border-l border-l-[#00BDD6] border-l-[7px] m-2 w-[90%]">
-              <p className="font-bold text-[1.5rem]">Quality</p>
-              <img
-                src="/quality_image.png"
-                alt=""
-                className="rounded-[0.5rem]"
-              />
-            </div>
-          </div>
+          <Features features={features}/>
+        
         </section>
 
-        {/* start of review section */}
-        <section className="w-full md:w-[100%] mt-1 md:h-[50vh] flex flex-col bg-[#00BDD6] items-center p-5 gap-5">
-      <h3 className="text-white text-2xl font-semibold mb-4">Reviews</h3>
-      
-      {/* Review slider */}
-      <Slider
-        {...settings}
-        className="w-full md:w-4/5 mx-auto"
-      >
-        <div className="md:w-1/3 w-full m-3 border border-gray-300 p-6 bg-white flex flex-col justify-between h-[calc(2 * 2rem)] gap-">
-          <div className="flex items-center space-x-2">
-            <img src="/kenny.png" alt="" className="rounded-full w-12" />
-            <p className="text-sm">Ashley Robinson</p>
-          </div>
-          <p className="text-sm mt-4">
-            I highly recommend a membership with baobabpad, the support on managing
-            our cloud backend was excellent.
-          </p>
-        </div>
 
-        <div className="md:w-1/3 w-full m-3 border border-gray-300 p-6 bg-white flex flex-col justify-between h-[calc(2 * 2rem)]">
-          <div className="flex items-center space-x-2">
-            <img src="/kenny.png" alt="" className="rounded-full w-12" />
-            <p className="text-sm">Ashley Robinson</p>
-          </div>
-          <p className="text-sm mt-4">
-            I highly recommend a membership with baobabpad, the support on managing
-            our cloud backend was excellent.
-          </p>
-        </div>
 
-        <div className="md:w-1/3 w-full m-3 border border-gray-300 p-6 bg-white flex flex-col justify-between h-[calc(2 * 2rem)]">
-          <div className="flex items-center space-x-2">
-            <img src="/kenny.png" alt="" className="rounded-full w-12" />
-            <p className="text-sm">Ashley Robinson</p>
-          </div>
-          <p className="text-sm mt-4">
-            I highly recommend a membership with baobabpad, the support on managing
-            our cloud backend was excellent.
-          </p>
-        </div>
-      </Slider>
-    </section>
+
+        
+       <Reviews/>
   
-        {/* end of review section */}
-
+       
         <section className="flex flex-col md:flex-row items-center justify-center  flex-wrap p-12 border-t border-t-gray m-6  ">
           <div className="w-full md:w-[60%] flex flex-row md:flex-col justify-center flex-wrap p-6 pt-[-1rem] gap-y-7">
             <div className="flex flex-row bg-[#F1F1FE] w-[13rem] items-center">
@@ -390,50 +325,9 @@ const Remote = () => {
         </section>
 
 
-        <section className="flex flex-col md:flex-row items-center justify-center flex-wrap p-12 border-t border-t-gray ">
-           
-       </section>
-
-      {/* FAQ start */}
-      <section className="container mx-auto mt-[-6rem] py-12">
-      <h2 className="text-3xl font-semibold text-center mb-8">FAQ</h2>
-      <div className="grid gap-6 ">
-        {faqs.map((faq, index) => (
-          <div
-          key={index}
-          className={`bg-white p-6 shadow rounded-lg ${
-            activeIndex === index ? 'border-[#00BDD6] border-2' : ''
-          }`}
-        >
-            <button
-              className="flex justify-between w-full text-left focus:outline-none"
-              onClick={() => handleToggle(index)}
-            >
-              <h3 className="text-lg font-semibold">{faq.question}</h3>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className={`h-6 w-6 transition-transform ${activeIndex === index ? 'rotate-180' : ''}`}
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path fillRule="evenodd" d="M6 8l4 4 4-4"></path>
-              </svg>
-            </button>
-            <p className={`mt-2 ${activeIndex === index ? '' : 'hidden'}`}>{faq.answer}</p>
-          </div>
-        ))}
-      </div>
-    </section>
-    {/* End of FAQ */}
-
-
-
-
-
-
-
-
-
+       
+      <Faq faqs={faqs}/>
+  
 
       </Layout>
     </div>

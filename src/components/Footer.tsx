@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
-import { FaTwitter, FaFacebook, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { FaTwitter, FaFacebook, FaLinkedin, FaYoutube,FaInstagram } from "react-icons/fa";
+
 
 interface NavLink {
   label: string;
@@ -13,8 +14,8 @@ const navLinks: NavLink[] = [
   { id: "tfgbuyhejni3m", label: "Baobabpad", href: "/Baobabpad" },
   { id: "4389hunref", label: "Solutions", href: "/Solutions" },
   { id: "9ol,ytgrer", label: "Careers", href: "/Careers" },
-  { id: "buh43jnadsgqwe", label: "Contact Us", href: "/Contact" },
-  { id: "akljhqkjwebr", label: "FAQs", href: "/FAQs" },
+  { id: "buh43jnadsgqwe", label: "Try for free", href: "/Subscription" },
+  { id: "akljhqkjwebr", label: "Login", href: "/login" },
 ];
 
 interface FooterProps {}
@@ -47,9 +48,9 @@ const Footer: React.FC<FooterProps> = () => {
         </div>
 
         <nav className="flex">
-          <ul className="flex flex-col sm:flex-row flex-wrap sm:items-center pl-4 md:pl-0">
+          <ul className="hidden md:flex flex-col sm:flex-row flex-wrap sm:items-center pl-4 md:pl-0">
             
-            <h3 className="font-semibold mb-2 sm:hidden">Navigation</h3>
+            {/*<h3 className="font-semibold mb-2 sm:hidden">Navigation</h3> */}
             {navLinks.map((link) => (
               <li key={link.id}>
                 <Link
@@ -61,6 +62,22 @@ const Footer: React.FC<FooterProps> = () => {
               </li>
             ))}
           </ul>
+
+          <div className="md:hidden grid grid-cols-2 gap-[7rem] sm:items-center pl-4 md:pl-0  text-gray-400   px-1 mb-2 ">
+            
+            {/*<h3 className="font-semibold mb-2 md:hidden">Navigation</h3>*/}
+           <div className="flex flex-col ">
+            <a href ="/Village" className="hover:text-gray-300">The village</a>
+            <a href="/Baobabpad" className="hover:text-gray-300">Baobabpad</a>
+            <a  href="/Solutions"  className="hover:text-gray-300">The village</a>
+           </div>
+           <div className="flex flex-col">
+            <a href="/Careers" className="hover:text-gray-300 ">Careers</a>
+            <a  href="/Subscription" className="hover:text-gray-300">Try for free</a>
+            <a  href="/login" className="hover:text-gray-300">Login</a>
+           </div>
+          </div>
+          
         </nav>
 
         <span className="border w-full"></span>
@@ -79,18 +96,20 @@ const Footer: React.FC<FooterProps> = () => {
               </a>
             </p>
           </div>
-          <div className="flex items-center justify-center md:order-1 md:mt-0">
+          <div className="flex items-center justify-end md:order-1 md:mt-0">
+            {/*}
             <a href="#" className="mr-4 text-gray-400 hover:text-gray-300">
               <FaTwitter />
             </a>
             <a href="#" className="mr-4 text-gray-400 hover:text-gray-300">
               <FaFacebook />
             </a>
-            <a href="#" className="mr-4 text-gray-400 hover:text-gray-300">
+          */}
+            <a href="https://www.linkedin.com/company/baobabpad/mycompany/?viewAsMember=true" className="mr-4 text-gray-400 hover:text-gray-300">
               <FaLinkedin />
             </a>
-            <a href="#" className="text-gray-400 hover:text-gray-300">
-              <FaYoutube />
+            <a href="https://www.instagram.com/baobabpad/" className="text-gray-400 hover:text-gray-300">
+            <FaInstagram />
             </a>
           </div>
         </div>

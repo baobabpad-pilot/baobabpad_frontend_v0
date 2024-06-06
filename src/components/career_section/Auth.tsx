@@ -36,14 +36,14 @@ function Auth() {
 
   return (
     <>
-      <div className= {styles.part2 }>
+      <div className={`${styles.part2} py-6`} >
           {/* <pre>{JSON.stringify(session?.user?.token, null, 2)}</pre> */}
         {session ? (
             <div>
-              <p className="text-2xl">Welcome, {session?.user?.name}</p>
+              <p className="text-2xl ">Join Baobabpad Today</p>
             </div>
           ) : (
-          <p className="text-2xl"></p>
+          <p className="text-2xl">Join Baobabpad Today</p>
           )}
         <div>
           <div
@@ -55,7 +55,7 @@ function Auth() {
               style={{ width: "220px" }}
               onClick={handleGoogleSignUp}
             >
-              <Image src={"/google.png"} alt="Google Icon" width="20" height="20" />
+              <Image src={"/Google.png"} alt="Google Icon" width="20" height="20" />
               <span>Sign Up with Google</span>
             </button>
             <button
@@ -71,7 +71,7 @@ function Auth() {
               style={{ width: "220px" }}
               onClick={handleGitHubSignUp}
             >
-              <Image src={"/microsoft.png"} alt="GitHub Icon" width="20" height="20" />
+              <Image src={"/github.png"} alt="GitHub Icon" width="20" height="20" />
               <span>Sign Up with GitHub</span>
             </button>
           </div>
@@ -90,7 +90,7 @@ function Auth() {
           </div>
           
           {!showSignupForm ? (
-          <p className="text-base font-normal text-xs  opacity-70">
+          <p className="font-normal text-xs  opacity-70">
             By continuing, you agree to our{" "}
             <span style={{ color: "rgb(0,189,214)" }}>
               {" "}
@@ -107,7 +107,7 @@ function Auth() {
         <div className="section4 mt-5 text-base font-normal">
           {showSigninForm && <SigninForm />}
         </div>
-        <p className="text-base font-normal text-xs  opacity-70 mt-3">
+        <p className=" font-normal text-xs  opacity-70 mt-3">
           Existing member?{" "}
           <span style={{ color: "rgb(0,189,214)" }}>
             {" "}

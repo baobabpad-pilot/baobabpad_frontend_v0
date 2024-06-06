@@ -1,26 +1,34 @@
+import Faq from "@/components/FAQs/Faq";
 import Layout from "@/components/Layout";
+import Reviews from "@/components/Reviews/Reviews";
+import SolutionNavbar from "@/components/SolutionsNavbar/SolutionNavbar";
+import AI_strategy from "@/components/ai_and_data_sections/AI_strategy";
+import Large_Language_Modelling from "@/components/ai_and_data_sections/Large_Language_Modelling";
+import Machine_Learning_Ops from "@/components/ai_and_data_sections/Machine_Learning_Ops";
+import Features from "@/components/features/Features";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 import Slider from "react-slick";
 
+
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
 const Cloud = () => {
 
-  interface SolutionsLinks {
-    label: string;
-    href: string;
-  }
-  interface FAQItem {
-    question: string;
-    answer: string;
-  }
 
-  const solutionLinks: SolutionsLinks[] = [
-    { label: "CLIENT SUPPORT  ", href: "/Client" },
-    { label: "REMOTE TEAM", href: "/Remote" },
-    { label: "DIGITAL" + String.fromCharCode(0x02e3), href: "/DigitalX" },
-    { label: "AI & DATA", href: "/Cloud" },
-  ];
+ 
+  const [componentVisible, setComponentVisible] = useState(null);
+
+  const handleClick = (event: any, componentName: any) => {
+    event.preventDefault();
+    setComponentVisible(componentName);
+  };
+
+
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -28,13 +36,15 @@ const Cloud = () => {
     setIsOpen(!isOpen);
   };
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-  };
+
+
+  const features = [
+    { title: "Integrity", imageSrc: "/virtual_image.png" },
+    { title: "Security", imageSrc: "/collaboration_image.png" },
+    { title: "Scalability", imageSrc: "/cloud_storage.png" },
+    { title: "Reliability", imageSrc: "/database_image.png" },
+    { title: "Performance", imageSrc: "/management_image.png" },
+  ];
 
 
   const faqs:FAQItem[] = [
@@ -68,87 +78,22 @@ const Cloud = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Layout>
-        <div className="md:hidden">
-          <button
-            onClick={toggleSolutionsNavbar}
-            className="text-[#00BDD6] focus:outline-none"
-          >
-            {isOpen ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-8 w-8"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            ) : (
-              <>
-                {" "}
-                <span className="sr-only">Toggle menu</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              </>
-            )}
-          </button>
-        </div>
-
-       
-        <nav className=" md:flex space-x-12 flex-row justify-end pr-[5rem] text-lg bg-blue-100 p-4 text-white ">
-          <div className="flex justify-between items-center ">
-            <ul
-              className={`${
-                isOpen ? "block" : "hidden"
-              } sm:flex sm:space-x-12 sm:flex sm:justify-center sm:text-lg`}
-            >
-              {solutionLinks.map((solutionLink) => (
-                <li key={solutionLink.label}>
-                  <Link
-                    href={solutionLink.href}
-                    className={`text-gray-700 ${
-                      router.pathname === solutionLink.href
-                        ? "text-blue-500"
-                        : "hover:text-blue-500"
-                    } transition-colors duration-200 ease-in-out`}
-                  >
-                    {solutionLink.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </nav>
+       <SolutionNavbar/>
 
         <section className="flex mt-1 flex-col md:flex-row bg-[#ED7D2D] flex-wrap">
           <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 text-[1.25rem] max-w-full md:max-w-[50%]">
-            <span className="text-[3rem] font-semibold">
+            <span className="md:text-[3rem] text-[2.5rem] font-semibold">
               AI and Data Infrastructure
             </span>
             <span>
               Providing a scalable cloud-based infrastructure service, empower
               its clients to focus on their core business activities.
             </span>
+            <Link href="#1">
             <button className="bg-[white] text-black p-2 rounded-[1rem] hover:bg-[#00BDD6] hover:text-white">
               Discover More
             </button>
+            </Link>
           </div>
 
           <div className="w-full md:w-[50%] flex justify-center">
@@ -160,7 +105,7 @@ const Cloud = () => {
           </div>
         </section>
 
-        <section className="flex flex-col md:flex-row items-center justify-center flex-wrap p-12 ">
+        <section id="1" className="flex flex-col md:flex-row items-center justify-center flex-wrap p-12 ">
           <div className="w-full md:w-[50%] flex flex-row md:flex-col justify-center flex-wrap p-6 pt-[-1rem] gap-y-7">
             <div className="flex flex-row bg-[#EBFDFF] w-[13rem] items-center">
               <img
@@ -172,18 +117,28 @@ const Cloud = () => {
                 Introduction
               </span>
             </div>
-            <p className="text-[3rem]">Launch AI models
-integration</p>
-            <p className="text-[1.875rem]">
+            <p className="md:text-[3rem] text-[1.8rem]">Launch AI models </p>
+            <p className="md:text-[1.875rem] text-[1.400rem] text-align: center;">
             Leveraging technology for operational improvement and long-term growth strategies.
             </p>
             <div className=" flex flex-row gap-x-5 ">
-              <button className="border border-black p-2 rounded-[1rem] hover:bg-[#00BDD6] hover:text-white hover:border-none">
+              <Link href="#2">
+              <button  className="border border-black p-2 rounded-[1rem] hover:bg-[#00BDD6]  hover:text-white hover:border-black">
                 Learn More
               </button>
-              <button className="border border-black pl-9 pr-9 rounded-[1rem] bg-[#723CDE] text-white hover:bg-white hover:text-black">
+              </Link>
+              <Link href="/Subscription">
+              <button className="border border-black p-2 rounded-[1rem] w-35  text-white bg-violet-500 hover:bg-white hover:text-black hover:border-black">
                 Sign up
               </button>
+              </Link>
+             
+              {/*
+              <button onClick={() => setIsVisible(!isVisible)} className="border border-black pl-9 pr-9 rounded-[1rem] bg-[#723CDE] text-white hover:bg-white hover:text-black">
+                Sign up
+              </button>
+              {isVisible && <Businessform />}
+              */}
             </div>
           </div>
           <div className="w-full md:w-[49%] flex justify-center  ">
@@ -195,46 +150,78 @@ integration</p>
           </div>
         </section>
 
-        <section className="flex mt-1 flex-col md:flex-row bg-[#00BDD6] flex-wrap justify-center items-center">
+        <section id="2" className="flex mt-1 flex-col md:flex-row bg-[#00BDD6] flex-wrap justify-center items-center">
           <div className="flex flex-col p-4 text-white items-start justify-center gap-y-7 gap-x-12 text-[1.25rem] max-w-full md:max-w-[50%]">
-            <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
-              <span className="text-[#171A1F] font-[500] text-[2.5rem]">
+            <div className="sm:w-100% md:w-[30.75rem] w-[22rem] md:h-[18.75rem] h-[20.75rem]  bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+              <span className="text-[#171A1F] font-[500] md:text-[1.8rem] text-[1.6rem]">
                  AI strategy
               </span>
-              <span className="">
-              Strategic management formulates and implements major goals and initiatives.
+              <span className=" ">
+               AI is a very common term nowadays, different interpretations almost like ana art. In the world of startups, two advantages make them stand out, being lightweight, and risk friendly. 
+               startups can ship product without much bureaucracy.
+               
               </span>
-              <div className="w-[100%] flex justify-end">
-                <span className="text-[#00BDD6]">Learn More... </span>
+              <div className="w-[100%] hidden md:flex justify-end">
+              <a
+                  href="#"
+                  onClick={(event) => handleClick(event, "AI strategy")}
+                  className="text-[#00BDD6] cursor-pointer mt-4"
+                >
+                  Learn More...
+                </a>
               </div>
             </div>
-            <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
-              <span className="text-[#171A1F] font-[500] text-[2.5rem]">
-                Machine Laerning Ops
+            <div className="sm:w-100% md:w-[30.75rem] w-[22rem] md:h-[12.75rem] h-[14.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+              <span className="text-[#171A1F] font-[500] md:text-[1.8rem] text-[1.6rem]">
+                Machine Learning Ops
               </span>
               <span className="">
-              Four activities for financial health: planning, budgeting, integrated financial planning, and performance management.
+              It highlights the paradigm shift machine learning represents and its  application beyond software products.
               </span>
-              <div className="w-[100%] flex justify-end">
-                <span className="text-[#00BDD6]">Learn More... </span>
+              <div className="w-[100%] hidden md:flex justify-end">
+              <a
+                  href="#"
+                  onClick={(event) => handleClick(event, "Machine Learning Ops")}
+                  className="text-[#00BDD6] cursor-pointer"
+                >
+                  Learn More...
+                </a>
               </div>
             </div>
-            <div className="sm:w-100% w-[30.75rem] h-[12.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
-              <span className="text-[#171A1F] font-[500] text-[2.5rem]">
-            Large Language Modelling
+            <div className="sm:w-100% md:w-[30.75rem] w-[22rem] md:h-[12.75rem] h-[17.75rem] bg-white rounded-[1rem] flex flex-col text-black p-4 text-[#171A1F]">
+              <span className="text-[#171A1F] font-[500] md:text-[1.8rem] text-[1.4rem]">
+                SEO Large Language Modelling
               </span>
               <span className="">
-              Ongoing support services provide assistance to customers for a limited period.
+              Integrating Generative AI ~AI21 Labs models for businesses can boost SEO quality and efficiency by optimizing page rank on the first page when rank on the first page when you search.
               </span>
-              <div className="w-[100%]  flex justify-end">
-                <span className="text-[#00BDD6]">Learn More... </span>
+              <div className="w-[100%] hidden md:flex justify-end">
+              <a
+                  href="#"
+                  onClick={(event) => handleClick(event, "Large Language Modelling")}
+                  className="text-[#00BDD6] cursor-pointer"
+                >
+                  Learn More...
+                </a>
               </div>
             </div>
           </div>
 
-          <div className="w-full md:w-[50%] md:h-[50%] flex justify-center p-5">
-            <img src="/digital_section_3_image.png" alt="a guy smiling" />
-          </div>
+          <div
+            className="w-full md:w-[50%] md:h-[50%] flex justify-center p-5"
+            id="right-sub-section"
+          >
+            {componentVisible === "AI strategy" && <AI_strategy />}
+            {componentVisible === "Machine Learning Ops" && <Machine_Learning_Ops />}
+            {componentVisible === "Large Language Modelling" && <Large_Language_Modelling />}
+            
+            {!componentVisible && (
+              <img src="/introduction-solution-image.png" alt="a guy smiling" />
+            )}
+            </div>
+           
+        
+         
         </section>
 
         <section className="flex flex-col md:flex-row items-center justify-center flex-wrap p-12 ">
@@ -245,117 +232,32 @@ integration</p>
                 alt="introduction icon"
                 className="w-[10rem]"
               />
-              <span className=" text-[#00BDD6] text-[1.625rem]">
+              <span className=" text-[#00BDD6] md:text-[1.625rem] text-[1.300rem] ">
                 Core Values
               </span>
             </div>
-            <p className="text-[3rem]">AI Model Integrations  </p>
+            <p className="md:text-[3rem] text-[1.8rem]">Our Key Strategic Approach</p>
 
             <div className=" flex flex-row gap-x-5 items-center mt-[1rem]">
               <img
-                src="/cloud_advisor_page.png"
+                src="/kenny.png"
                 alt=""
-                className="rounded-[1rem]"
+                className="rounded-[1rem] w-[40px]"
               />
               <div className="">
-                <p className=" font-bold font-[1rem]">Martin Sundberg</p>
-                <p className="text-[#9095A0]">Advisor</p>
+                <p className=" font-bold font-[1rem]">Kenny Kaluiji</p>
+                <p className="text-[#9095A0]">Founder</p>
               </div>
             </div>
           </div>
-          <div className="w-full md:w-[44%] flex-col justify-center m-1 ">
-            <div className="flex  items-center gap-x-1  border-l border-l-[#00BDD6] border-l-[7px] m-2 w-[90%] hover:bg-[#4069E5] hover:text-white">
-              <p className="font-bold text-[1.5rem] ">Integrity</p>
-              <img
-                src="/virtual_image.png"
-                alt=""
-                className="rounded-[0.5rem]"
-              />
-            </div>
-
-            <div className="flex  items-center gap-x-1  border-l border-l-[#00BDD6] border-l-[7px] m-2 w-[90%]">
-              <p className="font-bold text-[1.5rem] ">Collaboration</p>
-              <img
-                src="/collaboration_image.png"
-                alt=""
-                className="rounded-[0.5rem]"
-              />
-            </div>
-
-            <div className="flex  items-center gap-x-1 border-l border-l-[#00BDD6] border-l-[7px] m-2 w-[90%]">
-              <p className="font-bold text-[1.5rem]">Growth</p>
-              <img
-                src="/cloud_storage.png"
-                alt=""
-                className="rounded-[0.5rem]"
-              />
-            </div>
-            <div className="flex items-center gap-x-1 border-l border-l-[#00BDD6] border-l-[7px] m-2 w-[90%]">
-              <p className="font-bold text-[1.5rem] ">Reliability</p>
-              <img
-                src="/database_image.png"
-                alt=""
-                className="rounded-[0.5rem] ml-12"
-              />
-            </div>
-            <div className="flex  items-center gap-x-1 p-2 border-l border-l-[#00BDD6] border-l-[7px] m-2 w-[90%]">
-              <p className="font-bold text-[1.5rem]">Commitment</p>
-              <img
-                src="/management_image.png"
-                alt=""
-                className="rounded-[0.5rem]"
-              />
-            </div>
-          </div>
+         
+           <Features features={features}/>
         </section>
-
-        {/* start of review section */}
-        <section className="w-full md:w-[100%] mt-1 md:h-[50vh] flex flex-col bg-[#00BDD6] items-center p-5 gap-5">
-      <h3 className="text-white text-2xl font-semibold mb-4">Reviews</h3>
       
-      {/* Review slider */}
-      <Slider
-        {...settings}
-        className="w-full md:w-4/5 mx-auto"
-      >
-        <div className="md:w-1/3 w-full m-3 border border-gray-300 p-6 bg-white flex flex-col justify-between h-[calc(2 * 2rem)] gap-">
-          <div className="flex items-center space-x-2">
-            <img src="/kenny.png" alt="" className="rounded-full w-12" />
-            <p className="text-sm">Ashley Robinson</p>
-          </div>
-          <p className="text-sm mt-4">
-            I highly recommend a membership with baobabpad, the support on managing
-            our cloud backend was excellent.
-          </p>
-        </div>
+          <Reviews/>
+      
 
-        <div className="md:w-1/3 w-full m-3 border border-gray-300 p-6 bg-white flex flex-col justify-between h-[calc(2 * 2rem)]">
-          <div className="flex items-center space-x-2">
-            <img src="/kenny.png" alt="" className="rounded-full w-12" />
-            <p className="text-sm">Ashley Robinson</p>
-          </div>
-          <p className="text-sm mt-4">
-            I highly recommend a membership with baobabpad, the support on managing
-            our cloud backend was excellent.
-          </p>
-        </div>
-
-        <div className="md:w-1/3 w-full m-3 border border-gray-300 p-6 bg-white flex flex-col justify-between h-[calc(2 * 2rem)]">
-          <div className="flex items-center space-x-2">
-            <img src="/kenny.png" alt="" className="rounded-full w-12" />
-            <p className="text-sm">Ashley Robinson</p>
-          </div>
-          <p className="text-sm mt-4">
-            I highly recommend a membership with baobabpad, the support on managing
-            our cloud backend was excellent.
-          </p>
-        </div>
-      </Slider>
-    </section>
-  
-        {/* end of review section */}
-
-        <section className="flex flex-col md:flex-row items-center justify-center  flex-wrap p-12 border-t border-t-gray m-6  ">
+        <section className=" hidden md:flex flex-col md:flex-row items-center justify-center  flex-wrap p-12 border-t border-t-gray m-6  ">
           <div className="w-full md:w-[60%] flex flex-row md:flex-col justify-center flex-wrap p-6 pt-[-1rem] gap-y-7">
             <div className="flex flex-row bg-[#F1F1FE] w-[13rem] items-center">
               <img
@@ -367,7 +269,7 @@ integration</p>
                 Our Community
               </span>
             </div>
-            <p className="text-[3rem]">Build AI Models with our AI expert </p>
+            <p className="text-[3rem]"> Gain insights from our AI Expert </p>
           </div>
           <div className="w-full md:w-[35%] flex-col justify-center m-1 ">
             <p className="w-[70%]">
@@ -385,45 +287,9 @@ integration</p>
           </div>
         </section>
 
-
-        <section className="flex flex-col md:flex-row items-center justify-center flex-wrap p-12 border-t border-t-gray ">
-           
-       </section>
-
-      {/* FAQ start */}
-      <section className="container mx-auto mt-[-6rem] py-12">
-      <h2 className="text-3xl font-semibold text-center mb-8">FAQ</h2>
-      <div className="grid gap-6 ">
-        {faqs.map((faq, index) => (
-          <div
-          key={index}
-          className={`bg-white p-6 shadow rounded-lg ${
-            activeIndex === index ? 'border-[#00BDD6] border-2' : ''
-          }`}
-        >
-            <button
-              className="flex justify-between w-full text-left focus:outline-none"
-              onClick={() => handleToggle(index)}
-            >
-              <h3 className="text-lg font-semibold">{faq.question}</h3>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className={`h-6 w-6 transition-transform ${activeIndex === index ? 'rotate-180' : ''}`}
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path fillRule="evenodd" d="M6 8l4 4 4-4"></path>
-              </svg>
-            </button>
-            <p className={`mt-2 ${activeIndex === index ? '' : 'hidden'}`}>{faq.answer}</p>
-          </div>
-        ))}
-      </div>
-    </section>
-    {/* End of FAQ */}
-
-
-
+       <div className="hidden md:flex">
+        <Faq  faqs={faqs}/>
+        </div> 
       </Layout>
     </div>
   );
