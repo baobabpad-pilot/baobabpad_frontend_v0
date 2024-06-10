@@ -94,12 +94,12 @@ function Auth() {
             By continuing, you agree to our{" "}
             <span style={{ color: "rgb(0,189,214)" }}>
               {" "}
-              <b> Terms & Conditions</b>
+              <a href="/Talents-policy"> Terms & Conditions</a>
             </span>{" "}
             and{" "}
             <span style={{ color: "rgb(0,189,214)" }}>
               {" "}
-              <b>Privacy Policy</b>{" "}
+              <a href="Talents-policy">Privacy Policy</a>{" "}
             </span>
           </p>) : (<></>
           )}

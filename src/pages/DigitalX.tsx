@@ -36,21 +36,21 @@ const DigitalX = () => {
   const faqs: FAQItem[] = [
     {
       question: "What are the benefits of cloud adoption for businesses?",
-      answer: "We accept Visa, MasterCard, American Express, and PayPal.",
+      answer: "Adopting cloud solutions through Baobabpad offers businesses enhanced scalability, cost-efficiency, and robust security. Our expert tech talents ensure seamless integration and management, enabling companies to focus on innovation while we handle infrastructure complexities.",
     },
     {
       question: "What skills are needed for cloud engineering",
-      answer: "Yes, we offer refunds within 30 days of purchase.",
+      answer: "Cloud engineering requires proficiency in cloud platforms (such as AWS, Azure, or Google Cloud), strong programming skills (in languages like Python, Java, or Ruby), and expertise in networking, security, and DevOps practices. Here at Baobabpad, you will find talented experts in these areas ready to support your business needs.",
     },
     {
       question: "How will cloud computing evolve in the future?",
       answer:
-        "You can contact our customer support team at support@example.com.",
+        "Cloud computing will evolve with increased adoption of artificial intelligence and machine learning for automation, enhanced security measures, and more edge computing to process data closer to its source. At Baobabpad, our skilled professionals stay ahead of these trends to provide cutting-edge solutions tailored to your business's future needs.",
     },
     {
       question: "What are the challenges associated with cloud computing?",
       answer:
-        "You can contact our customer support team at support@example.com.",
+        "Challenges associated with cloud computing include data security and privacy concerns, potential downtime and service outages, managing cloud costs, and ensuring compliance with regulations. At Baobabpad, our experts help you navigate these challenges with robust security measures, cost management strategies, and seamless integration services to ensure a smooth cloud experience.",
     },
   ];
 
